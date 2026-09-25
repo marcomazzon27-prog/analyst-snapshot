@@ -1,0 +1,32 @@
+name: analyst-snapshot
+
+# Gira ogni notte alle 05:30 UTC (07:30 in Italia) — prima del brief delle 08:00.
+# GitHub Actions è gratis per repo pubblici e ha rete senza restrizioni: è il pezzo
+# che il cloud Anthropic non può fare, perché lì i domini finanziari sono bloccati.
+on:
+  schedule:
+    - cron: "30 5 * * 1-5"
+  workflow_dispatch:        # per lanciarlo a mano la prima volta
+
+permissions:
+  contents: write           # serve per committare gli snapshot
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install yfinance pandas lxml html5lib pyarrow
+      - name: Snapshot
+        run: python collect.py --universe universe.csv --out data
+      - name: Commit
+        run: |
+          git config user.name  "analyst-snapshot"
+          git config user.email "actions@github.com"
+          git add data
+          git diff --staged --quiet || git commit -m "snapshot $(date -u +%Y-%m-%d)"
+          git push
