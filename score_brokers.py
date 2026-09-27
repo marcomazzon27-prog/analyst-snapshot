@@ -39,8 +39,8 @@ DB, SITE, DATA = ROOT / "build" / "analyst.db", ROOT / "site", ROOT / "data"
 H = {"1m": 21, "3m": 63, "6m": 126, "12m": 252}
 MAIN = "3m"
 ALPHAS = np.logspace(0, 7, 29)
-MIN_N = 20            # analisi valutate (con segnale) per entrare in classifica
-PRIOR_K = 30          # forza della riduzione verso la media (in "analisi equivalenti")
+MIN_N = 100           # analisi valutate (con segnale) per entrare in classifica
+PRIOR_K = 50          # forza della riduzione verso la media (in "analisi equivalenti")
 W = {"ml": .30, "hit": .25, "alpha": .20, "ic": .10, "pt_hit": .075, "pt_err": .075}
 try:
     from collect import BENCH, bench_for
