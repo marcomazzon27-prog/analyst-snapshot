@@ -3,384 +3,490 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="dark">
-<title>ASNP — Analyst Snapshot Terminal</title>
+<title>ASNP · Analyst Snapshot</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#000000; --panel:#0A0A0A; --line:#262626; --amber:#F4A300; --amber-dim:#8C6A2A;
-  --txt:#E4E4E4; --dim:#8A8A8A; --up:#2BD46A; --dn:#FF4136; --tick:#5CC8FF; --sel:#15356E;
-  --warn:#FFD23F; --bar-txt:#000000;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f4f5f7; --card:#ffffff; --card2:#f9fafb; --line:#e5e7eb; --ink:#0f172a; --ink2:#334155; --muted:#64748b;
+  --acc:#0f766e; --acc-soft:#e6f4f2; --acc-ink:#ffffff; --up:#15803d; --up-soft:#e8f5ec; --dn:#b91c1c; --dn-soft:#fdecec;
+  --warn:#b45309; --warn-soft:#fef3e2; --info:#1d4ed8; --info-soft:#e8effd; --shadow:0 1px 2px rgba(15,23,42,.05),0 1px 3px rgba(15,23,42,.04);
+  --r:14px; color-scheme:light;
 }
-:root[data-theme="dark"], :root:not([data-theme="light"]){ color-scheme:dark; }
-*,*::before,*::after{box-sizing:inherit}
-html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;min-height:100%;background:var(--bg);color:var(--txt);
-  font:13px/1.45 "IBM Plex Mono","SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+:root[data-theme="dark"]{
+  --bg:#0b0f14; --card:#121821; --card2:#0f141b; --line:#222c38; --ink:#e7edf4; --ink2:#c3cdd9; --muted:#8593a3;
+  --acc:#2dd4bf; --acc-soft:#0f2b2a; --acc-ink:#04201d; --up:#4ade80; --up-soft:#12281b; --dn:#f87171; --dn-soft:#2d1515;
+  --warn:#fbbf24; --warn-soft:#2b220f; --info:#93b4ff; --info-soft:#141f38; --shadow:none; color-scheme:dark;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0b0f14; --card:#121821; --card2:#0f141b; --line:#222c38; --ink:#e7edf4; --ink2:#c3cdd9; --muted:#8593a3;
+  --acc:#2dd4bf; --acc-soft:#0f2b2a; --acc-ink:#04201d; --up:#4ade80; --up-soft:#12281b; --dn:#f87171; --dn-soft:#2d1515;
+  --warn:#fbbf24; --warn-soft:#2b220f; --info:#93b4ff; --info-soft:#141f38; --shadow:none; color-scheme:dark; }}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
-button,input,select{font:inherit;color:inherit}
-a{color:var(--tick)}
-:focus-visible{outline:1px solid var(--amber);outline-offset:1px}
+button,input{font:inherit;color:inherit}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 
-/* command line */
-#top{display:flex;align-items:stretch;gap:0;border-bottom:1px solid var(--line);background:var(--bg);
-  position:sticky;top:env(safe-area-inset-top,0px);z-index:5;flex-wrap:wrap}
-#brand{background:var(--amber);color:var(--bar-txt);font-weight:600;padding:6px 10px;letter-spacing:.02em}
-#cmdwrap{flex:1 1 260px;display:flex;align-items:center;position:relative;min-width:200px}
-#cmdwrap::before{content:">";color:var(--amber);padding:0 6px 0 10px}
-#cmd{flex:1;background:transparent;border:0;color:var(--warn);text-transform:uppercase;padding:6px 0;outline:none;caret-color:var(--amber)}
-#go{background:#1E7A2E;color:#fff;border:0;padding:0 12px;cursor:pointer;font-weight:600}
-#go:hover{background:#26963A}
-#sugg{position:absolute;left:24px;top:100%;background:#111;border:1px solid var(--amber-dim);min-width:320px;display:none;z-index:9}
-#sugg div{padding:2px 8px;cursor:pointer;white-space:nowrap}
-#sugg div.on,#sugg div:hover{background:var(--sel)}
-#clock{display:flex;gap:14px;align-items:center;padding:0 10px;color:var(--dim);white-space:nowrap}
-#clock b{color:var(--txt);font-weight:500}
-.lamp{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:1px}
+.app{display:grid;grid-template-columns:232px 1fr;min-height:100vh}
+aside{position:sticky;top:0;height:100vh;padding:20px 14px;border-right:1px solid var(--line);background:var(--card);display:flex;flex-direction:column;gap:4px}
+.brand{display:flex;align-items:center;gap:10px;padding:4px 8px 18px}
+.logo{width:34px;height:34px;border-radius:10px;background:var(--acc);display:grid;place-items:center;color:var(--acc-ink)}
+.brand b{display:block;font-size:15px;letter-spacing:-.01em}
+.brand small{color:var(--muted);font-size:12px;white-space:nowrap}
+nav a{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;color:var(--ink2);font-weight:500}
+nav a svg{width:18px;height:18px;flex:none;opacity:.8}
+nav a:hover{background:var(--card2)}
+nav a[aria-current="page"]{background:var(--acc-soft);color:var(--acc)}
+nav a[aria-current="page"] svg{opacity:1}
+.aside-foot{margin-top:auto;padding:10px;font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+#status{display:flex;flex-direction:column;gap:4px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:0}
 
-/* function keys */
-#fkeys{display:flex;overflow-x:auto;border-bottom:1px solid var(--line);background:#050505}
-#fkeys button{background:transparent;border:0;border-right:1px solid var(--line);padding:4px 10px;cursor:pointer;white-space:nowrap;color:var(--dim)}
-#fkeys button span{color:var(--amber);margin-right:6px}
-#fkeys button[aria-current="true"]{background:var(--sel);color:var(--txt)}
-#fkeys button:hover{color:var(--txt)}
+.main{min-width:0;display:flex;flex-direction:column}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);
+  padding:14px 28px;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:center}
+.search{position:relative;flex:1;max-width:620px}
+.search input{width:100%;padding:11px 14px 11px 40px;border:1px solid var(--line);border-radius:12px;background:var(--card);outline:none;box-shadow:var(--shadow)}
+.search input:focus{border-color:var(--acc)}
+.search > svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--muted)}
+.search kbd{position:absolute;right:10px;top:50%;transform:translateY(-50%);font:11px Inter;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:1px 6px}
+#results{position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 32px rgba(15,23,42,.14);overflow:hidden;display:none}
+#results .r{display:flex;align-items:center;gap:12px;padding:10px 14px;cursor:pointer}
+#results .r.on,#results .r:hover{background:var(--card2)}
+#results .r .nm{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#results .r .sub{color:var(--muted);font-size:12px}
+#results .empty{padding:14px;color:var(--muted)}
+.hdr-right{margin-left:auto;display:flex;gap:8px;align-items:center}
+.iconbtn{border:1px solid var(--line);background:var(--card);border-radius:10px;width:38px;height:38px;display:grid;place-items:center;cursor:pointer}
+.iconbtn svg{width:18px;height:18px}
 
-main{padding:8px 10px 60px;max-width:1500px}
-.bar{background:var(--amber);color:var(--bar-txt);font-weight:600;padding:2px 8px;display:flex;justify-content:space-between;gap:12px;margin-top:12px}
-.bar:first-child{margin-top:0}
-.bar small{font-weight:400}
-.sub{color:var(--dim);padding:4px 0 6px}
-.ctrl{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center;padding:6px 0;color:var(--dim)}
-.ctrl .opt{cursor:pointer;padding:0 5px;border:1px solid transparent;background:none;color:var(--dim)}
-.ctrl .opt[aria-pressed="true"]{color:var(--bar-txt);background:var(--amber)}
-.ctrl .opt:hover{border-color:var(--amber-dim)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:0 18px}
-.scroll{overflow-x:auto}
-table{border-collapse:collapse;width:100%;white-space:nowrap}
-th{color:var(--amber);font-weight:500;text-align:left;padding:3px 8px 3px 0;border-bottom:1px solid var(--line)}
-td{padding:1px 8px 1px 0;border-bottom:1px solid #111}
-th.n,td.n{text-align:right}
-tr.go{cursor:pointer}
-tr.go:hover td{background:var(--sel)}
-td.idx{color:var(--amber);width:1%;padding-right:10px}
-.t{color:var(--tick)}
-.up{color:var(--up)} .dn{color:var(--dn)} .dim{color:var(--dim)} .w{color:var(--warn)} .a{color:var(--amber)}
-.tag{display:inline-block;min-width:54px}
-.kv{display:grid;grid-template-columns:max-content 1fr;gap:1px 14px;padding:4px 0}
-.kv dt{color:var(--amber)} .kv dd{margin:0}
-.big{font-size:22px;line-height:1.1;font-weight:500}
-.hdr{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline;padding:6px 0 2px}
-.dist{letter-spacing:-1px}
-.note{border-left:2px solid var(--warn);padding:4px 10px;margin:8px 0;color:var(--txt);background:#0d0b00}
-svg text{font-family:inherit;font-size:11px;fill:var(--dim)}
-#status{position:fixed;left:0;right:0;bottom:0;background:#050505;border-top:1px solid var(--line);
-  padding:3px 10px calc(3px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;gap:12px;color:var(--dim);font-size:12px}
-#msg{color:var(--warn)}
-@media (max-width:640px){ #clock .opt-hide{display:none} .grid{grid-template-columns:1fr} }
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.page{padding:24px 28px 80px;max-width:1440px;width:100%}
+h1{font-size:24px;letter-spacing:-.02em;margin:0 0 4px}
+.lead{color:var(--muted);margin:0 0 20px}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:0 0 18px}
+.seg{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:3px;gap:2px;flex-wrap:wrap}
+.seg button{border:0;background:none;padding:5px 11px;border-radius:7px;cursor:pointer;color:var(--muted);font-weight:500;font-size:13px}
+.seg button[aria-pressed="true"]{background:var(--acc);color:var(--acc-ink)}
+.lbl{font-size:12px;color:var(--muted);margin-right:-8px}
+
+.grid{display:grid;gap:16px}
+.kpis{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.two{grid-template-columns:repeat(auto-fit,minmax(440px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);min-width:0}
+.card > .hd{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:16px 18px 10px}
+.card > .hd h2{font-size:15px;margin:0;letter-spacing:-.01em}
+.card > .hd small{color:var(--muted)}
+.card > .bd{padding:0 18px 16px}
+.kpi{padding:16px 18px}
+.kpi .k{color:var(--muted);font-size:12.5px;font-weight:500}
+.kpi .v{font-size:28px;font-weight:700;letter-spacing:-.02em;margin-top:4px}
+.kpi .s{font-size:12px;color:var(--muted)}
+.up{color:var(--up)} .dn{color:var(--dn)} .mut{color:var(--muted)} .warnc{color:var(--warn)}
+
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-size:12px;font-weight:600;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none;background:var(--card)}
+th.num,td.num{text-align:right}
+th[aria-sort]::after{content:" ↓";color:var(--acc)} th[aria-sort="ascending"]::after{content:" ↑"}
+td{padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:middle}
+tr:last-child td{border-bottom:0}
+tbody tr{cursor:pointer} tbody tr:hover td{background:var(--card2)}
+.tk{display:flex;flex-direction:column;line-height:1.25}
+.tk b{font-weight:600;max-width:260px;overflow:hidden;text-overflow:ellipsis}
+.tk span{font-size:12px;color:var(--muted)}
+.pill{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.p-up{background:var(--up-soft);color:var(--up)} .p-dn{background:var(--dn-soft);color:var(--dn)}
+.p-in{background:var(--info-soft);color:var(--info)} .p-nt{background:var(--card2);color:var(--muted);border:1px solid var(--line)}
+.p-wr{background:var(--warn-soft);color:var(--warn)}
+.mkt{font-size:11px;font-weight:700;letter-spacing:.03em;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:1px 5px}
+.rt{color:var(--muted)} .rt b{color:var(--ink);font-weight:600}
+.more{display:block;margin:10px auto 0;border:1px solid var(--line);background:var(--card);border-radius:10px;padding:7px 14px;cursor:pointer;color:var(--ink2)}
+.note{background:var(--warn-soft);color:var(--warn);border-radius:12px;padding:12px 14px;margin:0 0 16px;font-size:13px}
+.empty-state{padding:30px 18px;text-align:center;color:var(--muted)}
+
+/* scheda titolo */
+.co-head{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between;margin-bottom:18px}
+.co-head h1{font-size:28px}
+.co-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;color:var(--muted);font-size:13px}
+.co-meta code{font:12.5px ui-monospace,Menlo,monospace;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1px 6px;color:var(--ink2)}
+.px{text-align:right}
+.px .v{font-size:30px;font-weight:700;letter-spacing:-.02em}
+.btn{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:8px 14px;cursor:pointer;font-weight:500}
+.btn.on{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+.chart{width:100%;height:auto;display:block}
+.chart text{fill:var(--muted);font-size:11px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);padding:6px 18px 14px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.range{position:relative;height:8px;border-radius:99px;background:linear-gradient(90deg,var(--dn-soft),var(--card2),var(--up-soft));border:1px solid var(--line);margin:22px 4px 26px}
+.range .m{position:absolute;top:-6px;width:3px;height:18px;border-radius:2px;transform:translateX(-50%)}
+.rleg{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted);margin:-18px 0 8px}
+.rleg i{display:inline-block;width:3px;height:11px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.dist{display:flex;height:10px;border-radius:99px;overflow:hidden;background:var(--card2);margin:8px 0}
+.dist div{height:100%}
+.stat{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+.stat:last-child{border-bottom:0}
+.stat span:first-child{color:var(--muted)}
+
+.bottomnav{display:none}
+@media (max-width: 900px){
+  .app{grid-template-columns:1fr}
+  aside{display:none}
+  header{padding:10px 16px}
+  .page{padding:18px 16px 96px}
+  .two{grid-template-columns:1fr}
+  .bottomnav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:30;background:var(--card);border-top:1px solid var(--line);
+    padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));overflow-x:auto}
+  .bottomnav a{flex:1 0 64px;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10.5px;color:var(--muted);padding:4px}
+  .bottomnav a svg{width:20px;height:20px}
+  .bottomnav a[aria-current="page"]{color:var(--acc)}
+  .search kbd{display:none}
+  .hide-m{display:none}
+  .px{text-align:left}
+  .co-head{align-items:flex-start}
+}
 </style>
 </head>
 <body>
-<header id="top">
-  <div id="brand">ASNP</div>
-  <div id="cmdwrap">
-    <input id="cmd" autocomplete="off" spellcheck="false" aria-label="Comando: ticker e funzione, es. AAPL ANR" placeholder="AAPL US ANR · MOV · REV · HELP">
-    <div id="sugg" role="listbox"></div>
+<div class="app">
+  <aside>
+    <div class="brand"><div class="logo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-9"/><path d="M15 7h5v5"/></svg></div>
+      <div><b>Analyst Snapshot</b><small>Rating · Target · EPS</small></div></div>
+    <nav id="nav"></nav>
+    <div class="aside-foot"><div id="status"></div><button class="btn" id="themeBtn" type="button">Tema chiaro/scuro</button></div>
+  </aside>
+  <div class="main">
+    <header>
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Cerca per nome, ISIN o ticker…" aria-label="Cerca titolo">
+        <kbd>/</kbd>
+        <div id="results" role="listbox"></div>
+      </div>
+      <div class="hdr-right"><span class="mut hide-m" id="asof"></span></div>
+    </header>
+    <div class="page" id="page"><div class="empty-state">Caricamento dati…</div></div>
   </div>
-  <button id="go" title="Esegui (Invio)">&lt;GO&gt;</button>
-  <div id="clock"><span id="lampwrap"></span><span class="opt-hide">Dati al <b id="asof">—</b></span><span id="now"></span></div>
-</header>
-<nav id="fkeys"></nav>
-<main id="screen"><div class="sub">Caricamento dati…</div></main>
-<footer id="status"><span id="msg"></span><span>Rassegna di ciò che è successo. Non è una raccomandazione e non è un segnale.</span></footer>
+</div>
+<nav class="bottomnav" id="bnav"></nav>
 
 <script>
-(()=>{
 "use strict";
-const $=s=>document.querySelector(s);
-const esc=s=>s==null?"":String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const LS={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},
           set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
-const FUN=[["MOV","Movimenti"],["REV","Revisioni"],["ANR","Titolo"],["BRK","Broker"],["WL","Watchlist"],["HLTH","Pipeline"],["DB","Database"],["HELP","Aiuto"]];
-const CAT={DBL_UP:["2×UP",0,"up"],DBL_DN:["2×DN",0,"dn"],BH_UP:["B/H ▲",1,"up"],BH_DN:["B/H ▼",1,"dn"],
-           HS_UP:["H/S ▲",1,"up"],HS_DN:["H/S ▼",1,"dn"],UP:["UP",3,"up"],DN:["DN",3,"dn"],INIT:["INIT",4,"a"],
-           MAIN:["MAIN",5,"dim"],REIT:["REIT",5,"dim"],OTHER:["—",5,"dim"]};
-const GR={1:"Strong Buy",2:"Buy",3:"Hold",4:"Underperf.",5:"Sell"};
-let D,EV=[],BY={},ASOF,state={fn:"MOV",arg:null,rows:[]},hist=[];
+(function(){const t=LS.get("asnp.theme",null);if(t)document.documentElement.dataset.theme=t;})();
+document.getElementById("themeBtn").onclick=()=>{
+  const dark=document.documentElement.dataset.theme?document.documentElement.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;
+  const t=dark?"light":"dark";document.documentElement.dataset.theme=t;LS.set("asnp.theme",t);render();};
 
-/* ---------- data ---------- */
-async function load(){
-  let raw=window.__DATA__;
-  if(!raw){ try{ const r=await fetch("terminal.json",{cache:"no-cache"}); if(!r.ok)throw new Error("HTTP "+r.status); raw=await r.json(); }
-    catch(e){ $("#screen").innerHTML=`<div class="bar">ERRORE DATI</div><p>terminal.json non raggiungibile (${esc(e.message)}). Il sito si pubblica dopo il primo run di build_db.py su GitHub Actions.</p>`; return; } }
-  D=raw; ASOF=D.meta.as_of;
-  EV=D.events.map(r=>({t:r[0],d:r[1],b:D.brokers[r[2]]??"?",a:r[3]||"",rf:r[4],rt:r[5],fn:r[6],tn:r[7],fs:r[8],bf:r[9]}));
-  EV.forEach(e=>{e.c=cat(e);(BY[e.t]=BY[e.t]||[]).push(e)});
-  $("#asof").textContent=ASOF||"—"; lamp(); tick(); setInterval(tick,30000);
-  keys(); const h=decodeURIComponent(location.hash.slice(1)); run(h||"MOV",true);
-}
+const IC={
+ home:'<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/>',
+ moves:'<path d="M7 17V7"/><path d="m4 10 3-3 3 3"/><path d="M17 7v10"/><path d="m14 14 3 3 3-3"/>',
+ target:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".6"/>',
+ rev:'<path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15l3-4 3 2 5-6"/>',
+ broker:'<rect x="4" y="7" width="16" height="13" rx="2"/><path d="M9 7V5h6v2"/>',
+ star:'<path d="m12 4 2.5 5 5.5.8-4 3.9.9 5.5L12 16.7 7.1 19.2l.9-5.5-4-3.9 5.5-.8z"/>',
+ db:'<ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/>'};
+const svg=n=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${IC[n]}</svg>`;
+const PAGES=[["home","Panoramica","home"],["moves","Movimenti","moves"],["targets","Target price","target"],
+  ["revisions","Revisioni","rev"],["brokers","Broker","broker"],["watchlist","Watchlist","star"],["pipeline","Dati","db"]];
+const MKTS=[["ALL","Tutti"],["US","USA"],["UK","UK"],["IT","Italia"],["DE","Germania"],["FR","Francia"],["EU50","Euro Stoxx 50"]];
+const MKT_LBL={US:"USA",UK:"UK",IT:"IT",DE:"DE",FR:"FR",NL:"NL",ES:"ES",BE:"BE",FI:"FI",IE:"IE",PT:"PT"};
+const IDX_LBL={SP500:"S&P 500",UKX:"FTSE 100",MCX:"FTSE 250",FTSEMIB:"FTSE MIB",DAX:"DAX 40",CAC:"CAC 40",SX5E:"Euro Stoxx 50"};
+const WINS=[[1,"1G"],[5,"5G"],[20,"1M"],[60,"3M"],[250,"1A"]];
+const RLBL={1:"Strong Buy",2:"Buy",3:"Hold",4:"Underperform",5:"Sell"};
+
+let D=null, U={}, EV=[], BR=[], ASOF=null, IDX=[];
+const st={mkt:LS.get("asnp.mkt","ALL"),win:LS.get("asnp.win",5),type:"REL",sort:{},limit:{}};
+
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const nf=(v,d=2)=>v==null||isNaN(v)?"–":Number(v).toLocaleString("it-IT",{minimumFractionDigits:d,maximumFractionDigits:d});
+const pct=(v,d=1)=>v==null||!isFinite(v)?"–":(v>0?"+":"")+nf(v,d)+"%";
+const pcls=v=>v==null||!isFinite(v)?"mut":v>0?"up":v<0?"dn":"mut";
+const fd=s=>{if(!s)return"–";const[y,m,d]=s.split("-");return `${d}/${m}/${y.slice(2)}`};
+const norm=s=>String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+const wl=()=>new Set(LS.get("asnp.wl",[]));
+function bdBack(iso,n){const d=new Date(iso+"T12:00:00Z");let k=0;while(k<n){d.setUTCDate(d.getUTCDate()-1);const w=d.getUTCDay();if(w&&w<6)k++;}return d.toISOString().slice(0,10);}
+
+function info(t){const u=U[t]||[];return{t,name:u[0]||u[6]||t,panel:u[1]||"",idx:(u[2]||"").split(";").filter(Boolean),isin:u[3]||"",cur:u[4]||"",lname:u[6]||"",exch:u[7]||""};}
+function inMkt(t){if(st.mkt==="ALL")return true;const i=info(t);return st.mkt==="EU50"?i.idx.includes("SX5E"):i.panel===st.mkt;}
 function cat(e){const f=e.fn,t=e.tn;
   if(f!=null&&t!=null&&Math.abs(t-f)>=2)return t<f?"DBL_UP":"DBL_DN";
-  if(f!=null&&t!=null){ if(f<=2&&t>=3)return"BH_DN"; if(f>=3&&t<=2)return"BH_UP"; if(f<=3&&t>=4)return"HS_DN"; if(f>=4&&t<=3)return"HS_UP"; }
-  if(e.a==="up")return"UP"; if(e.a==="down")return"DN"; if(e.a==="init")return"INIT"; if(e.a==="main")return"MAIN"; if(e.a==="reit")return"REIT"; return"OTHER";}
-const dir=e=>CAT[e.c][2]==="up"?1:CAT[e.c][2]==="dn"?-1:0;
-function bdBack(iso,n){const d=new Date(iso+"T00:00:00Z");while(n>0){d.setUTCDate(d.getUTCDate()-1);const w=d.getUTCDay();if(w&&w<6)n--;}return d.toISOString().slice(0,10)}
-function daysBetween(a,b){return Math.round((new Date(b)-new Date(a))/864e5)}
-const panel=t=>(D.universe[t]||["?"])[0];
-function lamp(){const s=D.snapshots.at(-1)||[];const n=new Date();let d=new Date(Date.UTC(n.getUTCFullYear(),n.getUTCMonth(),n.getUTCDate()));
-  const wk=x=>{const w=x.getUTCDay();return w>0&&w<6};
-  if(!(wk(d)&&n.getUTCHours()>=7)){do{d.setUTCDate(d.getUTCDate()-1)}while(!wk(d))}
-  const expected=d.toISOString().slice(0,10),stale=!ASOF||ASOF<expected,bad=(s[2]||0)>0;
-  const col=stale?"var(--dn)":bad?"var(--warn)":"var(--up)";
-  $("#lampwrap").innerHTML=`<span class="lamp" style="background:${col}"></span>${stale?"Dati fermi al "+(ASOF||"—"):bad?"Run con errori":"Pipeline ok"}`;}
-function tick(){const d=new Date();$("#now").textContent=d.toLocaleString("it-IT",{weekday:"short",day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"})}
-function msg(s){$("#msg").textContent=s||""}
+  if(f!=null&&t!=null){if(f<=2&&t>=3)return"BH_DN";if(f>=3&&t<=2)return"BH_UP";if(f<=3&&t>=4)return"HS_DN";if(f>=4&&t<=3)return"HS_UP";}
+  if(e.a==="up")return"UP";if(e.a==="down")return"DN";if(e.a==="init")return"INIT";return"OTHER";}
+const CAT={DBL_UP:["Doppio upgrade","p-up"],DBL_DN:["Doppio downgrade","p-dn"],BH_UP:["Upgrade a Buy","p-up"],BH_DN:["Downgrade da Buy","p-dn"],
+  HS_UP:["Upgrade da Sell","p-up"],HS_DN:["Downgrade a Sell","p-dn"],UP:["Upgrade","p-up"],DN:["Downgrade","p-dn"],INIT:["Inizio copertura","p-in"],OTHER:["Conferma","p-nt"]};
+const RANK={DBL_UP:0,DBL_DN:0,BH_UP:1,BH_DN:1,HS_UP:1,HS_DN:1,UP:2,DN:2,INIT:3,OTHER:4};
+function ptChg(e){return e.pf&&e.pt?100*(e.pt/e.pf-1):null;}
+function lastPx(t){return (D.last||{})[t]||null;}
+function upNow(e){const l=lastPx(e.t);return e.pt&&l&&l[1]?100*(e.pt/l[1]-1):null;}
+function upEv(e){return e.pt&&e.cx?100*(e.pt/e.cx-1):null;}
 
-/* ---------- command line ---------- */
-function keys(){
-  $("#fkeys").innerHTML=FUN.map(([f,l],i)=>`<button data-f="${f}"><span>F${i+1}</span>${f} ${l}</button>`).join("");
-  $("#fkeys").onclick=e=>{const b=e.target.closest("button");if(b)run(b.dataset.f==="ANR"&&state.arg&&state.fn==="ANR"?"ANR "+state.arg:b.dataset.f)};
-  const cmd=$("#cmd"),sg=$("#sugg");let sel=-1;
-  cmd.addEventListener("input",()=>{const v=cmd.value.trim().toUpperCase();sel=-1;
-    if(v.length<1||/\s/.test(v)||/^\d+$/.test(v)){sg.style.display="none";return}
-    const tk=Object.keys(D.universe).filter(t=>t.startsWith(v)||t.replace(".L","")===v).slice(0,8);
-    const fx=FUN.filter(f=>f[0].startsWith(v)).map(f=>f[0]);
-    const items=[...fx.map(f=>[f,FUN.find(x=>x[0]===f)[1]]),...tk.map(t=>[t+" ANR",`${D.universe[t][0]} ${D.universe[t][1]} · ${(BY[t]||[]).length} eventi`])];
-    sg.innerHTML=items.map(([c,l],i)=>`<div data-c="${esc(c)}" role="option"><span class="w">${esc(c)}</span> <span class="dim">${esc(l)}</span></div>`).join("");
-    sg.style.display=items.length?"block":"none";});
-  sg.onclick=e=>{const d=e.target.closest("div[data-c]");if(d){run(d.dataset.c);}};
-  cmd.addEventListener("keydown",e=>{const it=[...sg.querySelectorAll("div[data-c]")];
-    if(e.key==="ArrowDown"&&it.length){e.preventDefault();sel=(sel+1)%it.length}
-    else if(e.key==="ArrowUp"&&it.length){e.preventDefault();sel=(sel-1+it.length)%it.length}
-    else if(e.key==="Enter"){e.preventDefault();run(sel>=0&&it[sel]?it[sel].dataset.c:cmd.value);return}
-    else if(e.key==="Escape"){cmd.value="";sg.style.display="none";return}
-    else return;
-    it.forEach((d,i)=>d.classList.toggle("on",i===sel));});
-  $("#go").onclick=()=>run(cmd.value);
-  document.addEventListener("keydown",e=>{
-    if(/^F[1-8]$/.test(e.key)){e.preventDefault();run(FUN[+e.key.slice(1)-1][0]);return}
-    if(e.key==="Escape"&&document.activeElement!==cmd){back();return}
-    if(document.activeElement===cmd||e.ctrlKey||e.metaKey||e.altKey)return;
-    if(e.key.length===1&&/[\w.]/.test(e.key)){cmd.focus()}});
-  $("#screen").addEventListener("click",e=>{const g=e.target.closest("[data-go]");if(g)run(g.dataset.go);
-    const o=e.target.closest("[data-set]");if(o){const[k,v]=o.dataset.set.split("=");opts[k]=isNaN(+v)?v:+v;LS.set("asnp.opts",opts);render()}});
-}
-function back(){hist.pop();const p=hist.pop();if(p)run(p)}
-function norm(tk){tk=tk.toUpperCase();if(D.universe[tk])return tk;if(D.universe[tk+".L"])return tk+".L";return null}
-function run(raw,init){
-  $("#sugg").style.display="none";const cmd=$("#cmd");
-  let s=(raw||"").toUpperCase().replace(/<GO>/g,"").replace(/\bEQUITY\b/g,"").trim().replace(/\s+/g," ");
-  if(!s)return;
-  if(/^\d+$/.test(s)){const r=state.rows[+s-1];if(r){s=r}else{msg(`Riga ${s} non presente in questa schermata.`);cmd.value="";return}}
-  let p=s.split(" "),fn=null,arg=null;
-  const fi=p.findIndex(x=>FUN.some(f=>f[0]===x)||x==="WL+"||x==="WL-");
-  if(fi>=0){fn=p[fi];p.splice(fi,1)}
-  if(p.length){ if(fn==="BRK"){arg=p.join(" ")} else {
-    let t=p[0];if(p[1]==="LN")t=t+".L";const n=norm(t);if(!n){msg(`Ticker ${p[0]} non nell'universo.`);return}arg=n;if(!fn)fn="ANR"} }
-  if(fn==="WL+"||fn==="WL-"){ if(!arg){msg("Serve un ticker: es. AAPL WL+");return}
-    const wl=new Set(LS.get("asnp.wl",[]));fn==="WL+"?wl.add(arg):wl.delete(arg);LS.set("asnp.wl",[...wl]);msg(`${arg} ${fn==="WL+"?"aggiunto alla":"tolto dalla"} watchlist.`);fn="ANR"}
-  if(fn==="ANR"&&!arg){arg=state.fn==="ANR"?state.arg:null;if(!arg){msg("ANR richiede un ticker: es. MSFT ANR");fn="HELP"}}
-  state={fn,arg,rows:[]};const key=(arg?arg+" ":"")+fn;hist.push(key);
-  if(!init)history.replaceState(null,"","#"+encodeURIComponent(key));
-  cmd.value="";if(!init)msg("");render();window.scrollTo(0,0);
-}
-let opts=Object.assign({win:1,pan:"ALL",main:0,fy:1,minr:3,bwin:90},LS.get("asnp.opts",{}));
-function render(){
-  document.querySelectorAll("#fkeys button").forEach(b=>b.setAttribute("aria-current",b.dataset.f===state.fn));
-  state.rows=[];const f={MOV,REV,ANR,BRK,WL,HLTH,DB,HELP}[state.fn]||HELP;$("#screen").innerHTML=f(state.arg);}
-const R=go=>{state.rows.push(go);return state.rows.length};
-const optBtns=(k,list)=>list.map(([v,l])=>`<button class="opt" data-set="${k}=${v}" aria-pressed="${opts[k]==v}">${l}</button>`).join("");
-const rt=(n,txt)=>n==null?`<span class="dim">${esc(txt||"n.m.")}</span>`:`${esc(txt||GR[n])}<span class="dim">(${n})</span>`;
-const trans=e=>`${e.rf?rt(e.fn,e.rf):'<span class="dim">—</span>'} <span class="a">→</span> ${rt(e.tn,e.rt)}`;
-const catTag=e=>`<span class="tag ${CAT[e.c][2]}">${CAT[e.c][0]}</span>`;
-const f2=x=>x==null||isNaN(x)?"—":(x>0?"+":"")+x.toFixed(2);
-const pct=x=>x==null?"—":(x>0?"+":"")+Math.round(x*100)+"%";
-const lag=e=>{const l=daysBetween(e.d,e.fs);return e.bf?'<span class="dim">carico</span>':l<=1?`<span class="up">${l}g</span>`:`<span class="w">${l}g</span>`};
-const panOk=t=>opts.pan==="ALL"||panel(t)===opts.pan;
-
-/* ---------- MOV: movimenti rilevanti ---------- */
-function MOV(){
-  const cut=bdBack(ASOF,opts.win),wl=new Set(LS.get("asnp.wl",[]));
-  let ev=EV.filter(e=>e.d>=cut&&panOk(e.t));
-  const cnt=k=>ev.filter(e=>k.includes(e.c)).length;
-  const nUp=ev.filter(e=>dir(e)>0).length,nDn=ev.filter(e=>dir(e)<0).length;
-  const clu={};ev.forEach(e=>{const d=dir(e);if(!d)return;const k=e.t+"|"+d;(clu[k]=clu[k]||{t:e.t,d,b:new Set()}).b.add(e.b)});
-  const clusters=Object.values(clu).filter(c=>c.b.size>=2).sort((a,b)=>b.b.size-a.b.size);
-  const inClu=new Set(clusters.map(c=>c.t+"|"+c.d));
-  const shown=ev.filter(e=>opts.main||CAT[e.c][1]<5).map(e=>({...e,p:CAT[e.c][1]===3&&inClu.has(e.t+"|"+dir(e))?2:CAT[e.c][1]}))
-    .sort((a,b)=>a.p-b.p||b.d.localeCompare(a.d)||a.t.localeCompare(b.t));
-  const row=e=>`<tr class="go" data-go="${e.t} ANR"><td class="idx">${R(e.t+" ANR")})</td><td>${catTag(e)}</td><td>${e.d}</td><td class="t">${e.t}</td><td class="dim">${panel(e.t)}</td><td>${esc(e.b)}</td><td>${trans(e)}</td><td class="n">${lag(e)}</td></tr>`;
-  const head=`<tr><th></th><th>Tipo</th><th>Data</th><th>Ticker</th><th>Mkt</th><th>Broker</th><th>Rating da → a</th><th class="n" title="Giorni tra evento e primo snapshot che lo vede">Visto</th></tr>`;
-  const wlRows=shown.filter(e=>wl.has(e.t)),rest=shown.filter(e=>!wl.has(e.t));
-  return `<div class="bar"><span>MOV · Movimenti rilevanti</span><small>dal ${cut} al ${ASOF}</small></div>
-  <div class="ctrl">Finestra ${optBtns("win",[[1,"1G"],[5,"5G"],[20,"20G"],[60,"60G"]])} Mercato ${optBtns("pan",[["ALL","Tutti"],["US","US"],["UK","UK"]])} Conferme/reiterazioni ${optBtns("main",[[0,"Nascoste"],[1,"Visibili"]])}</div>
-  <div class="hdr"><span><span class="big up">${nUp}</span> upgrade</span><span><span class="big dn">${nDn}</span> downgrade</span><span><span class="big a">${cnt(["INIT"])}</span> inizi copertura</span><span><span class="big dim">${cnt(["MAIN","REIT","OTHER"])}</span> conferme</span><span><span class="big">${new Set(ev.map(e=>e.t)).size}</span> titoli toccati</span></div>
-  <div class="sub">Ordine: doppi salti, poi attraversamenti di soglia buy/hold e hold/sell, poi titoli con più broker nella stessa direzione, poi il resto. Giorni lavorativi, date senza orario.</div>
-  ${wl.size?`<div class="bar"><span>Watchlist</span><small>${wlRows.length} eventi</small></div><div class="scroll"><table>${head}${wlRows.map(row).join("")||'<tr><td colspan="8" class="dim">Nessun movimento sui titoli in watchlist in questa finestra.</td></tr>'}</table></div>`:""}
-  ${clusters.length?`<div class="bar"><span>Più broker nella stessa direzione</span><small>${clusters.length} titoli</small></div><div class="scroll"><table><tr><th></th><th>Ticker</th><th>Mkt</th><th>Direzione</th><th class="n">Broker</th><th>Chi</th></tr>${clusters.map(c=>`<tr class="go" data-go="${c.t} ANR"><td class="idx">${R(c.t+" ANR")})</td><td class="t">${c.t}</td><td class="dim">${panel(c.t)}</td><td class="${c.d>0?"up":"dn"}">${c.d>0?"▲ upgrade":"▼ downgrade"}</td><td class="n">${c.b.size}</td><td>${esc([...c.b].join(", "))}</td></tr>`).join("")}</table></div>`:""}
-  <div class="bar"><span>${wl.size?"Resto dell'universo":"Tutti gli eventi"}</span><small>${rest.length} eventi</small></div>
-  <div class="scroll"><table>${head}${rest.map(row).join("")||'<tr><td colspan="8" class="dim">Nessun evento in questa finestra. Allarga a 5G o mostra le conferme.</td></tr>'}</table></div>`;
+async function load(){
+  let raw;
+  try{const r=await fetch("terminal.json",{cache:"no-cache"});if(!r.ok)throw new Error("HTTP "+r.status);raw=await r.json();}
+  catch(err){document.getElementById("page").innerHTML=`<div class="card empty-state">Dati non disponibili (${esc(err.message)}). Il file terminal.json lo pubblica il workflow 3-terminale.</div>`;return;}
+  D=raw;U=D.universe||{};BR=D.brokers||[];ASOF=D.meta.as_of;
+  EV=D.events.map(r=>({t:r[0],d:r[1],b:BR[r[2]]||"—",a:r[3],rf:r[4],rt:r[5],fn:r[6],tn:r[7],fs:r[8],bf:r[9],pf:r[10],pt:r[11],pa:r[12],cx:r[13]}));
+  EV.forEach(e=>e.c=cat(e));
+  IDX=Object.keys(U).map(t=>{const i=info(t);const base=t.split(".")[0];
+    return{t,i,k:[norm(t),norm(base)],n:norm(i.name+" "+i.lname),isin:norm(i.isin)}});
+  document.getElementById("asof").textContent=`Dati al ${fd(ASOF)} · aggiornato ${D.meta.built_at}`;
+  const last=(D.snapshots||[]).slice(-1)[0];
+  document.getElementById("status").innerHTML=`<span><span class="dot" style="background:${last&&!last[2]?"var(--up)":"var(--warn)"}"></span>Pipeline ${last&&!last[2]?"ok":"da controllare"}</span><span>Snapshot ${fd(ASOF)}</span>`;
+  addEventListener("hashchange",render);render();
 }
 
-/* ---------- REV: rotazione revisioni ---------- */
-function revIndex(){const by={};D.revisions.forEach(([t,a,fy,u,d,n])=>{if(fy!==opts.fy)return;(by[t]=by[t]||[]).push({a,u,d,n})});return by}
-function breadth(r){const base=r.n??((r.u||0)+(r.d||0));return base>0?((r.u||0)-(r.d||0))/base:null}
-function REV(){
-  const by=revIndex(),snaps=[...new Set(D.revisions.map(r=>r[1]))].sort(),hasPrev=snaps.length>1;
-  const rows=Object.entries(by).filter(([t])=>panOk(t)).map(([t,l])=>{l.sort((a,b)=>a.a.localeCompare(b.a));const c=l.at(-1),p=l.at(-2);
-    const b=breadth(c),bp=p?breadth(p):null;return{t,u:c.u||0,d:c.d||0,n:(c.u||0)+(c.d||0),b,db:b!=null&&bp!=null?b-bp:null,ex:c.n}})
-    .filter(r=>r.n>=opts.minr&&r.b!=null);
-  const tbl=(list)=>`<div class="scroll"><table><tr><th></th><th>Ticker</th><th>Mkt</th><th class="n">▲ 30g</th><th class="n">▼ 30g</th><th class="n">Netto</th><th class="n">Breadth</th><th class="n">Δ vs prec.</th></tr>${list.map(r=>`<tr class="go" data-go="${r.t} ANR"><td class="idx">${R(r.t+" ANR")})</td><td class="t">${r.t}</td><td class="dim">${panel(r.t)}</td><td class="n up">${r.u}</td><td class="n dn">${r.d}</td><td class="n">${r.u-r.d>0?"+":""}${r.u-r.d}</td><td class="n ${r.b>0?"up":r.b<0?"dn":""}">${pct(r.b)}</td><td class="n ${r.db>0?"up":r.db<0?"dn":"dim"}">${r.db==null?"—":pct(r.db)}</td></tr>`).join("")}</table></div>`;
-  let body;
-  if(hasPrev){const m=rows.filter(r=>r.db!=null);
-    body=`<div class="grid"><div><div class="bar"><span>Breadth in salita</span><small>vs ${snaps.at(-2)}</small></div>${tbl(m.filter(r=>r.db>0).sort((a,b)=>b.db-a.db).slice(0,30))}</div>
-          <div><div class="bar"><span>Breadth in discesa</span><small>vs ${snaps.at(-2)}</small></div>${tbl(m.filter(r=>r.db<0).sort((a,b)=>a.db-b.db).slice(0,30))}</div></div>`;}
-  else body=`<div class="note">Un solo snapshot di revisioni nel database (${snaps[0]||"nessuno"}). La rotazione è un confronto tra due notti: compare dal prossimo run. Intanto qui sotto ci sono i livelli, non le variazioni.</div>
-    <div class="grid"><div><div class="bar"><span>Breadth più positiva</span><small>livello</small></div>${tbl([...rows].sort((a,b)=>b.b-a.b||b.n-a.n).slice(0,30))}</div>
-    <div><div class="bar"><span>Breadth più negativa</span><small>livello</small></div>${tbl([...rows].sort((a,b)=>a.b-b.b||b.n-a.n).slice(0,30))}</div></div>`;
-  const base=D.revisions.some(r=>r[5]!=null)?"numero di stime":"numero di revisioni (n_est non ancora raccolto)";
-  return `<div class="bar"><span>REV · Rotazione delle revisioni EPS</span><small>${snaps.length} snapshot · ultimo ${snaps.at(-1)||"—"}</small></div>
-  <div class="ctrl">Esercizio ${optBtns("fy",[[1,"FY corrente"],[2,"FY successivo"]])} Mercato ${optBtns("pan",[["ALL","Tutti"],["US","US"],["UK","UK"]])} Minimo revisioni ${optBtns("minr",[[1,"1"],[3,"3"],[5,"5"],[10,"10"]])}</div>
-  <div class="sub">Breadth = (revisioni al rialzo − al ribasso) / ${base}, ultimi 30 giorni. ${rows.length} titoli sopra il filtro.</div>${body}`;
-}
+/* ---------- ricerca ---------- */
+const qi=document.getElementById("q"),res=document.getElementById("results");let hits=[],hi=0;
+function search(q){q=norm(q.trim());if(!q)return[];const out=[];
+  for(const x of IDX){let s=0;
+    if(x.k[0]===q||x.k[1]===q)s=100;else if(x.isin&&x.isin===q)s=95;else if(x.k[0].startsWith(q)||x.k[1].startsWith(q))s=70;
+    else if(x.isin&&q.length>=4&&x.isin.startsWith(q))s=65;else if(x.n.startsWith(q))s=60;else if((" "+x.n).includes(" "+q))s=50;else if(x.n.includes(q))s=40;
+    if(s)out.push([s,x]);}
+  return out.sort((a,b)=>b[0]-a[0]||a[1].i.name.localeCompare(b[1].i.name)).slice(0,10).map(a=>a[1]);}
+function showRes(){if(!qi.value.trim()){res.style.display="none";return;}
+  res.style.display="block";
+  res.innerHTML=hits.length?hits.map((x,k)=>{const l=lastPx(x.t);return `<div class="r${k===hi?" on":""}" data-t="${esc(x.t)}" role="option">
+    <span class="mkt">${esc(MKT_LBL[x.i.panel]||x.i.panel)}</span>
+    <div style="min-width:0;flex:1"><div class="nm">${esc(x.i.name)}</div><div class="sub">${esc(x.t)}${x.i.isin?" · "+esc(x.i.isin):""}</div></div>
+    ${l?`<span class="mut">${nf(l[1])}</span>`:""}</div>`}).join(""):`<div class="empty">Nessun titolo trovato. Prova con il nome, l'ISIN (es. IT0003132476) o il ticker.</div>`;}
+qi.addEventListener("input",()=>{hits=search(qi.value);hi=0;showRes();});
+qi.addEventListener("keydown",e=>{
+  if(e.key==="ArrowDown"){hi=Math.min(hi+1,hits.length-1);showRes();e.preventDefault();}
+  else if(e.key==="ArrowUp"){hi=Math.max(hi-1,0);showRes();e.preventDefault();}
+  else if(e.key==="Enter"&&hits[hi]){go("t/"+hits[hi].t);}
+  else if(e.key==="Escape"){qi.value="";showRes();qi.blur();}});
+res.addEventListener("mousedown",e=>{const r=e.target.closest(".r");if(r){e.preventDefault();go("t/"+r.dataset.t);}});
+qi.addEventListener("blur",()=>setTimeout(()=>res.style.display="none",120));
+qi.addEventListener("focus",()=>{if(qi.value.trim())showRes();});
+addEventListener("keydown",e=>{if(e.key==="/"&&document.activeElement!==qi){e.preventDefault();qi.focus();}});
+function go(h){qi.value="";res.style.display="none";qi.blur();location.hash="#/"+h;}
 
-/* ---------- ANR: pagina titolo ---------- */
-function consensusAt(ev,iso){const from=new Date(iso);from.setUTCDate(from.getUTCDate()-365);const f=from.toISOString().slice(0,10);
-  const last={};ev.forEach(e=>{if(e.tn==null||e.d>iso||e.d<f)return;if(!last[e.b]||e.d>last[e.b].d)last[e.b]=e});
-  const v=Object.values(last);return v.length?{m:v.reduce((s,e)=>s+e.tn,0)/v.length,n:v.length,cur:v}:null}
-function chart(ev){
-  if(!ev.length)return"";const pts=[];const end=new Date(ASOF+"T00:00:00Z");
-  for(let i=24;i>=0;i--){const d=new Date(Date.UTC(end.getUTCFullYear(),end.getUTCMonth()-i+1,0));const iso=i===0?ASOF:d.toISOString().slice(0,10);const c=consensusAt(ev,iso);pts.push({iso,c})}
-  while(pts.length>6&&!pts[0].c)pts.shift();
-  const W=720,H=150,L=44,T=10,B=22,ok=pts.filter(p=>p.c);if(ok.length<2)return"";const SH={1:"S.Buy",2:"Buy",3:"Hold",4:"Under",5:"Sell"};
-  const x=i=>L+i*(W-L-8)/(pts.length-1),y=v=>T+(v-1)*(H-T-B)/4;
-  let dpath="",dots="";pts.forEach((p,i)=>{if(!p.c)return;dpath+=(dpath?"L":"M")+x(i).toFixed(1)+","+y(p.c.m).toFixed(1);});
-  const grid=[1,2,3,4,5].map(v=>`<line x1="${L}" x2="${W-8}" y1="${y(v)}" y2="${y(v)}" stroke="#1e1e1e"/><text x="4" y="${y(v)+4}">${SH[v]}</text>`).join("");
-  const lbl=pts.map((p,i)=>i%Math.max(1,Math.ceil(pts.length/6))===0||i===pts.length-1?`<text x="${x(i)}" y="${H-6}" text-anchor="${i===pts.length-1?"end":"middle"}">${p.iso.slice(2,7)}</text>`:"").join("");
-  const bars=pts.map((p,i)=>p.c?`<rect x="${x(i)-3}" y="${H-B-2-Math.min(p.c.n,30)*1.2}" width="6" height="${Math.min(p.c.n,30)*1.2}" fill="#3a2a05"/>`:"").join("");
-  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px;display:block" role="img" aria-label="Rating medio di consenso negli ultimi 24 mesi">${grid}${bars}<path d="${dpath}" fill="none" stroke="var(--amber)" stroke-width="1.6"/>${lbl}</svg>`;
-}
-function ANR(t){
-  const ev=(BY[t]||[]).slice().sort((a,b)=>b.d.localeCompare(a.d)),[pn,tier]=D.universe[t]||["?","?"];
-  const c=consensusAt(ev,ASOF),wl=new Set(LS.get("asnp.wl",[]));
-  const rv={};D.revisions.forEach(([tt,a,fy,u,d,n])=>{if(tt===t&&(!rv[fy]||a>rv[fy].a))rv[fy]={a,u,d,n}});
-  const nb=c?c.cur.filter(e=>e.tn<=2).length:0,nh=c?c.cur.filter(e=>e.tn===3).length:0,ns=c?c.cur.filter(e=>e.tn>=4).length:0;
-  const blocks=(n,cls)=>`<span class="${cls} dist">${"█".repeat(n)}</span>`;
-  const cur=c?c.cur.slice().sort((a,b)=>a.tn-b.tn||b.d.localeCompare(a.d)):[];
-  const prevOf=e=>ev.find(x=>x.b===e.b&&x.d<e.d&&x.tn!=null);
-  return `<div class="bar"><span>${t} ${pn==="UK"?"LN":"US"} Equity · ANR</span><small>${pn} ${tier} · ${ev.length} eventi nel database</small></div>
-  <div class="hdr"><span class="big t">${t}</span>
-    <span>Consenso <span class="big ${c&&c.m<=2.5?"up":c&&c.m>=3.5?"dn":"a"}">${c?c.m.toFixed(2):"—"}</span> <span class="dim">(1 Strong Buy · 5 Sell)</span></span>
-    <span>${c?c.n:0} broker attivi 12m</span>
-    <button class="opt" style="border:1px solid var(--amber-dim);background:none;cursor:pointer;color:var(--amber)" data-go="${t} ${wl.has(t)?"WL-":"WL+"}">${wl.has(t)?"Togli dalla watchlist":"Aggiungi alla watchlist"}</button></div>
-  ${ev.length?"":`<div class="note">Nessun rating per ${t} nella fonte. yfinance copre poco i titoli UK: su questo mercato restano utili le revisioni.</div>`}
-  <div class="grid"><div>
-    <div class="bar"><span>Distribuzione</span><small>ultimi 12 mesi</small></div>
-    <dl class="kv"><dt>Buy</dt><dd>${blocks(nb,"up")} ${nb}</dd><dt>Hold</dt><dd>${blocks(nh,"a")} ${nh}</dd><dt>Sell</dt><dd>${blocks(ns,"dn")} ${ns}</dd></dl>
-    <div class="bar"><span>Revisioni EPS 30g</span><small>${rv[1]?.a||"—"}</small></div>
-    <table><tr><th>Esercizio</th><th class="n">▲</th><th class="n">▼</th><th class="n">Breadth</th></tr>
-    ${[1,2].map(fy=>rv[fy]?`<tr><td>${fy===1?"FY corrente":"FY successivo"}</td><td class="n up">${rv[fy].u??"—"}</td><td class="n dn">${rv[fy].d??"—"}</td><td class="n">${pct(breadth(rv[fy]))}</td></tr>`:`<tr><td>${fy===1?"FY corrente":"FY successivo"}</td><td colspan="3" class="dim">nessun dato</td></tr>`).join("")}</table>
-  </div><div>
-    <div class="bar"><span>Consenso nel tempo</span><small>fine mese · barre = n. broker</small></div>${chart(ev)||'<div class="sub">Storico insufficiente per il grafico.</div>'}
-    <div class="sub">Il primo carico contiene al massimo gli ultimi 40 eventi per titolo: la parte vecchia della curva può sottostimare i broker.</div>
-  </div></div>
-  <div class="bar"><span>Rating correnti per broker</span><small>${cur.length}</small></div>
-  <div class="scroll"><table><tr><th></th><th>Broker</th><th>Rating</th><th>Data</th><th>Precedente</th><th>Azione</th></tr>
-  ${cur.map(e=>{const p=prevOf(e);return`<tr class="go" data-go="BRK ${esc(e.b)}"><td class="idx">${R("BRK "+e.b)})</td><td>${esc(e.b)}</td><td class="${e.tn<=2?"up":e.tn>=4?"dn":"a"}">${esc(e.rt)} <span class="dim">(${e.tn})</span></td><td>${e.d}</td><td class="dim">${p?esc(p.rt)+" · "+p.d:"—"}</td><td>${catTag(e)}</td></tr>`}).join("")||'<tr><td colspan="6" class="dim">Nessun broker attivo negli ultimi 12 mesi.</td></tr>'}</table></div>
-  <div class="bar"><span>Storico eventi</span><small>${ev.length}</small></div>
-  <div class="scroll"><table><tr><th>Data</th><th>Tipo</th><th>Broker</th><th>Rating da → a</th><th>Primo snapshot</th></tr>
-  ${ev.map(e=>`<tr><td>${e.d}</td><td>${catTag(e)}</td><td>${esc(e.b)}</td><td>${trans(e)}</td><td class="dim">${e.fs}${e.bf?" (carico iniziale)":""}</td></tr>`).join("")}</table></div>`;
-}
+/* ---------- componenti ---------- */
+function seg(key,opts,label){return `${label?`<span class="lbl">${label}</span>`:""}<div class="seg">${opts.map(([v,l])=>`<button type="button" data-set="${key}" data-v="${v}" aria-pressed="${String(st[key])===String(v)}">${l}</button>`).join("")}</div>`;}
+function coCell(t){const i=info(t);return `<div class="tk"><b title="${esc(i.name)}">${esc(i.name)}</b><span>${esc(t)} · ${esc(MKT_LBL[i.panel]||i.panel)}</span></div>`;}
+function rating(e){const f=e.rf?`${esc(e.rf)} → `:"";return `<span class="rt">${f}<b>${esc(e.rt||"–")}</b></span>`;}
+function ptCell(e){if(!e.pt)return'<span class="mut">–</span>';const c=ptChg(e);
+  return `${e.pf?`<span class="mut">${nf(e.pf)} → </span>`:""}<b>${nf(e.pt)}</b>${c!=null?` <span class="${pcls(c)}" style="font-size:12px">${pct(c)}</span>`:""}`;}
+/* tabella ordinabile: cols=[{k,l,v(row)->valore ordinamento,h(row)->html,num}] */
+function table(id,cols,rows,{def,desc=true,limit=100,rowAttr}={}){
+  const s=st.sort[id]||(st.sort[id]={k:def||cols[0].k,desc});
+  const c=cols.find(c=>c.k===s.k)||cols[0];
+  const r=[...rows].sort((a,b)=>{const x=c.v(a),y=c.v(b);if(x==null&&y==null)return 0;if(x==null)return 1;if(y==null)return -1;
+    return (x<y?-1:x>y?1:0)*(s.desc?-1:1);});
+  const lim=st.limit[id]||limit;
+  return `<div class="tw"><table><thead><tr>${cols.map(k=>`<th class="${k.num?"num":""}" data-sort="${id}" data-k="${k.k}"${k.k===s.k?` aria-sort="${s.desc?"descending":"ascending"}"`:""}>${k.l}</th>`).join("")}</tr></thead>
+  <tbody>${r.slice(0,lim).map(x=>`<tr ${rowAttr?rowAttr(x):""}>${cols.map(k=>`<td class="${k.num?"num":""}">${k.h(x)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>
+  ${r.length>lim?`<button class="more" data-more="${id}">Mostra altri (${r.length-lim})</button>`:""}
+  ${r.length?"":`<div class="empty-state">Nessun dato con questi filtri.</div>`}`;}
+const EVCOLS=[
+  {k:"d",l:"Data",v:e=>e.d,h:e=>fd(e.d)},
+  {k:"t",l:"Titolo",v:e=>info(e.t).name,h:e=>coCell(e.t)},
+  {k:"c",l:"Evento · rating",v:e=>RANK[e.c],h:e=>`<span class="pill ${CAT[e.c][1]}">${CAT[e.c][0]}</span><div style="font-size:12.5px;margin-top:3px">${rating(e)}</div>`},
+  {k:"b",l:"Broker",v:e=>e.b,h:e=>esc(e.b)},
+  {k:"pt",l:"Target",num:1,v:e=>ptChg(e)??(e.pt?0:null),h:ptCell},
+  {k:"cx",l:"Chiusura giorno",num:1,v:e=>e.cx,h:e=>nf(e.cx)},
+  {k:"ue",l:"Upside giorno",num:1,v:upEv,h:e=>`<span class="${pcls(upEv(e))}">${pct(upEv(e))}</span>`},
+  {k:"un",l:"Upside oggi",num:1,v:upNow,h:e=>`<span class="${pcls(upNow(e))}">${pct(upNow(e))}</span>`}];
+const rowT=e=>`data-go="t/${esc(e.t)}"`;
 
-/* ---------- BRK ---------- */
-function BRK(arg){
-  const cut=(()=>{const d=new Date(ASOF);d.setUTCDate(d.getUTCDate()-opts.bwin);return d.toISOString().slice(0,10)})();
-  const ev=EV.filter(e=>e.d>=cut&&panOk(e.t));
-  if(arg){const q=arg.toLowerCase();const name=D.brokers.find(b=>b.toLowerCase()===q)||D.brokers.find(b=>b.toLowerCase().includes(q));
-    if(!name)return`<div class="bar">BRK</div><div class="sub">Nessun broker contiene “${esc(arg)}”.</div>`;
-    const l=EV.filter(e=>e.b===name&&e.d>=cut&&panOk(e.t)&&(opts.main||CAT[e.c][1]<5));
-    return `<div class="bar"><span>BRK · ${esc(name)}</span><small>dal ${cut}</small></div>
-    <div class="ctrl">Finestra ${optBtns("bwin",[[30,"30G"],[90,"90G"],[365,"1A"]])} Conferme ${optBtns("main",[[0,"Nascoste"],[1,"Visibili"]])}</div>
-    <div class="scroll"><table><tr><th></th><th>Data</th><th>Tipo</th><th>Ticker</th><th>Rating da → a</th></tr>${l.map(e=>`<tr class="go" data-go="${e.t} ANR"><td class="idx">${R(e.t+" ANR")})</td><td>${e.d}</td><td>${catTag(e)}</td><td class="t">${e.t}</td><td>${trans(e)}</td></tr>`).join("")||'<tr><td colspan="5" class="dim">Nessuna azione in finestra.</td></tr>'}</table></div>`;}
-  const s={};ev.forEach(e=>{const r=s[e.b]=s[e.b]||{b:e.b,n:0,u:0,d:0,i:0,sum:0,k:0};r.n++;const d=dir(e);if(d>0)r.u++;if(d<0)r.d++;if(e.c==="INIT")r.i++;if(e.tn!=null){r.sum+=e.tn;r.k++}});
-  const l=Object.values(s).sort((a,b)=>b.n-a.n);
-  return `<div class="bar"><span>BRK · Attività dei broker</span><small>dal ${cut} · ${l.length} broker</small></div>
-  <div class="ctrl">Finestra ${optBtns("bwin",[[30,"30G"],[90,"90G"],[365,"1A"]])} Mercato ${optBtns("pan",[["ALL","Tutti"],["US","US"],["UK","UK"]])}</div>
-  <div class="scroll"><table><tr><th></th><th>Broker</th><th class="n">Eventi</th><th class="n">▲</th><th class="n">▼</th><th class="n">Init</th><th class="n">Rating medio</th></tr>
-  ${l.map(r=>`<tr class="go" data-go="BRK ${esc(r.b)}"><td class="idx">${R("BRK "+r.b)})</td><td>${esc(r.b)}</td><td class="n">${r.n}</td><td class="n up">${r.u}</td><td class="n dn">${r.d}</td><td class="n a">${r.i}</td><td class="n">${r.k?(r.sum/r.k).toFixed(2):"—"}</td></tr>`).join("")}</table></div>`;
-}
+/* ---------- pagine ---------- */
+function winEvents(){const cut=bdBack(ASOF,st.win);return EV.filter(e=>e.d>cut&&inMkt(e.t));}
+function toolbar(){return `<div class="toolbar">${seg("mkt",MKTS,"Mercato")}${seg("win",WINS,"Periodo")}</div>`;}
 
-/* ---------- WL ---------- */
-function WL(){
-  const wl=LS.get("asnp.wl",[]);
-  const rows=wl.map(t=>{const ev=(BY[t]||[]);const c=consensusAt(ev,ASOF);const last=ev.filter(e=>CAT[e.c][1]<5).sort((a,b)=>b.d.localeCompare(a.d))[0];
-    const r=D.revisions.filter(x=>x[0]===t&&x[2]===1).sort((a,b)=>b[1].localeCompare(a[1]))[0];return{t,c,last,b:r?breadth({u:r[3],d:r[4],n:r[5]}):null}});
-  return `<div class="bar"><span>WL · Watchlist</span><small>${wl.length} titoli · salvata in questo browser</small></div>
-  <div class="sub">Aggiungi con <span class="w">AAPL WL+</span>, togli con <span class="w">AAPL WL-</span>. Per farla leggere anche al brief mattutino, copia i ticker nella sezione Watchlist di analyst-brief-config.md.</div>
-  ${wl.length?`<div class="scroll"><table><tr><th></th><th>Ticker</th><th>Mkt</th><th class="n">Consenso</th><th class="n">Broker</th><th>Ultimo movimento</th><th class="n">Breadth FY1</th></tr>
-  ${rows.map(r=>`<tr class="go" data-go="${r.t} ANR"><td class="idx">${R(r.t+" ANR")})</td><td class="t">${r.t}</td><td class="dim">${panel(r.t)}</td><td class="n">${r.c?r.c.m.toFixed(2):"—"}</td><td class="n">${r.c?r.c.n:0}</td><td>${r.last?`${r.last.d} ${catTag(r.last)} ${esc(r.last.b)}`:'<span class="dim">—</span>'}</td><td class="n">${pct(r.b)}</td></tr>`).join("")}</table></div>`:'<div class="note">Watchlist vuota. Scrivi un ticker seguito da WL+ nella riga di comando.</div>'}`;
-}
+function pHome(){
+  const ev=winEvents();const cnt=k=>ev.filter(e=>k.includes(e.c)).length;
+  const ups=cnt(["DBL_UP","BH_UP","HS_UP","UP"]),dns=cnt(["DBL_DN","BH_DN","HS_DN","DN"]),ini=cnt(["INIT"]);
+  const ptu=ev.filter(e=>ptChg(e)>0).length,ptd=ev.filter(e=>ptChg(e)<0).length;
+  const rel=ev.filter(e=>RANK[e.c]<=2).sort((a,b)=>RANK[a.c]-RANK[b.c]||b.d.localeCompare(a.d)).slice(0,8);
+  const pts=ev.filter(e=>e.pt&&ptChg(e)!=null).sort((a,b)=>Math.abs(ptChg(b))-Math.abs(ptChg(a))).slice(0,8);
+  const br=breadthRows().filter(r=>inMkt(r.t)&&r.b!=null);
+  const best=[...br].sort((a,b)=>b.b-a.b).slice(0,6),worst=[...br].sort((a,b)=>a.b-b.b).slice(0,6);
+  const W=WINS.find(w=>w[0]==st.win)[1];
+  const mini=(rows,f)=>rows.length?`<div class="tw"><table><tbody>${rows.map(f).join("")}</tbody></table></div>`:`<div class="empty-state">Nessun dato.</div>`;
+  return `<h1>Panoramica</h1><p class="lead">Cosa hanno fatto gli analisti nel periodo ${W} fino al ${fd(ASOF)}. Nessuna classifica di titoli da comprare: solo i fatti.</p>
+  ${toolbar()}
+  <div class="grid kpis">
+    ${kpi("Upgrade",ups,"up")}${kpi("Downgrade",dns,"dn")}${kpi("Inizi copertura",ini,"")}${kpi("Target alzati",ptu,"up")}${kpi("Target tagliati",ptd,"dn")}${kpi("Titoli toccati",new Set(ev.map(e=>e.t)).size,"")}
+  </div>
+  <div class="grid two" style="margin-top:16px">
+    <div class="card"><div class="hd"><h2>Movimenti rilevanti</h2><a class="mut" href="#/moves">Tutti →</a></div>
+      ${mini(rel,e=>`<tr data-go="t/${esc(e.t)}"><td>${coCell(e.t)}</td><td><span class="pill ${CAT[e.c][1]}">${CAT[e.c][0]}</span><div class="mut" style="font-size:12px;margin-top:3px">${esc(e.b)} · ${fd(e.d)}</div></td><td class="num">${ptCell(e)}</td></tr>`)}</div>
+    <div class="card"><div class="hd"><h2>Variazioni di target più ampie</h2><a class="mut" href="#/targets">Tutte →</a></div>
+      ${mini(pts,e=>`<tr data-go="t/${esc(e.t)}"><td>${coCell(e.t)}</td><td><div>${esc(e.b)}</div><div class="mut" style="font-size:12px">${fd(e.d)}</div></td><td class="num">${ptCell(e)}<div style="font-size:12px" class="${pcls(upNow(e))}">vs chiusura ${pct(upNow(e))}</div></td></tr>`)}</div>
+    <div class="card"><div class="hd"><h2>Revisioni EPS più positive</h2><small>FY corrente</small></div>
+      ${mini(best,r=>`<tr data-go="t/${esc(r.t)}"><td>${coCell(r.t)}</td><td class="num"><span class="up">${r.up}↑</span> <span class="dn">${r.dn}↓</span></td><td class="num"><b class="${pcls(r.b)}">${pct(r.b*100,0)}</b></td></tr>`)}</div>
+    <div class="card"><div class="hd"><h2>Revisioni EPS più negative</h2><small>FY corrente</small></div>
+      ${mini(worst,r=>`<tr data-go="t/${esc(r.t)}"><td>${coCell(r.t)}</td><td class="num"><span class="up">${r.up}↑</span> <span class="dn">${r.dn}↓</span></td><td class="num"><b class="${pcls(r.b)}">${pct(r.b*100,0)}</b></td></tr>`)}</div>
+  </div>`;}
+function kpi(k,v,c){return `<div class="card kpi"><div class="k">${k}</div><div class="v ${c}">${v.toLocaleString("it-IT")}</div></div>`;}
 
-/* ---------- HLTH ---------- */
-function HLTH(){
-  const s=D.snapshots,last=s.at(-1)||[];const cov={};Object.entries(D.universe).forEach(([t,[p]])=>{const c=cov[p]=cov[p]||{u:0,r:0,v:0};c.u++;if(BY[t])c.r++});
-  const rvT=new Set(D.revisions.map(r=>r[0]));Object.entries(D.universe).forEach(([t,[p]])=>{if(rvT.has(t))cov[p].v++});
-  const um=(last[5]||"").split(";").map(x=>x.trim()).filter(Boolean);
-  return `<div class="bar"><span>HLTH · Salute della pipeline</span><small>ultimo run ${last[0]||"—"}</small></div>
-  <dl class="kv"><dt>Esito</dt><dd>${last.length?(last[2]?`<span class="w">${last[2]} ticker falliti su ${last[1]}</span>`:`<span class="up">ok, ${last[1]} ticker, nessun fallimento</span>`):'<span class="dn">nessun run registrato</span>'}</dd>
-  <dt>Righe</dt><dd>${last[3]??"—"} rating · ${last[4]??"—"} revisioni</dd>
-  <dt>Grade non mappate</dt><dd>${um.length?um.map(x=>`<span class="w">${esc(x)}</span>`).join(", ")+' <span class="dim">(ricalcolate nel database se la mappa attuale le riconosce)</span>':'<span class="up">nessuna</span>'}</dd>
-  <dt>Database costruito</dt><dd>${esc(D.meta.built_at)}</dd><dt>Fonte</dt><dd>github.com/${esc(D.meta.repo)}</dd></dl>
-  <div class="bar"><span>Copertura per mercato</span><small>titoli con almeno un dato</small></div>
-  <div class="scroll"><table><tr><th>Mercato</th><th class="n">Universo</th><th class="n">Con rating</th><th class="n">%</th><th class="n">Con revisioni</th><th class="n">%</th></tr>
-  ${Object.entries(cov).map(([p,c])=>`<tr><td>${p}</td><td class="n">${c.u}</td><td class="n">${c.r}</td><td class="n ${c.r/c.u<.5?"w":""}">${Math.round(c.r/c.u*100)}%</td><td class="n">${c.v}</td><td class="n">${Math.round(c.v/c.u*100)}%</td></tr>`).join("")}</table></div>
-  ${cov.UK&&cov.UK.r/cov.UK.u<.5?`<div class="note">yfinance restituisce rating solo per ${cov.UK.r} titoli UK su ${cov.UK.u}. Sul mercato UK il terminale è affidabile per le revisioni, molto meno per i cambi di rating.</div>`:""}
-  <div class="bar"><span>Storico dei run</span><small>${s.length}</small></div>
-  <div class="scroll"><table><tr><th>Data</th><th class="n">Ticker</th><th class="n">Falliti</th><th class="n">Righe rating</th><th class="n">Righe revisioni</th><th>Grade non mappate</th></tr>
-  ${s.slice().reverse().map(r=>`<tr><td>${r[0]}</td><td class="n">${r[1]??"—"}</td><td class="n ${r[2]?"w":""}">${r[2]??"—"}</td><td class="n">${r[3]??"—"}</td><td class="n">${r[4]??"—"}</td><td class="dim">${esc(r[5]||"")}</td></tr>`).join("")}</table></div>`;
-}
+function pMoves(){
+  const T=[["REL","Rilevanti"],["UP","Upgrade"],["DN","Downgrade"],["INIT","Inizi copertura"],["PT","Con target"],["ALL","Tutti"]];
+  let ev=winEvents();const w=wl();
+  const f={REL:e=>RANK[e.c]<=2,UP:e=>/UP/.test(e.c),DN:e=>/DN/.test(e.c),INIT:e=>e.c==="INIT",PT:e=>!!e.pt,ALL:()=>true}[st.type];
+  ev=ev.filter(f);const wev=ev.filter(e=>w.has(e.t));
+  return `<h1>Movimenti</h1><p class="lead">Rating e target price per analisi, con la chiusura del giorno e l'ultima chiusura (${fd(ASOF)}).</p>
+  ${toolbar()}<div class="toolbar">${seg("type",T,"Tipo")}</div>
+  ${wev.length?`<div class="card" style="margin-bottom:16px"><div class="hd"><h2>Watchlist</h2><small>${wev.length} eventi</small></div>${table("mv-wl",EVCOLS,wev,{def:"d",rowAttr:rowT})}</div>`:""}
+  <div class="card"><div class="hd"><h2>${T.find(t=>t[0]===st.type)[1]}</h2><small>${ev.length} eventi</small></div>${table("mv",EVCOLS,ev,{def:"d",rowAttr:rowT})}</div>`;}
 
-/* ---------- DB ---------- */
-function DB(){
-  const T=D.tables,byFS={};EV.forEach(e=>{byFS[e.fs]=(byFS[e.fs]||0)+1});
-  const pit=EV.filter(e=>!e.bf),lags=pit.map(e=>daysBetween(e.d,e.fs)).sort((a,b)=>a-b);
-  const range=EV.length?[EV.at(-1).d,EV[0].d]:["—","—"];
-  return `<div class="bar"><span>DB · Database storico</span><small>SQLite · build/analyst.db</small></div>
-  <div class="sub">I CSV notturni in data/ sono la fonte di verità e non vengono mai riscritti. Il database si ricostruisce da zero da tutti i CSV a ogni run: deduplica gli eventi che ricompaiono ogni notte e registra la prima notte in cui ciascuno è stato visto.</div>
-  <div class="grid"><div>
-  <div class="bar"><span>Tabelle</span><small>righe</small></div>
-  <table><tr><th>Tabella</th><th class="n">Righe</th><th>Contenuto</th></tr>
-  <tr><td class="a">rating_event</td><td class="n">${T.rating_event}</td><td class="dim">un evento unico per (titolo, data, broker, azione, da, a)</td></tr>
-  <tr><td class="a">revision</td><td class="n">${T.revision}</td><td class="dim">conteggi revisioni per titolo, notte, esercizio</td></tr>
-  <tr><td class="a">snapshot</td><td class="n">${T.snapshot}</td><td class="dim">esito di ogni run notturno</td></tr>
-  <tr><td class="a">universe</td><td class="n">${T.universe}</td><td class="dim">ticker, mercato, fascia</td></tr>
-  <tr><td class="a">ingest_log</td><td class="n">${T.ingest_log}</td><td class="dim">file letti e righe nuove per file</td></tr></table>
-  <div class="bar"><span>Viste</span></div>
-  <table><tr><td class="a">v_broker_current</td><td class="dim">ultimo rating di ogni broker su ogni titolo</td></tr>
-  <tr><td class="a">v_consensus</td><td class="dim">media e distribuzione dei rating attivi 12 mesi</td></tr>
-  <tr><td class="a">v_revision_breadth</td><td class="dim">breadth e variazione rispetto alla notte prima</td></tr>
-  <tr><td class="a">v_moves</td><td class="dim">eventi classificati per rilevanza</td></tr></table>
-  </div><div>
-  <div class="bar"><span>Storico accumulato</span><small>eventi per notte di prima osservazione</small></div>
-  <table><tr><th>Snapshot</th><th class="n">Eventi nuovi</th><th>Nota</th></tr>${Object.entries(byFS).sort().reverse().map(([d,n])=>`<tr><td>${d}</td><td class="n">${n}</td><td class="dim">${d===Object.keys(byFS).sort()[0]?"carico iniziale, non point-in-time":"point-in-time"}</td></tr>`).join("")}</table>
-  <dl class="kv"><dt>Date eventi</dt><dd>${range[0]} → ${range[1]}</dd><dt>Broker distinti</dt><dd>${D.brokers.length}</dd>
-  <dt>Point-in-time</dt><dd>${pit.length} eventi${lags.length?` · ritardo mediano ${lags[lags.length>>1]}g tra evento e osservazione`:" · si accumulano dal secondo run"}</dd></dl>
-  </div></div>`;
-}
+function consRows(){return Object.entries(D.targets||{}).filter(([t])=>inMkt(t)&&U[t]).map(([t,g])=>{const l=lastPx(t);
+  return{t,mean:g[0],med:g[1],hi:g[2],lo:g[3],px:l?l[1]:null,up:l&&g[0]?100*(g[0]/l[1]-1):null,n:brokerCurrent(t).filter(x=>x.pt).length}});}
+function pTargets(){
+  const ev=winEvents().filter(e=>e.pt);const cr=consRows();
+  const cols=[{k:"t",l:"Titolo",v:r=>info(r.t).name,h:r=>coCell(r.t)},
+    {k:"px",l:"Ultima chiusura",num:1,v:r=>r.px,h:r=>nf(r.px)},
+    {k:"mean",l:"Target medio",num:1,v:r=>r.mean,h:r=>`<b>${nf(r.mean)}</b>`},
+    {k:"lo",l:"Min",num:1,v:r=>r.lo,h:r=>nf(r.lo)},{k:"hi",l:"Max",num:1,v:r=>r.hi,h:r=>nf(r.hi)},
+    {k:"up",l:"Upside vs chiusura",num:1,v:r=>r.up,h:r=>`<b class="${pcls(r.up)}">${pct(r.up)}</b>`}];
+  const note=!cr.length&&!EV.some(e=>e.pt)?`<div class="note">Non ci sono ancora target price nel database: la raccolta li aggiunge dalla prossima notte (i dati del 25/09 sono stati raccolti prima della modifica).</div>`:"";
+  return `<h1>Target price</h1><p class="lead">Target di ogni analisi confrontato con la chiusura del giorno e con l'ultima chiusura; sotto, il consenso per titolo.</p>
+  ${note}${toolbar()}
+  <div class="card" style="margin-bottom:16px"><div class="hd"><h2>Analisi con target nel periodo</h2><small>${ev.length}</small></div>${table("pt",EVCOLS,ev,{def:"d",rowAttr:rowT})}</div>
+  <div class="card"><div class="hd"><h2>Consenso per titolo</h2><small>${cr.length} titoli</small></div>${table("cons",cols,cr,{def:"up",rowAttr:rowT})}</div>`;}
 
-/* ---------- HELP ---------- */
-function HELP(){
-  const c=[["MOV","Movimenti rilevanti su rating: doppi salti, soglie, gruppi di broker"],["REV","Rotazione delle revisioni EPS tra una notte e la precedente"],["AAPL ANR","Pagina titolo: consenso, broker, storico. Basta anche solo AAPL"],["VOD LN","Titolo UK (equivale a VOD.L)"],["BRK","Attività dei broker · BRK GOLDMAN per un broker"],["AAPL WL+","Aggiunge alla watchlist · WL- toglie · WL la mostra"],["HLTH","Esito dei run e copertura dei dati"],["DB","Struttura e storico del database"],["3","Numero + Invio: apre la riga 3 della schermata"],["Esc","Schermata precedente"]];
-  return `<div class="bar"><span>HELP · Comandi</span><small>F1–F8 aprono le funzioni</small></div>
-  <table>${c.map(([k,d])=>`<tr><td class="w" style="width:1%;padding-right:24px">${k} &lt;GO&gt;</td><td>${d}</td></tr>`).join("")}</table>
-  <div class="note">Fonte yfinance: date senza orario, nessun titolo delistato, copertura rating UK scarsa. Il terminale è una rassegna. Non ordina titoli da comprare e non va usato per dimensionare posizioni.</div>`;
-}
+function breadthRows(fy=1){const rv=D.revisions||[];const dates=[...new Set(rv.map(r=>r[1]))].sort();const L=dates.at(-1),P=dates.at(-2);
+  const m={};for(const r of rv){if(r[2]!==fy)continue;if(r[1]===L)(m[r[0]]??={}).cur=r;else if(r[1]===P)(m[r[0]]??={}).prev=r;}
+  const br=r=>{if(!r)return null;const den=r[5]||(r[3]+r[4]);return den?(r[3]-r[4])/den:null;};
+  return Object.entries(m).filter(([,v])=>v.cur).map(([t,v])=>({t,up:v.cur[3]??0,dn:v.cur[4]??0,n:v.cur[5],b:br(v.cur),d:v.prev&&br(v.prev)!=null&&br(v.cur)!=null?br(v.cur)-br(v.prev):null,base:v.cur[5]?"analisti":"revisori"}));}
+function pRevisions(){st.fy??=1;const rows=breadthRows(st.fy).filter(r=>inMkt(r.t));
+  const dates=[...new Set((D.revisions||[]).map(r=>r[1]))];
+  const cols=[{k:"t",l:"Titolo",v:r=>info(r.t).name,h:r=>coCell(r.t)},
+    {k:"up",l:"Revisioni ↑ 30g",num:1,v:r=>r.up,h:r=>`<span class="up">${r.up}</span>`},
+    {k:"dn",l:"Revisioni ↓ 30g",num:1,v:r=>r.dn,h:r=>`<span class="dn">${r.dn}</span>`},
+    {k:"n",l:"Analisti",num:1,v:r=>r.n,h:r=>r.n??'<span class="mut">–</span>'},
+    {k:"b",l:"Breadth",num:1,v:r=>r.b,h:r=>`<b class="${pcls(r.b)}">${pct(r.b==null?null:r.b*100,0)}</b>`},
+    {k:"d",l:"Δ vs notte prima",num:1,v:r=>r.d,h:r=>`<span class="${pcls(r.d)}">${r.d==null?"–":pct(r.d*100,0)}</span>`}];
+  return `<h1>Revisioni EPS</h1><p class="lead">Breadth = (revisioni al rialzo − al ribasso) / numero di analisti. ${dates.length<2?"Con un solo snapshot la variazione notte su notte non è ancora calcolabile.":""}</p>
+  <div class="toolbar">${seg("mkt",MKTS,"Mercato")}${seg("fy",[[1,"Esercizio corrente"],[2,"Prossimo esercizio"]],"")}</div>
+  <div class="card"><div class="hd"><h2>Breadth per titolo</h2><small>${rows.length} titoli</small></div>${table("rev",cols,rows,{def:"b",rowAttr:r=>`data-go="t/${esc(r.t)}"`})}</div>`;}
+
+function pBrokers(arg){
+  if(arg){const b=decodeURIComponent(arg);const ev=EV.filter(e=>e.b===b&&inMkt(e.t));
+    return `<p><a class="mut" href="#/brokers">← Broker</a></p><h1>${esc(b)}</h1><p class="lead">${ev.length} analisi nel database.</p>
+    <div class="toolbar">${seg("mkt",MKTS,"Mercato")}</div><div class="card">${table("brk1",EVCOLS,ev,{def:"d",rowAttr:rowT})}</div>`;}
+  const cut=bdBack(ASOF,st.win);const m={};
+  for(const e of EV){if(!inMkt(e.t))continue;const x=m[e.b]??={b:e.b,n:0,w:0,up:0,dn:0,pt:0,tk:new Set()};x.n++;x.tk.add(e.t);if(e.pt)x.pt++;
+    if(e.d>cut){x.w++;if(/UP/.test(e.c))x.up++;if(/DN/.test(e.c))x.dn++;}}
+  const rows=Object.values(m);
+  const cols=[{k:"b",l:"Broker",v:r=>r.b,h:r=>`<b>${esc(r.b)}</b>`},{k:"tk",l:"Titoli coperti",num:1,v:r=>r.tk.size,h:r=>r.tk.size},
+    {k:"n",l:"Analisi totali",num:1,v:r=>r.n,h:r=>r.n},{k:"pt",l:"Con target",num:1,v:r=>r.pt,h:r=>r.pt},
+    {k:"w",l:"Nel periodo",num:1,v:r=>r.w,h:r=>r.w},{k:"up",l:"Upgrade",num:1,v:r=>r.up,h:r=>`<span class="up">${r.up}</span>`},
+    {k:"dn",l:"Downgrade",num:1,v:r=>r.dn,h:r=>`<span class="dn">${r.dn}</span>`}];
+  return `<h1>Broker</h1><p class="lead">Case di ricerca presenti nel database. Clicca per vedere le loro analisi.</p>${toolbar()}
+  <div class="card">${table("brk",cols,rows,{def:"w",rowAttr:r=>`data-go="brokers/${encodeURIComponent(r.b)}"`})}</div>`;}
+
+function pWatch(){const w=[...wl()];
+  if(!w.length)return `<h1>Watchlist</h1><div class="card empty-state">La watchlist è vuota. Apri un titolo dalla ricerca e premi “Aggiungi alla watchlist”.</div>`;
+  const rows=w.filter(t=>U[t]).map(t=>{const l=lastPx(t),g=(D.targets||{})[t],bc=brokerCurrent(t),last=EV.find(e=>e.t===t);
+    return{t,px:l?.[1],ch:l&&l[2]?100*(l[1]/l[2]-1):null,mean:g?.[0],up:g&&l?100*(g[0]/l[1]-1):null,n:bc.length,avg:bc.length?bc.reduce((s,x)=>s+x.tn,0)/bc.length:null,last:last?.d}});
+  const cols=[{k:"t",l:"Titolo",v:r=>info(r.t).name,h:r=>coCell(r.t)},{k:"px",l:"Chiusura",num:1,v:r=>r.px,h:r=>nf(r.px)},
+    {k:"ch",l:"Var. giorno",num:1,v:r=>r.ch,h:r=>`<span class="${pcls(r.ch)}">${pct(r.ch,2)}</span>`},
+    {k:"mean",l:"Target medio",num:1,v:r=>r.mean,h:r=>nf(r.mean)},{k:"up",l:"Upside",num:1,v:r=>r.up,h:r=>`<b class="${pcls(r.up)}">${pct(r.up)}</b>`},
+    {k:"avg",l:"Rating medio (1-5)",num:1,v:r=>r.avg,h:r=>nf(r.avg,2)},{k:"n",l:"Broker",num:1,v:r=>r.n,h:r=>r.n},{k:"last",l:"Ultima analisi",v:r=>r.last,h:r=>fd(r.last)}];
+  return `<h1>Watchlist</h1><p class="lead">Salvata in questo browser.</p><div class="card">${table("wl",cols,rows,{def:"up",rowAttr:r=>`data-go="t/${esc(r.t)}"`})}</div>`;}
+
+function pPipeline(){const sn=D.snapshots||[];const tb=D.tables||{};
+  const byM={};for(const t of Object.keys(U)){const p=info(t).panel;(byM[p]??={p,n:0,isin:0,ev:new Set(),pt:new Set(),px:0,tg:0});byM[p].n++;if(info(t).isin)byM[p].isin++;if(lastPx(t))byM[p].px++;if((D.targets||{})[t])byM[p].tg++;}
+  for(const e of EV){const p=info(e.t).panel;if(byM[p]){byM[p].ev.add(e.t);if(e.pt)byM[p].pt.add(e.t);}}
+  const cov=Object.values(byM).sort((a,b)=>b.n-a.n);
+  const pc=(a,b)=>b?Math.round(100*a/b)+"%":"–";
+  return `<h1>Dati e pipeline</h1><p class="lead">Da dove arrivano i numeri e quanto sono completi. Il database SQLite completo si scarica da <a href="analyst.db" style="color:var(--acc)">analyst.db</a>.</p>
+  <div class="grid kpis">${Object.entries(tb).map(([k,v])=>kpi({universe:"Titoli",snapshot:"Snapshot",rating_event:"Analisi uniche",revision:"Righe revisioni",price:"Chiusure",target:"Target consenso",ingest_log:"File letti"}[k]||k,v,"")).join("")}</div>
+  <div class="card" style="margin-top:16px"><div class="hd"><h2>Copertura per mercato</h2><small>quota di titoli con il dato</small></div><div class="tw"><table><thead><tr><th>Mercato</th><th class="num">Titoli</th><th class="num">ISIN</th><th class="num">Rating</th><th class="num">Target per analisi</th><th class="num">Target consenso</th><th class="num">Prezzi</th></tr></thead><tbody>
+  ${cov.map(r=>`<tr><td><b>${esc(MKT_LBL[r.p]||r.p)}</b></td><td class="num">${r.n}</td><td class="num">${pc(r.isin,r.n)}</td><td class="num">${pc(r.ev.size,r.n)}</td><td class="num">${pc(r.pt.size,r.n)}</td><td class="num">${pc(r.tg,r.n)}</td><td class="num">${pc(r.px,r.n)}</td></tr>`).join("")}</tbody></table></div></div>
+  <div class="card" style="margin-top:16px"><div class="hd"><h2>Snapshot notturni</h2></div><div class="tw"><table><thead><tr><th>Data</th><th class="num">Titoli</th><th class="num">Falliti</th><th class="num">Righe rating</th><th class="num">Con target</th><th class="num">Revisioni</th><th class="num">Target consenso</th><th class="num">Prezzi</th><th>Grade non mappate</th></tr></thead><tbody>
+  ${[...sn].reverse().map(s=>`<tr><td>${fd(s[0])}</td><td class="num">${s[1]??"–"}</td><td class="num ${s[2]?"warnc":""}">${s[2]??"–"}</td><td class="num">${s[3]??"–"}</td><td class="num">${s[8]??"–"}</td><td class="num">${s[4]??"–"}</td><td class="num">${s[6]??"–"}</td><td class="num">${s[7]??"–"}</td><td class="mut">${esc(s[5]||"")}</td></tr>`).join("")}</tbody></table></div></div>
+  <p class="mut" style="font-size:12px;margin-top:16px">Fonte: Yahoo Finance via yfinance, raccolta ogni notte da GitHub Actions. Il nome del singolo analista non è disponibile in questa fonte.</p>`;}
+
+function brokerCurrent(t){const m={};for(const e of EV){if(e.t!==t||e.tn==null)continue;const x=m[e.b];if(!x||e.d>x.d)m[e.b]=e;}
+  const cut=bdBack(ASOF,260);return Object.values(m).filter(e=>e.d>=cut);}
+
+async function pTicker(t){
+  if(!U[t])return `<div class="card empty-state">Titolo ${esc(t)} non presente nell'universo.</div>`;
+  const i=info(t),l=lastPx(t),g=(D.targets||{})[t],ev=EV.filter(e=>e.t===t),bc=brokerCurrent(t).sort((a,b)=>a.tn-b.tn||b.d.localeCompare(a.d));
+  const ch=l&&l[2]?100*(l[1]/l[2]-1):null,inW=wl().has(t);
+  const nb=bc.filter(e=>e.tn<=2).length,nh=bc.filter(e=>e.tn===3).length,ns=bc.filter(e=>e.tn>=4).length,avg=bc.length?bc.reduce((s,e)=>s+e.tn,0)/bc.length:null;
+  const bpt=bc.filter(e=>e.pt).map(e=>e.pt);const mean=g?.[0]??(bpt.length?bpt.reduce((a,b)=>a+b,0)/bpt.length:null);
+  const lo=g?.[3]??(bpt.length?Math.min(...bpt):null),hi=g?.[2]??(bpt.length?Math.max(...bpt):null);
+  const up=mean&&l?100*(mean/l[1]-1):null;
+  const rv=(D.revisions||[]).filter(r=>r[0]===t);const rl=rv.filter(r=>r[1]===rv.at(-1)?.[1]);
+  let series=null;try{const r=await fetch(`t/${encodeURIComponent(t)}.json`,{cache:"no-cache"});if(r.ok)series=await r.json();}catch(e){}
+  const rng=lo!=null&&hi!=null&&l?rangeBar(lo,hi,mean,l[1]):"";
+  const bcols=[{k:"b",l:"Broker",v:e=>e.b,h:e=>`<b>${esc(e.b)}</b>`},{k:"r",l:"Rating",v:e=>e.tn,h:e=>`<span class="pill ${e.tn<=2?"p-up":e.tn>=4?"p-dn":"p-nt"}">${esc(e.rt)}</span>`},
+    {k:"pt",l:"Target",num:1,v:e=>e.pt,h:ptCell},{k:"un",l:"Upside oggi",num:1,v:upNow,h:e=>`<span class="${pcls(upNow(e))}">${pct(upNow(e))}</span>`},{k:"d",l:"Data",v:e=>e.d,h:e=>fd(e.d)}];
+  const hcols=EVCOLS.filter(c=>c.k!=="t");
+  return `<p><a class="mut" href="javascript:history.back()">← Indietro</a></p>
+  <div class="co-head"><div><h1>${esc(i.name)}</h1>
+    <div class="co-meta"><code>${esc(t)}</code>${i.isin?`<code>${esc(i.isin)}</code>`:`<span class="mut">ISIN n.d.</span>`}<span class="mkt">${esc(MKT_LBL[i.panel]||i.panel)}</span>${i.idx.map(x=>`<span class="pill p-nt">${esc(IDX_LBL[x]||x)}</span>`).join("")}${i.cur?`<span>${esc(i.cur)}</span>`:""}</div></div>
+    <div class="px">${l?`<div class="v">${nf(l[1])}</div><div class="${pcls(ch)}">${pct(ch,2)} <span class="mut">chiusura ${fd(l[0])}</span></div>`:`<div class="mut">Prezzo non ancora disponibile</div>`}
+    <button class="btn ${inW?"on":""}" style="margin-top:10px" data-wl="${esc(t)}">${inW?"★ In watchlist":"☆ Aggiungi alla watchlist"}</button></div></div>
+  <div class="grid two">
+    <div class="card"><div class="hd"><h2>Prezzo e target</h2><small>${series&&series.d.length?`${fd(series.d[0])} – ${fd(series.d.at(-1))}`:""}</small></div>
+      ${series&&series.d.length>1?chart(series,ev,mean):`<div class="empty-state">Lo storico prezzi arriva con il prossimo snapshot notturno.</div>`}
+      <div class="legend"><span><i style="background:var(--acc)"></i>Chiusura</span><span><i style="background:var(--up)"></i>Target alzato</span><span><i style="background:var(--dn)"></i>Target tagliato</span><span><i style="background:var(--info)"></i>Target nuovo/confermato</span><span><i style="background:var(--warn);border-radius:0;height:2px;width:14px;vertical-align:3px"></i>Target medio</span></div></div>
+    <div class="card"><div class="hd"><h2>Consenso</h2><small>${bc.length} broker, ultimi 12 mesi</small></div><div class="bd">
+      <div class="stat"><span>Target medio</span><b>${nf(mean)}</b></div>
+      <div class="stat"><span>Upside vs ultima chiusura</span><b class="${pcls(up)}">${pct(up)}</b></div>
+      <div class="stat"><span>Rating medio (1 = Strong Buy, 5 = Sell)</span><b>${nf(avg,2)}</b></div>
+      ${rng}
+      <div class="dist">${bc.length?`<div style="width:${100*nb/bc.length}%;background:var(--up)"></div><div style="width:${100*nh/bc.length}%;background:var(--muted);opacity:.45"></div><div style="width:${100*ns/bc.length}%;background:var(--dn)"></div>`:""}</div>
+      <div class="mut" style="font-size:12.5px"><span class="up">${nb} Buy</span> · ${nh} Hold · <span class="dn">${ns} Sell</span></div>
+      ${rl.length?`<div style="margin-top:14px">${rl.map(r=>{const den=r[5]||(r[3]+r[4]);const b=den?(r[3]-r[4])/den:null;return `<div class="stat"><span>Revisioni EPS ${r[2]===1?"FY corrente":"FY prossimo"} (30g)</span><span><span class="up">${r[3]}↑</span> <span class="dn">${r[4]}↓</span> · <b class="${pcls(b)}">${pct(b==null?null:b*100,0)}</b></span></div>`}).join("")}</div>`:""}
+    </div></div>
+  </div>
+  <div class="card" style="margin-top:16px"><div class="hd"><h2>Posizione attuale di ogni broker</h2><small>ultimo rating per broker</small></div>${table("co-b",bcols,bc,{def:"r",desc:false,limit:60})}</div>
+  <div class="card" style="margin-top:16px"><div class="hd"><h2>Storico analisi</h2><small>${ev.length} eventi</small></div>${table("co-h",hcols,ev,{def:"d",limit:60})}</div>`;}
+
+function rangeBar(lo,hi,mean,px){const a=Math.min(lo,px),b=Math.max(hi,px),sp=(b-a)||1,p=v=>(100*(v-a)/sp).toFixed(1)+"%";
+  return `<div class="range" title="Intervallo dei target"><div class="m" style="left:${p(lo)};background:var(--dn)"></div>
+  <div class="m" style="left:${p(mean)};background:var(--warn)"></div><div class="m" style="left:${p(hi)};background:var(--up)"></div>
+  <div class="m" style="left:${p(px)};background:var(--ink);width:4px"></div></div>
+  <div class="rleg"><span><i style="background:var(--dn)"></i>Target min ${nf(lo)}</span><span><i style="background:var(--ink)"></i>Prezzo ${nf(px)}</span><span><i style="background:var(--warn)"></i>Target medio ${nf(mean)}</span><span><i style="background:var(--up)"></i>Target max ${nf(hi)}</span></div>`;}
+
+function chart(s,ev,mean){
+  const pw=document.getElementById("page").clientWidth-(innerWidth>900?56:32);
+  const W=Math.round(Math.max(320,innerWidth>900&&pw>900?(pw-16)/2-2:pw-2)),H=Math.round(W*.46),L=52,R=12,T=12,B=24;const d=s.d,c=s.c;const d0=d[0];
+  const pts=ev.filter(e=>e.pt&&e.d>=d0);const vals=[...c,...pts.map(e=>e.pt)];if(mean)vals.push(mean);
+  let mn=Math.min(...vals),mx=Math.max(...vals);const pad=(mx-mn)*.08||1;mn-=pad;mx+=pad;
+  const t0=Date.parse(d0),t1=Date.parse(d.at(-1))||t0+1;
+  const X=ds=>L+(W-L-R)*((Date.parse(ds)-t0)/((t1-t0)||1)),Y=v=>T+(H-T-B)*(1-(v-mn)/(mx-mn));
+  const line=c.map((v,k)=>`${k?"L":"M"}${X(d[k]).toFixed(1)},${Y(v).toFixed(1)}`).join("");
+  const area=`${line}L${X(d.at(-1)).toFixed(1)},${H-B}L${X(d0).toFixed(1)},${H-B}Z`;
+  const ticks=[0,.25,.5,.75,1].map(f=>mn+(mx-mn)*f);
+  const xt=[0,.25,.5,.75,1].map(f=>d[Math.min(d.length-1,Math.round((d.length-1)*f))]);
+  const col=e=>{const k=ptChg(e);return k>0?"var(--up)":k<0?"var(--dn)":"var(--info)"};
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Grafico prezzo e target">
+  <defs><linearGradient id="ga" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="var(--acc)" stop-opacity=".22"/><stop offset="1" stop-color="var(--acc)" stop-opacity="0"/></linearGradient></defs>
+  ${ticks.map(v=>`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-8}" y="${Y(v)+4}" text-anchor="end">${nf(v,v>=1000?0:2)}</text>`).join("")}
+  ${xt.map(x=>`<text x="${X(x)}" y="${H-6}" text-anchor="middle">${fd(x)}</text>`).join("")}
+  <path d="${area}" fill="url(#ga)"/><path d="${line}" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linejoin="round"/>
+  ${mean?`<line x1="${L}" x2="${W-R}" y1="${Y(mean)}" y2="${Y(mean)}" stroke="var(--warn)" stroke-width="1.5" stroke-dasharray="5 4"/>`:""}
+  ${pts.map(e=>`<circle cx="${X(e.d)}" cy="${Y(e.pt)}" r="4.5" fill="${col(e)}" stroke="var(--card)" stroke-width="1.5"><title>${esc(e.b)} · ${fd(e.d)}: target ${nf(e.pt)}${e.pf?" (da "+nf(e.pf)+")":""}${e.cx?" · chiusura "+nf(e.cx):""}</title></circle>`).join("")}
+  </svg>`;}
+
+/* ---------- router ---------- */
+function navHtml(cur){return PAGES.map(([k,l,ic])=>`<a href="#/${k}" ${cur===k?'aria-current="page"':""}>${svg(ic)}<span>${l}</span></a>`).join("");}
+let seq=0;
+async function render(){if(!D)return;const my=++seq;
+  const [p,...rest]=(location.hash.replace(/^#\/?/,"")||"home").split("/");const arg=rest.join("/");
+  const cur=p==="t"?"":p;document.getElementById("nav").innerHTML=navHtml(cur);document.getElementById("bnav").innerHTML=navHtml(cur);
+  const f={home:pHome,moves:pMoves,targets:pTargets,revisions:pRevisions,brokers:pBrokers,watchlist:pWatch,pipeline:pPipeline,t:pTicker}[p]||pHome;
+  const html=await f(decodeURIComponent(arg||""));if(my!==seq)return;
+  document.getElementById("page").innerHTML=html;
+  document.title=p==="t"&&U[arg]?`${info(decodeURIComponent(arg)).name} · ASNP`:"ASNP · Analyst Snapshot";}
+document.getElementById("page").addEventListener("click",e=>{
+  const b=e.target.closest("[data-set]");if(b){const k=b.dataset.set;st[k]=isNaN(b.dataset.v)?b.dataset.v:+b.dataset.v;if(k==="mkt"||k==="win")LS.set("asnp."+k,st[k]);st.limit={};render();return;}
+  const s=e.target.closest("[data-sort]");if(s){const o=st.sort[s.dataset.sort];if(o.k===s.dataset.k)o.desc=!o.desc;else{o.k=s.dataset.k;o.desc=true;}render();return;}
+  const m=e.target.closest("[data-more]");if(m){st.limit[m.dataset.more]=(st.limit[m.dataset.more]||100)+200;render();return;}
+  const w=e.target.closest("[data-wl]");if(w){const s=wl(),t=w.dataset.wl;s.has(t)?s.delete(t):s.add(t);LS.set("asnp.wl",[...s]);render();return;}
+  const r=e.target.closest("[data-go]");if(r&&!e.target.closest("a")){location.hash="#/"+r.dataset.go;scrollTo(0,0);}});
 load();
-})();
 </script>
 </body>
 </html>
