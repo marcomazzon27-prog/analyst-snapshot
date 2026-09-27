@@ -19,8 +19,8 @@ ENR.DE,Siemens Energy,DE,DAX;SX5E,large,DE000ENER6Y0,EUR,GER,Siemens Energy AG
 EOAN.DE,E.ON,DE,DAX,large,DE000ENAG999,EUR,GER,E.ON SE
 FME.DE,Fresenius Medical Care,DE,DAX,large,DE0005785802,EUR,GER,Fresenius Medical Care AG
 FRE.DE,Fresenius,DE,DAX,large,DE0005785604,EUR,GER,Fresenius SE & Co. KGaA
-G1A.DE,GEA Group,DE,DAX,large,-,EUR,GER,GEA Group Aktiengesellschaft
-G24.DE,Scout24,DE,DAX,large,-,EUR,GER,Scout24 SE
+G1A.DE,GEA Group,DE,DAX,large,DE0006602006,EUR,GER,GEA Group Aktiengesellschaft
+G24.DE,Scout24,DE,DAX,large,DE000A12DM80,EUR,GER,Scout24 SE
 HEI.DE,Heidelberg Materials,DE,DAX,large,DE0006047004,EUR,GER,Heidelberg Materials AG
 HEN3.DE,Henkel,DE,DAX,large,DE0006048408,EUR,GER,Henkel AG & Co. KGaA
 HNR1.DE,Hannover Re,DE,DAX,large,DE0008402215,EUR,GER,Hannover Rück SE
@@ -34,7 +34,7 @@ QIA.DE,Qiagen,DE,DAX,large,NL0000240000,EUR,GER,Qiagen N.V.
 RHM.DE,Rheinmetall,DE,DAX;SX5E,large,DE0007030009,EUR,GER,Rheinmetall AG
 RWE.DE,RWE,DE,DAX,large,DE0007037129,EUR,GER,RWE Aktiengesellschaft
 SAP.DE,SAP,DE,DAX;SX5E,large,DE0007164600,EUR,GER,SAP SE
-SHL.DE,Siemens Healthineers,DE,DAX,large,-,EUR,GER,Siemens Healthineers AG
+SHL.DE,Siemens Healthineers,DE,DAX,large,DE000SHL1006,EUR,GER,Siemens Healthineers AG
 SIE.DE,Siemens,DE,DAX;SX5E,large,DE0007236101,EUR,GER,Siemens Aktiengesellschaft
 SY1.DE,Symrise,DE,DAX,large,DE000SYM9999,EUR,GER,Symrise AG
 VNA.DE,Vonovia,DE,DAX,large,DE000A1ML7J1,EUR,GER,Vonovia SE
@@ -52,8 +52,8 @@ AI.PA,Air Liquide,FR,CAC;SX5E,large,FR0000120073,EUR,PAR,L'Air Liquide S.A.
 AIR.PA,Airbus,FR,DAX;CAC;SX5E,large,NL0000235190,EUR,PAR,Airbus SE
 BN.PA,Danone,FR,CAC;SX5E,large,FR0000120644,EUR,PAR,Danone S.A.
 BNP.PA,BNP Paribas,FR,CAC;SX5E,large,FR0000131104,EUR,PAR,BNP Paribas SA
-BVI.PA,Bureau Veritas,FR,CAC,large,-,EUR,PAR,Bureau Veritas SA
-CA.PA,Carrefour,FR,CAC,large,-,EUR,PAR,Carrefour SA
+BVI.PA,Bureau Veritas,FR,CAC,large,FR0006174348,EUR,PAR,Bureau Veritas SA
+CA.PA,Carrefour,FR,CAC,large,FR0000120172,EUR,PAR,Carrefour SA
 CAP.PA,Capgemini,FR,CAC,large,FR0000125338,EUR,PAR,Capgemini SE
 CS.PA,Axa,FR,CAC;SX5E,large,FR0000120628,EUR,PAR,AXA SA
 DG.PA,Vinci,FR,CAC;SX5E,large,FR0000125486,EUR,PAR,Vinci SA
@@ -86,45 +86,45 @@ TTE.PA,TotalEnergies,FR,CAC;SX5E,large,FR0000120271,EUR,PAR,TotalEnergies SE
 URW.PA,Unibail-Rodamco-Westfield,FR,CAC,large,FR0013326246,EUR,PAR,Unibail-Rodamco-Westfield SE
 VIE.PA,Veolia,FR,CAC,large,FR0000124141,EUR,PAR,Veolia Environnement SA
 A2A.MI,A2A,IT,FTSEMIB,large,IT0001233417,EUR,MIL,A2A S.p.A.
-AMP.MI,Amplifon,IT,FTSEMIB,large,-,EUR,MIL,Amplifon S.p.A.
-AVIO.MI,Avio,IT,FTSEMIB,large,-,EUR,MIL,Avio S.p.A.
-AZM.MI,Azimut,IT,FTSEMIB,large,-,EUR,MIL,Azimut Holding S.p.A.
+AMP.MI,Amplifon,IT,FTSEMIB,large,IT0004056880,EUR,MIL,Amplifon S.p.A.
+AVIO.MI,Avio,IT,FTSEMIB,large,IT0005119810,EUR,MIL,Avio S.p.A.
+AZM.MI,Azimut,IT,FTSEMIB,large,IT0003261697,EUR,MIL,Azimut Holding S.p.A.
 BAMI.MI,Banco BPM,IT,FTSEMIB,large,IT0005218380,EUR,MIL,Banco BPM S.p.A.
-BC.MI,Brunello Cucinelli,IT,FTSEMIB,large,-,EUR,MIL,Brunello Cucinelli S.p.A.
-BMED.MI,Banca Mediolanum,IT,FTSEMIB,large,-,EUR,MIL,Banca Mediolanum S.p.A.
-BMPS.MI,Banca Monte dei Paschi di Siena,IT,FTSEMIB,large,-,EUR,MIL,Banca Monte dei Paschi di Siena S.p.A.
-BPE.MI,BPER Banca,IT,FTSEMIB,large,-,EUR,MIL,BPER Banca SpA
+BC.MI,Brunello Cucinelli,IT,FTSEMIB,large,IT0004764699,EUR,MIL,Brunello Cucinelli S.p.A.
+BMED.MI,Banca Mediolanum,IT,FTSEMIB,large,IT0004776628,EUR,MIL,Banca Mediolanum S.p.A.
+BMPS.MI,Banca Monte dei Paschi di Siena,IT,FTSEMIB,large,IT0005218752,EUR,MIL,Banca Monte dei Paschi di Siena S.p.A.
+BPE.MI,BPER Banca,IT,FTSEMIB,large,IT0000066123,EUR,MIL,BPER Banca SpA
 BZU.MI,Buzzi,IT,FTSEMIB,large,IT0001347308,EUR,MIL,Buzzi S.p.A.
-CPR.MI,Campari,IT,FTSEMIB,large,-,EUR,MIL,Davide Campari-Milano N.V.
-DIA.MI,Diasorin,IT,FTSEMIB,large,-,EUR,MIL,DiaSorin S.p.A.
+CPR.MI,Campari,IT,FTSEMIB,large,NL0015435975,EUR,MIL,Davide Campari-Milano N.V.
+DIA.MI,Diasorin,IT,FTSEMIB,large,IT0003492391,EUR,MIL,DiaSorin S.p.A.
 ENEL.MI,Enel,IT,FTSEMIB;SX5E,large,IT0003128367,EUR,MIL,Enel SpA
 ENI.MI,Eni,IT,FTSEMIB;SX5E,large,IT0003132476,EUR,MIL,Eni S.p.A.
-FBK.MI,FinecoBank,IT,FTSEMIB,large,-,EUR,MIL,FinecoBank Banca Fineco S.p.A.
-FCT.MI,Fincantieri,IT,FTSEMIB,large,-,EUR,MIL,Fincantieri S.p.A.
+FBK.MI,FinecoBank,IT,FTSEMIB,large,IT0000072170,EUR,MIL,FinecoBank Banca Fineco S.p.A.
+FCT.MI,Fincantieri,IT,FTSEMIB,large,IT0005599938,EUR,MIL,Fincantieri S.p.A.
 G.MI,Generali,IT,FTSEMIB,large,IT0000062072,EUR,MIL,Assicurazioni Generali S.p.A.
-HER.MI,Hera,IT,FTSEMIB,large,-,EUR,MIL,Hera S.p.A.
-IG.MI,Italgas,IT,FTSEMIB,large,-,EUR,MIL,Italgas S.p.A.
+HER.MI,Hera,IT,FTSEMIB,large,IT0001250932,EUR,MIL,Hera S.p.A.
+IG.MI,Italgas,IT,FTSEMIB,large,IT0005211237,EUR,MIL,Italgas S.p.A.
 INW.MI,INWIT,IT,FTSEMIB,large,IT0005090300,EUR,MIL,Infrastrutture Wireless Italiane S.p.A.
 ISP.MI,Intesa Sanpaolo,IT,FTSEMIB;SX5E,large,IT0000072618,EUR,MIL,Intesa Sanpaolo S.p.A.
 IVG.MI,Iveco,IT,FTSEMIB,large,NL0015000LU4,EUR,MIL,Iveco Group N.V.
 LDO.MI,Leonardo,IT,FTSEMIB,large,IT0003856405,EUR,MIL,Leonardo S.p.a.
-LTMC.MI,Lottomatica Group,IT,FTSEMIB,large,-,EUR,MIL,Lottomatica Group S.p.A.
-MB.MI,Mediobanca,IT,FTSEMIB,large,-,EUR,MIL,Mediobanca Banca di Credito Finanziario S.p.A.
+LTMC.MI,Lottomatica Group,IT,FTSEMIB,large,IT0005541336,EUR,MIL,Lottomatica Group S.p.A.
+MB.MI,Mediobanca,IT,FTSEMIB,large,IT0000062957,EUR,MIL,Mediobanca Banca di Credito Finanziario S.p.A.
 MONC.MI,Moncler,IT,FTSEMIB,large,IT0004965148,EUR,MIL,Moncler S.p.A.
 NEXI.MI,Nexi,IT,FTSEMIB,large,US5928351023,EUR,MIL,Nexi S.p.A.
 PRY.MI,Prysmian,IT,FTSEMIB,large,IT0004176001,EUR,MIL,Prysmian S.p.A.
 PST.MI,Poste italiane,IT,FTSEMIB,large,IT0003796171,EUR,MIL,Poste Italiane S.p.A.
 RACE.MI,Ferrari,IT,FTSEMIB;SX5E,large,NL0011509302,EUR,MIL,Ferrari N.V.
-REC.MI,Recordati,IT,FTSEMIB,large,-,EUR,MIL,Recordati Industria Chimica e Farmaceutica S.p.A.
+REC.MI,Recordati,IT,FTSEMIB,large,IT0003828271,EUR,MIL,Recordati Industria Chimica e Farmaceutica S.p.A.
 SPM.MI,Saipem,IT,FTSEMIB,large,IT0005495673,EUR,MIL,Saipem SpA
-SRG.MI,Snam,IT,FTSEMIB,large,-,EUR,MIL,Snam S.p.A.
+SRG.MI,Snam,IT,FTSEMIB,large,IT0003153415,EUR,MIL,Snam S.p.A.
 STLAM.MI,Stellantis,IT,FTSEMIB,large,NL00150001Q9,EUR,MIL,Stellantis N.V.
 STMMI.MI,STMicroelectronics,IT,FTSEMIB,large,NL0000226223,EUR,MIL,STMicroelectronics N.V.
-TEN.MI,Tenaris,IT,FTSEMIB,large,-,EUR,MIL,Tenaris S.A.
+TEN.MI,Tenaris,IT,FTSEMIB,large,LU0156801721,EUR,MIL,Tenaris S.A.
 TIT.MI,Telecom Italia,IT,FTSEMIB,large,IT0003497168,EUR,MIL,Telecom Italia S.p.A.
 TRN.MI,Terna,IT,FTSEMIB,large,IT0004359037,EUR,MIL,Terna S.p.A.
 UCG.MI,UniCredit,IT,FTSEMIB;SX5E,large,IT0005239360,EUR,MIL,UniCredit S.p.A.
-UNI.MI,Unipol,IT,FTSEMIB,large,-,EUR,MIL,Unipol Assicurazioni S.p.A.
+UNI.MI,Unipol,IT,FTSEMIB,large,IT0004810054,EUR,MIL,Unipol Assicurazioni S.p.A.
 AD.AS,Ahold Delhaize,NL,SX5E,large,NL0011794037,EUR,AMS,Koninklijke Ahold Delhaize N.V.
 ADYEN.AS,Adyen,NL,SX5E,large,NL0012969182,EUR,AMS,Adyen N.V.
 ASML.AS,ASML Holding,NL,SX5E,large,NL0010273215,EUR,AMS,ASML Holding N.V.
@@ -146,9 +146,9 @@ AJB.L,AJ Bell,UK,MCX,mid,GB00BFZNLB60,GBp,LSE,AJ Bell plc
 ALFA.L,Alfa Financial Software,UK,MCX,mid,GB00BDHXPG30,GBp,LSE,Alfa Financial Software Holdings PLC
 ALW.L,Alliance Witan,UK,UKX,large,-,GBp,LSE,Alliance Witan Ord
 ANTO.L,Antofagasta plc,UK,UKX,large,GB0000456144,GBp,LSE,Antofagasta plc
-AO.L,AO World,UK,MCX,mid,-,GBp,LSE,AO World plc
+AO.L,AO World,UK,MCX,mid,GB00BJTNFH41,GBp,LSE,AO World plc
 APN.L,Applied Nutrition,UK,MCX,mid,-,GBp,LSE,Applied Nutrition Plc
-ASHM.L,Ashmore Group,UK,MCX,mid,-,GBp,LSE,Ashmore Group Plc
+ASHM.L,Ashmore Group,UK,MCX,mid,GB00B132NW22,GBp,LSE,Ashmore Group Plc
 ASL.L,Aberforth Smaller Companies Trust,UK,MCX,mid,-,GBp,LSE,Aberforth Smaller Companies Ord
 ATG.L,Auction Technology Group,UK,MCX,mid,-,GBp,LSE,Auction Technology Group plc
 ATR.L,Schroder Asian Total Return Investment Company,UK,MCX,mid,-,GBp,LSE,Schroder Asian Total Return Inv. Company
@@ -164,9 +164,9 @@ BAG.L,A.G. Barr,UK,MCX,mid,GB00B6XZKY75,GBp,LSE,A.G. BARR p.l.c.
 BARC.L,Barclays,UK,UKX,large,GB0031348658,GBp,LSE,Barclays PLC
 BATS.L,British American Tobacco,UK,UKX,large,GB0002875804,GBp,LSE,British American Tobacco p.l.c.
 BBOX.L,Tritax Big Box REIT,UK,UKX,large,GB00BG49KP99,GBp,LSE,Tritax Big Box Ord
-BBY.L,Balfour Beatty,UK,MCX,mid,-,GBp,LSE,Balfour Beatty plc
+BBY.L,Balfour Beatty,UK,MCX,mid,GB0000961622,GBp,LSE,Balfour Beatty plc
 BCG.L,Baltic Classifieds,UK,MCX,mid,-,EUR,LSE,Baltic Classifieds Group PLC
-BEZ.L,Beazley,UK,UKX,large,-,GBp,LSE,Beazley plc
+BEZ.L,Beazley,UK,UKX,large,GB00BYQ0JC66,GBp,LSE,Beazley plc
 BGEO.L,Lion Finance Group,UK,UKX,large,-,GBp,LSE,Lion Finance Group PLC
 BGFD.L,Baillie Gifford Japan Trust,UK,MCX,mid,-,GBp,LSE,Baillie Gifford Japan Ord
 BHMG.L,BH Macro,UK,MCX,mid,GG00BQBFY362,GBp,LSE,BH Macro Limited
@@ -177,55 +177,55 @@ BMY.L,Bloomsbury Publishing,UK,MCX,mid,GB0033147751,GBp,LSE,Bloomsbury Publishin
 BNKR.L,Bankers Investment Trust,UK,MCX,mid,-,GBp,LSE,Bankers Ord
 BNZL.L,Bunzl,UK,UKX,large,GB00B0744B38,GBp,LSE,Bunzl plc
 BOWL.L,Hollywood Bowl Group,UK,MCX,mid,-,GBp,LSE,Hollywood Bowl Group plc
-BOY.L,Bodycote,UK,MCX,mid,-,GBp,LSE,Bodycote plc
+BOY.L,Bodycote,UK,MCX,mid,GB0006895626,GBp,LSE,Bodycote plc
 BP.L,BP,UK,UKX,large,GB0007980591,GBp,LSE,BP p.l.c.
 BPCR.L,Biopharma Credit,UK,MCX,mid,-,USD,LSE,BioPharma Credit Ord
 BPT.L,Bridgepoint Group,UK,MCX,mid,-,GBp,LSE,Bridgepoint Group plc
 BRBY.L,Burberry Group,UK,UKX,large,GB0031743007,GBp,LSE,Burberry Group plc
 BREE.L,Breedon Group,UK,MCX,mid,-,GBp,LSE,Breedon Group plc
-BRGE.L,BlackRock Greater Europe Investment Trust,UK,MCX,mid,-,GBp,LSE,BlackRock Greater Europe Ord
+BRGE.L,BlackRock Greater Europe Investment Trust,UK,MCX,mid,GB00B01RDH75,GBp,LSE,BlackRock Greater Europe Ord
 BRSC.L,BlackRock Smaller Companies Trust,UK,MCX,mid,-,GBp,LSE,BlackRock Smaller Companies Ord
 BRWM.L,BlackRock World Mining Trust,UK,MCX,mid,GB0005774855,GBp,LSE,BlackRock World Mining Trust Ord
 BT-A.L,BT Group,UK,UKX,large,GB0030913577,GBp,LSE,BT Group plc
 BTRW.L,Barratt Redrow,UK,UKX,large,-,GBp,LSE,Barratt Redrow plc
-BUT.L,Brunner Investment Trust,UK,MCX,mid,-,GBp,LSE,Brunner Ord
-BWY.L,Bellway,UK,MCX,mid,-,GBp,LSE,Bellway p.l.c.
+BUT.L,Brunner Investment Trust,UK,MCX,mid,GB0001490001,GBp,LSE,Brunner Ord
+BWY.L,Bellway,UK,MCX,mid,GB0000904986,GBp,LSE,Bellway p.l.c.
 BYG.L,Big Yellow Group,UK,MCX,mid,-,GBp,LSE,Big Yellow Group Plc
 BYIT.L,Bytes Technology Group,UK,MCX,mid,-,GBp,LSE,Bytes Technology Group plc
 CBG.L,Close Brothers Group,UK,MCX,mid,-,GBp,LSE,Close Brothers Group plc
-CCC.L,Computacenter,UK,UKX,large,-,GBp,LSE,Computacenter plc
-CCEP.L,Coca-Cola Europacific Partners,UK,UKX,large,-,GBp,LSE,Coca-Cola Europacific Partners PLC
+CCC.L,Computacenter,UK,UKX,large,GB00BV9FP302,GBp,LSE,Computacenter plc
+CCEP.L,Coca-Cola Europacific Partners,UK,UKX,large,GB00BDCPN049,GBp,LSE,Coca-Cola Europacific Partners PLC
 CCH.L,Coca-Cola HBC,UK,UKX,large,CH0198251305,GBp,LSE,Coca-Cola HBC AG
-CGT.L,Capital Gearing Trust,UK,MCX,mid,-,GBp,LSE,Capital Gearing Ord
-CHG.L,Chemring Group,UK,MCX,mid,-,GBp,LSE,Chemring Group PLC
+CGT.L,Capital Gearing Trust,UK,MCX,mid,GB0001738615,GBp,LSE,Capital Gearing Ord
+CHG.L,Chemring Group,UK,MCX,mid,GB00B45C9X44,GBp,LSE,Chemring Group PLC
 CKN.L,Clarkson,UK,MCX,mid,GB0002018363,GBp,LSE,Clarkson PLC
 CLDN.L,Caledonia Investments,UK,MCX,mid,-,GBp,LSE,Caledonia Investments Ord
-CMCX.L,CMC Markets,UK,MCX,mid,-,GBp,LSE,CMC Markets Plc
+CMCX.L,CMC Markets,UK,MCX,mid,GB00B14SKR37,GBp,LSE,CMC Markets Plc
 CNA.L,Centrica,UK,UKX,large,GB00B033F229,GBp,LSE,Centrica plc
-COA.L,Coats Group,UK,MCX,mid,-,GBp,LSE,Coats Group plc
+COA.L,Coats Group,UK,MCX,mid,GB0002068202,GBp,LSE,Coats Group plc
 CORD.L,Cordiant Digital Infrastructure,UK,MCX,mid,-,GBp,LSE,Cordiant Digital Infrastructure Limited
 COST.L,Costain Group,UK,MCX,mid,-,GBp,LSE,Costain Group PLC
 CPG.L,Compass Group,UK,UKX,large,GB0005331532,USD,LSE,Compass Group PLC
 CRDA.L,Croda International,UK,UKX,large,GB00BJFFLV09,GBp,LSE,Croda International Plc
-CSN.L,Chesnara,UK,MCX,mid,-,GBp,LSE,Chesnara plc
-CTEC.L,Convatec,UK,UKX,large,-,GBp,LSE,Convatec Group PLC
-CTY.L,City of London Investment Trust,UK,MCX,mid,-,GBp,LSE,City of London Ord
-CURY.L,Currys,UK,MCX,mid,-,GBp,LSE,Currys plc
+CSN.L,Chesnara,UK,MCX,mid,GB00B00FPT80,GBp,LSE,Chesnara plc
+CTEC.L,Convatec,UK,UKX,large,GB00BD3VFW73,GBp,LSE,Convatec Group PLC
+CTY.L,City of London Investment Trust,UK,MCX,mid,GB0001990497,GBp,LSE,City of London Ord
+CURY.L,Currys,UK,MCX,mid,GB00B4Y7R145,GBp,LSE,Currys plc
 CVSG.L,CVS Group,UK,MCX,mid,-,GBp,LSE,CVS Group plc
-CWK.L,Cranswick,UK,MCX,mid,-,GBp,LSE,Cranswick plc
-CWR.L,Ceres Power,UK,MCX,mid,-,GBp,LSE,Ceres Power Holdings plc
+CWK.L,Cranswick,UK,MCX,mid,GB0002318888,GBp,LSE,Cranswick plc
+CWR.L,Ceres Power,UK,MCX,mid,GB00BG5KQW09,GBp,LSE,Ceres Power Holdings plc
 DATA.L,GlobalData,UK,MCX,mid,-,GBp,LSE,GlobalData Plc
 DCC.L,DCC Energy,UK,UKX,large,IE0002424939,GBp,LSE,DCC Energy plc
 DGE.L,Diageo,UK,UKX,large,GB0002374006,GBp,LSE,Diageo plc
 DLN.L,Derwent London,UK,MCX,mid,-,GBp,LSE,Derwent London Plc
 DNLM.L,Dunelm Group,UK,MCX,mid,-,GBp,LSE,Dunelm Group plc
 DOCS.L,Dr. Martens,UK,MCX,mid,-,GBp,LSE,Dr. Martens plc
-DOM.L,Domino's Pizza,UK,MCX,mid,-,GBp,LSE,Domino's Pizza Group plc
-DPLM.L,Diploma,UK,UKX,large,-,GBp,LSE,Diploma PLC
+DOM.L,Domino's Pizza,UK,MCX,mid,GB00BYN59130,GBp,LSE,Domino's Pizza Group plc
+DPLM.L,Diploma,UK,UKX,large,GB0001826634,GBp,LSE,Diploma PLC
 DRX.L,Drax Group,UK,MCX,mid,GB00B1VNSX38,GBp,LSE,Drax Group plc
 DSCV.L,discoverIE,UK,MCX,mid,-,GBp,LSE,discoverIE Group plc
 EDIN.L,Edinburgh Investment Trust,UK,MCX,mid,-,GBp,LSE,Edinburgh Investment Ord
-EDV.L,Endeavour Mining,UK,UKX,large,-,GBp,LSE,Endeavour Mining plc
+EDV.L,Endeavour Mining,UK,UKX,large,GB00BL6K5J42,GBp,LSE,Endeavour Mining plc
 ELM.L,Elementis,UK,MCX,mid,-,GBp,LSE,Elementis plc
 EMG.L,Man Group,UK,MCX,mid,GB00B83VD954,GBp,LSE,Man Group Plc
 ENOG.L,Energean,UK,MCX,mid,GB00BG12Y042,GBp,LSE,Energean plc
@@ -243,74 +243,74 @@ FEML.L,Fidelity Emerging Markets,UK,MCX,mid,-,GBp,LSE,Fidelity Emerging Markets 
 FEV.L,Fidelity European Trust,UK,MCX,mid,-,GBp,LSE,Fidelity European Trust Ord
 FGEN.L,Foresight Environmental Infrastructure,UK,MCX,mid,GG00BJL5FH87,GBp,LSE,Foresight Environmental Infrastructure Limited
 FGP.L,FirstGroup,UK,MCX,mid,GB0003452173,GBp,LSE,FirstGroup plc
-FGT.L,Finsbury Growth & Income Trust,UK,MCX,mid,-,GBp,LSE,Finsbury Growth & Income Ord
-FOUR.L,4imprint,UK,MCX,mid,-,GBp,LSE,4imprint Group plc
+FGT.L,Finsbury Growth & Income Trust,UK,MCX,mid,GB0007816068,GBp,LSE,Finsbury Growth & Income Ord
+FOUR.L,4imprint,UK,MCX,mid,GB0006640972,GBp,LSE,4imprint Group plc
 FRAS.L,Frasers Group,UK,MCX,mid,GB00B1QH8P22,GBp,LSE,Frasers Group Plc
 FRES.L,Fresnillo plc,UK,UKX,large,GB00B2QPKJ12,GBp,LSE,Fresnillo plc
 FSG.L,Foresight Group,UK,MCX,mid,GG00BMD8MJ76,GBp,LSE,Foresight Group Holdings Limited
 FSV.L,Fidelity Special Values,UK,MCX,mid,-,GBp,LSE,Fidelity Special Values Ord
-GAMA.L,Gamma Communications,UK,MCX,mid,-,GBp,LSE,Gamma Communications plc
-GAW.L,Games Workshop,UK,UKX,large,-,GBp,LSE,Games Workshop Group PLC
+GAMA.L,Gamma Communications,UK,MCX,mid,GB00BQS10J50,GBp,LSE,Gamma Communications plc
+GAW.L,Games Workshop,UK,UKX,large,GB0003718474,GBp,LSE,Games Workshop Group PLC
 GCP.L,GCP Infrastructure Investments,UK,MCX,mid,JE00B6173J15,GBp,LSE,GCP Infrastructure Investments Limited
 GDWN.L,Goodwin,UK,MCX,mid,-,GBp,LSE,Goodwin PLC
 GEN.L,Genuit Group,UK,MCX,mid,-,GBp,LSE,Genuit Group plc
 GFRD.L,Galliford Try,UK,MCX,mid,-,GBp,LSE,Galliford Try Holdings plc
 GFTU.L,Grafton Group,UK,MCX,mid,IE00B00MZ448,GBp,LSE,Grafton Group plc
 GLEN.L,Glencore,UK,UKX,large,JE00B4T3BW64,GBp,LSE,Glencore plc
-GNC.L,Greencore,UK,MCX,mid,-,GBp,LSE,Greencore Group plc
-GNS.L,Genus,UK,MCX,mid,-,GBp,LSE,Genus plc
-GPE.L,Great Portland Estates,UK,MCX,mid,-,GBp,LSE,Great Portland Estates Plc
+GNC.L,Greencore,UK,MCX,mid,IE0003864109,GBp,LSE,Greencore Group plc
+GNS.L,Genus,UK,MCX,mid,GB0002074580,GBp,LSE,Genus plc
+GPE.L,Great Portland Estates,UK,MCX,mid,GB00BF5H9P87,GBp,LSE,Great Portland Estates Plc
 GRG.L,Greggs,UK,MCX,mid,GB00B63QSB39,GBp,LSE,Greggs plc
-GRI.L,Grainger,UK,MCX,mid,-,GBp,LSE,Grainger plc
+GRI.L,Grainger,UK,MCX,mid,GB00B04V1276,GBp,LSE,Grainger plc
 GROW.L,Molten Ventures,UK,MCX,mid,-,GBp,LSE,Molten Ventures Plc
 GSCT.L,Global Smaller Companies Trust,UK,MCX,mid,-,GBp,LSE,The Global Smaller Companies Trust Ord
 GSK.L,GSK plc,UK,UKX,large,GB0009252882,GBp,LSE,GSK plc
 HANA.L,Hansa Investment Company,UK,MCX,mid,-,GBp,LSE,Hansa Investment Company Limited
 HAS.L,Hays,UK,MCX,mid,GB0004161021,GBp,LSE,Hays plc
-HBR.L,Harbour Energy,UK,MCX,mid,-,GBp,LSE,Harbour Energy plc
+HBR.L,Harbour Energy,UK,MCX,mid,GB00BMBVGQ36,GBp,LSE,Harbour Energy plc
 HFD.L,Halfords,UK,MCX,mid,-,GBp,LSE,Halfords Group plc
 HFEL.L,Henderson Far East Income,UK,MCX,mid,-,GBp,LSE,Henderson Far East Income Limited
 HFG.L,Hilton Food Group,UK,MCX,mid,GB00B1V9NW54,GBp,LSE,Hilton Food Group plc
 HGT.L,Hg Capital Trust,UK,MCX,mid,-,GBp,LSE,HgCapital Trust Ord
 HICL.L,HICL Infrastructure Company,UK,MCX,mid,-,GBp,LSE,HICL Infrastructure PLC Ord
 HIK.L,Hikma Pharmaceuticals,UK,MCX,mid,GB00B0LCW083,GBp,LSE,Hikma Pharmaceuticals PLC
-HILS.L,Hill & Smith,UK,MCX,mid,-,GBp,LSE,Hill & Smith PLC
+HILS.L,Hill & Smith,UK,MCX,mid,GB0004270301,GBp,LSE,Hill & Smith PLC
 HLMA.L,Halma plc,UK,UKX,large,GB0004052071,GBp,LSE,Halma plc
 HLN.L,Haleon,UK,UKX,large,GB00BMX86B70,GBp,LSE,Haleon plc
 HMSO.L,Hammerson,UK,MCX,mid,GB0004065016,GBp,LSE,Hammerson Plc
-HOC.L,Hochschild Mining,UK,MCX,mid,-,GBp,LSE,Hochschild Mining plc
+HOC.L,Hochschild Mining,UK,MCX,mid,GB00B1FW5029,GBp,LSE,Hochschild Mining plc
 HRI.L,Herald Investment Trust,UK,MCX,mid,-,GBp,LSE,Herald Ord
 HSBA.L,HSBC,UK,UKX,large,GB0005405286,GBp,LSE,HSBC Holdings plc
 HSL.L,Henderson Smaller Companies Investment Trust,UK,MCX,mid,-,GBp,LSE,Henderson Smaller Companies Ord
-HSX.L,Hiscox,UK,UKX,large,-,GBp,LSE,Hiscox Ltd
+HSX.L,Hiscox,UK,UKX,large,BMG4593F1389,GBp,LSE,Hiscox Ltd
 HTG.L,Hunting,UK,MCX,mid,-,GBp,LSE,Hunting PLC
-HTWS.L,Helios Towers,UK,MCX,mid,-,GBp,LSE,Helios Towers plc
+HTWS.L,Helios Towers,UK,MCX,mid,GB00BJVQC708,GBp,LSE,Helios Towers plc
 HVPE.L,HarbourVest Global Private Equity,UK,MCX,mid,GG00BR30MJ80,GBp,LSE,HarbourVest Global Private Equity Ltd.
-HWDN.L,Howdens Joinery,UK,UKX,large,-,GBp,LSE,Howden Joinery Group Plc
+HWDN.L,Howdens Joinery,UK,UKX,large,GB0005576813,GBp,LSE,Howden Joinery Group Plc
 HWG.L,Harworth Group,UK,MCX,mid,-,GBp,LSE,Harworth Group plc
 IAD.L,Invesco Asia Dragon Trust,UK,MCX,mid,-,GBp,LSE,Invesco Asia Dragon Trust Ord
 IAG.L,International Airlines Group,UK,UKX,large,ES0177542018,GBp,LSE,International Consolidated Airlines Group S.A.
 ICG.L,ICG,UK,UKX,large,-,GBp,LSE,ICG plc
 ICGT.L,ICG Enterprise Trust,UK,MCX,mid,-,GBp,LSE,ICG Enterprise Trust Ord
-IGG.L,IG Group,UK,UKX,large,-,GBp,LSE,IG Group Holdings plc
+IGG.L,IG Group,UK,UKX,large,GB00B06QFB75,GBp,LSE,IG Group Holdings plc
 IHG.L,IHG Hotels & Resorts,UK,UKX,large,GB00BHJYC057,USD,LSE,InterContinental Hotels Group PLC
 IHP.L,IntegraFin Holdings,UK,MCX,mid,-,GBp,LSE,IntegraFin Holdings plc
 III.L,3i,UK,UKX,large,GB00B1YW4409,GBp,LSE,3i Group Ord
 IMB.L,Imperial Brands,UK,UKX,large,GB0004544929,GBp,LSE,Imperial Brands PLC
-IMI.L,IMI,UK,UKX,large,-,GBp,LSE,IMI plc
+IMI.L,IMI,UK,UKX,large,GB00BGLP8L22,GBp,LSE,IMI plc
 INCH.L,Inchcape,UK,MCX,mid,GB00B61TVQ02,GBp,LSE,Inchcape plc
 INF.L,Informa,UK,UKX,large,-,GBp,LSE,Informa plc
 INPP.L,International Public Partnerships,UK,MCX,mid,GB00B188SR50,GBp,LSE,International Public Partnerships Limited
 INVP.L,Investec,UK,UKX,large,GB0031773103,GBp,LSE,Investec Group
 IPO.L,IP Group,UK,MCX,mid,-,GBp,LSE,IP Group Plc
-ITH.L,Ithaca Energy,UK,UKX,large,-,GBp,LSE,Ithaca Energy plc
+ITH.L,Ithaca Energy,UK,UKX,large,GB00BPJHV584,GBp,LSE,Ithaca Energy plc
 ITRK.L,Intertek,UK,UKX,large,GB0031638363,GBp,LSE,Intertek Group plc
 ITV.L,ITV,UK,MCX,mid,GB0033986497,GBp,LSE,ITV plc
 IWG.L,International Workplace Group,UK,MCX,mid,-,GBp,LSE,International Workplace Group plc
-JAM.L,JPMorgan American Investment Trust,UK,MCX,mid,-,GBp,LSE,JPMorgan American Ord
-JCH.L,JPMorgan Claverhouse Investment Trust,UK,MCX,mid,-,GBp,LSE,JPMorgan Claverhouse Ord
-JD.L,JD Sports,UK,UKX,large,-,GBp,LSE,JD Sports Fashion Plc
-JDW.L,Wetherspoons,UK,MCX,mid,-,GBp,LSE,J D Wetherspoon plc
+JAM.L,JPMorgan American Investment Trust,UK,MCX,mid,GB00BKZGVH64,GBp,LSE,JPMorgan American Ord
+JCH.L,JPMorgan Claverhouse Investment Trust,UK,MCX,mid,GB0003422184,GBp,LSE,JPMorgan Claverhouse Ord
+JD.L,JD Sports,UK,UKX,large,GB00BM8Q5M07,GBp,LSE,JD Sports Fashion Plc
+JDW.L,Wetherspoons,UK,MCX,mid,GB0001638955,GBp,LSE,J D Wetherspoon plc
 JEDT.L,JPMorgan European Discovery,UK,MCX,mid,-,GBp,LSE,JPMorgan European Discovery Ord
 JEGI.L,JPMorgan European Growth & Income,UK,MCX,mid,GB00BPR9Y246,GBp,LSE,JPMorgan European Growth & Income Ord
 JEMI.L,JPMorgan Emerging Markets Dividend Income,UK,MCX,mid,-,GBp,LSE,JPMorgan Emerging Markets Div Inc
@@ -322,14 +322,14 @@ JSG.L,Johnson Service Group,UK,MCX,mid,-,GBp,LSE,Johnson Service Group PLC
 JUP.L,Jupiter Fund Management,UK,MCX,mid,-,GBp,LSE,Jupiter Fund Management Plc
 KGF.L,Kingfisher plc,UK,UKX,large,GB0033195214,GBp,LSE,Kingfisher plc
 KIE.L,Kier Group,UK,MCX,mid,-,GBp,LSE,Kier Group plc
-KLR.L,Keller Group,UK,MCX,mid,-,GBp,LSE,Keller Group plc
+KLR.L,Keller Group,UK,MCX,mid,GB0004866223,GBp,LSE,Keller Group plc
 KNOS.L,Kainos,UK,MCX,mid,-,GBp,LSE,Kainos Group plc
 LAND.L,Land Securities,UK,UKX,large,GB0031809436,GBp,LSE,Land Securities Group Plc
 LGEN.L,Legal & General,UK,UKX,large,GB0005603997,GBp,LSE,Legal & General Group Plc
 LLOY.L,Lloyds Banking Group,UK,UKX,large,GB0008706128,GBp,LSE,Lloyds Banking Group plc
 LMP.L,LondonMetric Property,UK,UKX,large,GB00B4WFW713,GBp,LSE,LondonMetric Property Plc
 LRE.L,Lancashire Holdings,UK,MCX,mid,BMG5361W1047,GBp,LSE,Lancashire Holdings Limited
-LSEG.L,London Stock Exchange Group,UK,UKX,large,-,GBp,LSE,London Stock Exchange Group plc
+LSEG.L,London Stock Exchange Group,UK,UKX,large,GB00B0SWJX34,GBp,LSE,London Stock Exchange Group plc
 LWDB.L,Law Debenture,UK,MCX,mid,-,GBp,LSE,Law Debenture Corporation Ord
 MAB.L,Mitchells & Butlers,UK,MCX,mid,GB00B1FP6H53,GBp,LSE,Mitchells & Butlers plc
 MEGP.L,ME Group International,UK,MCX,mid,-,GBp,LSE,ME Group International plc
@@ -360,27 +360,27 @@ NWG.L,NatWest Group,UK,UKX,large,GB00B7T77214,GBp,LSE,NatWest Group plc
 NXT.L,Next plc,UK,UKX,large,GB0032089863,GBp,LSE,NEXT plc
 OCDO.L,Ocado Group,UK,MCX,mid,GB00B3MBS747,GBp,LSE,Ocado Group plc
 OCI.L,Oakley Capital Investments,UK,MCX,mid,-,GBp,LSE,Oakley Capital Investments Limited
-ONT.L,Oxford Nanopore Technologies,UK,MCX,mid,-,GBp,LSE,Oxford Nanopore Technologies plc
-OSB.L,OSB Group,UK,MCX,mid,-,GBp,LSE,OSB Group Plc
+ONT.L,Oxford Nanopore Technologies,UK,MCX,mid,GB00BP6S8Z30,GBp,LSE,Oxford Nanopore Technologies plc
+OSB.L,OSB Group,UK,MCX,mid,GB00BLDRH360,GBp,LSE,OSB Group Plc
 OXB.L,Oxford Biomedica,UK,MCX,mid,-,GBp,LSE,Oxford Biomedica plc
 OXIG.L,Oxford Instruments,UK,MCX,mid,GB0006650450,GBp,LSE,Oxford Instruments plc
-PAF.L,Pan African Resources,UK,MCX,mid,-,GBp,LSE,Pan African Resources PLC
+PAF.L,Pan African Resources,UK,MCX,mid,GB0004300496,GBp,LSE,Pan African Resources PLC
 PAG.L,Paragon Banking Group,UK,MCX,mid,-,GBp,LSE,Paragon Banking Group PLC
 PAGE.L,Michael Page,UK,MCX,mid,GB0030232317,GBp,LSE,Michael Page Plc
 PCGH.L,Polar Capital Global Healthcare Trust,UK,MCX,mid,-,GBp,LSE,Polar Capital Glb Healthcare Ord
-PCT.L,Polar Capital Technology Trust,UK,UKX,large,-,GBp,LSE,Polar Capital Technology Ord
+PCT.L,Polar Capital Technology Trust,UK,UKX,large,GB00BR3YV268,GBp,LSE,Polar Capital Technology Ord
 PETS.L,Pets at Home,UK,MCX,mid,-,GBp,LSE,Pets at Home Group Plc
-PEY.L,Partners Group Private Equity,UK,MCX,mid,-,EUR,LSE,Partners Group Private Equity Limited
+PEY.L,Partners Group Private Equity,UK,MCX,mid,GG00B28C2R28,EUR,LSE,Partners Group Private Equity Limited
 PFD.L,Premier Foods,UK,MCX,mid,GB00B7N0K053,GBp,LSE,Premier Foods plc
 PHI.L,Pacific Horizon Investment Trust,UK,MCX,mid,-,GBp,LSE,Pacific Horizon Ord
-PHP.L,Primary Health Properties,UK,MCX,mid,-,GBp,LSE,Primary Health Properties Plc
-PIN.L,Pantheon International,UK,MCX,mid,-,GBp,LSE,Pantheon International Ord
+PHP.L,Primary Health Properties,UK,MCX,mid,GB00BYRJ5J14,GBp,LSE,Primary Health Properties Plc
+PIN.L,Pantheon International,UK,MCX,mid,GB00BP37WF17,GBp,LSE,Pantheon International Ord
 PINE.L,Pinewood Technologies,UK,MCX,mid,-,GBp,LSE,Pinewood Technologies Group PLC
 PINT.L,Pantheon Infrastructure,UK,MCX,mid,-,GBp,LSE,Pantheon Infrastructure Ord
 PLUS.L,Plus500,UK,MCX,mid,-,GBp,LSE,Plus500 Ltd.
 PNL.L,Personal Assets Trust,UK,MCX,mid,-,GBp,LSE,Personal Assets Ord
 PNN.L,Pennon Group,UK,MCX,mid,-,GBp,LSE,Pennon Group Plc
-POLN.L,Pollen Street Group,UK,MCX,mid,-,GBp,LSE,Pollen Street Group Limited
+POLN.L,Pollen Street Group,UK,MCX,mid,GB00BYZV3G25,GBp,LSE,Pollen Street Group Limited
 PPET.L,Patria Private Equity Trust,UK,MCX,mid,-,GBp,LSE,Patria Private Equity Trust
 PPH.L,PPHE Hotel Group,UK,MCX,mid,-,GBp,LSE,PPHE Hotel Group Limited
 PRN.L,Princes Group,UK,MCX,mid,-,GBp,LSE,Princes Group plc
@@ -389,31 +389,31 @@ PSH.L,Pershing Square Holdings,UK,UKX,large,GG00BPFJTF46,GBp,LSE,"Pershing Squar
 PSN.L,Persimmon,UK,MCX,mid,GB0006825383,GBp,LSE,Persimmon Plc
 PSON.L,Pearson plc,UK,UKX,large,GB0006776081,GBp,LSE,Pearson plc
 PTEC.L,Playtech,UK,MCX,mid,IM00B7S9G985,GBp,LSE,Playtech plc
-QLT.L,Quilter,UK,MCX,mid,-,GBp,LSE,Quilter plc
+QLT.L,Quilter,UK,MCX,mid,GB00BNHSJN34,GBp,LSE,Quilter plc
 QQ.L,Qinetiq,UK,MCX,mid,GB00B0WMWD03,GBp,LSE,QinetiQ Group plc
 RAT.L,Rathbones,UK,MCX,mid,GB0002148343,GBp,LSE,Rathbones Group Plc
-RCP.L,RIT Capital Partners,UK,MCX,mid,-,GBp,LSE,RIT Capital Partners Ord
+RCP.L,RIT Capital Partners,UK,MCX,mid,GB0007366395,GBp,LSE,RIT Capital Partners Ord
 REL.L,RELX,UK,UKX,large,GB00B2B0DG97,GBp,LSE,RELX PLC
-RHIM.L,RHI Magnesita,UK,MCX,mid,-,GBp,LSE,RHI Magnesita N.V.
+RHIM.L,RHI Magnesita,UK,MCX,mid,AT0000676903,GBp,LSE,RHI Magnesita N.V.
 RICA.L,Ruffer Investment Company,UK,MCX,mid,-,GBp,LSE,Ruffer Investment Company Limited
 RIO.L,Rio Tinto,UK,UKX,large,GB0007188757,GBp,LSE,Rio Tinto Group
-RKT.L,Reckitt,UK,UKX,large,-,GBp,LSE,Reckitt Benckiser Group plc
+RKT.L,Reckitt,UK,UKX,large,GB00B24CGK77,GBp,LSE,Reckitt Benckiser Group plc
 RMV.L,Rightmove,UK,MCX,mid,GB00BGDT3G23,GBp,LSE,Rightmove plc
 RNK.L,Rank Group,UK,MCX,mid,-,GBp,LSE,The Rank Group Plc
-ROR.L,Rotork,UK,MCX,mid,-,GBp,LSE,Rotork plc
+ROR.L,Rotork,UK,MCX,mid,GB00BVFNZH21,GBp,LSE,Rotork plc
 ROSE.L,Rosebank Industries,UK,MCX,mid,-,GBp,LSE,Rosebank Industries plc
 RPI.L,Raspberry Pi Holdings,UK,MCX,mid,-,GBp,LSE,Raspberry Pi Holdings plc
 RR.L,Rolls-Royce Holdings,UK,UKX,large,GB00B63H8491,GBp,LSE,Rolls-Royce Holdings plc
-RS1.L,RS Group,UK,MCX,mid,-,GBp,LSE,RS Group plc
+RS1.L,RS Group,UK,MCX,mid,GB0003096442,GBp,LSE,RS Group plc
 RSW.L,Renishaw,UK,MCX,mid,GB0007323586,GBp,LSE,Renishaw plc
 RTO.L,Rentokil Initial,UK,UKX,large,GB0007327124,GBp,LSE,Rentokil Initial plc
 RTW.L,RTW Biotech Opportunities,UK,MCX,mid,-,USD,LSE,RTW Biotech Opportunities Ltd
 SAFE.L,Safestore,UK,MCX,mid,-,GBp,LSE,Safestore Holdings Plc
-SAGA.L,Saga,UK,MCX,mid,-,GBp,LSE,Saga plc
+SAGA.L,Saga,UK,MCX,mid,GB00BMX64W89,GBp,LSE,Saga plc
 SAIN.L,Scottish American Investment Company,UK,MCX,mid,-,GBp,LSE,Scottish American Ord
 SBRY.L,Sainsbury's,UK,UKX,large,GB00B019KW72,GBp,LSE,J Sainsbury plc
 SCT.L,Softcat,UK,MCX,mid,GB00BYZDVK82,GBp,LSE,Softcat plc
-SDLF.L,Standard Life,UK,UKX,large,-,GBp,LSE,Standard Life plc
+SDLF.L,Standard Life,UK,UKX,large,GB00B16KPT44,GBp,LSE,Standard Life plc
 SDP.L,Schroder AsiaPacific Fund,UK,MCX,mid,-,GBp,LSE,Schroder AsiaPacific Ord
 SDR.L,Schroders,UK,UKX,large,GB0002405495,GBp,LSE,Schroders plc
 SEIT.L,SDCL Efficiency Income Trust,UK,MCX,mid,-,GBp,LSE,SDCL Efficiency Income Trust plc.
@@ -421,7 +421,7 @@ SEQI.L,Sequoia Economic Infrastructure Income Fund,UK,MCX,mid,-,GBp,LSE,Sequoia 
 SGE.L,Sage Group,UK,UKX,large,GB00B8C3BL03,GBp,LSE,The Sage Group plc
 SGRO.L,Segro,UK,UKX,large,GB00B5ZN1N88,GBp,LSE,SEGRO Plc
 SHAW.L,Shawbrook Bank,UK,MCX,mid,-,GBp,LSE,Shawbrook Group PLC
-SHC.L,Shaftesbury Capital,UK,MCX,mid,-,GBp,LSE,Shaftesbury Capital PLC
+SHC.L,Shaftesbury Capital,UK,MCX,mid,GB00B62G9D36,GBp,LSE,Shaftesbury Capital PLC
 SHEL.L,Shell plc,UK,UKX,large,GB00B03MLX29,GBp,LSE,Shell plc
 SMIN.L,Smiths Group,UK,UKX,large,GB00B1WY2338,GBp,LSE,Smiths Group plc
 SMT.L,Scottish Mortgage Investment Trust,UK,UKX,large,GB00BLDYK618,GBp,LSE,Scottish Mortgage Ord
@@ -431,30 +431,30 @@ SNR.L,Senior,UK,MCX,mid,-,GBp,LSE,Senior plc
 SOI.L,Schroder Oriental Income Fund,UK,MCX,mid,LU3185647958,GBp,LSE,Schroder Oriental Income Ord
 SPI.L,Spire Healthcare,UK,MCX,mid,-,GBp,LSE,Spire Healthcare Group plc
 SPX.L,Spirax Group,UK,UKX,large,-,GBp,LSE,Spirax Group plc
-SRE.L,Sirius Real Estate,UK,MCX,mid,-,GBp,LSE,Sirius Real Estate Limited
-SRP.L,Serco,UK,MCX,mid,-,GBp,LSE,Serco Group plc
+SRE.L,Sirius Real Estate,UK,MCX,mid,GG00B1W3VF54,GBp,LSE,Sirius Real Estate Limited
+SRP.L,Serco,UK,MCX,mid,GB0007973794,GBp,LSE,Serco Group plc
 SSE.L,SSE plc,UK,UKX,large,GB0007908733,GBp,LSE,SSE plc
 SSIT.L,Seraphim Space Investment Trust,UK,MCX,mid,GB00BW6HS596,GBp,LSE,Seraphim Space Investment Trust Ord
 SSPG.L,SSP Group,UK,MCX,mid,-,GBp,LSE,SSP Group plc
 STAN.L,Standard Chartered,UK,UKX,large,GB0004082847,GBp,LSE,Standard Chartered PLC
 STJ.L,St. James's Place,UK,UKX,large,-,GBp,LSE,St. James's Place plc
-SUPR.L,Supermarket Income REIT,UK,MCX,mid,-,GBp,LSE,Supermarket Income REIT plc
+SUPR.L,Supermarket Income REIT,UK,MCX,mid,GB00BF345X11,GBp,LSE,Supermarket Income REIT plc
 SVS.L,Savills,UK,MCX,mid,GB00B135BJ46,GBp,LSE,Savills plc
 SVT.L,Severn Trent,UK,UKX,large,GB00B1FH8J72,GBp,LSE,Severn Trent PLC
 SYNC.L,Syncona,UK,MCX,mid,-,GBp,LSE,Syncona Limited
-TATE.L,Tate & Lyle,UK,MCX,mid,-,GBp,LSE,Tate & Lyle plc
+TATE.L,Tate & Lyle,UK,MCX,mid,GB0008754136,GBp,LSE,Tate & Lyle plc
 TBCG.L,TBC Bank,UK,MCX,mid,-,GBp,LSE,TBC Bank Group PLC
-TCAP.L,TP ICAP,UK,MCX,mid,-,GBp,LSE,TP ICAP Group PLC
+TCAP.L,TP ICAP,UK,MCX,mid,JE00BMDZN391,GBp,LSE,TP ICAP Group PLC
 TEM.L,Templeton Emerging Markets Investment Trust,UK,MCX,mid,-,GBp,LSE,Templeton Emerging Mkts Invmt Tr TEMIT
 TEP.L,Telecom Plus,UK,MCX,mid,GB0008794710,GBp,LSE,Telecom Plus Plc
 TFIF.L,Twentyfour Income Fund,UK,MCX,mid,-,GBp,LSE,TwentyFour Income Fund Limited
 THG.L,THG,UK,MCX,mid,GB00BMTV7393,GBp,LSE,THG Plc
 THRL.L,Target Healthcare REIT,UK,MCX,mid,-,GBp,LSE,Target Healthcare REIT Ord
 TMPL.L,Temple Bar Investment Trust,UK,MCX,mid,-,GBp,LSE,Temple Bar Ord
-TPK.L,Travis Perkins,UK,MCX,mid,-,GBp,LSE,Travis Perkins plc
-TRIG.L,The Renewables Infrastructure Group,UK,MCX,mid,-,GBp,LSE,The Renewables Infrastructure Group Limited
-TRN.L,Trainline,UK,MCX,mid,-,GBp,LSE,Trainline plc
-TRST.L,Trustpilot,UK,MCX,mid,-,GBp,LSE,Trustpilot Group plc
+TPK.L,Travis Perkins,UK,MCX,mid,GB0007739609,GBp,LSE,Travis Perkins plc
+TRIG.L,The Renewables Infrastructure Group,UK,MCX,mid,GG00BBHX2H91,GBp,LSE,The Renewables Infrastructure Group Limited
+TRN.L,Trainline,UK,MCX,mid,GB00BKDTK925,GBp,LSE,Trainline plc
+TRST.L,Trustpilot,UK,MCX,mid,GB00BNK9TP58,GBp,LSE,Trustpilot Group plc
 TRY.L,TR Property Investment Trust,UK,MCX,mid,GB0009064097,GBp,LSE,TR Property Ord
 TSCO.L,Tesco,UK,UKX,large,GB00BLGZ9862,GBp,LSE,Tesco PLC
 TW.L,Taylor Wimpey,UK,MCX,mid,GB0008782301,GBp,LSE,Taylor Wimpey plc
@@ -464,23 +464,23 @@ ULVR.L,Unilever,UK,UKX,large,GB00B10RZP78,GBp,LSE,Unilever PLC
 USA.L,Baillie Gifford US Growth Trust,UK,MCX,mid,-,GBp,LSE,Baillie Gifford US Growth Ord
 UTG.L,Unite Group,UK,MCX,mid,-,GBp,LSE,Unite Group PLC
 UU.L,United Utilities,UK,UKX,large,GB0006462336,GBp,LSE,United Utilities Group PLC
-VCT.L,Victrex,UK,MCX,mid,-,GBp,LSE,Victrex plc
+VCT.L,Victrex,UK,MCX,mid,GB0009292243,GBp,LSE,Victrex plc
 VEIL.L,Vietnam Enterprise Investments,UK,MCX,mid,-,GBp,LSE,Vietnam Enterprise Ord
 VLX.L,Volex,UK,MCX,mid,-,GBp,LSE,Volex plc
 VOD.L,Vodafone Group,UK,UKX,large,GB00BH4HKS39,GBp,LSE,Vodafone Group Public Limited Company
-VOF.L,VinaCapital Vietnam Opportunity Fund,UK,MCX,mid,-,GBp,LSE,VinaCapital Vietnam Opportunity Fund Limited
-VSVS.L,Vesuvius,UK,MCX,mid,-,GBp,LSE,Vesuvius plc
+VOF.L,VinaCapital Vietnam Opportunity Fund,UK,MCX,mid,GG00BYXVT888,GBp,LSE,VinaCapital Vietnam Opportunity Fund Limited
+VSVS.L,Vesuvius,UK,MCX,mid,GB00B82YXW83,GBp,LSE,Vesuvius plc
 VTY.L,Vistry Group,UK,MCX,mid,-,GBp,LSE,Vistry Group PLC
-WEIR.L,Weir,UK,UKX,large,-,GBp,LSE,Weir PLC
-WIX.L,Wickes,UK,MCX,mid,-,GBp,LSE,Wickes Group plc
-WIZZ.L,Wizz Air,UK,MCX,mid,-,GBp,LSE,Wizz Air Holdings Plc
+WEIR.L,Weir,UK,UKX,large,GB0009465807,GBp,LSE,Weir PLC
+WIX.L,Wickes,UK,MCX,mid,GB00BL6C2002,GBp,LSE,Wickes Group plc
+WIZZ.L,Wizz Air,UK,MCX,mid,JE00BN574F90,GBp,LSE,Wizz Air Holdings Plc
 WKP.L,Workspace Group,UK,MCX,mid,-,GBp,LSE,Workspace Group Plc
 WOSG.L,Watches of Switzerland,UK,MCX,mid,GB00BJDQQ870,GBp,LSE,Watches of Switzerland Group PLC
 WPP.L,WPP,UK,MCX,mid,JE00B8KF9B49,GBp,LSE,WPP plc
 WTB.L,Whitbread,UK,UKX,large,GB00B1KJJ408,GBp,LSE,Whitbread plc
 WWH.L,Worldwide Healthcare Trust,UK,MCX,mid,-,GBp,LSE,Worldwide Healthcare Ord
 XPP.L,XP Power,UK,MCX,mid,-,GBp,LSE,XP Power Limited
-XPS.L,XPS Pensions,UK,MCX,mid,-,GBp,LSE,XPS Pensions Group plc
+XPS.L,XPS Pensions,UK,MCX,mid,GB00BDDN1T20,GBp,LSE,XPS Pensions Group plc
 ZIG.L,Zigup,UK,MCX,mid,-,GBp,LSE,Zigup Plc
 A,Agilent Technologies,US,SP500,large,US00846U1016,USD,NYQ,"Agilent Technologies, Inc."
 AAPL,Apple Inc.,US,SP500,large,US0378331005,USD,NMS,Apple Inc.
@@ -807,7 +807,7 @@ MSI,Motorola Solutions,US,SP500,large,US6200763075,USD,NYQ,"Motorola Solutions, 
 MTB,M&T Bank,US,SP500,large,US55261F1049,USD,NYQ,M&T Bank Corporation
 MTD,Mettler Toledo,US,SP500,large,US5926881054,USD,NYQ,Mettler-Toledo International Inc.
 MU,Micron Technology,US,SP500,large,US5951121038,USD,NMS,"Micron Technology, Inc."
-NCLH,Norwegian Cruise Line Holdings,US,SP500,large,-,USD,NYQ,Norwegian Cruise Line Holdings Ltd.
+NCLH,Norwegian Cruise Line Holdings,US,SP500,large,BMG667211046,USD,NYQ,Norwegian Cruise Line Holdings Ltd.
 NDAQ,"Nasdaq, Inc.",US,SP500,large,US6311031081,USD,NMS,"Nasdaq, Inc."
 NDSN,Nordson Corporation,US,SP500,large,US6556631025,USD,NMS,Nordson Corporation
 NEE,NextEra Energy,US,SP500,large,US3025711041,USD,NYQ,"NextEra Energy, Inc."
@@ -861,7 +861,7 @@ PPG,PPG Industries,US,SP500,large,US6935061076,USD,NYQ,"PPG Industries, Inc."
 PPL,PPL Corporation,US,SP500,large,US69351T1060,USD,NYQ,PPL Corporation
 PRU,Prudential Financial,US,SP500,large,US7443201023,USD,NYQ,"Prudential Financial, Inc."
 PSA,Public Storage,US,SP500,large,US74460D1090,USD,NYQ,Public Storage
-PSKY,Paramount Skydance Corporation,US,SP500,large,-,USD,NMS,Paramount Skydance Corporation
+PSKY,Paramount Skydance Corporation,US,SP500,large,US69932A2042,USD,NMS,Paramount Skydance Corporation
 PSX,Phillips 66,US,SP500,large,US7185461040,USD,NYQ,Phillips 66
 PTC,PTC Inc.,US,SP500,large,US69370C1009,USD,NMS,PTC Inc.
 PWR,Quanta Services,US,SP500,large,US74762E1029,USD,NYQ,"Quanta Services, Inc."
@@ -869,7 +869,7 @@ PYPL,PayPal,US,SP500,large,US70450Y1038,USD,NMS,"PayPal Holdings, Inc."
 Q,Qnity Electronics,US,SP500,large,US74743L1008,USD,NYQ,"Qnity Electronics, Inc."
 QCOM,Qualcomm,US,SP500,large,US7475251036,USD,NMS,QUALCOMM Incorporated
 RCL,Royal Caribbean Group,US,SP500,large,-,USD,NYQ,Royal Caribbean Cruises Ltd.
-RDDT,Reddit,US,SP500,large,-,USD,NYQ,"Reddit, Inc."
+RDDT,Reddit,US,SP500,large,US75734B1008,USD,NYQ,"Reddit, Inc."
 REG,Regency Centers,US,SP500,large,US7588491032,USD,NMS,Regency Centers Corporation
 REGN,Regeneron Pharmaceuticals,US,SP500,large,US75886F1075,USD,NMS,"Regeneron Pharmaceuticals, Inc."
 RF,Regions Financial Corporation,US,SP500,large,US7591EP1005,USD,NYQ,Regions Financial Corporation
