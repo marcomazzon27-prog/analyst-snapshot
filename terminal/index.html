@@ -378,7 +378,8 @@ async function pBrokers(arg){if(arg)await loadRank();
   if(arg){const b=arg;const ev=EV.filter(e=>e.b===b&&inMkt(e.t));
     const j=BRK,r=j?rankRows(j).find(x=>x.broker===b):null;
     const sc=r?`<div class="grid kpis" style="margin-bottom:16px">${kpiS("Posizione",r.rank?`${r.rank}° su ${rankRows(j).filter(x=>x.rank!=null).length}`:"non in classifica","",r.rank?`punteggio ${nf(r.score,0)}/100`:`servono ${j.min_n} analisi valutate`)}${kpiS("Successo 3M",r.hit==null?"–":nf(r.hit*100,1)+"%",r.hit>=j.global.hit?"up":"dn",`media ${nf(j.global.hit*100,1)}% · ${r.n_eval} analisi`)}${kpiS("Alfa medio 3M",pct(r.alpha==null?null:r.alpha*100,2),pcls(r.alpha))}${kpiS("Abilità ML",bps(r.ml),pcls(r.ml))}${kpiS("Target raggiunti 12M",r.pt_hit==null?"–":nf(r.pt_hit*100,0)+"%","",r.n_pt_eval?`${r.n_pt_eval} target valutati`:"")}</div>`:"";
-    return `<p><a class="mut" href="#/ranking">← Classifica</a> · <a class="mut" href="#/brokers">Tutti i broker</a></p><h1>${esc(b)}</h1><p class="lead">${ev.length} analisi nel database.</p>${sc}
+    const rh=j?.rank_hist?.[b];const rc=rh&&rh.length>1?`<div class="card" style="margin-bottom:16px"><div class="hd"><h2>Posizione nel tempo</h2><small>test trimestrale, alfa a 3 mesi corretto per il campione</small></div><div class="bd"><div style="max-width:640px">${rankChart(rh)}</div></div></div>`:"";
+    return `<p><a class="mut" href="#/ranking">← Classifica</a> · <a class="mut" href="#/brokers">Tutti i broker</a></p><h1>${esc(b)}</h1><p class="lead">${ev.length} analisi negli ultimi 2 anni.</p>${sc}${rc}
     <div class="toolbar">${seg("mkt",MKTS,"Mercato")}</div><div class="card">${table("brk1",EVCOLS,ev,{def:"d",rowAttr:rowT})}</div>`;}
   const cut=bdBack(ASOF,st.win);const m={};
   for(const e of EV){if(!inMkt(e.t))continue;const x=m[e.b]??={b:e.b,n:0,w:0,up:0,dn:0,pt:0,tk:new Set()};x.n++;x.tk.add(e.t);if(e.pt)x.pt++;
@@ -423,12 +424,17 @@ async function pRanking(){
   if(!j)return `<h1>Classifica broker</h1><div class="card empty-state">La classifica non è ancora stata calcolata: la genera il workflow 3-terminale.</div>`;
   const rows=rankRows(j),ranked=rows.filter(r=>r.rank!=null),other=rows.filter(r=>r.rank==null);
   const g=j.global,m=j.model||{},p=j.persistence||{};
-  const rel=p.rank_corr==null?{t:"Non ancora misurabile",c:"",d:esc(p.note||"")}:
+  const bt=j.backtest||{};
+  const rel=bt.n>=4?(bt.mean_rho>=.1&&bt.t_stat>=2?{t:"Buona",c:"up",d:`In ${bt.n} trimestri di test fuori campione la classifica ha anticipato i risultati successivi (ρ medio ${nf(bt.mean_rho,2)}, positiva nel ${nf(bt.pos_share*100,0)}% dei trimestri).`}:
+    bt.mean_rho>0&&bt.pos_share>=.5?{t:"Debole",c:"warnc",d:`In ${bt.n} trimestri di test fuori campione la classifica ha anticipato i risultati solo in parte (ρ medio ${nf(bt.mean_rho,2)}, t = ${nf(bt.t_stat,1)}).`}:
+    {t:"Non affidabile",c:"dn",d:`In ${bt.n} trimestri di test fuori campione la classifica non ha anticipato i risultati successivi (ρ medio ${nf(bt.mean_rho,2)}, positiva nel ${nf(bt.pos_share*100,0)}% dei trimestri): per ora le differenze tra broker sono in gran parte rumore.`}):
+    p.rank_corr==null?{t:"Non ancora misurabile",c:"",d:esc(p.note||"")}:
     p.rank_corr>=.3?{t:"Buona",c:"up",d:`La classifica calcolata fino al ${fd(p.cutoff)} ha anticipato bene i risultati successivi (ρ = ${nf(p.rank_corr,2)} su ${p.n_brokers} broker).`}:
     p.rank_corr>=.1?{t:"Debole",c:"warnc",d:`La classifica passata ha anticipato solo in parte i risultati successivi (ρ = ${nf(p.rank_corr,2)} su ${p.n_brokers} broker).`}:
     {t:"Non affidabile",c:"dn",d:`La classifica calcolata fino al ${fd(p.cutoff)} non ha anticipato i risultati successivi (ρ = ${nf(p.rank_corr,2)} su ${p.n_brokers} broker): per ora le differenze tra broker sono in gran parte rumore.`};
   const cols=[
     {k:"rank",l:"#",v:r=>r.rank,h:r=>`<span class="rk ${r.rank<=3?"g"+r.rank:""}">${r.rank}</span>`},
+    {k:"d",l:"Δ",v:r=>j.prev_rank&&j.prev_rank[r.broker]!=null?j.prev_rank[r.broker]-r.rank:null,h:r=>{const p=j.prev_rank?.[r.broker];if(p==null)return'<span class="mut">–</span>';const d=p-r.rank;return d?`<span class="${d>0?"up":"dn"}">${d>0?"▲":"▼"}${Math.abs(d)}</span>`:'<span class="mut">=</span>'}},
     {k:"broker",l:"Broker",v:r=>r.broker,h:r=>`<b>${esc(r.broker)}</b><div class="mut" style="font-size:12px">${r.n_tickers} titoli</div>`},
     {k:"score",l:"Punteggio",v:r=>r.score,h:r=>`<div class="bar-s"><i style="width:${Math.max(4,r.score)}px"></i><b>${nf(r.score,0)}</b></div>`},
     {k:"n_eval",l:"Analisi valutate",num:1,v:r=>r.n_eval,h:r=>r.n_eval},
@@ -455,6 +461,7 @@ async function pRanking(){
   <div class="note" style="margin-top:16px;${rel.c==="up"?"background:var(--up-soft);color:var(--up)":""}">${rel.d} ${m.informative===false?`Il modello ML non trova differenze significative tra broker (R² fuori campione ≤ 0): la colonna "Abilità ML" resta vuota e il punteggio usa le altre metriche.`:m.oos_r2!=null?`Il modello ML spiega fuori campione il ${nf(m.oos_r2*100,1)}% della variabilità dei rendimenti.`:""}</div>
   <div class="card"><div class="hd"><h2>Classifica</h2><small>${ranked.length} broker</small></div>${table("rank",cols,ranked,{def:"rank",desc:false,limit:200,rowAttr:r=>`data-go="brokers/${encodeURIComponent(r.broker)}"`})}</div>
   ${other.length?`<div class="card" style="margin-top:16px"><div class="hd"><h2>Campione insufficiente</h2><small>meno di ${j.min_n} analisi valutate</small></div>${table("rank-o",ocols,other,{def:"n_eval",limit:30,rowAttr:r=>`data-go="brokers/${encodeURIComponent(r.broker)}"`})}</div>`:""}
+  ${btCard(j)}
   <div class="card" style="margin-top:16px"><div class="hd"><h2>Come è calcolata</h2></div><div class="bd method"><ul>
     <li><b>Ingresso</b>: chiusura del giorno dell'analisi, dopo la reazione del mercato. Si misura la capacità di prevedere, non l'effetto della notizia.</li>
     <li><b>Risultato</b>: rendimento del titolo meno quello del suo indice (S&amp;P 500, FTSE 100/250, FTSE MIB, DAX, CAC 40, Euro Stoxx 50) a 1, 3, 6 e 12 mesi.</li>
@@ -464,8 +471,25 @@ async function pRanking(){
     <li><b>Abilità ML</b>: regressione ridge con cross-validation temporale. Stima il contributo del broker al rendimento a 3 mesi al netto di momentum, volatilità, mercato e upside del target. Se i dati non distinguono i broker, la regolarizzazione porta tutti vicino a zero.</li>
     <li><b>Correzione per il campione</b>: i tassi di ogni broker sono avvicinati alla media generale in proporzione a quante analisi ha (${j.min_n} per entrare, peso della media pari a 30 analisi). Così pochi colpi fortunati non bastano per salire in classifica.</li>
     <li><b>Punteggio</b>: media pesata dei valori standardizzati (ML ${j.weights.ml*100}%, successo ${j.weights.hit*100}%, alfa ${j.weights.alpha*100}%, IC ${j.weights.ic*100}%, target ${(j.weights.pt_hit+j.weights.pt_err)*100}%), espressa in percentile 0–100.</li>
-    <li><b>Affidabilità</b>: la classifica calcolata sulle analisi più vecchie viene confrontata con i risultati dei broker su quelle più recenti.</li>
+    <li><b>Affidabilità</b>: test fuori campione ripetuto ogni trimestre. La classifica viene calcolata solo con le analisi il cui esito era già noto a quella data, poi confrontata con i risultati dei broker nei 3 mesi successivi.</li>
+    <li><b>Storico</b>: l'intera cronologia di analisi che Yahoo conserva, più 10 anni di prezzi, scaricati una volta. Ogni notte si aggiungono le analisi nuove e gli esiti che maturano. Le analisi storiche non sono point-in-time, e l'universo è quello attuale (distorsione da sopravvivenza).</li>
     <li>Fonte: Yahoo Finance. Il nome del singolo analista non è disponibile, quindi la classifica è per casa di ricerca.</li></ul></div></div>`;}
+function btCard(j){const bt=j.backtest||{},P=bt.periods||[],cv=j.coverage||{};
+  const yrs=Object.entries(cv.by_year||{});const mx=Math.max(1,...yrs.map(y=>y[1]));
+  return `<div class="grid two" style="margin-top:16px">
+  <div class="card"><div class="hd"><h2>Test fuori campione</h2><small>${P.length} trimestri</small></div>
+   ${P.length?`<div class="tw"><table class="mini"><thead><tr><th>Trimestre</th><th class="num">Broker</th><th class="num">ρ</th><th class="num">Terzo alto − basso</th></tr></thead><tbody>${[...P].reverse().map(p=>`<tr><td>${fd(p.cutoff)}</td><td class="num">${p.n_brokers}</td><td class="num ${pcls(p.rho)}">${nf(p.rho,2)}</td><td class="num ${pcls(p.spread)}">${pct(p.spread*100,2)}</td></tr>`).join("")}</tbody></table></div>`:`<div class="empty-state">Storico ancora troppo corto per il test.</div>`}</div>
+  <div class="card"><div class="hd"><h2>Analisi valutate per anno</h2><small>dal ${fd(cv.first_event)}</small></div><div class="bd">
+   ${yrs.map(([y,n])=>`<div class="stat"><span>${y}</span><span style="display:flex;align-items:center;gap:8px"><i style="display:block;height:8px;border-radius:99px;background:var(--acc);width:${Math.max(3,160*n/mx)}px"></i><b>${n.toLocaleString("it-IT")}</b></span></div>`).join("")}</div></div></div>`;}
+function rankChart(h){if(!h||h.length<2)return"";const W=520,H=150,L=34,R=10,T=10,B=22;const mxN=Math.max(...h.map(x=>x[2]));
+  const X=i=>L+(W-L-R)*i/(h.length-1),Y=r=>T+(H-T-B)*(r-1)/Math.max(1,mxN-1);
+  const d=h.map((x,i)=>`${i?"L":"M"}${X(i).toFixed(1)},${Y(x[1]).toFixed(1)}`).join("");
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Posizione storica">
+   <line x1="${L}" x2="${W-R}" y1="${Y(1)}" y2="${Y(1)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(1)+4}" text-anchor="end">1°</text>
+   <line x1="${L}" x2="${W-R}" y1="${Y(mxN)}" y2="${Y(mxN)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(mxN)+4}" text-anchor="end">${mxN}°</text>
+   <path d="${d}" fill="none" stroke="var(--acc)" stroke-width="2"/>
+   ${h.map((x,i)=>`<circle cx="${X(i)}" cy="${Y(x[1])}" r="3.5" fill="var(--acc)"><title>${fd(x[0])}: ${x[1]}° su ${x[2]}</title></circle>`).join("")}
+   <text x="${L}" y="${H-5}">${fd(h[0][0])}</text><text x="${W-R}" y="${H-5}" text-anchor="end">${fd(h.at(-1)[0])}</text></svg>`;}
 function kpiS(k,v,c,s){return `<div class="card kpi"><div class="k">${k}</div><div class="v ${c}" style="font-size:24px">${v}</div>${s?`<div class="s">${s}</div>`:""}</div>`;}
 
 function brokerCurrent(t){const m={};for(const e of EV){if(e.t!==t||e.tn==null)continue;const x=m[e.b];if(!x||e.d>x.d)m[e.b]=e;}
