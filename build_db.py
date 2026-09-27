@@ -13,7 +13,7 @@ Output:
 
 Uso:  python build_db.py            (dalla root del repo)
 """
-import datetime as dt, hashlib, json, re, shutil, sqlite3
+import bisect, datetime as dt, hashlib, json, re, shutil, sqlite3
 from pathlib import Path
 import pandas as pd
 
@@ -27,11 +27,12 @@ DATA, BUILD, SITE = ROOT / "data", ROOT / "build", ROOT / "site"
 REV_HISTORY_IN_JSON = 60               # snapshot di revisioni esportati al terminale
 
 SCHEMA = """
-CREATE TABLE universe(ticker TEXT PRIMARY KEY, panel TEXT, cap_tier TEXT);
+CREATE TABLE universe(ticker TEXT PRIMARY KEY, name TEXT, long_name TEXT, panel TEXT,
+  indices TEXT, cap_tier TEXT, isin TEXT, currency TEXT, exchange TEXT);
 
 CREATE TABLE snapshot(               -- un record per notte di raccolta
   run_date TEXT PRIMARY KEY, tickers INT, failed INT, rating_rows INT,
-  revision_rows INT, unmapped_grades TEXT);
+  revision_rows INT, unmapped_grades TEXT, target_rows INT, price_tickers INT, pt_events INT);
 
 CREATE TABLE rating_event(           -- evento unico, deduplicato tra snapshot
   event_id TEXT PRIMARY KEY, ticker TEXT, event_date TEXT, broker TEXT,
@@ -39,7 +40,9 @@ CREATE TABLE rating_event(           -- evento unico, deduplicato tra snapshot
   first_seen TEXT,                   -- primo snapshot che lo contiene (point-in-time)
   last_seen TEXT, n_seen INT,
   is_backfill INT,                   -- 1 = arrivato col primo carico, non point-in-time
-  regraded INT);                     -- 1 = grade numerico ricalcolato con la mappa attuale
+  regraded INT,                      -- 1 = grade numerico ricalcolato con la mappa attuale
+  pt_action TEXT, pt_from REAL, pt_to REAL,   -- target price dell'analisi (se fornito)
+  close_at_event REAL);              -- chiusura del giorno dell'analisi (o l'ultima prima)
 CREATE INDEX ix_ev_t ON rating_event(ticker, event_date);
 CREATE INDEX ix_ev_d ON rating_event(event_date);
 CREATE INDEX ix_ev_b ON rating_event(broker);
@@ -47,6 +50,12 @@ CREATE INDEX ix_ev_b ON rating_event(broker);
 CREATE TABLE revision(
   ticker TEXT, as_of TEXT, fy INT, n_up_30d REAL, n_down_30d REAL, n_est REAL,
   PRIMARY KEY(ticker, as_of, fy));
+
+CREATE TABLE price(ticker TEXT, date TEXT, close REAL, PRIMARY KEY(ticker, date));
+
+CREATE TABLE target(                 -- target di consenso, uno snapshot per notte
+  ticker TEXT, as_of TEXT, pt_mean REAL, pt_median REAL, pt_high REAL, pt_low REAL, price REAL,
+  PRIMARY KEY(ticker, as_of));
 
 CREATE TABLE ingest_log(file TEXT PRIMARY KEY, kind TEXT, snapshot_date TEXT,
   rows_in INT, rows_new INT);
@@ -81,6 +90,21 @@ SELECT ticker, as_of, fy, n_up_30d, n_down_30d, n_est,
              THEN (n_up_30d - n_down_30d) * 1.0 / COALESCE(n_est, n_up_30d + n_down_30d) END) OVER w
          AS d_breadth
 FROM revision WINDOW w AS (PARTITION BY ticker, fy ORDER BY as_of);
+
+-- ultima chiusura disponibile per titolo
+CREATE VIEW v_last_close AS
+SELECT ticker, date, close FROM (
+  SELECT p.*, ROW_NUMBER() OVER (PARTITION BY ticker ORDER BY date DESC) rn FROM price p) WHERE rn = 1;
+
+-- analisi con target: confronto con la chiusura del giorno e con l'ultima chiusura
+CREATE VIEW v_pt_events AS
+SELECT e.ticker, u.name, u.isin, e.event_date, e.broker, e.action, e.rating_to, e.pt_action,
+       e.pt_from, e.pt_to, e.close_at_event,
+       ROUND(100.0 * (e.pt_to / e.close_at_event - 1), 1) AS upside_at_event_pct,
+       lc.date AS last_close_date, lc.close AS last_close,
+       ROUND(100.0 * (e.pt_to / lc.close - 1), 1) AS upside_now_pct
+FROM rating_event e LEFT JOIN universe u USING(ticker) LEFT JOIN v_last_close lc USING(ticker)
+WHERE e.pt_to IS NOT NULL;
 
 -- eventi classificati per rilevanza, come richiesto dal brief
 CREATE VIEW v_moves AS
@@ -132,15 +156,19 @@ def build():
     if dbp.exists(): dbp.unlink()
     con = sqlite3.connect(dbp); con.executescript(SCHEMA)
 
-    u = pd.read_csv(ROOT / "universe.csv")
-    con.executemany("INSERT OR IGNORE INTO universe VALUES(?,?,?)",
-                    [tuple(nn(v) for v in r) for r in u[["ticker", "panel", "cap_tier"]].itertuples(index=False)])
+    u = pd.read_csv(ROOT / "universe.csv", dtype=str)
+    ucols = ["ticker", "name", "long_name", "panel", "indices", "cap_tier", "isin", "currency", "exchange"]
+    for c in ucols:
+        if c not in u.columns: u[c] = None
+    u.loc[u["isin"] == "-", "isin"] = None
+    con.executemany(f"INSERT OR IGNORE INTO universe VALUES({','.join('?'*len(ucols))})",
+                    [tuple(nn(v) for v in r) for r in u[ucols].itertuples(index=False)])
 
     health = update_health_history()
-    for r in health.itertuples(index=False):
-        con.execute("INSERT OR REPLACE INTO snapshot VALUES(?,?,?,?,?,?)",
-                    (r.run_date, nn(r.tickers), nn(r.failed), nn(r.rating_rows),
-                     nn(r.revision_rows), nn(r.unmapped_grades)))
+    for r in health.to_dict("records"):
+        con.execute("INSERT OR REPLACE INTO snapshot VALUES(?,?,?,?,?,?,?,?,?)",
+                    tuple(nn(r.get(c)) for c in ("run_date", "tickers", "failed", "rating_rows", "revision_rows",
+                                                  "unmapped_grades", "target_rows", "price_tickers", "pt_events")))
 
     # --- rating: dedup tra snapshot, first_seen = prima notte in cui compare
     rfiles = snapshot_files("ratings")
@@ -148,21 +176,49 @@ def build():
     events = {}
     for snap, p in rfiles:
         df = pd.read_csv(p); new = 0
+        for c in ("pt_action", "pt_from", "pt_to"):
+            if c not in df.columns: df[c] = None
         for r in df.itertuples(index=False):
             key = "|".join(str(nn(x)) for x in (r.ticker, r.event_date, r.broker, r.action, r.rating_from, r.rating_to))
             eid = hashlib.sha1(key.encode()).hexdigest()[:16]
             if eid in events:
-                ev = events[eid]; ev["last_seen"] = snap; ev["n_seen"] += 1; continue
+                ev = events[eid]; ev["last_seen"] = snap; ev["n_seen"] += 1
+                if nn(r.pt_to) is not None:        # i target arrivano dagli snapshot più recenti
+                    ev["pt_action"], ev["pt_from"], ev["pt_to"] = nn(r.pt_action), nn(r.pt_from), nn(r.pt_to)
+                continue
             fnum, tnum, reg = nn(r.rating_from_num), nn(r.rating_to_num), 0
             if fnum is None and nn(r.rating_from) and grade(r.rating_from): fnum, reg = grade(r.rating_from), 1
             if tnum is None and nn(r.rating_to) and grade(r.rating_to): tnum, reg = grade(r.rating_to), 1
             events[eid] = dict(event_id=eid, ticker=r.ticker, event_date=r.event_date, broker=nn(r.broker),
                                action=nn(r.action), rating_from=nn(r.rating_from), rating_to=nn(r.rating_to),
                                from_num=fnum, to_num=tnum, first_seen=snap, last_seen=snap, n_seen=1,
-                               is_backfill=int(snap == first_snap), regraded=reg)
+                               is_backfill=int(snap == first_snap), regraded=reg,
+                               pt_action=nn(r.pt_action), pt_from=nn(r.pt_from), pt_to=nn(r.pt_to),
+                               close_at_event=None)
             new += 1
         con.execute("INSERT INTO snapshot(run_date) VALUES(?) ON CONFLICT DO NOTHING", (snap,))
         con.execute("INSERT INTO ingest_log VALUES(?,?,?,?,?)", (str(p.relative_to(ROOT)), "ratings", snap, len(df), new))
+    # --- prezzi (i file più recenti sovrascrivono) e target di consenso
+    for snap, p in snapshot_files("prices"):
+        df = pd.read_csv(p).dropna()
+        con.executemany("INSERT OR REPLACE INTO price VALUES(?,?,?)",
+                        [(r.ticker, r.date, float(r.close)) for r in df.itertuples(index=False)])
+        con.execute("INSERT INTO ingest_log VALUES(?,?,?,?,?)", (str(p.relative_to(ROOT)), "prices", snap, len(df), len(df)))
+    for snap, p in snapshot_files("targets"):
+        df = pd.read_csv(p)
+        con.executemany("INSERT OR REPLACE INTO target VALUES(?,?,?,?,?,?,?)",
+                        [tuple(nn(v) for v in r) for r in df[["ticker", "as_of", "pt_mean", "pt_median", "pt_high",
+                                                                "pt_low", "price"]].itertuples(index=False)])
+        con.execute("INSERT INTO ingest_log VALUES(?,?,?,?,?)", (str(p.relative_to(ROOT)), "targets", snap, len(df), len(df)))
+    px = {}
+    for t, d, c in con.execute("SELECT ticker, date, close FROM price ORDER BY ticker, date"):
+        px.setdefault(t, ([], []))[0].append(d); px[t][1].append(c)
+    for e in events.values():                  # chiusura del giorno dell'analisi (o precedente)
+        s_ = px.get(e["ticker"])
+        if s_:
+            i = bisect.bisect_right(s_[0], str(e["event_date"])) - 1
+            if i >= 0 and (dt.date.fromisoformat(str(e["event_date"])) - dt.date.fromisoformat(s_[0][i])).days <= 5:
+                e["close_at_event"] = s_[1][i]
     cols = list(next(iter(events.values())).keys()) if events else []
     if events:
         con.executemany(f"INSERT INTO rating_event({','.join(cols)}) VALUES({','.join('?'*len(cols))})",
@@ -191,24 +247,47 @@ def export(con):
     brokers = [r[0] for r in q("SELECT DISTINCT broker FROM rating_event WHERE broker IS NOT NULL ORDER BY broker")]
     bi = {b: i for i, b in enumerate(brokers)}
     ev = q("""SELECT ticker, event_date, broker, action, rating_from, rating_to, from_num, to_num,
-                     first_seen, is_backfill FROM rating_event ORDER BY event_date DESC, ticker""")
+                     first_seen, is_backfill, pt_from, pt_to, pt_action, close_at_event
+              FROM rating_event ORDER BY event_date DESC, ticker""")
     snaps = [r[0] for r in q("SELECT DISTINCT as_of FROM revision ORDER BY as_of DESC LIMIT ?", REV_HISTORY_IN_JSON)]
     rev = q(f"""SELECT ticker, as_of, fy, n_up_30d, n_down_30d, n_est FROM revision
                 WHERE as_of IN ({','.join('?'*len(snaps))}) ORDER BY as_of""", *snaps) if snaps else []
+    # ultima e penultima chiusura
+    last = {}
+    for t, d, c, rn in q("""SELECT ticker, date, close, rn FROM (SELECT p.*, ROW_NUMBER() OVER
+                             (PARTITION BY ticker ORDER BY date DESC) rn FROM price p) WHERE rn <= 2"""):
+        if rn == 1: last[t] = [d, c, None]
+        elif t in last: last[t][2] = c
+    tg = {t: [m, md, h, l, a] for t, a, m, md, h, l in q(
+        """SELECT ticker, as_of, pt_mean, pt_median, pt_high, pt_low FROM (SELECT t.*, ROW_NUMBER() OVER
+           (PARTITION BY ticker ORDER BY as_of DESC) rn FROM target t) WHERE rn = 1""")}
     out = {
         "meta": {"built_at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
                  "as_of": q("SELECT MAX(run_date) FROM snapshot")[0][0],
                  "repo": "marcomazzon27-prog/analyst-snapshot"},
-        "universe": {t: [p, c] for t, p, c in q("SELECT * FROM universe")},
+        "universe": {r[0]: list(r[1:]) for r in q(
+            "SELECT ticker, name, panel, indices, isin, currency, cap_tier, long_name, exchange FROM universe")},
         "brokers": brokers,
-        "events": [[t, d, bi.get(b, -1), a, rf, rt, fn, tn, fs, bf] for t, d, b, a, rf, rt, fn, tn, fs, bf in ev],
+        "events": [[t, d, bi.get(b, -1), a, rf, rt, fn, tn, fs, bf, pf, pt, pa, cx]
+                   for t, d, b, a, rf, rt, fn, tn, fs, bf, pf, pt, pa, cx in ev],
         "revisions": [list(r) for r in rev],
+        "last": last,
+        "targets": tg,
         "snapshots": [list(r) for r in q("SELECT * FROM snapshot ORDER BY run_date")],
         "ingest": [list(r) for r in q("SELECT * FROM ingest_log ORDER BY snapshot_date, kind")],
         "tables": {t: q(f"SELECT COUNT(*) FROM {t}")[0][0]
-                   for t in ("universe", "snapshot", "rating_event", "revision", "ingest_log")},
+                   for t in ("universe", "snapshot", "rating_event", "revision", "price", "target", "ingest_log")},
     }
     (SITE / "terminal.json").write_text(json.dumps(out, separators=(",", ":"), ensure_ascii=False))
+    # serie storiche per titolo, caricate dal terminale solo quando apri la scheda
+    tdir = SITE / "t"; tdir.mkdir(exist_ok=True)
+    series = {}
+    for t, d, c in q("SELECT ticker, date, close FROM price ORDER BY ticker, date"):
+        s_ = series.setdefault(t, {"d": [], "c": [], "tg": []}); s_["d"].append(d); s_["c"].append(c)
+    for t, a, m in q("SELECT ticker, as_of, pt_mean FROM target WHERE pt_mean IS NOT NULL ORDER BY ticker, as_of"):
+        series.setdefault(t, {"d": [], "c": [], "tg": []})["tg"].append([a, m])
+    for t, s_ in series.items():
+        (tdir / f"{t}.json").write_text(json.dumps(s_, separators=(",", ":")))
 
 
 if __name__ == "__main__":

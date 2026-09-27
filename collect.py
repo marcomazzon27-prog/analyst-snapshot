@@ -27,6 +27,42 @@ def grade(x):
         if len(k)>4 and k in s: return v
     return None                      # mai default a 3: creerebbe upgrade/downgrade finti
 
+def pt(x):
+    try:
+        v = float(x)
+        return round(v, 4) if v > 0 else None
+    except (TypeError, ValueError):
+        return None
+
+
+def closes(tickers, out, today):
+    """Chiusure giornaliere. Primo giro: 1 anno di storico; poi gli ultimi 5 giorni
+    (così una notte saltata si recupera). File append-only data/prices/YYYY-MM-DD.csv."""
+    import yfinance as yf
+    pdir = out / "prices"; pdir.mkdir(parents=True, exist_ok=True)
+    period = "5d" if any(pdir.glob("*.csv")) else "1y"
+    frames = []
+    for k in range(0, len(tickers), 200):
+        chunk = tickers[k:k+200]
+        try:
+            d = yf.download(chunk, period=period, auto_adjust=False, progress=False,
+                            threads=True, group_by="column")
+            c = d["Close"] if "Close" in d else None
+            if c is None: continue
+            if isinstance(c, pd.Series): c = c.to_frame(chunk[0])
+            c = c.stack().reset_index()
+            c.columns = ["date", "ticker", "close"]
+            frames.append(c)
+        except Exception as e:
+            print("prezzi: blocco fallito", e)
+    if not frames: return 0
+    p = pd.concat(frames).dropna()
+    p["date"] = pd.to_datetime(p["date"]).dt.date.astype(str)
+    p["close"] = p["close"].round(4)
+    p[["ticker", "date", "close"]].sort_values(["ticker", "date"]).to_csv(pdir / f"{today}.csv", index=False)
+    return p["ticker"].nunique()
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--universe", default="universe.csv")
@@ -38,7 +74,7 @@ def main():
     u = pd.read_csv(a.universe)
     tickers = u["ticker"].dropna().astype(str).tolist()
     today = dt.date.today().isoformat()
-    rat, rev, unmapped, failed = [], [], set(), []
+    rat, rev, tgt, unmapped, failed = [], [], [], set(), []
 
     for i, t in enumerate(tickers, 1):
         try:
@@ -53,13 +89,25 @@ def main():
                     rat.append({"ticker":t,"event_date":pd.to_datetime(r[dc]).date().isoformat(),
                                 "broker":r.get("Firm"),"action":str(r.get("Action","")).lower(),
                                 "rating_from":fg,"rating_to":tg,
-                                "rating_from_num":grade(fg),"rating_to_num":grade(tg)})
+                                "rating_from_num":grade(fg),"rating_to_num":grade(tg),
+                                # target price dell'analisi (yfinance >= 0.2.44); 0 = non fornito
+                                "pt_action":r.get("priceTargetAction"),
+                                "pt_to":pt(r.get("currentPriceTarget")),
+                                "pt_from":pt(r.get("priorPriceTarget"))})
             nest = {}
             try:                                   # numero di stime per esercizio -> breadth corretta
                 ee = tk.earnings_estimate
                 if ee is not None and len(ee):
                     for per, r in ee.iterrows():
                         nest[str(per).strip().lower()] = r.get("numberOfAnalysts")
+            except Exception:
+                pass
+            try:                                   # target di consenso (media/mediana/min/max)
+                apt = tk.analyst_price_targets or {}
+                if apt:
+                    tgt.append({"ticker":t,"as_of":today,"pt_mean":pt(apt.get("mean")),
+                                "pt_median":pt(apt.get("median")),"pt_high":pt(apt.get("high")),
+                                "pt_low":pt(apt.get("low")),"price":pt(apt.get("current"))})
             except Exception:
                 pass
             er = tk.eps_revisions
@@ -81,10 +129,17 @@ def main():
     out = Path(a.out); (out/"ratings").mkdir(parents=True, exist_ok=True); (out/"revisions").mkdir(exist_ok=True)
     pd.DataFrame(rat).to_csv(out/"ratings"/f"{today}.csv", index=False)
     pd.DataFrame(rev).to_csv(out/"revisions"/f"{today}.csv", index=False)
+    (out/"targets").mkdir(exist_ok=True)
+    pd.DataFrame(tgt, columns=["ticker","as_of","pt_mean","pt_median","pt_high","pt_low","price"]
+                 ).to_csv(out/"targets"/f"{today}.csv", index=False)
+    n_px = closes(tickers, out, today)
     pd.DataFrame({"run_date":[today],"tickers":[len(tickers)],"failed":[len(failed)],
                   "rating_rows":[len(rat)],"revision_rows":[len(rev)],
+                  "target_rows":[len(tgt)],"price_tickers":[n_px],
+                  "pt_events":[sum(1 for r in rat if r["pt_to"])],
                   "unmapped_grades":["; ".join(sorted(unmapped))]}).to_csv(out/"latest_health.csv", index=False)
-    print(f"ok: {len(rat)} rating, {len(rev)} revisioni, {len(failed)} ticker falliti")
+    print(f"ok: {len(rat)} rating ({sum(1 for r in rat if r['pt_to'])} con target), {len(rev)} revisioni, "
+          f"{len(tgt)} target consenso, prezzi per {n_px} titoli, {len(failed)} ticker falliti")
 
 if __name__ == "__main__":
     main()
