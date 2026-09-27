@@ -133,6 +133,11 @@ table.mini td.num{white-space:nowrap}
 .stat:last-child{border-bottom:0}
 .stat span:first-child{color:var(--muted)}
 
+.bar-s{display:flex;align-items:center;gap:8px;min-width:120px}
+.bar-s i{display:block;height:8px;border-radius:99px;background:var(--acc)}
+.rk{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;background:var(--card2);border:1px solid var(--line);font-weight:700;font-size:12.5px}
+.rk.g1{background:#f5c542;color:#3b2a00;border-color:transparent}.rk.g2{background:#cfd6de;color:#1d2733;border-color:transparent}.rk.g3{background:#d99a62;color:#2e1603;border-color:transparent}
+.method{font-size:13.5px;color:var(--ink2)} .method li{margin:4px 0}
 .bottomnav{display:none}
 @media (max-width: 900px){
   .app{grid-template-columns:1fr}
@@ -191,10 +196,11 @@ const IC={
  rev:'<path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15l3-4 3 2 5-6"/>',
  broker:'<rect x="4" y="7" width="16" height="13" rx="2"/><path d="M9 7V5h6v2"/>',
  star:'<path d="m12 4 2.5 5 5.5.8-4 3.9.9 5.5L12 16.7 7.1 19.2l.9-5.5-4-3.9 5.5-.8z"/>',
+ trophy:'<path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3"/><path d="M7 5H4v2a3 3 0 0 0 3 3"/>',
  db:'<ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/>'};
 const svg=n=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${IC[n]}</svg>`;
 const PAGES=[["home","Panoramica","home"],["moves","Movimenti","moves"],["targets","Target price","target"],
-  ["revisions","Revisioni","rev"],["brokers","Broker","broker"],["watchlist","Watchlist","star"],["pipeline","Dati","db"]];
+  ["revisions","Revisioni","rev"],["ranking","Classifica broker","trophy"],["brokers","Broker","broker"],["watchlist","Watchlist","star"],["pipeline","Dati","db"]];
 const MKTS=[["ALL","Tutti"],["US","USA"],["UK","UK"],["IT","Italia"],["DE","Germania"],["FR","Francia"],["EU50","Euro Stoxx 50"]];
 const MKT_LBL={US:"USA",UK:"UK",IT:"IT",DE:"DE",FR:"FR",NL:"NL",ES:"ES",BE:"BE",FI:"FI",IE:"IE",PT:"PT"};
 const IDX_LBL={SP500:"S&P 500",UKX:"FTSE 100",MCX:"FTSE 250",FTSEMIB:"FTSE MIB",DAX:"DAX 40",CAC:"CAC 40",SX5E:"Euro Stoxx 50"};
@@ -368,9 +374,11 @@ function pRevisions(){st.fy??=1;const rows=breadthRows(st.fy).filter(r=>inMkt(r.
   <div class="toolbar">${seg("mkt",MKTS,"Mercato")}${seg("fy",[[1,"Esercizio corrente"],[2,"Prossimo esercizio"]],"")}</div>
   <div class="card"><div class="hd"><h2>Breadth per titolo</h2><small>${rows.length} titoli</small></div>${table("rev",cols,rows,{def:"b",rowAttr:r=>`data-go="t/${esc(r.t)}"`})}</div>`;}
 
-function pBrokers(arg){
-  if(arg){const b=decodeURIComponent(arg);const ev=EV.filter(e=>e.b===b&&inMkt(e.t));
-    return `<p><a class="mut" href="#/brokers">← Broker</a></p><h1>${esc(b)}</h1><p class="lead">${ev.length} analisi nel database.</p>
+async function pBrokers(arg){if(arg)await loadRank();
+  if(arg){const b=arg;const ev=EV.filter(e=>e.b===b&&inMkt(e.t));
+    const j=BRK,r=j?rankRows(j).find(x=>x.broker===b):null;
+    const sc=r?`<div class="grid kpis" style="margin-bottom:16px">${kpiS("Posizione",r.rank?`${r.rank}° su ${rankRows(j).filter(x=>x.rank!=null).length}`:"non in classifica","",r.rank?`punteggio ${nf(r.score,0)}/100`:`servono ${j.min_n} analisi valutate`)}${kpiS("Successo 3M",r.hit==null?"–":nf(r.hit*100,1)+"%",r.hit>=j.global.hit?"up":"dn",`media ${nf(j.global.hit*100,1)}% · ${r.n_eval} analisi`)}${kpiS("Alfa medio 3M",pct(r.alpha==null?null:r.alpha*100,2),pcls(r.alpha))}${kpiS("Abilità ML",bps(r.ml),pcls(r.ml))}${kpiS("Target raggiunti 12M",r.pt_hit==null?"–":nf(r.pt_hit*100,0)+"%","",r.n_pt_eval?`${r.n_pt_eval} target valutati`:"")}</div>`:"";
+    return `<p><a class="mut" href="#/ranking">← Classifica</a> · <a class="mut" href="#/brokers">Tutti i broker</a></p><h1>${esc(b)}</h1><p class="lead">${ev.length} analisi nel database.</p>${sc}
     <div class="toolbar">${seg("mkt",MKTS,"Mercato")}</div><div class="card">${table("brk1",EVCOLS,ev,{def:"d",rowAttr:rowT})}</div>`;}
   const cut=bdBack(ASOF,st.win);const m={};
   for(const e of EV){if(!inMkt(e.t))continue;const x=m[e.b]??={b:e.b,n:0,w:0,up:0,dn:0,pt:0,tk:new Set()};x.n++;x.tk.add(e.t);if(e.pt)x.pt++;
@@ -405,6 +413,60 @@ function pPipeline(){const sn=D.snapshots||[];const tb=D.tables||{};
   <div class="card" style="margin-top:16px"><div class="hd"><h2>Snapshot notturni</h2></div><div class="tw"><table><thead><tr><th>Data</th><th class="num">Titoli</th><th class="num">Falliti</th><th class="num">Righe rating</th><th class="num">Con target</th><th class="num">Revisioni</th><th class="num">Target consenso</th><th class="num">Prezzi</th><th>Grade non mappate</th></tr></thead><tbody>
   ${[...sn].reverse().map(s=>`<tr><td>${fd(s[0])}</td><td class="num">${s[1]??"–"}</td><td class="num ${s[2]?"warnc":""}">${s[2]??"–"}</td><td class="num">${s[3]??"–"}</td><td class="num">${s[8]??"–"}</td><td class="num">${s[4]??"–"}</td><td class="num">${s[6]??"–"}</td><td class="num">${s[7]??"–"}</td><td class="mut">${esc(s[5]||"")}</td></tr>`).join("")}</tbody></table></div></div>
   <p class="mut" style="font-size:12px;margin-top:16px">Fonte: Yahoo Finance via yfinance, raccolta ogni notte da GitHub Actions. Il nome del singolo analista non è disponibile in questa fonte.</p>`;}
+
+let BRK=null;
+async function loadRank(){if(BRK)return BRK;try{const r=await fetch("brokers.json",{cache:"no-cache"});if(r.ok)BRK=await r.json();}catch(e){}return BRK;}
+function rankRows(j){return j.rows.map(r=>Object.fromEntries(j.cols.map((c,i)=>[c,r[i]])));}
+const bps=v=>v==null?"–":(v>0?"+":"")+nf(v*10000,0)+" bp";
+async function pRanking(){
+  const j=await loadRank();
+  if(!j)return `<h1>Classifica broker</h1><div class="card empty-state">La classifica non è ancora stata calcolata: la genera il workflow 3-terminale.</div>`;
+  const rows=rankRows(j),ranked=rows.filter(r=>r.rank!=null),other=rows.filter(r=>r.rank==null);
+  const g=j.global,m=j.model||{},p=j.persistence||{};
+  const rel=p.rank_corr==null?{t:"Non ancora misurabile",c:"",d:esc(p.note||"")}:
+    p.rank_corr>=.3?{t:"Buona",c:"up",d:`La classifica calcolata fino al ${fd(p.cutoff)} ha anticipato bene i risultati successivi (ρ = ${nf(p.rank_corr,2)} su ${p.n_brokers} broker).`}:
+    p.rank_corr>=.1?{t:"Debole",c:"warnc",d:`La classifica passata ha anticipato solo in parte i risultati successivi (ρ = ${nf(p.rank_corr,2)} su ${p.n_brokers} broker).`}:
+    {t:"Non affidabile",c:"dn",d:`La classifica calcolata fino al ${fd(p.cutoff)} non ha anticipato i risultati successivi (ρ = ${nf(p.rank_corr,2)} su ${p.n_brokers} broker): per ora le differenze tra broker sono in gran parte rumore.`};
+  const cols=[
+    {k:"rank",l:"#",v:r=>r.rank,h:r=>`<span class="rk ${r.rank<=3?"g"+r.rank:""}">${r.rank}</span>`},
+    {k:"broker",l:"Broker",v:r=>r.broker,h:r=>`<b>${esc(r.broker)}</b><div class="mut" style="font-size:12px">${r.n_tickers} titoli</div>`},
+    {k:"score",l:"Punteggio",v:r=>r.score,h:r=>`<div class="bar-s"><i style="width:${Math.max(4,r.score)}px"></i><b>${nf(r.score,0)}</b></div>`},
+    {k:"n_eval",l:"Analisi valutate",num:1,v:r=>r.n_eval,h:r=>r.n_eval},
+    {k:"hit",l:"Successo 3M",num:1,v:r=>r.hit,h:r=>`<b>${pct(r.hit==null?null:r.hit*100,1).replace("+","")}</b><div class="mut" style="font-size:12px">grezzo ${pct(r.hit_raw==null?null:r.hit_raw*100,0).replace("+","")}</div>`},
+    {k:"alpha",l:"Alfa medio 3M",num:1,v:r=>r.alpha,h:r=>`<span class="${pcls(r.alpha)}">${pct(r.alpha==null?null:r.alpha*100,2)}</span>`},
+    {k:"ml",l:"Abilità ML",num:1,v:r=>r.ml,h:r=>`<span class="${pcls(r.ml)}">${bps(r.ml)}</span>`},
+    {k:"ic",l:"IC target",num:1,v:r=>r.ic,h:r=>r.ic==null?'<span class="mut">–</span>':`<span class="${pcls(r.ic)}">${nf(r.ic,2)}</span>`},
+    {k:"pt_hit",l:"Target raggiunti 12M",num:1,v:r=>r.pt_hit,h:r=>r.pt_hit==null?'<span class="mut">–</span>':pct(r.pt_hit*100,0).replace("+","")},
+    {k:"hit_1m",l:"1M",num:1,v:r=>r.hit_1m,h:r=>r.hit_1m==null?'<span class="mut">–</span>':nf(r.hit_1m*100,0)+"%"},
+    {k:"hit_6m",l:"6M",num:1,v:r=>r.hit_6m,h:r=>r.hit_6m==null?'<span class="mut">–</span>':nf(r.hit_6m*100,0)+"%"},
+    {k:"hit_12m",l:"12M",num:1,v:r=>r.hit_12m,h:r=>r.hit_12m==null?'<span class="mut">–</span>':nf(r.hit_12m*100,0)+"%"}];
+  const hide=new Set([...(m.informative===false?["ml"]:[]),...(g.pt_hit==null?["pt_hit"]:[]),...(rows.every(r=>r.hit_12m==null)?["hit_12m"]:[])]);
+  cols.splice(0,cols.length,...cols.filter(c=>!hide.has(c.k)));
+  const ocols=[{k:"broker",l:"Broker",v:r=>r.broker,h:r=>`<b>${esc(r.broker)}</b>`},{k:"n_events",l:"Analisi",num:1,v:r=>r.n_events,h:r=>r.n_events},
+    {k:"n_eval",l:"Valutate a 3M",num:1,v:r=>r.n_eval,h:r=>r.n_eval},{k:"hit_raw",l:"Successo grezzo",num:1,v:r=>r.hit_raw,h:r=>r.hit_raw==null?"–":nf(r.hit_raw*100,0)+"%"}];
+  return `<h1>Classifica broker</h1><p class="lead">Quanto le analisi di ciascun broker hanno anticipato l'andamento del titolo rispetto al suo indice. Ricalcolata ogni notte al ${fd(j.as_of)}; in classifica chi ha almeno ${j.min_n} analisi valutate.</p>
+  <div class="grid kpis">
+    ${kpiS("Analisi valutate (3M)",g.n_eval.toLocaleString("it-IT"),"")}
+    ${kpiS("Successo medio",nf(g.hit*100,1)+"%",g.hit>=.5?"up":"dn")}
+    ${kpiS("Alfa medio per analisi",pct(g.alpha*100,2),pcls(g.alpha))}
+    ${kpiS("Target raggiunti in 12M",g.pt_hit==null?"–":nf(g.pt_hit*100,0)+"%","",g.n_pt?`${g.n_pt} target valutati`:"")}
+    ${kpiS("Affidabilità classifica",rel.t,rel.c)}
+  </div>
+  <div class="note" style="margin-top:16px;${rel.c==="up"?"background:var(--up-soft);color:var(--up)":""}">${rel.d} ${m.informative===false?`Il modello ML non trova differenze significative tra broker (R² fuori campione ≤ 0): la colonna "Abilità ML" resta vuota e il punteggio usa le altre metriche.`:m.oos_r2!=null?`Il modello ML spiega fuori campione il ${nf(m.oos_r2*100,1)}% della variabilità dei rendimenti.`:""}</div>
+  <div class="card"><div class="hd"><h2>Classifica</h2><small>${ranked.length} broker</small></div>${table("rank",cols,ranked,{def:"rank",desc:false,limit:200,rowAttr:r=>`data-go="brokers/${encodeURIComponent(r.broker)}"`})}</div>
+  ${other.length?`<div class="card" style="margin-top:16px"><div class="hd"><h2>Campione insufficiente</h2><small>meno di ${j.min_n} analisi valutate</small></div>${table("rank-o",ocols,other,{def:"n_eval",limit:30,rowAttr:r=>`data-go="brokers/${encodeURIComponent(r.broker)}"`})}</div>`:""}
+  <div class="card" style="margin-top:16px"><div class="hd"><h2>Come è calcolata</h2></div><div class="bd method"><ul>
+    <li><b>Ingresso</b>: chiusura del giorno dell'analisi, dopo la reazione del mercato. Si misura la capacità di prevedere, non l'effetto della notizia.</li>
+    <li><b>Risultato</b>: rendimento del titolo meno quello del suo indice (S&amp;P 500, FTSE 100/250, FTSE MIB, DAX, CAC 40, Euro Stoxx 50) a 1, 3, 6 e 12 mesi.</li>
+    <li><b>Successo</b>: Buy o upgrade con il titolo che batte l'indice, Sell o downgrade con il titolo che fa peggio. Gli Hold non contano.</li>
+    <li><b>Alfa medio</b>: rendimento in eccesso ottenuto seguendo le indicazioni del broker (comprando i Buy, vendendo i Sell).</li>
+    <li><b>IC target</b>: correlazione di rango fra l'upside implicito nel target e il rendimento realizzato. <b>Target raggiunti</b>: il prezzo ha toccato il target entro 12 mesi.</li>
+    <li><b>Abilità ML</b>: regressione ridge con cross-validation temporale. Stima il contributo del broker al rendimento a 3 mesi al netto di momentum, volatilità, mercato e upside del target. Se i dati non distinguono i broker, la regolarizzazione porta tutti vicino a zero.</li>
+    <li><b>Correzione per il campione</b>: i tassi di ogni broker sono avvicinati alla media generale in proporzione a quante analisi ha (${j.min_n} per entrare, peso della media pari a 30 analisi). Così pochi colpi fortunati non bastano per salire in classifica.</li>
+    <li><b>Punteggio</b>: media pesata dei valori standardizzati (ML ${j.weights.ml*100}%, successo ${j.weights.hit*100}%, alfa ${j.weights.alpha*100}%, IC ${j.weights.ic*100}%, target ${(j.weights.pt_hit+j.weights.pt_err)*100}%), espressa in percentile 0–100.</li>
+    <li><b>Affidabilità</b>: la classifica calcolata sulle analisi più vecchie viene confrontata con i risultati dei broker su quelle più recenti.</li>
+    <li>Fonte: Yahoo Finance. Il nome del singolo analista non è disponibile, quindi la classifica è per casa di ricerca.</li></ul></div></div>`;}
+function kpiS(k,v,c,s){return `<div class="card kpi"><div class="k">${k}</div><div class="v ${c}" style="font-size:24px">${v}</div>${s?`<div class="s">${s}</div>`:""}</div>`;}
 
 function brokerCurrent(t){const m={};for(const e of EV){if(e.t!==t||e.tn==null)continue;const x=m[e.b];if(!x||e.d>x.d)m[e.b]=e;}
   const cut=bdBack(ASOF,260);return Object.values(m).filter(e=>e.d>=cut);}
@@ -479,7 +541,7 @@ let seq=0;
 async function render(){if(!D)return;const my=++seq;
   const [p,...rest]=(location.hash.replace(/^#\/?/,"")||"home").split("/");const arg=rest.join("/");
   const cur=p==="t"?"":p;document.getElementById("nav").innerHTML=navHtml(cur);document.getElementById("bnav").innerHTML=navHtml(cur);
-  const f={home:pHome,moves:pMoves,targets:pTargets,revisions:pRevisions,brokers:pBrokers,watchlist:pWatch,pipeline:pPipeline,t:pTicker}[p]||pHome;
+  const f={home:pHome,moves:pMoves,targets:pTargets,revisions:pRevisions,brokers:pBrokers,ranking:pRanking,watchlist:pWatch,pipeline:pPipeline,t:pTicker}[p]||pHome;
   const html=await f(decodeURIComponent(arg||""));if(my!==seq)return;
   document.getElementById("page").innerHTML=html;
   document.title=p==="t"&&U[arg]?`${info(decodeURIComponent(arg)).name} · ASNP`:"ASNP · Analyst Snapshot";}
