@@ -1,854 +1,987 @@
-ticker,panel,cap_tier
-MMM,US,large
-AOS,US,large
-ABT,US,large
-ABBV,US,large
-ACN,US,large
-ADBE,US,large
-AMD,US,large
-AES,US,large
-AFL,US,large
-A,US,large
-APD,US,large
-ABNB,US,large
-AKAM,US,large
-ALB,US,large
-ARE,US,large
-ALGN,US,large
-ALLE,US,large
-LNT,US,large
-ALL,US,large
-GOOGL,US,large
-GOOG,US,large
-MO,US,large
-AMZN,US,large
-AMCR,US,large
-AEE,US,large
-AEP,US,large
-AXP,US,large
-AIG,US,large
-AMT,US,large
-AWK,US,large
-AMP,US,large
-AME,US,large
-AMGN,US,large
-APH,US,large
-ADI,US,large
-AON,US,large
-APA,US,large
-APO,US,large
-AAPL,US,large
-AMAT,US,large
-APP,US,large
-APTV,US,large
-ACGL,US,large
-ADM,US,large
-ARES,US,large
-ANET,US,large
-AJG,US,large
-AIZ,US,large
-T,US,large
-ATO,US,large
-ADSK,US,large
-ADP,US,large
-AZO,US,large
-AVY,US,large
-AXON,US,large
-BKR,US,large
-BALL,US,large
-BAC,US,large
-BAX,US,large
-BDX,US,large
-BRK-B,US,large
-BBY,US,large
-TECH,US,large
-BIIB,US,large
-BLK,US,large
-BX,US,large
-XYZ,US,large
-BE,US,large
-BNY,US,large
-BA,US,large
-BKNG,US,large
-BSX,US,large
-BMY,US,large
-AVGO,US,large
-BR,US,large
-BRO,US,large
-BF-B,US,large
-BG,US,large
-BXP,US,large
-CHRW,US,large
-CDNS,US,large
-CPT,US,large
-COF,US,large
-CAH,US,large
-CCL,US,large
-CARR,US,large
-CVNA,US,large
-CASY,US,large
-CAT,US,large
-CBOE,US,large
-CBRE,US,large
-CDW,US,large
-COR,US,large
-CNC,US,large
-CNP,US,large
-CF,US,large
-CRL,US,large
-SCHW,US,large
-CHTR,US,large
-CVX,US,large
-CMG,US,large
-CB,US,large
-CHD,US,large
-CIEN,US,large
-CI,US,large
-CINF,US,large
-CTAS,US,large
-CSCO,US,large
-C,US,large
-CFG,US,large
-CLX,US,large
-CME,US,large
-CMS,US,large
-KO,US,large
-CTSH,US,large
-COHR,US,large
-COIN,US,large
-CL,US,large
-CMCSA,US,large
-FIX,US,large
-COP,US,large
-ED,US,large
-STZ,US,large
-CEG,US,large
-COO,US,large
-CPRT,US,large
-GLW,US,large
-CPAY,US,large
-CTVA,US,large
-CSGP,US,large
-COST,US,large
-CRH,US,large
-CRWD,US,large
-CCI,US,large
-CSX,US,large
-CMI,US,large
-CVS,US,large
-DHR,US,large
-DRI,US,large
-DDOG,US,large
-DVA,US,large
-DECK,US,large
-DE,US,large
-DELL,US,large
-DAL,US,large
-DVN,US,large
-DXCM,US,large
-FANG,US,large
-DLR,US,large
-DG,US,large
-DLTR,US,large
-D,US,large
-DPZ,US,large
-DASH,US,large
-DOV,US,large
-DOW,US,large
-DHI,US,large
-DTE,US,large
-DUK,US,large
-DD,US,large
-ETN,US,large
-EBAY,US,large
-ECHO,US,large
-ECL,US,large
-EIX,US,large
-EW,US,large
-ELV,US,large
-EME,US,large
-EMR,US,large
-ETR,US,large
-EOG,US,large
-EQT,US,large
-EFX,US,large
-EQIX,US,large
-ERIE,US,large
-ESS,US,large
-EL,US,large
-EG,US,large
-EVRG,US,large
-P,US,large
-ES,US,large
-EXC,US,large
-EXE,US,large
-EXPE,US,large
-EXPD,US,large
-EXR,US,large
-XOM,US,large
-FFIV,US,large
-FDS,US,large
-FICO,US,large
-FAST,US,large
-FRT,US,large
-FDX,US,large
-FDXF,US,large
-FERG,US,large
-FIS,US,large
-FITB,US,large
-FSLR,US,large
-FE,US,large
-FISV,US,large
-FLEX,US,large
-F,US,large
-FTNT,US,large
-FTV,US,large
-FOXA,US,large
-FOX,US,large
-BEN,US,large
-FCX,US,large
-GRMN,US,large
-IT,US,large
-GE,US,large
-GEHC,US,large
-GEV,US,large
-GEN,US,large
-GNRC,US,large
-GD,US,large
-GIS,US,large
-GM,US,large
-GPC,US,large
-GILD,US,large
-GPN,US,large
-GL,US,large
-GDDY,US,large
-GS,US,large
-HAL,US,large
-HIG,US,large
-HAS,US,large
-HCA,US,large
-DOC,US,large
-HSIC,US,large
-HSY,US,large
-HPE,US,large
-HLT,US,large
-HD,US,large
-HONA,US,large
-HON,US,large
-HRL,US,large
-HST,US,large
-HWM,US,large
-HPQ,US,large
-HUBB,US,large
-HUM,US,large
-HBAN,US,large
-HII,US,large
-IBM,US,large
-IEX,US,large
-IDXX,US,large
-ITW,US,large
-ILMN,US,large
-INCY,US,large
-IR,US,large
-PODD,US,large
-INTC,US,large
-IBKR,US,large
-ICE,US,large
-IFF,US,large
-IP,US,large
-INTU,US,large
-ISRG,US,large
-IVZ,US,large
-INVH,US,large
-IQV,US,large
-IRM,US,large
-JBHT,US,large
-JBL,US,large
-JKHY,US,large
-J,US,large
-JNJ,US,large
-JCI,US,large
-JPM,US,large
-KVUE,US,large
-KDP,US,large
-KEY,US,large
-KEYS,US,large
-KMB,US,large
-KIM,US,large
-KMI,US,large
-KKR,US,large
-KLAC,US,large
-KHC,US,large
-KR,US,large
-LHX,US,large
-LH,US,large
-LRCX,US,large
-LVS,US,large
-LDOS,US,large
-LEN,US,large
-LII,US,large
-LLY,US,large
-LIN,US,large
-LYV,US,large
-LMT,US,large
-L,US,large
-LOW,US,large
-LULU,US,large
-LITE,US,large
-LYB,US,large
-MTB,US,large
-MPC,US,large
-MAR,US,large
-MRSH,US,large
-MLM,US,large
-MRVL,US,large
-MAS,US,large
-MA,US,large
-MKC,US,large
-MCD,US,large
-MCK,US,large
-MDT,US,large
-MRK,US,large
-META,US,large
-MET,US,large
-MTD,US,large
-MGM,US,large
-MCHP,US,large
-MU,US,large
-MSFT,US,large
-MAA,US,large
-MRNA,US,large
-MDLZ,US,large
-MPWR,US,large
-MNST,US,large
-MCO,US,large
-MS,US,large
-MOS,US,large
-MSI,US,large
-MSCI,US,large
-NDAQ,US,large
-NTAP,US,large
-NFLX,US,large
-NEM,US,large
-NWSA,US,large
-NWS,US,large
-NEE,US,large
-NKE,US,large
-NI,US,large
-NDSN,US,large
-NSC,US,large
-NTRS,US,large
-NOC,US,large
-NCLH,US,large
-NRG,US,large
-NUE,US,large
-NVDA,US,large
-NVR,US,large
-NXPI,US,large
-ORLY,US,large
-OXY,US,large
-ODFL,US,large
-OMC,US,large
-ON,US,large
-OKE,US,large
-ORCL,US,large
-OTIS,US,large
-PCAR,US,large
-PKG,US,large
-PLTR,US,large
-PANW,US,large
-PSKY,US,large
-PH,US,large
-PAYX,US,large
-PYPL,US,large
-PNR,US,large
-PEP,US,large
-PFE,US,large
-PCG,US,large
-PM,US,large
-PSX,US,large
-PNW,US,large
-PNC,US,large
-PPG,US,large
-PPL,US,large
-PFG,US,large
-PG,US,large
-PGR,US,large
-PLD,US,large
-PRU,US,large
-PEG,US,large
-PTC,US,large
-PSA,US,large
-PHM,US,large
-PWR,US,large
-QCOM,US,large
-DGX,US,large
-Q,US,large
-RL,US,large
-RJF,US,large
-RDDT,US,large
-RTX,US,large
-O,US,large
-REG,US,large
-REGN,US,large
-RF,US,large
-RSG,US,large
-RMD,US,large
-RVTY,US,large
-HOOD,US,large
-ROK,US,large
-ROL,US,large
-ROP,US,large
-ROST,US,large
-RCL,US,large
-SPGI,US,large
-CRM,US,large
-SNDK,US,large
-SBAC,US,large
-SLB,US,large
-STX,US,large
-SRE,US,large
-NOW,US,large
-SHW,US,large
-SPG,US,large
-SWKS,US,large
-SJM,US,large
-SW,US,large
-SNA,US,large
-SOLV,US,large
-SO,US,large
-LUV,US,large
-SWK,US,large
-SBUX,US,large
-STT,US,large
-STLD,US,large
-STE,US,large
-SYK,US,large
-SMCI,US,large
-SYF,US,large
-SNPS,US,large
-SYY,US,large
-TMUS,US,large
-TROW,US,large
-TTWO,US,large
-TPR,US,large
-TRGP,US,large
-TGT,US,large
-TEL,US,large
-TDY,US,large
-TER,US,large
-TSLA,US,large
-TXN,US,large
-TPL,US,large
-TXT,US,large
-TMO,US,large
-TJX,US,large
-TKO,US,large
-TSCO,US,large
-TT,US,large
-TDG,US,large
-TRV,US,large
-TRMB,US,large
-TFC,US,large
-TYL,US,large
-TSN,US,large
-USB,US,large
-UBER,US,large
-UDR,US,large
-ULTA,US,large
-UNP,US,large
-UAL,US,large
-UPS,US,large
-URI,US,large
-UNH,US,large
-UHS,US,large
-VLO,US,large
-VEEV,US,large
-VTR,US,large
-VLTO,US,large
-VRSN,US,large
-VRSK,US,large
-VZ,US,large
-VRTX,US,large
-VRT,US,large
-VTRS,US,large
-VICI,US,large
-V,US,large
-VST,US,large
-VMRK,US,large
-VMC,US,large
-WRB,US,large
-GWW,US,large
-WAB,US,large
-WMT,US,large
-DIS,US,large
-WBD,US,large
-WM,US,large
-WAT,US,large
-WEC,US,large
-WFC,US,large
-WELL,US,large
-WST,US,large
-WDC,US,large
-WY,US,large
-WSM,US,large
-WMB,US,large
-WTW,US,large
-WDAY,US,large
-WYNN,US,large
-XEL,US,large
-XYL,US,large
-YUM,US,large
-ZBRA,US,large
-ZBH,US,large
-ZTS,US,large
-III.L,UK,large
-ABDN.L,UK,large
-ADM.L,UK,large
-AAF.L,UK,large
-ALW.L,UK,large
-AAL.L,UK,large
-ANTO.L,UK,large
-ABF.L,UK,large
-AZN.L,UK,large
-AUTO.L,UK,large
-AV.L,UK,large
-BAB.L,UK,large
-BA.L,UK,large
-BARC.L,UK,large
-BTRW.L,UK,large
-BEZ.L,UK,large
-BP.L,UK,large
-BATS.L,UK,large
-BLND.L,UK,large
-BT-A.L,UK,large
-BNZL.L,UK,large
-BRBY.L,UK,large
-CNA.L,UK,large
-CCEP.L,UK,large
-CCH.L,UK,large
-CPG.L,UK,large
-CCC.L,UK,large
-CTEC.L,UK,large
-CRDA.L,UK,large
-DCC.L,UK,large
-DGE.L,UK,large
-DPLM.L,UK,large
-EZJ.L,UK,large
-EDV.L,UK,large
-EXPN.L,UK,large
-FCIT.L,UK,large
-FRES.L,UK,large
-GAW.L,UK,large
-GLEN.L,UK,large
-GSK.L,UK,large
-HLN.L,UK,large
-HLMA.L,UK,large
-HSX.L,UK,large
-HWDN.L,UK,large
-HSBA.L,UK,large
-ICG.L,UK,large
-IGG.L,UK,large
-IHG.L,UK,large
-IMI.L,UK,large
-IMB.L,UK,large
-INF.L,UK,large
-IAG.L,UK,large
-ITRK.L,UK,large
-INVP.L,UK,large
-ITH.L,UK,large
-JD.L,UK,large
-BGEO.L,UK,large
-KGF.L,UK,large
-LAND.L,UK,large
-LGEN.L,UK,large
-LLOY.L,UK,large
-LMP.L,UK,large
-LSEG.L,UK,large
-MNG.L,UK,large
-MKS.L,UK,large
-MRO.L,UK,large
-MTLN.L,UK,large
-NG.L,UK,large
-NWG.L,UK,large
-NXT.L,UK,large
-PSON.L,UK,large
-PSH.L,UK,large
-PCT.L,UK,large
-PRU.L,UK,large
-RKT.L,UK,large
-REL.L,UK,large
-RTO.L,UK,large
-RIO.L,UK,large
-RR.L,UK,large
-SGE.L,UK,large
-SBRY.L,UK,large
-SDR.L,UK,large
-SMT.L,UK,large
-SGRO.L,UK,large
-SVT.L,UK,large
-SHEL.L,UK,large
-SMIN.L,UK,large
-SN.L,UK,large
-SPX.L,UK,large
-SSE.L,UK,large
-STAN.L,UK,large
-SDLF.L,UK,large
-STJ.L,UK,large
-TSCO.L,UK,large
-BBOX.L,UK,large
-ULVR.L,UK,large
-UU.L,UK,large
-VOD.L,UK,large
-WEIR.L,UK,large
-WTB.L,UK,large
-3IN.L,UK,mid
-FOUR.L,UK,mid
-AAS.L,UK,mid
-ASL.L,UK,mid
-AEP.L,UK,mid
-ALFA.L,UK,mid
-ATT.L,UK,mid
-AO.L,UK,mid
-APN.L,UK,mid
-ASHM.L,UK,mid
-AIE.L,UK,mid
-ATYM.L,UK,mid
-ATG.L,UK,mid
-AGT.L,UK,mid
-AVON.L,UK,mid
-BME.L,UK,mid
-BGFD.L,UK,mid
-USA.L,UK,mid
-BBY.L,UK,mid
-BCG.L,UK,mid
-BNKR.L,UK,mid
-BAG.L,UK,mid
-AJB.L,UK,mid
-BWY.L,UK,mid
-BKG.L,UK,mid
-BHMG.L,UK,mid
-BYG.L,UK,mid
-BPCR.L,UK,mid
-BRGE.L,UK,mid
-BRSC.L,UK,mid
-BRWM.L,UK,mid
-BMY.L,UK,mid
-BOY.L,UK,mid
-BREE.L,UK,mid
-BPT.L,UK,mid
-BUT.L,UK,mid
-BYIT.L,UK,mid
-CLDN.L,UK,mid
-CGT.L,UK,mid
-CWR.L,UK,mid
-CHG.L,UK,mid
-CSN.L,UK,mid
-CTY.L,UK,mid
-CKN.L,UK,mid
-CBG.L,UK,mid
-CMCX.L,UK,mid
-COA.L,UK,mid
-CORD.L,UK,mid
-COST.L,UK,mid
-CWK.L,UK,mid
-CURY.L,UK,mid
-CVSG.L,UK,mid
-DLN.L,UK,mid
-DSCV.L,UK,mid
-DOM.L,UK,mid
-DRX.L,UK,mid
-DOCS.L,UK,mid
-DNLM.L,UK,mid
-EDIN.L,UK,mid
-EWI.L,UK,mid
-ELM.L,UK,mid
-ENOG.L,UK,mid
-ENT.L,UK,mid
-ESCT.L,UK,mid
-EWG.L,UK,mid
-FCSS.L,UK,mid
-FEML.L,UK,mid
-FEV.L,UK,mid
-FSV.L,UK,mid
-FGT.L,UK,mid
-FGP.L,UK,mid
-FGEN.L,UK,mid
-FSG.L,UK,mid
-FRAS.L,UK,mid
-FCH.L,UK,mid
-GFRD.L,UK,mid
-GAMA.L,UK,mid
-GCP.L,UK,mid
-GEN.L,UK,mid
-GNS.L,UK,mid
-DATA.L,UK,mid
-GSCT.L,UK,mid
-GDWN.L,UK,mid
-GFTU.L,UK,mid
-GRI.L,UK,mid
-GPE.L,UK,mid
-UKW.L,UK,mid
-GNC.L,UK,mid
-GRG.L,UK,mid
-HFD.L,UK,mid
-HMSO.L,UK,mid
-HANA.L,UK,mid
-HBR.L,UK,mid
-HVPE.L,UK,mid
-HWG.L,UK,mid
-HAS.L,UK,mid
-HTWS.L,UK,mid
-HFEL.L,UK,mid
-HSL.L,UK,mid
-HRI.L,UK,mid
-HGT.L,UK,mid
-HICL.L,UK,mid
-HIK.L,UK,mid
-HILS.L,UK,mid
-HFG.L,UK,mid
-HOC.L,UK,mid
-BOWL.L,UK,mid
-HTG.L,UK,mid
-ICGT.L,UK,mid
-INCH.L,UK,mid
-IHP.L,UK,mid
-INPP.L,UK,mid
-IWG.L,UK,mid
-IAD.L,UK,mid
-IPO.L,UK,mid
-ITV.L,UK,mid
-JMAT.L,UK,mid
-JSG.L,UK,mid
-JAM.L,UK,mid
-JCH.L,UK,mid
-JEMI.L,UK,mid
-JMGI.L,UK,mid
-JEDT.L,UK,mid
-JEGI.L,UK,mid
-JGGI.L,UK,mid
-JFJ.L,UK,mid
-JUP.L,UK,mid
-KNOS.L,UK,mid
-KLR.L,UK,mid
-KIE.L,UK,mid
-LRE.L,UK,mid
-LWDB.L,UK,mid
-EMG.L,UK,mid
-MEGP.L,UK,mid
-MRC.L,UK,mid
-MRCH.L,UK,mid
-MTRO.L,UK,mid
-PAGE.L,UK,mid
-MAB.L,UK,mid
-MTO.L,UK,mid
-GROW.L,UK,mid
-MNDI.L,UK,mid
-MNKS.L,UK,mid
-MONY.L,UK,mid
-MOON.L,UK,mid
-MGAM.L,UK,mid
-MGNS.L,UK,mid
-MUT.L,UK,mid
-MYI.L,UK,mid
-NCC.L,UK,mid
-NBPE.L,UK,mid
-N91.L,UK,mid
-NAIT.L,UK,mid
-NAS.L,UK,mid
-OCI.L,UK,mid
-OCDO.L,UK,mid
-OSB.L,UK,mid
-OXB.L,UK,mid
-OXIG.L,UK,mid
-ONT.L,UK,mid
-PHI.L,UK,mid
-PAF.L,UK,mid
-PINT.L,UK,mid
-PIN.L,UK,mid
-PAG.L,UK,mid
-PEY.L,UK,mid
-PPET.L,UK,mid
-PNN.L,UK,mid
-PSN.L,UK,mid
-PNL.L,UK,mid
-PETS.L,UK,mid
-PINE.L,UK,mid
-PTEC.L,UK,mid
-PLUS.L,UK,mid
-PCGH.L,UK,mid
-POLN.L,UK,mid
-PPH.L,UK,mid
-PFD.L,UK,mid
-PHP.L,UK,mid
-PRN.L,UK,mid
-QQ.L,UK,mid
-QLT.L,UK,mid
-RNK.L,UK,mid
-RPI.L,UK,mid
-RAT.L,UK,mid
-RSW.L,UK,mid
-RHIM.L,UK,mid
-RMV.L,UK,mid
-RCP.L,UK,mid
-ROSE.L,UK,mid
-ROR.L,UK,mid
-RS1.L,UK,mid
-RTW.L,UK,mid
-RICA.L,UK,mid
-SAFE.L,UK,mid
-SAGA.L,UK,mid
-SVS.L,UK,mid
-MNTN.L,UK,mid
-ATR.L,UK,mid
-SDP.L,UK,mid
-SOI.L,UK,mid
-SAIN.L,UK,mid
-SEIT.L,UK,mid
-SNR.L,UK,mid
-SEQI.L,UK,mid
-SSIT.L,UK,mid
-SRP.L,UK,mid
-SHC.L,UK,mid
-SHAW.L,UK,mid
-SRE.L,UK,mid
-SCT.L,UK,mid
-SPI.L,UK,mid
-SSPG.L,UK,mid
-SUPR.L,UK,mid
-SYNC.L,UK,mid
-THRL.L,UK,mid
-TATE.L,UK,mid
-TW.L,UK,mid
-TBCG.L,UK,mid
-TEP.L,UK,mid
-TMPL.L,UK,mid
-TEM.L,UK,mid
-TRIG.L,UK,mid
-THG.L,UK,mid
-TCAP.L,UK,mid
-TRN.L,UK,mid
-TPK.L,UK,mid
-TRY.L,UK,mid
-TRST.L,UK,mid
-TFIF.L,UK,mid
-UTG.L,UK,mid
-UEM.L,UK,mid
-VSVS.L,UK,mid
-VCT.L,UK,mid
-VEIL.L,UK,mid
-VOF.L,UK,mid
-VTY.L,UK,mid
-VLX.L,UK,mid
-FAN.L,UK,mid
-WOSG.L,UK,mid
-JDW.L,UK,mid
-SMWH.L,UK,mid
-WIX.L,UK,mid
-WIZZ.L,UK,mid
-WKP.L,UK,mid
-WWH.L,UK,mid
-WPP.L,UK,mid
-XPP.L,UK,mid
-XPS.L,UK,mid
-ZIG.L,UK,mid
+ticker,name,panel,indices,cap_tier,isin,currency,exchange,long_name
+ABI.BR,Anheuser-Busch InBev,BE,SX5E,large,-,EUR,BRU,Anheuser-Busch InBev SA/NV
+ARGX.BR,Argenx,BE,SX5E,large,-,EUR,BRU,argenx SE
+ADS.DE,Adidas,DE,DAX;SX5E,large,-,EUR,GER,adidas AG
+ALV.DE,Allianz,DE,DAX;SX5E,large,-,EUR,GER,Allianz SE
+BAS.DE,BASF,DE,DAX;SX5E,large,-,EUR,GER,BASF SE
+BAYN.DE,Bayer,DE,DAX;SX5E,large,-,EUR,GER,Bayer Aktiengesellschaft
+BEI.DE,Beiersdorf,DE,DAX,large,-,EUR,GER,Beiersdorf Aktiengesellschaft
+BMW.DE,BMW,DE,DAX;SX5E,large,-,EUR,GER,Bayerische Motoren Werke Aktiengesellschaft
+BNR.DE,Brenntag,DE,DAX,large,-,EUR,GER,Brenntag SE
+CBK.DE,Commerzbank,DE,DAX,large,-,EUR,GER,Commerzbank AG
+CON.DE,Continental,DE,DAX,large,-,EUR,GER,Continental Aktiengesellschaft
+DB1.DE,Deutsche Börse,DE,DAX;SX5E,large,-,EUR,GER,Deutsche Börse AG
+DBK.DE,Deutsche Bank,DE,DAX;SX5E,large,-,EUR,GER,Deutsche Bank Aktiengesellschaft
+DHL.DE,Deutsche Post,DE,DAX;SX5E,large,-,EUR,GER,DHL AG
+DTE.DE,Deutsche Telekom,DE,DAX;SX5E,large,-,EUR,GER,Deutsche Telekom AG
+DTG.DE,Daimler Truck,DE,DAX,large,-,EUR,GER,Daimler Truck Holding AG
+ENR.DE,Siemens Energy,DE,DAX;SX5E,large,-,EUR,GER,Siemens Energy AG
+EOAN.DE,E.ON,DE,DAX,large,-,EUR,GER,E.ON SE
+FME.DE,Fresenius Medical Care,DE,DAX,large,-,EUR,GER,Fresenius Medical Care AG
+FRE.DE,Fresenius,DE,DAX,large,-,EUR,GER,Fresenius SE & Co. KGaA
+G1A.DE,GEA Group,DE,DAX,large,-,EUR,GER,GEA Group Aktiengesellschaft
+G24.DE,Scout24,DE,DAX,large,-,EUR,GER,Scout24 SE
+HEI.DE,Heidelberg Materials,DE,DAX,large,-,EUR,GER,Heidelberg Materials AG
+HEN3.DE,Henkel,DE,DAX,large,-,EUR,GER,Henkel AG & Co. KGaA
+HNR1.DE,Hannover Re,DE,DAX,large,-,EUR,GER,Hannover Rück SE
+IFX.DE,Infineon Technologies,DE,DAX;SX5E,large,-,EUR,GER,Infineon Technologies AG
+MBG.DE,Mercedes-Benz Group,DE,DAX;SX5E,large,-,EUR,GER,Mercedes-Benz Group AG
+MRK.DE,Merck,DE,DAX,large,-,EUR,GER,Merck KGaA
+MTX.DE,MTU Aero Engines,DE,DAX,large,-,EUR,GER,MTU Aero Engines AG
+MUV2.DE,Munich Re,DE,DAX;SX5E,large,-,EUR,GER,Münchener Rückversicherungs-Gesellschaft Aktiengesellschaft in München
+PAH3.DE,Porsche SE,DE,DAX,large,-,EUR,GER,Porsche Automobil Holding SE
+QIA.DE,Qiagen,DE,DAX,large,-,EUR,GER,Qiagen N.V.
+RHM.DE,Rheinmetall,DE,DAX;SX5E,large,-,EUR,GER,Rheinmetall AG
+RWE.DE,RWE,DE,DAX,large,-,EUR,GER,RWE Aktiengesellschaft
+SAP.DE,SAP,DE,DAX;SX5E,large,-,EUR,GER,SAP SE
+SHL.DE,Siemens Healthineers,DE,DAX,large,-,EUR,GER,Siemens Healthineers AG
+SIE.DE,Siemens,DE,DAX;SX5E,large,-,EUR,GER,Siemens Aktiengesellschaft
+SY1.DE,Symrise,DE,DAX,large,-,EUR,GER,Symrise AG
+VNA.DE,Vonovia,DE,DAX,large,-,EUR,GER,Vonovia SE
+VOW.DE,Volkswagen Group,DE,SX5E,large,-,EUR,GER,Volkswagen AG
+VOW3.DE,Volkswagen Group,DE,DAX,large,-,EUR,GER,Volkswagen AG
+ZAL.DE,Zalando,DE,DAX,large,-,EUR,GER,Zalando SE
+BBVA.MC,BBVA,ES,SX5E,large,COB13PA00019,EUR,MCE,"Banco Bilbao Vizcaya Argentaria, S.A."
+IBE.MC,Iberdrola,ES,SX5E,large,-,EUR,MCE,"Iberdrola, S.A."
+ITX.MC,Inditex,ES,SX5E,large,-,EUR,MCE,"Industria de Diseño Textil, S.A."
+SAN.MC,Banco Santander,ES,SX5E,large,CA05973U1057,EUR,MCE,"Banco Santander, S.A."
+NDA-FI.HE,Nordea,FI,SX5E,large,-,EUR,HEL,Nordea Bank Abp
+AC.PA,Accor,FR,CAC,large,FR0014003PZ3,EUR,PAR,Accor SA
+ACA.PA,Crédit Agricole,FR,CAC,large,FR0000044323,EUR,PAR,Crédit Agricole S.A.
+AI.PA,Air Liquide,FR,CAC;SX5E,large,FR0000053951,EUR,PAR,L'Air Liquide S.A.
+AIR.PA,Airbus,FR,DAX;CAC;SX5E,large,-,EUR,PAR,Airbus SE
+BN.PA,Danone,FR,CAC;SX5E,large,-,EUR,PAR,Danone S.A.
+BNP.PA,BNP Paribas,FR,CAC;SX5E,large,-,EUR,PAR,BNP Paribas SA
+BVI.PA,Bureau Veritas,FR,CAC,large,-,EUR,PAR,Bureau Veritas SA
+CA.PA,Carrefour,FR,CAC,large,-,EUR,PAR,Carrefour SA
+CAP.PA,Capgemini,FR,CAC,large,-,EUR,PAR,Capgemini SE
+CS.PA,Axa,FR,CAC;SX5E,large,FR001400UEZ6,EUR,PAR,AXA SA
+DG.PA,Vinci,FR,CAC;SX5E,large,FI4000185533,EUR,PAR,Vinci SA
+DSY.PA,Dassault Systèmes,FR,CAC,large,-,EUR,PAR,Dassault Systèmes SE
+EDEN.PA,Edenred,FR,CAC,large,-,EUR,PAR,Edenred SE
+EL.PA,EssilorLuxottica,FR,CAC;SX5E,large,FR001400EFS2,EUR,PAR,EssilorLuxottica Société anonyme
+EN.PA,Bouygues,FR,CAC,large,FR001400UJU6,EUR,PAR,Bouygues SA
+ENGI.PA,Engie,FR,CAC,large,FR0013215407,EUR,PAR,Engie SA
+ERF.PA,Eurofins Scientific,FR,CAC,large,-,EUR,PAR,Eurofins Scientific SE
+GLE.PA,Société Générale,FR,CAC,large,CA83360C1032,EUR,PAR,Société Générale Société anonyme
+HO.PA,Thales,FR,CAC,large,VGG878801114,EUR,PAR,Thales S.A.
+KER.PA,Kering,FR,CAC,large,JP3270790003,EUR,PAR,Kering SA
+LR.PA,Legrand,FR,CAC,large,-,EUR,PAR,Legrand SA
+MC.PA,LVMH,FR,CAC;SX5E,large,CA50244Q1037,EUR,PAR,"LVMH Moët Hennessy - Louis Vuitton, Société Européenne"
+ML.PA,Michelin,FR,CAC,large,-,EUR,PAR,Compagnie Générale des Établissements Michelin Société en commandite par actions
+OR.PA,L'Oréal,FR,CAC;SX5E,large,FR0011149590,EUR,PAR,L'Oréal S.A.
+ORA.PA,Orange,FR,CAC,large,-,EUR,PAR,Orange S.A.
+PUB.PA,Publicis,FR,CAC,large,-,EUR,PAR,Publicis Groupe S.A.
+RI.PA,Pernod Ricard,FR,CAC,large,-,EUR,PAR,Pernod Ricard SA
+RMS.PA,Hermès,FR,CAC;SX5E,large,-,EUR,PAR,Hermès International Société en commandite par actions
+RNO.PA,Renault,FR,CAC,large,-,EUR,PAR,Renault SA
+SAF.PA,Safran,FR,CAC;SX5E,large,GRS118003003,EUR,PAR,Safran SA
+SAN.PA,Sanofi,FR,CAC;SX5E,large,FR001400UEY9,EUR,PAR,Sanofi
+SGO.PA,Saint-Gobain,FR,CAC;SX5E,large,-,EUR,PAR,Compagnie de Saint-Gobain S.A.
+STLAP.PA,Stellantis,FR,CAC,large,-,EUR,PAR,Stellantis N.V.
+STMPA.PA,STMicroelectronics,FR,CAC,large,-,EUR,PAR,STMicroelectronics N.V.
+SU.PA,Schneider Electric,FR,CAC;SX5E,large,CA80687R1029,EUR,PAR,Schneider Electric S.E.
+TEP.PA,Teleperformance,FR,CAC,large,-,EUR,PAR,Teleperformance SE
+TTE.PA,TotalEnergies,FR,CAC;SX5E,large,NETTOTALOIL1,EUR,PAR,TotalEnergies SE
+URW.PA,Unibail-Rodamco-Westfield,FR,CAC,large,-,EUR,PAR,Unibail-Rodamco-Westfield SE
+VIE.PA,Veolia,FR,CAC,large,-,EUR,PAR,Veolia Environnement SA
+A2A.MI,A2A,IT,FTSEMIB,large,NET00AMNEOS1,EUR,MIL,A2A S.p.A.
+AMP.MI,Amplifon,IT,FTSEMIB,large,-,EUR,MIL,Amplifon S.p.A.
+AVIO.MI,Avio,IT,FTSEMIB,large,CNE0000018C0,EUR,MIL,Avio S.p.A.
+AZM.MI,Azimut,IT,FTSEMIB,large,-,EUR,MIL,Azimut Holding S.p.A.
+BAMI.MI,Banco BPM,IT,FTSEMIB,large,IT0000074077,EUR,MIL,Banco BPM S.p.A.
+BC.MI,Brunello Cucinelli,IT,FTSEMIB,large,-,EUR,MIL,Brunello Cucinelli S.p.A.
+BMED.MI,Banca Mediolanum,IT,FTSEMIB,large,-,EUR,MIL,Banca Mediolanum S.p.A.
+BMPS.MI,Banca Monte dei Paschi di Siena,IT,FTSEMIB,large,-,EUR,MIL,Banca Monte dei Paschi di Siena S.p.A.
+BPE.MI,BPER Banca,IT,FTSEMIB,large,COB52PA00108,EUR,MIL,BPER Banca SpA
+BZU.MI,Buzzi,IT,FTSEMIB,large,CA12430G1090,EUR,MIL,Buzzi S.p.A.
+CPR.MI,Campari,IT,FTSEMIB,large,-,EUR,MIL,Davide Campari-Milano N.V.
+DIA.MI,Diasorin,IT,FTSEMIB,large,-,EUR,MIL,DiaSorin S.p.A.
+ENEL.MI,Enel,IT,FTSEMIB;SX5E,large,CL0002266774,EUR,MIL,Enel SpA
+ENI.MI,Eni,IT,FTSEMIB;SX5E,large,NET000PLEN01,EUR,MIL,Eni S.p.A.
+FBK.MI,FinecoBank,IT,FTSEMIB,large,-,EUR,MIL,FinecoBank Banca Fineco S.p.A.
+FCT.MI,Fincantieri,IT,FTSEMIB,large,-,EUR,MIL,Fincantieri S.p.A.
+G.MI,Generali,IT,FTSEMIB,large,CH0198963503,EUR,MIL,Assicurazioni Generali S.p.A.
+HER.MI,Hera,IT,FTSEMIB,large,INE694N01015,EUR,MIL,Hera S.p.A.
+IG.MI,Italgas,IT,FTSEMIB,large,-,EUR,MIL,Italgas S.p.A.
+INW.MI,INWIT,IT,FTSEMIB,large,NET000INW177,EUR,MIL,Infrastrutture Wireless Italiane S.p.A.
+ISP.MI,Intesa Sanpaolo,IT,FTSEMIB;SX5E,large,-,EUR,MIL,Intesa Sanpaolo S.p.A.
+IVG.MI,Iveco,IT,FTSEMIB,large,-,EUR,MIL,Iveco Group N.V.
+LDO.MI,Leonardo,IT,FTSEMIB,large,-,EUR,MIL,Leonardo S.p.a.
+LTMC.MI,Lottomatica Group,IT,FTSEMIB,large,-,EUR,MIL,Lottomatica Group S.p.A.
+MB.MI,Mediobanca,IT,FTSEMIB,large,-,EUR,MIL,Mediobanca Banca di Credito Finanziario S.p.A.
+MONC.MI,Moncler,IT,FTSEMIB,large,-,EUR,MIL,Moncler S.p.A.
+NEXI.MI,Nexi,IT,FTSEMIB,large,US5928351023,EUR,MIL,Nexi S.p.A.
+PRY.MI,Prysmian,IT,FTSEMIB,large,-,EUR,MIL,Prysmian S.p.A.
+PST.MI,Poste italiane,IT,FTSEMIB,large,-,EUR,MIL,Poste Italiane S.p.A.
+RACE.MI,Ferrari,IT,FTSEMIB;SX5E,large,GB00BN0VZ646,EUR,MIL,Ferrari N.V.
+REC.MI,Recordati,IT,FTSEMIB,large,-,EUR,MIL,Recordati Industria Chimica e Farmaceutica S.p.A.
+SPM.MI,Saipem,IT,FTSEMIB,large,IT0005495673,EUR,MIL,Saipem SpA
+SRG.MI,Snam,IT,FTSEMIB,large,NET00SNADEA1,EUR,MIL,Snam S.p.A.
+STLAM.MI,Stellantis,IT,FTSEMIB,large,AR0940941575,EUR,MIL,Stellantis N.V.
+STMMI.MI,STMicroelectronics,IT,FTSEMIB,large,-,EUR,MIL,STMicroelectronics N.V.
+TEN.MI,Tenaris,IT,FTSEMIB,large,ARBCOM4602S8,EUR,MIL,Tenaris S.A.
+TIT.MI,Telecom Italia,IT,FTSEMIB,large,-,EUR,MIL,Telecom Italia S.p.A.
+TRN.MI,Terna,IT,FTSEMIB,large,IT0004359037,EUR,MIL,Terna S.p.A.
+UCG.MI,UniCredit,IT,FTSEMIB;SX5E,large,-,EUR,MIL,UniCredit S.p.A.
+UNI.MI,Unipol,IT,FTSEMIB,large,INE950G01023,EUR,MIL,Unipol Assicurazioni S.p.A.
+AD.AS,Ahold Delhaize,NL,SX5E,large,-,EUR,AMS,Koninklijke Ahold Delhaize N.V.
+ADYEN.AS,Adyen,NL,SX5E,large,JP3122380003,EUR,AMS,Adyen N.V.
+ASML.AS,ASML Holding,NL,SX5E,large,AR0725224551,EUR,AMS,ASML Holding N.V.
+INGA.AS,ING Group,NL,SX5E,large,CA44989Q1054,EUR,AMS,ING Groep N.V.
+MT.AS,ArcelorMittal,NL,CAC,large,-,EUR,AMS,ArcelorMittal S.A.
+PRX.AS,Prosus,NL,SX5E,large,-,EUR,AMS,Prosus N.V.
+WKL.AS,Wolters Kluwer,NL,SX5E,large,-,EUR,AMS,Wolters Kluwer N.V.
+3IN.L,3i Infrastructure,UK,MCX,mid,-,GBp,LSE,3i Infrastructure plc
+AAF.L,Airtel Africa,UK,UKX,large,-,GBp,LSE,Airtel Africa Plc
+AAL.L,Anglo American plc,UK,UKX,large,-,GBp,LSE,Anglo American plc
+AAS.L,Aberdeen Asia Focus,UK,MCX,mid,-,GBp,LSE,Aberdeen Asia Focus PLC
+ABDN.L,Aberdeen Group,UK,UKX,large,-,GBp,LSE,Aberdeen Group Plc
+ABF.L,Associated British Foods,UK,UKX,large,-,GBp,LSE,Associated British Foods plc
+ADM.L,Admiral Group,UK,UKX,large,-,GBp,LSE,Admiral Group plc
+AEP.L,AEP Plantations,UK,MCX,mid,-,GBp,LSE,AEP Plantations Plc
+AGT.L,AVI Global Trust,UK,MCX,mid,-,GBp,LSE,AVI Global Trust Ord
+AIE.L,Ashoka India Equity Investment Trust,UK,MCX,mid,-,GBp,LSE,Ashoka India Equity Investment Ord
+AJB.L,AJ Bell,UK,MCX,mid,-,GBp,LSE,AJ Bell plc
+ALFA.L,Alfa Financial Software,UK,MCX,mid,GB00BDHXPG30,GBp,LSE,Alfa Financial Software Holdings PLC
+ALW.L,Alliance Witan,UK,UKX,large,-,GBp,LSE,Alliance Witan Ord
+ANTO.L,Antofagasta plc,UK,UKX,large,-,GBp,LSE,Antofagasta plc
+AO.L,AO World,UK,MCX,mid,-,GBp,LSE,AO World plc
+APN.L,Applied Nutrition,UK,MCX,mid,-,GBp,LSE,Applied Nutrition Plc
+ASHM.L,Ashmore Group,UK,MCX,mid,-,GBp,LSE,Ashmore Group Plc
+ASL.L,Aberforth Smaller Companies Trust,UK,MCX,mid,-,GBp,LSE,Aberforth Smaller Companies Ord
+ATG.L,Auction Technology Group,UK,MCX,mid,-,GBp,LSE,Auction Technology Group plc
+ATR.L,Schroder Asian Total Return Investment Company,UK,MCX,mid,-,GBp,LSE,Schroder Asian Total Return Inv. Company
+ATT.L,Allianz Technology Trust,UK,MCX,mid,-,GBp,LSE,Allianz Technology Trust Ord
+ATYM.L,Atalaya Mining,UK,MCX,mid,-,GBp,LSE,"Atalaya Mining Copper, S.A."
+AUTO.L,Autotrader Group,UK,UKX,large,-,GBp,LSE,Autotrader Group plc
+AV.L,Aviva,UK,UKX,large,-,GBp,LSE,Aviva plc
+AVON.L,Avon Technologies,UK,MCX,mid,-,GBp,LSE,Avon Technologies Plc
+AZN.L,AstraZeneca,UK,UKX,large,-,GBp,LSE,AstraZeneca PLC
+BA.L,BAE Systems,UK,UKX,large,-,GBp,LSE,BAE Systems plc
+BAB.L,Babcock International,UK,UKX,large,PLCTHQM00018,GBp,LSE,Babcock International Group PLC
+BAG.L,A.G. Barr,UK,MCX,mid,-,GBp,LSE,A.G. BARR p.l.c.
+BARC.L,Barclays,UK,UKX,large,-,GBp,LSE,Barclays PLC
+BATS.L,British American Tobacco,UK,UKX,large,-,GBp,LSE,British American Tobacco p.l.c.
+BBOX.L,Tritax Big Box REIT,UK,UKX,large,-,GBp,LSE,Tritax Big Box Ord
+BBY.L,Balfour Beatty,UK,MCX,mid,-,GBp,LSE,Balfour Beatty plc
+BCG.L,Baltic Classifieds,UK,MCX,mid,-,EUR,LSE,Baltic Classifieds Group PLC
+BEZ.L,Beazley,UK,UKX,large,-,GBp,LSE,Beazley plc
+BGEO.L,Lion Finance Group,UK,UKX,large,-,GBp,LSE,Lion Finance Group PLC
+BGFD.L,Baillie Gifford Japan Trust,UK,MCX,mid,-,GBp,LSE,Baillie Gifford Japan Ord
+BHMG.L,BH Macro,UK,MCX,mid,-,GBp,LSE,BH Macro Limited
+BKG.L,Berkeley Group Holdings,UK,MCX,mid,-,GBp,LSE,The Berkeley Group Holdings plc
+BLND.L,British Land,UK,UKX,large,-,GBp,LSE,British Land Company PLC
+BME.L,B&M,UK,MCX,mid,-,GBp,LSE,B&M European Value Retail plc
+BMY.L,Bloomsbury Publishing,UK,MCX,mid,-,GBp,LSE,Bloomsbury Publishing Plc
+BNKR.L,Bankers Investment Trust,UK,MCX,mid,-,GBp,LSE,Bankers Ord
+BNZL.L,Bunzl,UK,UKX,large,-,GBp,LSE,Bunzl plc
+BOWL.L,Hollywood Bowl Group,UK,MCX,mid,-,GBp,LSE,Hollywood Bowl Group plc
+BOY.L,Bodycote,UK,MCX,mid,-,GBp,LSE,Bodycote plc
+BP.L,BP,UK,UKX,large,-,GBp,LSE,BP p.l.c.
+BPCR.L,Biopharma Credit,UK,MCX,mid,-,USD,LSE,BioPharma Credit Ord
+BPT.L,Bridgepoint Group,UK,MCX,mid,-,GBp,LSE,Bridgepoint Group plc
+BRBY.L,Burberry Group,UK,UKX,large,-,GBp,LSE,Burberry Group plc
+BREE.L,Breedon Group,UK,MCX,mid,-,GBp,LSE,Breedon Group plc
+BRGE.L,BlackRock Greater Europe Investment Trust,UK,MCX,mid,-,GBp,LSE,BlackRock Greater Europe Ord
+BRSC.L,BlackRock Smaller Companies Trust,UK,MCX,mid,-,GBp,LSE,BlackRock Smaller Companies Ord
+BRWM.L,BlackRock World Mining Trust,UK,MCX,mid,GB0005774855,GBp,LSE,BlackRock World Mining Trust Ord
+BT-A.L,BT Group,UK,UKX,large,-,GBp,LSE,BT Group plc
+BTRW.L,Barratt Redrow,UK,UKX,large,-,GBp,LSE,Barratt Redrow plc
+BUT.L,Brunner Investment Trust,UK,MCX,mid,-,GBp,LSE,Brunner Ord
+BWY.L,Bellway,UK,MCX,mid,-,GBp,LSE,Bellway p.l.c.
+BYG.L,Big Yellow Group,UK,MCX,mid,-,GBp,LSE,Big Yellow Group Plc
+BYIT.L,Bytes Technology Group,UK,MCX,mid,-,GBp,LSE,Bytes Technology Group plc
+CBG.L,Close Brothers Group,UK,MCX,mid,-,GBp,LSE,Close Brothers Group plc
+CCC.L,Computacenter,UK,UKX,large,-,GBp,LSE,Computacenter plc
+CCEP.L,Coca-Cola Europacific Partners,UK,UKX,large,-,GBp,LSE,Coca-Cola Europacific Partners PLC
+CCH.L,Coca-Cola HBC,UK,UKX,large,-,GBp,LSE,Coca-Cola HBC AG
+CGT.L,Capital Gearing Trust,UK,MCX,mid,-,GBp,LSE,Capital Gearing Ord
+CHG.L,Chemring Group,UK,MCX,mid,-,GBp,LSE,Chemring Group PLC
+CKN.L,Clarkson,UK,MCX,mid,-,GBp,LSE,Clarkson PLC
+CLDN.L,Caledonia Investments,UK,MCX,mid,-,GBp,LSE,Caledonia Investments Ord
+CMCX.L,CMC Markets,UK,MCX,mid,-,GBp,LSE,CMC Markets Plc
+CNA.L,Centrica,UK,UKX,large,-,GBp,LSE,Centrica plc
+COA.L,Coats Group,UK,MCX,mid,-,GBp,LSE,Coats Group plc
+CORD.L,Cordiant Digital Infrastructure,UK,MCX,mid,-,GBp,LSE,Cordiant Digital Infrastructure Limited
+COST.L,Costain Group,UK,MCX,mid,-,GBp,LSE,Costain Group PLC
+CPG.L,Compass Group,UK,UKX,large,-,USD,LSE,Compass Group PLC
+CRDA.L,Croda International,UK,UKX,large,-,GBp,LSE,Croda International Plc
+CSN.L,Chesnara,UK,MCX,mid,-,GBp,LSE,Chesnara plc
+CTEC.L,Convatec,UK,UKX,large,-,GBp,LSE,Convatec Group PLC
+CTY.L,City of London Investment Trust,UK,MCX,mid,-,GBp,LSE,City of London Ord
+CURY.L,Currys,UK,MCX,mid,-,GBp,LSE,Currys plc
+CVSG.L,CVS Group,UK,MCX,mid,-,GBp,LSE,CVS Group plc
+CWK.L,Cranswick,UK,MCX,mid,-,GBp,LSE,Cranswick plc
+CWR.L,Ceres Power,UK,MCX,mid,-,GBp,LSE,Ceres Power Holdings plc
+DATA.L,GlobalData,UK,MCX,mid,-,GBp,LSE,GlobalData Plc
+DCC.L,DCC Energy,UK,UKX,large,-,GBp,LSE,DCC Energy plc
+DGE.L,Diageo,UK,UKX,large,-,GBp,LSE,Diageo plc
+DLN.L,Derwent London,UK,MCX,mid,-,GBp,LSE,Derwent London Plc
+DNLM.L,Dunelm Group,UK,MCX,mid,-,GBp,LSE,Dunelm Group plc
+DOCS.L,Dr. Martens,UK,MCX,mid,-,GBp,LSE,Dr. Martens plc
+DOM.L,Domino's Pizza,UK,MCX,mid,-,GBp,LSE,Domino's Pizza Group plc
+DPLM.L,Diploma,UK,UKX,large,-,GBp,LSE,Diploma PLC
+DRX.L,Drax Group,UK,MCX,mid,-,GBp,LSE,Drax Group plc
+DSCV.L,discoverIE,UK,MCX,mid,-,GBp,LSE,discoverIE Group plc
+EDIN.L,Edinburgh Investment Trust,UK,MCX,mid,-,GBp,LSE,Edinburgh Investment Ord
+EDV.L,Endeavour Mining,UK,UKX,large,-,GBp,LSE,Endeavour Mining plc
+ELM.L,Elementis,UK,MCX,mid,-,GBp,LSE,Elementis plc
+EMG.L,Man Group,UK,MCX,mid,-,GBp,LSE,Man Group Plc
+ENOG.L,Energean,UK,MCX,mid,-,GBp,LSE,Energean plc
+ENT.L,Entain,UK,MCX,mid,-,GBp,LSE,Entain Plc
+ESCT.L,European Smaller Companies Trust,UK,MCX,mid,-,GBp,LSE,The European Smaller Companies Trust PLC
+EWG.L,Eurowag,UK,MCX,mid,-,GBp,LSE,W.A.G payment solutions plc
+EWI.L,Edinburgh Worldwide Investment Trust,UK,MCX,mid,-,GBp,LSE,Edinburgh Worldwide Ord
+EXPN.L,Experian,UK,UKX,large,-,GBp,LSE,Experian plc
+EZJ.L,EasyJet,UK,UKX,large,-,GBp,LSE,easyJet plc
+FAN.L,Volution Group,UK,MCX,mid,-,GBp,LSE,Volution Group plc
+FCH.L,Funding Circle,UK,MCX,mid,-,GBp,LSE,Funding Circle Holdings plc
+FCIT.L,F & C Investment Trust,UK,UKX,large,-,GBp,LSE,F&C Investment Trust Ord
+FCSS.L,Fidelity China Special Situations,UK,MCX,mid,-,GBp,LSE,Fidelity China Special Situations Ord
+FEML.L,Fidelity Emerging Markets,UK,MCX,mid,-,GBp,LSE,Fidelity Emerging Markets Limited
+FEV.L,Fidelity European Trust,UK,MCX,mid,-,GBp,LSE,Fidelity European Trust Ord
+FGEN.L,Foresight Environmental Infrastructure,UK,MCX,mid,GG00BJL5FH87,GBp,LSE,Foresight Environmental Infrastructure Limited
+FGP.L,FirstGroup,UK,MCX,mid,-,GBp,LSE,FirstGroup plc
+FGT.L,Finsbury Growth & Income Trust,UK,MCX,mid,-,GBp,LSE,Finsbury Growth & Income Ord
+FOUR.L,4imprint,UK,MCX,mid,-,GBp,LSE,4imprint Group plc
+FRAS.L,Frasers Group,UK,MCX,mid,-,GBp,LSE,Frasers Group Plc
+FRES.L,Fresnillo plc,UK,UKX,large,-,GBp,LSE,Fresnillo plc
+FSG.L,Foresight Group,UK,MCX,mid,GG00BMD8MJ76,GBp,LSE,Foresight Group Holdings Limited
+FSV.L,Fidelity Special Values,UK,MCX,mid,-,GBp,LSE,Fidelity Special Values Ord
+GAMA.L,Gamma Communications,UK,MCX,mid,-,GBp,LSE,Gamma Communications plc
+GAW.L,Games Workshop,UK,UKX,large,-,GBp,LSE,Games Workshop Group PLC
+GCP.L,GCP Infrastructure Investments,UK,MCX,mid,JE00B6173J15,GBp,LSE,GCP Infrastructure Investments Limited
+GDWN.L,Goodwin,UK,MCX,mid,-,GBp,LSE,Goodwin PLC
+GEN.L,Genuit Group,UK,MCX,mid,-,GBp,LSE,Genuit Group plc
+GFRD.L,Galliford Try,UK,MCX,mid,-,GBp,LSE,Galliford Try Holdings plc
+GFTU.L,Grafton Group,UK,MCX,mid,-,GBp,LSE,Grafton Group plc
+GLEN.L,Glencore,UK,UKX,large,-,GBp,LSE,Glencore plc
+GNC.L,Greencore,UK,MCX,mid,-,GBp,LSE,Greencore Group plc
+GNS.L,Genus,UK,MCX,mid,-,GBp,LSE,Genus plc
+GPE.L,Great Portland Estates,UK,MCX,mid,-,GBp,LSE,Great Portland Estates Plc
+GRG.L,Greggs,UK,MCX,mid,-,GBp,LSE,Greggs plc
+GRI.L,Grainger,UK,MCX,mid,-,GBp,LSE,Grainger plc
+GROW.L,Molten Ventures,UK,MCX,mid,-,GBp,LSE,Molten Ventures Plc
+GSCT.L,Global Smaller Companies Trust,UK,MCX,mid,-,GBp,LSE,The Global Smaller Companies Trust Ord
+GSK.L,GSK plc,UK,UKX,large,-,GBp,LSE,GSK plc
+HANA.L,Hansa Investment Company,UK,MCX,mid,-,GBp,LSE,Hansa Investment Company Limited
+HAS.L,Hays,UK,MCX,mid,-,GBp,LSE,Hays plc
+HBR.L,Harbour Energy,UK,MCX,mid,-,GBp,LSE,Harbour Energy plc
+HFD.L,Halfords,UK,MCX,mid,-,GBp,LSE,Halfords Group plc
+HFEL.L,Henderson Far East Income,UK,MCX,mid,-,GBp,LSE,Henderson Far East Income Limited
+HFG.L,Hilton Food Group,UK,MCX,mid,-,GBp,LSE,Hilton Food Group plc
+HGT.L,Hg Capital Trust,UK,MCX,mid,-,GBp,LSE,HgCapital Trust Ord
+HICL.L,HICL Infrastructure Company,UK,MCX,mid,-,GBp,LSE,HICL Infrastructure PLC Ord
+HIK.L,Hikma Pharmaceuticals,UK,MCX,mid,-,GBp,LSE,Hikma Pharmaceuticals PLC
+HILS.L,Hill & Smith,UK,MCX,mid,-,GBp,LSE,Hill & Smith PLC
+HLMA.L,Halma plc,UK,UKX,large,-,GBp,LSE,Halma plc
+HLN.L,Haleon,UK,UKX,large,-,GBp,LSE,Haleon plc
+HMSO.L,Hammerson,UK,MCX,mid,-,GBp,LSE,Hammerson Plc
+HOC.L,Hochschild Mining,UK,MCX,mid,-,GBp,LSE,Hochschild Mining plc
+HRI.L,Herald Investment Trust,UK,MCX,mid,-,GBp,LSE,Herald Ord
+HSBA.L,HSBC,UK,UKX,large,-,GBp,LSE,HSBC Holdings plc
+HSL.L,Henderson Smaller Companies Investment Trust,UK,MCX,mid,-,GBp,LSE,Henderson Smaller Companies Ord
+HSX.L,Hiscox,UK,UKX,large,-,GBp,LSE,Hiscox Ltd
+HTG.L,Hunting,UK,MCX,mid,-,GBp,LSE,Hunting PLC
+HTWS.L,Helios Towers,UK,MCX,mid,-,GBp,LSE,Helios Towers plc
+HVPE.L,HarbourVest Global Private Equity,UK,MCX,mid,GG00BR30MJ80,GBp,LSE,HarbourVest Global Private Equity Ltd.
+HWDN.L,Howdens Joinery,UK,UKX,large,-,GBp,LSE,Howden Joinery Group Plc
+HWG.L,Harworth Group,UK,MCX,mid,-,GBp,LSE,Harworth Group plc
+IAD.L,Invesco Asia Dragon Trust,UK,MCX,mid,-,GBp,LSE,Invesco Asia Dragon Trust Ord
+IAG.L,International Airlines Group,UK,UKX,large,-,GBp,LSE,International Consolidated Airlines Group S.A.
+ICG.L,ICG,UK,UKX,large,-,GBp,LSE,ICG plc
+ICGT.L,ICG Enterprise Trust,UK,MCX,mid,-,GBp,LSE,ICG Enterprise Trust Ord
+IGG.L,IG Group,UK,UKX,large,-,GBp,LSE,IG Group Holdings plc
+IHG.L,IHG Hotels & Resorts,UK,UKX,large,PR82525F1005,USD,LSE,InterContinental Hotels Group PLC
+IHP.L,IntegraFin Holdings,UK,MCX,mid,-,GBp,LSE,IntegraFin Holdings plc
+III.L,3i,UK,UKX,large,-,GBp,LSE,3i Group Ord
+IMB.L,Imperial Brands,UK,UKX,large,-,GBp,LSE,Imperial Brands PLC
+IMI.L,IMI,UK,UKX,large,-,GBp,LSE,IMI plc
+INCH.L,Inchcape,UK,MCX,mid,-,GBp,LSE,Inchcape plc
+INF.L,Informa,UK,UKX,large,-,GBp,LSE,Informa plc
+INPP.L,International Public Partnerships,UK,MCX,mid,GB00B188SR50,GBp,LSE,International Public Partnerships Limited
+INVP.L,Investec,UK,UKX,large,-,GBp,LSE,Investec Group
+IPO.L,IP Group,UK,MCX,mid,-,GBp,LSE,IP Group Plc
+ITH.L,Ithaca Energy,UK,UKX,large,-,GBp,LSE,Ithaca Energy plc
+ITRK.L,Intertek,UK,UKX,large,-,GBp,LSE,Intertek Group plc
+ITV.L,ITV,UK,MCX,mid,-,GBp,LSE,ITV plc
+IWG.L,International Workplace Group,UK,MCX,mid,-,GBp,LSE,International Workplace Group plc
+JAM.L,JPMorgan American Investment Trust,UK,MCX,mid,-,GBp,LSE,JPMorgan American Ord
+JCH.L,JPMorgan Claverhouse Investment Trust,UK,MCX,mid,-,GBp,LSE,JPMorgan Claverhouse Ord
+JD.L,JD Sports,UK,UKX,large,-,GBp,LSE,JD Sports Fashion Plc
+JDW.L,Wetherspoons,UK,MCX,mid,-,GBp,LSE,J D Wetherspoon plc
+JEDT.L,JPMorgan European Discovery,UK,MCX,mid,-,GBp,LSE,JPMorgan European Discovery Ord
+JEGI.L,JPMorgan European Growth & Income,UK,MCX,mid,GB00BPR9Y246,GBp,LSE,JPMorgan European Growth & Income Ord
+JEMI.L,JPMorgan Emerging Markets Dividend Income,UK,MCX,mid,-,GBp,LSE,JPMorgan Emerging Markets Div Inc
+JFJ.L,JPMorgan Japanese Investment Trust,UK,MCX,mid,-,GBp,LSE,JPMorgan Japanese Ord
+JGGI.L,JPMorgan Global Growth & Income,UK,MCX,mid,-,GBp,LSE,JPMorgan Global Growth & Income Ord
+JMAT.L,Johnson Matthey,UK,MCX,mid,-,GBp,LSE,Johnson Matthey Plc
+JMGI.L,JPMorgan Emerging Markets Growth & Income,UK,MCX,mid,-,GBp,LSE,JPMorgan Emerging Markets Growth & Income plc.
+JSG.L,Johnson Service Group,UK,MCX,mid,-,GBp,LSE,Johnson Service Group PLC
+JUP.L,Jupiter Fund Management,UK,MCX,mid,-,GBp,LSE,Jupiter Fund Management Plc
+KGF.L,Kingfisher plc,UK,UKX,large,-,GBp,LSE,Kingfisher plc
+KIE.L,Kier Group,UK,MCX,mid,-,GBp,LSE,Kier Group plc
+KLR.L,Keller Group,UK,MCX,mid,-,GBp,LSE,Keller Group plc
+KNOS.L,Kainos,UK,MCX,mid,-,GBp,LSE,Kainos Group plc
+LAND.L,Land Securities,UK,UKX,large,-,GBp,LSE,Land Securities Group Plc
+LGEN.L,Legal & General,UK,UKX,large,-,GBp,LSE,Legal & General Group Plc
+LLOY.L,Lloyds Banking Group,UK,UKX,large,-,GBp,LSE,Lloyds Banking Group plc
+LMP.L,LondonMetric Property,UK,UKX,large,-,GBp,LSE,LondonMetric Property Plc
+LRE.L,Lancashire Holdings,UK,MCX,mid,-,GBp,LSE,Lancashire Holdings Limited
+LSEG.L,London Stock Exchange Group,UK,UKX,large,PLCTHQM00018,GBp,LSE,London Stock Exchange Group plc
+LWDB.L,Law Debenture,UK,MCX,mid,-,GBp,LSE,Law Debenture Corporation Ord
+MAB.L,Mitchells & Butlers,UK,MCX,mid,-,GBp,LSE,Mitchells & Butlers plc
+MEGP.L,ME Group International,UK,MCX,mid,-,GBp,LSE,ME Group International plc
+MGAM.L,Morgan Advanced Materials,UK,MCX,mid,-,GBp,LSE,Morgan Advanced Materials plc
+MGNS.L,Morgan Sindall Group,UK,MCX,mid,-,GBp,LSE,Morgan Sindall Group plc
+MKS.L,Marks & Spencer,UK,UKX,large,-,GBp,LSE,Marks and Spencer Group plc
+MNDI.L,Mondi,UK,MCX,mid,-,GBp,LSE,Mondi plc
+MNG.L,M&G,UK,UKX,large,-,GBp,LSE,M&G plc
+MNKS.L,Monks Investment Trust,UK,MCX,mid,-,GBp,LSE,Monks Ord
+MNTN.L,Schiehallion Fund,UK,MCX,mid,-,USD,LSE,The Schiehallion Fund Limited
+MONY.L,MONY Group,UK,MCX,mid,-,GBp,LSE,MONY Group plc
+MOON.L,Moonpig,UK,MCX,mid,-,GBp,LSE,Moonpig Group PLC
+MRC.L,Mercantile Investment Trust,UK,MCX,mid,-,GBp,LSE,Mercantile Ord
+MRCH.L,Merchants Trust,UK,MCX,mid,-,GBp,LSE,Merchants Trust Ord
+MRO.L,Melrose Industries,UK,UKX,large,-,GBp,LSE,Melrose Industries PLC
+MTLN.L,Metlen Energy & Metals,UK,UKX,large,-,EUR,LSE,Metlen Energy & Metals PLC
+MTO.L,Mitie,UK,MCX,mid,-,GBp,LSE,Mitie Group plc
+MTRO.L,Metro Bank,UK,MCX,mid,-,GBp,LSE,Metro Bank Holdings PLC
+MUT.L,Murray Income Trust,UK,MCX,mid,-,GBp,LSE,Murray Income Trust Ord
+MYI.L,Murray International Trust,UK,MCX,mid,-,GBp,LSE,Murray International Ord
+N91.L,Ninety One,UK,MCX,mid,-,GBp,LSE,Ninety One Group
+NAIT.L,North American Income Trust,UK,MCX,mid,-,GBp,LSE,North American Income Trust Ord
+NAS.L,North Atlantic Smaller Companies Investment Trust,UK,MCX,mid,-,GBp,LSE,North Atlantic Smaller Cos Ord
+NBPE.L,Neuberger Private Equity Partners,UK,MCX,mid,-,GBp,LSE,Neuberger Private Equity Partners Limited
+NCC.L,NCC Group,UK,MCX,mid,-,GBp,LSE,NCC Group plc
+NG.L,National Grid plc,UK,UKX,large,-,GBp,LSE,National Grid plc
+NWG.L,NatWest Group,UK,UKX,large,-,GBp,LSE,NatWest Group plc
+NXT.L,Next plc,UK,UKX,large,-,GBp,LSE,NEXT plc
+OCDO.L,Ocado Group,UK,MCX,mid,-,GBp,LSE,Ocado Group plc
+OCI.L,Oakley Capital Investments,UK,MCX,mid,-,GBp,LSE,Oakley Capital Investments Limited
+ONT.L,Oxford Nanopore Technologies,UK,MCX,mid,-,GBp,LSE,Oxford Nanopore Technologies plc
+OSB.L,OSB Group,UK,MCX,mid,-,GBp,LSE,OSB Group Plc
+OXB.L,Oxford Biomedica,UK,MCX,mid,-,GBp,LSE,Oxford Biomedica plc
+OXIG.L,Oxford Instruments,UK,MCX,mid,-,GBp,LSE,Oxford Instruments plc
+PAF.L,Pan African Resources,UK,MCX,mid,-,GBp,LSE,Pan African Resources PLC
+PAG.L,Paragon Banking Group,UK,MCX,mid,-,GBp,LSE,Paragon Banking Group PLC
+PAGE.L,Michael Page,UK,MCX,mid,-,GBp,LSE,Michael Page Plc
+PCGH.L,Polar Capital Global Healthcare Trust,UK,MCX,mid,-,GBp,LSE,Polar Capital Glb Healthcare Ord
+PCT.L,Polar Capital Technology Trust,UK,UKX,large,-,GBp,LSE,Polar Capital Technology Ord
+PETS.L,Pets at Home,UK,MCX,mid,-,GBp,LSE,Pets at Home Group Plc
+PEY.L,Partners Group Private Equity,UK,MCX,mid,-,EUR,LSE,Partners Group Private Equity Limited
+PFD.L,Premier Foods,UK,MCX,mid,-,GBp,LSE,Premier Foods plc
+PHI.L,Pacific Horizon Investment Trust,UK,MCX,mid,-,GBp,LSE,Pacific Horizon Ord
+PHP.L,Primary Health Properties,UK,MCX,mid,-,GBp,LSE,Primary Health Properties Plc
+PIN.L,Pantheon International,UK,MCX,mid,-,GBp,LSE,Pantheon International Ord
+PINE.L,Pinewood Technologies,UK,MCX,mid,-,GBp,LSE,Pinewood Technologies Group PLC
+PINT.L,Pantheon Infrastructure,UK,MCX,mid,-,GBp,LSE,Pantheon Infrastructure Ord
+PLUS.L,Plus500,UK,MCX,mid,-,GBp,LSE,Plus500 Ltd.
+PNL.L,Personal Assets Trust,UK,MCX,mid,-,GBp,LSE,Personal Assets Ord
+PNN.L,Pennon Group,UK,MCX,mid,-,GBp,LSE,Pennon Group Plc
+POLN.L,Pollen Street Group,UK,MCX,mid,-,GBp,LSE,Pollen Street Group Limited
+PPET.L,Patria Private Equity Trust,UK,MCX,mid,-,GBp,LSE,Patria Private Equity Trust
+PPH.L,PPHE Hotel Group,UK,MCX,mid,-,GBp,LSE,PPHE Hotel Group Limited
+PRN.L,Princes Group,UK,MCX,mid,-,GBp,LSE,Princes Group plc
+PRU.L,Prudential plc,UK,UKX,large,-,GBp,LSE,Prudential plc
+PSH.L,Pershing Square Holdings,UK,UKX,large,-,GBp,LSE,"Pershing Square Holdings, Ltd."
+PSN.L,Persimmon,UK,MCX,mid,-,GBp,LSE,Persimmon Plc
+PSON.L,Pearson plc,UK,UKX,large,-,GBp,LSE,Pearson plc
+PTEC.L,Playtech,UK,MCX,mid,-,GBp,LSE,Playtech plc
+QLT.L,Quilter,UK,MCX,mid,-,GBp,LSE,Quilter plc
+QQ.L,Qinetiq,UK,MCX,mid,-,GBp,LSE,QinetiQ Group plc
+RAT.L,Rathbones,UK,MCX,mid,-,GBp,LSE,Rathbones Group Plc
+RCP.L,RIT Capital Partners,UK,MCX,mid,-,GBp,LSE,RIT Capital Partners Ord
+REL.L,RELX,UK,UKX,large,-,GBp,LSE,RELX PLC
+RHIM.L,RHI Magnesita,UK,MCX,mid,-,GBp,LSE,RHI Magnesita N.V.
+RICA.L,Ruffer Investment Company,UK,MCX,mid,-,GBp,LSE,Ruffer Investment Company Limited
+RIO.L,Rio Tinto,UK,UKX,large,-,GBp,LSE,Rio Tinto Group
+RKT.L,Reckitt,UK,UKX,large,-,GBp,LSE,Reckitt Benckiser Group plc
+RMV.L,Rightmove,UK,MCX,mid,-,GBp,LSE,Rightmove plc
+RNK.L,Rank Group,UK,MCX,mid,-,GBp,LSE,The Rank Group Plc
+ROR.L,Rotork,UK,MCX,mid,-,GBp,LSE,Rotork plc
+ROSE.L,Rosebank Industries,UK,MCX,mid,-,GBp,LSE,Rosebank Industries plc
+RPI.L,Raspberry Pi Holdings,UK,MCX,mid,-,GBp,LSE,Raspberry Pi Holdings plc
+RR.L,Rolls-Royce Holdings,UK,UKX,large,-,GBp,LSE,Rolls-Royce Holdings plc
+RS1.L,RS Group,UK,MCX,mid,-,GBp,LSE,RS Group plc
+RSW.L,Renishaw,UK,MCX,mid,-,GBp,LSE,Renishaw plc
+RTO.L,Rentokil Initial,UK,UKX,large,-,GBp,LSE,Rentokil Initial plc
+RTW.L,RTW Biotech Opportunities,UK,MCX,mid,-,USD,LSE,RTW Biotech Opportunities Ltd
+SAFE.L,Safestore,UK,MCX,mid,-,GBp,LSE,Safestore Holdings Plc
+SAGA.L,Saga,UK,MCX,mid,-,GBp,LSE,Saga plc
+SAIN.L,Scottish American Investment Company,UK,MCX,mid,-,GBp,LSE,Scottish American Ord
+SBRY.L,Sainsbury's,UK,UKX,large,-,GBp,LSE,J Sainsbury plc
+SCT.L,Softcat,UK,MCX,mid,GB00BYZDVK82,GBp,LSE,Softcat plc
+SDLF.L,Standard Life,UK,UKX,large,-,GBp,LSE,Standard Life plc
+SDP.L,Schroder AsiaPacific Fund,UK,MCX,mid,-,GBp,LSE,Schroder AsiaPacific Ord
+SDR.L,Schroders,UK,UKX,large,-,GBp,LSE,Schroders plc
+SEIT.L,SDCL Efficiency Income Trust,UK,MCX,mid,-,GBp,LSE,SDCL Efficiency Income Trust plc.
+SEQI.L,Sequoia Economic Infrastructure Income Fund,UK,MCX,mid,-,GBp,LSE,Sequoia Economic Infrastructure Income Fund Limited
+SGE.L,Sage Group,UK,UKX,large,-,GBp,LSE,The Sage Group plc
+SGRO.L,Segro,UK,UKX,large,-,GBp,LSE,SEGRO Plc
+SHAW.L,Shawbrook Bank,UK,MCX,mid,-,GBp,LSE,Shawbrook Group PLC
+SHC.L,Shaftesbury Capital,UK,MCX,mid,-,GBp,LSE,Shaftesbury Capital PLC
+SHEL.L,Shell plc,UK,UKX,large,-,GBp,LSE,Shell plc
+SMIN.L,Smiths Group,UK,UKX,large,-,GBp,LSE,Smiths Group plc
+SMT.L,Scottish Mortgage Investment Trust,UK,UKX,large,GB00BLDYK618,GBp,LSE,Scottish Mortgage Ord
+SMWH.L,WHSmith,UK,MCX,mid,-,GBp,LSE,WH Smith PLC
+SN.L,Smith & Nephew,UK,UKX,large,-,GBp,LSE,Smith & Nephew plc
+SNR.L,Senior,UK,MCX,mid,-,GBp,LSE,Senior plc
+SOI.L,Schroder Oriental Income Fund,UK,MCX,mid,LU3185647958,GBp,LSE,Schroder Oriental Income Ord
+SPI.L,Spire Healthcare,UK,MCX,mid,-,GBp,LSE,Spire Healthcare Group plc
+SPX.L,Spirax Group,UK,UKX,large,-,GBp,LSE,Spirax Group plc
+SRE.L,Sirius Real Estate,UK,MCX,mid,-,GBp,LSE,Sirius Real Estate Limited
+SRP.L,Serco,UK,MCX,mid,-,GBp,LSE,Serco Group plc
+SSE.L,SSE plc,UK,UKX,large,-,GBp,LSE,SSE plc
+SSIT.L,Seraphim Space Investment Trust,UK,MCX,mid,GB00BW6HS596,GBp,LSE,Seraphim Space Investment Trust Ord
+SSPG.L,SSP Group,UK,MCX,mid,-,GBp,LSE,SSP Group plc
+STAN.L,Standard Chartered,UK,UKX,large,-,GBp,LSE,Standard Chartered PLC
+STJ.L,St. James's Place,UK,UKX,large,-,GBp,LSE,St. James's Place plc
+SUPR.L,Supermarket Income REIT,UK,MCX,mid,-,GBp,LSE,Supermarket Income REIT plc
+SVS.L,Savills,UK,MCX,mid,-,GBp,LSE,Savills plc
+SVT.L,Severn Trent,UK,UKX,large,-,GBp,LSE,Severn Trent PLC
+SYNC.L,Syncona,UK,MCX,mid,-,GBp,LSE,Syncona Limited
+TATE.L,Tate & Lyle,UK,MCX,mid,-,GBp,LSE,Tate & Lyle plc
+TBCG.L,TBC Bank,UK,MCX,mid,-,GBp,LSE,TBC Bank Group PLC
+TCAP.L,TP ICAP,UK,MCX,mid,-,GBp,LSE,TP ICAP Group PLC
+TEM.L,Templeton Emerging Markets Investment Trust,UK,MCX,mid,-,GBp,LSE,Templeton Emerging Mkts Invmt Tr TEMIT
+TEP.L,Telecom Plus,UK,MCX,mid,-,GBp,LSE,Telecom Plus Plc
+TFIF.L,Twentyfour Income Fund,UK,MCX,mid,-,GBp,LSE,TwentyFour Income Fund Limited
+THG.L,THG,UK,MCX,mid,-,GBp,LSE,THG Plc
+THRL.L,Target Healthcare REIT,UK,MCX,mid,-,GBp,LSE,Target Healthcare REIT Ord
+TMPL.L,Temple Bar Investment Trust,UK,MCX,mid,-,GBp,LSE,Temple Bar Ord
+TPK.L,Travis Perkins,UK,MCX,mid,PLCTHQM00018,GBp,LSE,Travis Perkins plc
+TRIG.L,The Renewables Infrastructure Group,UK,MCX,mid,-,GBp,LSE,The Renewables Infrastructure Group Limited
+TRN.L,Trainline,UK,MCX,mid,-,GBp,LSE,Trainline plc
+TRST.L,Trustpilot,UK,MCX,mid,-,GBp,LSE,Trustpilot Group plc
+TRY.L,TR Property Investment Trust,UK,MCX,mid,GB0009064097,GBp,LSE,TR Property Ord
+TSCO.L,Tesco,UK,UKX,large,-,GBp,LSE,Tesco PLC
+TW.L,Taylor Wimpey,UK,MCX,mid,-,GBp,LSE,Taylor Wimpey plc
+UEM.L,Utilico Emerging Markets,UK,MCX,mid,-,GBp,LSE,Utilico Emerging Markets Ord
+UKW.L,Greencoat UK Wind,UK,MCX,mid,-,GBp,LSE,Greencoat UK Wind
+ULVR.L,Unilever,UK,UKX,large,-,GBp,LSE,Unilever PLC
+USA.L,Baillie Gifford US Growth Trust,UK,MCX,mid,-,GBp,LSE,Baillie Gifford US Growth Ord
+UTG.L,Unite Group,UK,MCX,mid,-,GBp,LSE,Unite Group PLC
+UU.L,United Utilities,UK,UKX,large,-,GBp,LSE,United Utilities Group PLC
+VCT.L,Victrex,UK,MCX,mid,-,GBp,LSE,Victrex plc
+VEIL.L,Vietnam Enterprise Investments,UK,MCX,mid,-,GBp,LSE,Vietnam Enterprise Ord
+VLX.L,Volex,UK,MCX,mid,-,GBp,LSE,Volex plc
+VOD.L,Vodafone Group,UK,UKX,large,-,GBp,LSE,Vodafone Group Public Limited Company
+VOF.L,VinaCapital Vietnam Opportunity Fund,UK,MCX,mid,-,GBp,LSE,VinaCapital Vietnam Opportunity Fund Limited
+VSVS.L,Vesuvius,UK,MCX,mid,-,GBp,LSE,Vesuvius plc
+VTY.L,Vistry Group,UK,MCX,mid,-,GBp,LSE,Vistry Group PLC
+WEIR.L,Weir,UK,UKX,large,-,GBp,LSE,Weir PLC
+WIX.L,Wickes,UK,MCX,mid,-,GBp,LSE,Wickes Group plc
+WIZZ.L,Wizz Air,UK,MCX,mid,-,GBp,LSE,Wizz Air Holdings Plc
+WKP.L,Workspace Group,UK,MCX,mid,-,GBp,LSE,Workspace Group Plc
+WOSG.L,Watches of Switzerland,UK,MCX,mid,-,GBp,LSE,Watches of Switzerland Group PLC
+WPP.L,WPP,UK,MCX,mid,-,GBp,LSE,WPP plc
+WTB.L,Whitbread,UK,UKX,large,-,GBp,LSE,Whitbread plc
+WWH.L,Worldwide Healthcare Trust,UK,MCX,mid,-,GBp,LSE,Worldwide Healthcare Ord
+XPP.L,XP Power,UK,MCX,mid,-,GBp,LSE,XP Power Limited
+XPS.L,XPS Pensions,UK,MCX,mid,-,GBp,LSE,XPS Pensions Group plc
+ZIG.L,Zigup,UK,MCX,mid,-,GBp,LSE,Zigup Plc
+A,Agilent Technologies,US,SP500,large,US00846U1016,USD,NYQ,"Agilent Technologies, Inc."
+AAPL,Apple Inc.,US,SP500,large,US0378331005,USD,NMS,Apple Inc.
+ABBV,AbbVie,US,SP500,large,US00287Y1091,USD,NYQ,AbbVie Inc.
+ABNB,Airbnb,US,SP500,large,-,USD,NMS,"Airbnb, Inc."
+ABT,Abbott Laboratories,US,SP500,large,US0028241000,USD,NYQ,Abbott Laboratories
+ACGL,Arch Capital Group,US,SP500,large,BMG0450A1053,USD,NMS,Arch Capital Group Ltd.
+ACN,Accenture,US,SP500,large,IE00B4BNMY34,USD,NYQ,Accenture plc
+ADBE,Adobe Inc.,US,SP500,large,US00724F1012,USD,NMS,Adobe Inc.
+ADI,Analog Devices,US,SP500,large,US0326541051,USD,NMS,"Analog Devices, Inc."
+ADM,Archer Daniels Midland,US,SP500,large,-,USD,NYQ,Archer-Daniels-Midland Company
+ADP,Automatic Data Processing,US,SP500,large,US0530151036,USD,NMS,"Automatic Data Processing, Inc."
+ADSK,Autodesk,US,SP500,large,US0527691069,USD,NMS,"Autodesk, Inc."
+AEE,Ameren,US,SP500,large,-,USD,NYQ,Ameren Corporation
+AEP,American Electric Power,US,SP500,large,-,USD,NMS,"American Electric Power Company, Inc."
+AES,AES Corporation,US,SP500,large,US00130H1059,USD,NYQ,The AES Corporation
+AFL,Aflac,US,SP500,large,-,USD,NYQ,Aflac Incorporated
+AIG,American International Group,US,SP500,large,US0268747849,USD,NYQ,"American International Group, Inc."
+AIZ,Assurant,US,SP500,large,US04621X1081,USD,NYQ,"Assurant, Inc."
+AJG,Arthur J. Gallagher & Co.,US,SP500,large,US3635761097,USD,NYQ,Arthur J. Gallagher & Co.
+AKAM,Akamai Technologies,US,SP500,large,-,USD,NMS,"Akamai Technologies, Inc."
+ALB,Albemarle Corporation,US,SP500,large,-,USD,NYQ,Albemarle Corporation
+ALGN,Align Technology,US,SP500,large,US0162551016,USD,NMS,"Align Technology, Inc."
+ALL,Allstate,US,SP500,large,-,USD,NYQ,The Allstate Corporation
+ALLE,Allegion,US,SP500,large,IE00BFRT3W74,USD,NYQ,Allegion plc
+AMAT,Applied Materials,US,SP500,large,US0382221051,USD,NMS,"Applied Materials, Inc."
+AMCR,Amcor,US,SP500,large,JE00BV7DQ550,USD,NYQ,Amcor plc
+AMD,Advanced Micro Devices,US,SP500,large,US0079031078,USD,NMS,"Advanced Micro Devices, Inc."
+AME,Ametek,US,SP500,large,US0311001004,USD,NYQ,"AMETEK, Inc."
+AMGN,Amgen,US,SP500,large,US0311621009,USD,NMS,Amgen Inc.
+AMP,Ameriprise Financial,US,SP500,large,US03076C1062,USD,NYQ,"Ameriprise Financial, Inc."
+AMT,American Tower,US,SP500,large,-,USD,NYQ,American Tower Corporation
+AMZN,Amazon,US,SP500,large,-,USD,NMS,"Amazon.com, Inc."
+ANET,Arista Networks,US,SP500,large,US0404132054,USD,NYQ,"Arista Networks, Inc."
+AON,Aon plc,US,SP500,large,IE00BLP1HW54,USD,NYQ,Aon plc
+AOS,A. O. Smith,US,SP500,large,-,USD,NYQ,A. O. Smith Corporation
+APA,APA Corporation,US,SP500,large,US03743Q1085,USD,NMS,APA Corporation
+APD,Air Products,US,SP500,large,US0091581068,USD,NYQ,"Air Products and Chemicals, Inc."
+APH,Amphenol,US,SP500,large,CA03209E1025,USD,NYQ,Amphenol Corporation
+APO,Apollo Global Management,US,SP500,large,US03769M1062,USD,NYQ,"Apollo Global Management, Inc."
+APP,AppLovin,US,SP500,large,-,USD,NMS,AppLovin Corporation
+APTV,Aptiv,US,SP500,large,JE00BTDN8H13,USD,NYQ,Aptiv PLC
+ARE,Alexandria Real Estate Equities,US,SP500,large,US0152711091,USD,NYQ,"Alexandria Real Estate Equities, Inc."
+ARES,Ares Management,US,SP500,large,US03990B1017,USD,NYQ,Ares Management Corporation
+ATO,Atmos Energy,US,SP500,large,-,USD,NYQ,Atmos Energy Corporation
+AVGO,Broadcom,US,SP500,large,CA11134P1009,USD,NMS,Broadcom Inc.
+AVY,Avery Dennison,US,SP500,large,-,USD,NYQ,Avery Dennison Corporation
+AWK,American Water Works,US,SP500,large,-,USD,NYQ,"American Water Works Company, Inc."
+AXON,Axon Enterprise,US,SP500,large,US05464C1018,USD,NMS,"Axon Enterprise, Inc."
+AXP,American Express,US,SP500,large,-,USD,NYQ,American Express Company
+AZO,AutoZone,US,SP500,large,US0533321024,USD,NYQ,"AutoZone, Inc."
+BA,Boeing,US,SP500,large,-,USD,NYQ,The Boeing Company
+BAC,Bank of America,US,SP500,large,-,USD,NYQ,Bank of America Corporation
+BALL,Ball Corporation,US,SP500,large,US0584981064,USD,NYQ,Ball Corporation
+BAX,Baxter International,US,SP500,large,US0718131099,USD,NYQ,Baxter International Inc.
+BBY,Best Buy,US,SP500,large,US0865161014,USD,NYQ,"Best Buy Co., Inc."
+BDX,Becton Dickinson,US,SP500,large,-,USD,NYQ,"Becton, Dickinson and Company"
+BE,Bloom Energy,US,SP500,large,-,USD,NYQ,Bloom Energy Corporation
+BEN,Franklin Resources,US,SP500,large,-,USD,NYQ,Franklin Templeton Inc.
+BF-B,Brown–Forman,US,SP500,large,-,USD,NYQ,Brown-Forman Corporation
+BG,Bunge Global,US,SP500,large,-,USD,NYQ,Bunge Global SA
+BIIB,Biogen,US,SP500,large,US09062X1037,USD,NMS,Biogen Inc.
+BKNG,Booking Holdings,US,SP500,large,-,USD,NMS,Booking Holdings Inc.
+BKR,Baker Hughes,US,SP500,large,AR0302010498,USD,NMS,Baker Hughes Company
+BLK,BlackRock,US,SP500,large,US09290D1019,USD,NYQ,"BlackRock, Inc."
+BMY,Bristol Myers Squibb,US,SP500,large,-,USD,NYQ,Bristol-Myers Squibb Company
+BNY,BNY Mellon,US,SP500,large,-,USD,NYQ,The Bank of New York Mellon Corporation
+BR,Broadridge Financial Solutions,US,SP500,large,US11133T1034,USD,NYQ,"Broadridge Financial Solutions, Inc."
+BRK-B,Berkshire Hathaway,US,SP500,large,-,USD,NYQ,Berkshire Hathaway Inc.
+BRO,Brown & Brown,US,SP500,large,US1152361010,USD,NYQ,"Brown & Brown, Inc."
+BSX,Boston Scientific,US,SP500,large,-,USD,NYQ,Boston Scientific Corporation
+BX,Blackstone Inc.,US,SP500,large,-,USD,NYQ,Blackstone Inc.
+BXP,"BXP, Inc.",US,SP500,large,US1011211018,USD,NYQ,"BXP, Inc."
+C,Citigroup,US,SP500,large,US1729674242,USD,NYQ,Citigroup Inc.
+CAH,Cardinal Health,US,SP500,large,US14149Y1082,USD,NYQ,"Cardinal Health, Inc."
+CARR,Carrier Global,US,SP500,large,US14448C1045,USD,NYQ,Carrier Global Corporation
+CASY,Casey's,US,SP500,large,US1475281036,USD,NMS,"Casey's General Stores, Inc."
+CAT,Caterpillar Inc.,US,SP500,large,US1491231015,USD,NYQ,Caterpillar Inc.
+CB,Chubb Limited,US,SP500,large,-,USD,NYQ,Chubb Limited
+CBOE,Cboe Global Markets,US,SP500,large,US12503M1080,USD,BTS,"Cboe Global Markets, Inc."
+CBRE,CBRE Group,US,SP500,large,US12504L1098,USD,NYQ,"CBRE Group, Inc."
+CCI,Crown Castle,US,SP500,large,-,USD,NYQ,Crown Castle Inc.
+CCL,Carnival Corporation,US,SP500,large,BMG2004J1036,USD,NYQ,Carnival Corporation Ltd.
+CDNS,Cadence Design Systems,US,SP500,large,US1273871087,USD,NMS,"Cadence Design Systems, Inc."
+CDW,CDW Corporation,US,SP500,large,US12514G1085,USD,NMS,CDW Corporation
+CEG,Constellation Energy,US,SP500,large,-,USD,NMS,Constellation Energy Corporation
+CF,CF Industries,US,SP500,large,US1252691001,USD,NYQ,"CF Industries Holdings, Inc."
+CFG,Citizens Financial Group,US,SP500,large,US1746101054,USD,NYQ,"Citizens Financial Group, Inc."
+CHD,Church & Dwight,US,SP500,large,-,USD,NYQ,"Church & Dwight Co., Inc."
+CHRW,C.H. Robinson,US,SP500,large,US12541W2098,USD,NMS,"C.H. Robinson Worldwide, Inc."
+CHTR,Charter Communications,US,SP500,large,US16119P1084,USD,NMS,"Charter Communications, Inc."
+CI,Cigna,US,SP500,large,US1255231003,USD,NYQ,The Cigna Group
+CIEN,Ciena,US,SP500,large,-,USD,NYQ,Ciena Corporation
+CINF,Cincinnati Financial,US,SP500,large,-,USD,NMS,Cincinnati Financial Corporation
+CL,Colgate-Palmolive,US,SP500,large,-,USD,NYQ,Colgate-Palmolive Company
+CLX,Clorox,US,SP500,large,-,USD,NYQ,The Clorox Company
+CMCSA,Comcast,US,SP500,large,-,USD,NMS,Comcast Corporation
+CME,CME Group,US,SP500,large,US12572Q1058,USD,NMS,CME Group Inc.
+CMG,Chipotle Mexican Grill,US,SP500,large,US1696561059,USD,NYQ,"Chipotle Mexican Grill, Inc."
+CMI,Cummins,US,SP500,large,US2310211063,USD,NYQ,Cummins Inc.
+CMS,CMS Energy,US,SP500,large,US1258961002,USD,NYQ,CMS Energy Corporation
+CNC,Centene Corporation,US,SP500,large,-,USD,NYQ,Centene Corporation
+CNP,CenterPoint Energy,US,SP500,large,-,USD,NYQ,"CenterPoint Energy, Inc."
+COF,Capital One,US,SP500,large,-,USD,NYQ,Capital One Financial Corporation
+COHR,Coherent Corp.,US,SP500,large,US19247G1076,USD,NYQ,Coherent Corp.
+COIN,Coinbase,US,SP500,large,-,USD,NMS,"Coinbase Global, Inc."
+COO,Cooper Companies (The),US,SP500,large,-,USD,NMS,"The Cooper Companies, Inc."
+COP,ConocoPhillips,US,SP500,large,US20825C1045,USD,NYQ,ConocoPhillips
+COR,Cencora,US,SP500,large,-,USD,NYQ,"Cencora, Inc."
+COST,Costco,US,SP500,large,-,USD,NMS,Costco Wholesale Corporation
+CPAY,Corpay,US,SP500,large,-,USD,NYQ,"Corpay, Inc."
+CPRT,Copart,US,SP500,large,US2172041061,USD,NMS,"Copart, Inc."
+CPT,Camden Property Trust,US,SP500,large,US1331311027,USD,NYQ,Camden Property Trust
+CRH,CRH plc,US,SP500,large,IE0001827041,USD,NYQ,CRH plc
+CRL,Charles River Laboratories,US,SP500,large,US1598641074,USD,NYQ,"Charles River Laboratories International, Inc."
+CRM,Salesforce,US,SP500,large,-,USD,NYQ,"Salesforce, Inc."
+CRWD,CrowdStrike,US,SP500,large,-,USD,NMS,"CrowdStrike Holdings, Inc."
+CSCO,Cisco,US,SP500,large,-,USD,NMS,"Cisco Systems, Inc."
+CSGP,CoStar Group,US,SP500,large,US22160N1090,USD,NMS,"CoStar Group, Inc."
+CSX,CSX Corporation,US,SP500,large,US1264081035,USD,NMS,CSX Corporation
+CTAS,Cintas,US,SP500,large,-,USD,NMS,Cintas Corporation
+CTSH,Cognizant,US,SP500,large,-,USD,NMS,Cognizant Technology Solutions Corporation
+CTVA,Corteva,US,SP500,large,US22052L1044,USD,NYQ,"Corteva, Inc."
+CVNA,Carvana,US,SP500,large,US1468691027,USD,NYQ,Carvana Co.
+CVS,CVS Health,US,SP500,large,US1266501006,USD,NYQ,CVS Health Corporation
+CVX,Chevron Corporation,US,SP500,large,ARDEUT110087,USD,NYQ,Chevron Corporation
+D,Dominion Energy,US,SP500,large,US25746U1097,USD,NYQ,"Dominion Energy, Inc."
+DAL,Delta Air Lines,US,SP500,large,US2473617023,USD,NYQ,"Delta Air Lines, Inc."
+DASH,DoorDash,US,SP500,large,-,USD,NMS,"DoorDash, Inc."
+DD,DuPont,US,SP500,large,US26614N2018,USD,NYQ,"DuPont de Nemours, Inc."
+DDOG,Datadog,US,SP500,large,US23804L1035,USD,NMS,"Datadog, Inc."
+DE,Deere & Company,US,SP500,large,-,USD,NYQ,Deere & Company
+DECK,Deckers Brands,US,SP500,large,-,USD,NYQ,Deckers Outdoor Corporation
+DELL,Dell Technologies,US,SP500,large,US24703L2025,USD,NYQ,Dell Technologies Inc.
+DG,Dollar General,US,SP500,large,US2566771059,USD,NYQ,Dollar General Corporation
+DGX,Quest Diagnostics,US,SP500,large,-,USD,NYQ,Quest Diagnostics Incorporated
+DHI,D. R. Horton,US,SP500,large,US23331A1097,USD,NYQ,"D.R. Horton, Inc."
+DHR,Danaher Corporation,US,SP500,large,-,USD,NYQ,Danaher Corporation
+DIS,Walt Disney Company (The),US,SP500,large,-,USD,NYQ,The Walt Disney Company
+DLR,Digital Realty,US,SP500,large,US2538681030,USD,NYQ,"Digital Realty Trust, Inc."
+DLTR,Dollar Tree,US,SP500,large,US2567461080,USD,NMS,"Dollar Tree, Inc."
+DOC,Healthpeak Properties,US,SP500,large,US42250P1030,USD,NYQ,"Healthpeak Properties, Inc."
+DOV,Dover Corporation,US,SP500,large,-,USD,NYQ,Dover Corporation
+DOW,Dow Inc.,US,SP500,large,US2605571031,USD,NYQ,Dow Inc.
+DPZ,Domino's,US,SP500,large,US25754A2015,USD,NMS,"Domino's Pizza, Inc."
+DRI,Darden Restaurants,US,SP500,large,US2371941053,USD,NYQ,"Darden Restaurants, Inc."
+DTE,DTE Energy,US,SP500,large,US2333311072,USD,NYQ,DTE Energy Company
+DUK,Duke Energy,US,SP500,large,-,USD,NYQ,Duke Energy Corporation
+DVA,DaVita,US,SP500,large,US23918K1088,USD,NYQ,DaVita Inc.
+DVN,Devon Energy,US,SP500,large,-,USD,NYQ,Devon Energy Corporation
+DXCM,Dexcom,US,SP500,large,US2521311074,USD,NMS,"DexCom, Inc."
+EBAY,eBay Inc.,US,SP500,large,US2786421030,USD,NMS,eBay Inc.
+ECHO,EchoStar,US,SP500,large,-,USD,NMS,EchoStar Corporation
+ECL,Ecolab,US,SP500,large,US2788651006,USD,NYQ,Ecolab Inc.
+ED,Consolidated Edison,US,SP500,large,US2091151041,USD,NYQ,"Consolidated Edison, Inc."
+EFX,Equifax,US,SP500,large,US2944291051,USD,NYQ,Equifax Inc.
+EG,Everest Group,US,SP500,large,BMG3223R1088,USD,NYQ,"Everest Group, Ltd."
+EIX,Edison International,US,SP500,large,US2810201077,USD,NYQ,Edison International
+EL,Estée Lauder Companies (The),US,SP500,large,US5184391044,USD,NYQ,The Estée Lauder Companies Inc.
+ELV,Elevance Health,US,SP500,large,US0367521038,USD,NYQ,"Elevance Health, Inc."
+EME,Emcor,US,SP500,large,US29084Q1004,USD,NYQ,"EMCOR Group, Inc."
+EMR,Emerson Electric,US,SP500,large,-,USD,NYQ,Emerson Electric Co.
+EOG,EOG Resources,US,SP500,large,US26875P1012,USD,NYQ,"EOG Resources, Inc."
+EQIX,Equinix,US,SP500,large,US29444U7000,USD,NMS,"Equinix, Inc."
+EQT,EQT Corporation,US,SP500,large,US26884L1098,USD,NYQ,EQT Corporation
+ERIE,Erie Indemnity,US,SP500,large,US29530P1021,USD,NMS,Erie Indemnity Company
+ES,Eversource Energy,US,SP500,large,-,USD,NYQ,Eversource Energy
+ESS,Essex Property Trust,US,SP500,large,-,USD,NYQ,"Essex Property Trust, Inc."
+ETN,Eaton Corporation,US,SP500,large,-,USD,NYQ,Eaton Corporation plc
+ETR,Entergy,US,SP500,large,CA76091R1001,USD,NYQ,Entergy Corporation
+EVRG,Evergy,US,SP500,large,US30034W1062,USD,NMS,"Evergy, Inc."
+EW,Edwards Lifesciences,US,SP500,large,-,USD,NYQ,Edwards Lifesciences Corporation
+EXC,Exelon,US,SP500,large,-,USD,NMS,Exelon Corporation
+EXE,Expand Energy,US,SP500,large,-,USD,NMS,Expand Energy Corporation
+EXPD,Expeditors International,US,SP500,large,US3021301094,USD,NYQ,"Expeditors International of Washington, Inc."
+EXPE,Expedia Group,US,SP500,large,-,USD,NMS,"Expedia Group, Inc."
+EXR,Extra Space Storage,US,SP500,large,US30225T1025,USD,NYQ,Extra Space Storage Inc.
+F,Ford Motor Company,US,SP500,large,-,USD,NYQ,Ford Motor Company
+FANG,Diamondback Energy,US,SP500,large,US25278X1090,USD,NMS,"Diamondback Energy, Inc."
+FAST,Fastenal,US,SP500,large,-,USD,NMS,Fastenal Company
+FCX,Freeport-McMoRan,US,SP500,large,US35671D8570,USD,NYQ,Freeport-McMoRan Inc.
+FDS,FactSet,US,SP500,large,US3030751057,USD,NYQ,FactSet Research Systems Inc.
+FDX,FedEx,US,SP500,large,-,USD,NYQ,FedEx Corporation
+FDXF,FedEx Freight,US,SP500,large,US3143521058,USD,NYQ,"FedEx Freight Holding Company, Inc."
+FE,FirstEnergy,US,SP500,large,US3379321074,USD,NYQ,FirstEnergy Corp.
+FERG,Ferguson Enterprises,US,SP500,large,US31488V1070,USD,NYQ,Ferguson Enterprises Inc.
+FFIV,"F5, Inc.",US,SP500,large,US3156161024,USD,NMS,"F5, Inc."
+FICO,Fair Isaac,US,SP500,large,-,USD,NYQ,Fair Isaac Corporation
+FIS,Fidelity National Information Services,US,SP500,large,US31620M1062,USD,NYQ,"Fidelity National Information Services, Inc."
+FISV,Fiserv,US,SP500,large,US3377381088,USD,NMS,"Fiserv, Inc."
+FITB,Fifth Third Bancorp,US,SP500,large,US3167731005,USD,NYQ,Fifth Third Bancorp
+FIX,Comfort Systems USA,US,SP500,large,US1999081045,USD,NYQ,"Comfort Systems USA, Inc."
+FLEX,Flex Ltd.,US,SP500,large,SG9999000020,USD,NMS,Flex Ltd.
+FOX,Fox Corporation (Class B),US,SP500,large,-,USD,NMS,Fox Corporation
+FOXA,Fox Corporation (Class A),US,SP500,large,-,USD,NMS,Fox Corporation
+FRT,Federal Realty Investment Trust,US,SP500,large,US3137451015,USD,NYQ,Federal Realty Investment Trust
+FSLR,First Solar,US,SP500,large,US3364331070,USD,NMS,"First Solar, Inc."
+FTNT,Fortinet,US,SP500,large,US34959E1091,USD,NMS,"Fortinet, Inc."
+FTV,Fortive,US,SP500,large,-,USD,NYQ,Fortive Corporation
+GD,General Dynamics,US,SP500,large,-,USD,NYQ,General Dynamics Corporation
+GDDY,GoDaddy,US,SP500,large,US3802371076,USD,NYQ,GoDaddy Inc.
+GE,GE Aerospace,US,SP500,large,US3696043013,USD,NYQ,GE Aerospace
+GEHC,GE HealthCare,US,SP500,large,-,USD,NMS,GE HealthCare Technologies Inc.
+GEN,Gen Digital,US,SP500,large,-,USD,NMS,Gen Digital Inc.
+GEV,GE Vernova,US,SP500,large,-,USD,NYQ,GE Vernova Inc.
+GILD,Gilead Sciences,US,SP500,large,US3755581036,USD,NMS,"Gilead Sciences, Inc."
+GIS,General Mills,US,SP500,large,US3703341046,USD,NYQ,"General Mills, Inc."
+GL,Globe Life,US,SP500,large,US37959E1029,USD,NYQ,Globe Life Inc.
+GLW,Corning Inc.,US,SP500,large,-,USD,NYQ,Corning Incorporated
+GM,General Motors,US,SP500,large,-,USD,NYQ,General Motors Company
+GNRC,Generac,US,SP500,large,US3687361044,USD,NYQ,Generac Holdings Inc.
+GOOG,Alphabet Inc. (Class C),US,SP500,large,CA02080M1005,USD,NMS,Alphabet Inc.
+GOOGL,Alphabet Inc. (Class A),US,SP500,large,CA02080M1005,USD,NMS,Alphabet Inc.
+GPC,Genuine Parts Company,US,SP500,large,-,USD,NYQ,Genuine Parts Company
+GPN,Global Payments,US,SP500,large,US37940X1028,USD,NYQ,Global Payments Inc.
+GRMN,Garmin,US,SP500,large,CH0114405324,USD,NYQ,Garmin Ltd.
+GS,Goldman Sachs,US,SP500,large,-,USD,NYQ,"The Goldman Sachs Group, Inc."
+GWW,W. W. Grainger,US,SP500,large,US3848021040,USD,NYQ,"W.W. Grainger, Inc."
+HAL,Halliburton,US,SP500,large,-,USD,NYQ,Halliburton Company
+HAS,Hasbro,US,SP500,large,US4180561072,USD,NMS,"Hasbro, Inc."
+HBAN,Huntington Bancshares,US,SP500,large,-,USD,NMS,Huntington Bancshares Incorporated
+HCA,HCA Healthcare,US,SP500,large,-,USD,NYQ,"HCA Healthcare, Inc."
+HD,Home Depot (The),US,SP500,large,-,USD,NYQ,"The Home Depot, Inc."
+HIG,Hartford (The),US,SP500,large,-,USD,NYQ,"The Hartford Insurance Group, Inc."
+HII,Huntington Ingalls Industries,US,SP500,large,US4464131063,USD,NYQ,"Huntington Ingalls Industries, Inc."
+HLT,Hilton Worldwide,US,SP500,large,US43300A2033,USD,NYQ,Hilton Worldwide Holdings Inc.
+HON,Honeywell Technologies,US,SP500,large,-,USD,NMS,Honeywell International Inc.
+HONA,Honeywell Aerospace,US,SP500,large,-,USD,NMS,Honeywell Aerospace Inc.
+HOOD,Robinhood Markets,US,SP500,large,-,USD,NMS,"Robinhood Markets, Inc."
+HPE,Hewlett Packard Enterprise,US,SP500,large,-,USD,NYQ,Hewlett Packard Enterprise Company
+HPQ,HP Inc.,US,SP500,large,US40434L1052,USD,NYQ,HP Inc.
+HRL,Hormel Foods,US,SP500,large,-,USD,NYQ,Hormel Foods Corporation
+HSIC,Henry Schein,US,SP500,large,US8064071025,USD,NMS,"Henry Schein, Inc."
+HST,Host Hotels & Resorts,US,SP500,large,US44107P1049,USD,NMS,"Host Hotels & Resorts, Inc."
+HSY,Hershey Company (The),US,SP500,large,-,USD,NYQ,The Hershey Company
+HUBB,Hubbell Incorporated,US,SP500,large,US4435106079,USD,NYQ,Hubbell Incorporated
+HUM,Humana,US,SP500,large,US4448591028,USD,NYQ,Humana Inc.
+HWM,Howmet Aerospace,US,SP500,large,-,USD,NYQ,Howmet Aerospace Inc.
+IBKR,Interactive Brokers,US,SP500,large,US45841N1072,USD,NMS,"Interactive Brokers Group, Inc."
+IBM,IBM,US,SP500,large,US4592001014,USD,NYQ,International Business Machines Corporation
+ICE,Intercontinental Exchange,US,SP500,large,-,USD,NYQ,"Intercontinental Exchange, Inc."
+IDXX,Idexx Laboratories,US,SP500,large,-,USD,NMS,"IDEXX Laboratories, Inc."
+IEX,IDEX Corporation,US,SP500,large,-,USD,NYQ,IDEX Corporation
+IFF,International Flavors & Fragrances,US,SP500,large,US4595061015,USD,NYQ,International Flavors & Fragrances Inc.
+ILMN,"Illumina, Inc.",US,SP500,large,US4523271090,USD,NMS,"Illumina, Inc."
+INCY,Incyte,US,SP500,large,-,USD,NMS,Incyte Corporation
+INTC,Intel,US,SP500,large,-,USD,NMS,Intel Corporation
+INTU,Intuit,US,SP500,large,US4612021034,USD,NMS,Intuit Inc.
+INVH,Invitation Homes,US,SP500,large,US46187W1071,USD,NYQ,Invitation Homes Inc.
+IP,International Paper,US,SP500,large,-,USD,NYQ,International Paper Company
+IQV,IQVIA,US,SP500,large,US46266C1053,USD,NYQ,IQVIA Holdings Inc.
+IR,Ingersoll Rand,US,SP500,large,US45687V1061,USD,NYQ,Ingersoll Rand Inc.
+IRM,Iron Mountain,US,SP500,large,-,USD,NYQ,Iron Mountain Incorporated
+ISRG,Intuitive Surgical,US,SP500,large,US46120E6023,USD,NMS,"Intuitive Surgical, Inc."
+IT,Gartner,US,SP500,large,US3666511072,USD,NYQ,"Gartner, Inc."
+ITW,Illinois Tool Works,US,SP500,large,US4523081093,USD,NYQ,Illinois Tool Works Inc.
+IVZ,Invesco,US,SP500,large,BMG491BT1088,USD,NYQ,Invesco Ltd.
+J,Jacobs Solutions,US,SP500,large,US46982L1089,USD,NYQ,Jacobs Solutions Inc.
+JBHT,J.B. Hunt,US,SP500,large,US4456581077,USD,NMS,"J.B. Hunt Transport Services, Inc."
+JBL,Jabil,US,SP500,large,US4663131039,USD,NYQ,Jabil Inc.
+JCI,Johnson Controls,US,SP500,large,IE00BY7QL619,USD,NYQ,Johnson Controls International plc
+JKHY,Jack Henry & Associates,US,SP500,large,US4262811015,USD,NMS,"Jack Henry & Associates, Inc."
+JNJ,Johnson & Johnson,US,SP500,large,US4781601046,USD,NYQ,Johnson & Johnson
+JPM,JPMorgan Chase,US,SP500,large,-,USD,NYQ,JPMorgan Chase & Co.
+KDP,Keurig Dr Pepper,US,SP500,large,US49271V1008,USD,NMS,Keurig Dr Pepper Inc.
+KEY,KeyCorp,US,SP500,large,US4932671088,USD,NYQ,KeyCorp
+KEYS,Keysight Technologies,US,SP500,large,US49338L1035,USD,NYQ,"Keysight Technologies, Inc."
+KHC,Kraft Heinz,US,SP500,large,-,USD,NYQ,The Kraft Heinz Company
+KIM,Kimco Realty,US,SP500,large,-,USD,NYQ,Kimco Realty Corporation
+KKR,KKR & Co.,US,SP500,large,US48251W1045,USD,NYQ,KKR & Co. Inc.
+KLAC,KLA Corporation,US,SP500,large,US4824801009,USD,NMS,KLA Corporation
+KMB,Kimberly-Clark,US,SP500,large,-,USD,NMS,Kimberly-Clark Corporation
+KMI,Kinder Morgan,US,SP500,large,US49456B1017,USD,NYQ,"Kinder Morgan, Inc."
+KO,Coca-Cola Company (The),US,SP500,large,-,USD,NYQ,The Coca-Cola Company
+KR,Kroger,US,SP500,large,-,USD,NYQ,The Kroger Co.
+KVUE,Kenvue,US,SP500,large,US49177J1025,USD,NYQ,Kenvue Inc.
+L,Loews Corporation,US,SP500,large,-,USD,NYQ,Loews Corporation
+LDOS,Leidos,US,SP500,large,US5253271028,USD,NYQ,"Leidos Holdings, Inc."
+LEN,Lennar,US,SP500,large,-,USD,NYQ,Lennar Corporation
+LH,Labcorp,US,SP500,large,US5049221055,USD,NYQ,Labcorp Holdings Inc.
+LHX,L3Harris,US,SP500,large,-,USD,NYQ,"L3Harris Technologies, Inc."
+LII,Lennox International,US,SP500,large,US5261071071,USD,NYQ,Lennox International Inc.
+LIN,Linde plc,US,SP500,large,IE000S9YS762,USD,NMS,Linde plc
+LITE,Lumentum,US,SP500,large,US55024U1097,USD,NMS,Lumentum Holdings Inc.
+LLY,Lilly (Eli),US,SP500,large,-,USD,NYQ,Eli Lilly and Company
+LMT,Lockheed Martin,US,SP500,large,-,USD,NYQ,Lockheed Martin Corporation
+LNT,Alliant Energy,US,SP500,large,-,USD,NMS,Alliant Energy Corporation
+LOW,Lowe's,US,SP500,large,US5486611073,USD,NYQ,"Lowe's Companies, Inc."
+LRCX,Lam Research,US,SP500,large,-,USD,NMS,Lam Research Corporation
+LULU,Lululemon Athletica,US,SP500,large,US5500211090,USD,NMS,lululemon athletica inc.
+LUV,Southwest Airlines,US,SP500,large,-,USD,NYQ,Southwest Airlines Co.
+LVS,Las Vegas Sands,US,SP500,large,US5178341070,USD,NYQ,Las Vegas Sands Corp.
+LYB,LyondellBasell,US,SP500,large,NL0009434992,USD,NYQ,LyondellBasell Industries N.V.
+LYV,Live Nation Entertainment,US,SP500,large,US5380341090,USD,NYQ,"Live Nation Entertainment, Inc."
+MA,Mastercard,US,SP500,large,-,USD,NYQ,Mastercard Incorporated
+MAA,Mid-America Apartment Communities,US,SP500,large,US59522J1034,USD,NYQ,"Mid-America Apartment Communities, Inc."
+MAR,Marriott International,US,SP500,large,-,USD,NMS,"Marriott International, Inc."
+MAS,Masco,US,SP500,large,-,USD,NYQ,Masco Corporation
+MCD,McDonald's,US,SP500,large,-,USD,NYQ,McDonald's Corporation
+MCHP,Microchip Technology,US,SP500,large,-,USD,NMS,Microchip Technology Incorporated
+MCK,McKesson Corporation,US,SP500,large,-,USD,NYQ,McKesson Corporation
+MCO,Moody's Corporation,US,SP500,large,-,USD,NYQ,Moody's Corporation
+MDLZ,Mondelez International,US,SP500,large,-,USD,NMS,"Mondelez International, Inc."
+MDT,Medtronic,US,SP500,large,IE00BTN1Y115,USD,NYQ,Medtronic plc
+MET,MetLife,US,SP500,large,US59156R1086,USD,NYQ,"MetLife, Inc."
+META,Meta Platforms,US,SP500,large,US30303M1027,USD,NMS,"Meta Platforms, Inc."
+MGM,MGM Resorts,US,SP500,large,US5529531015,USD,NYQ,MGM Resorts International
+MKC,McCormick & Company,US,SP500,large,-,USD,NYQ,"McCormick & Company, Incorporated"
+MLM,Martin Marietta Materials,US,SP500,large,US5732841060,USD,NYQ,"Martin Marietta Materials, Inc."
+MMM,3M,US,SP500,large,-,USD,NYQ,3M Company
+MNST,Monster Beverage,US,SP500,large,-,USD,NMS,Monster Beverage Corporation
+MO,Altria,US,SP500,large,-,USD,NYQ,"Altria Group, Inc."
+MOS,Mosaic Company (The),US,SP500,large,-,USD,NYQ,The Mosaic Company
+MPC,Marathon Petroleum,US,SP500,large,US56585A1025,USD,NYQ,Marathon Petroleum Corporation
+MPWR,Monolithic Power Systems,US,SP500,large,US6098391054,USD,NMS,"Monolithic Power Systems, Inc."
+MRK,Merck & Co.,US,SP500,large,-,USD,NYQ,"Merck & Co., Inc."
+MRNA,Moderna,US,SP500,large,US60770K1079,USD,NMS,"Moderna, Inc."
+MRSH,Marsh McLennan,US,SP500,large,US5717481023,USD,NYQ,"Marsh & McLennan Companies, Inc."
+MRVL,Marvell Technology,US,SP500,large,-,USD,NMS,"Marvell Technology, Inc."
+MS,Morgan Stanley,US,SP500,large,US6174464486,USD,NYQ,Morgan Stanley
+MSCI,MSCI,US,SP500,large,US55354G1004,USD,NYQ,MSCI Inc.
+MSFT,Microsoft,US,SP500,large,-,USD,NMS,Microsoft Corporation
+MSI,Motorola Solutions,US,SP500,large,US6200763075,USD,NYQ,"Motorola Solutions, Inc."
+MTB,M&T Bank,US,SP500,large,US55261FAG90,USD,NYQ,M&T Bank Corporation
+MTD,Mettler Toledo,US,SP500,large,US5926881054,USD,NYQ,Mettler-Toledo International Inc.
+MU,Micron Technology,US,SP500,large,US5951121038,USD,NMS,"Micron Technology, Inc."
+NCLH,Norwegian Cruise Line Holdings,US,SP500,large,-,USD,NYQ,Norwegian Cruise Line Holdings Ltd.
+NDAQ,"Nasdaq, Inc.",US,SP500,large,US6311031081,USD,NMS,"Nasdaq, Inc."
+NDSN,Nordson Corporation,US,SP500,large,-,USD,NMS,Nordson Corporation
+NEE,NextEra Energy,US,SP500,large,US65339F1012,USD,NYQ,"NextEra Energy, Inc."
+NEM,Newmont,US,SP500,large,US6516391066,USD,NYQ,Newmont Corporation
+NFLX,Netflix,US,SP500,large,US64110L1061,USD,NMS,"Netflix, Inc."
+NI,NiSource,US,SP500,large,US65473P1057,USD,NYQ,NiSource Inc.
+NKE,"Nike, Inc.",US,SP500,large,US6541061031,USD,NYQ,"NIKE, Inc."
+NOC,Northrop Grumman,US,SP500,large,-,USD,NYQ,Northrop Grumman Corporation
+NOW,ServiceNow,US,SP500,large,US81762P1021,USD,NYQ,"ServiceNow, Inc."
+NRG,NRG Energy,US,SP500,large,US6293775085,USD,NYQ,"NRG Energy, Inc."
+NSC,Norfolk Southern,US,SP500,large,-,USD,NYQ,Norfolk Southern Corporation
+NTAP,NetApp,US,SP500,large,US64110D1046,USD,NMS,"NetApp, Inc."
+NTRS,Northern Trust,US,SP500,large,-,USD,NMS,Northern Trust Corporation
+NUE,Nucor,US,SP500,large,-,USD,NYQ,Nucor Corporation
+NVDA,Nvidia,US,SP500,large,-,USD,NMS,NVIDIA Corporation
+NVR,"NVR, Inc.",US,SP500,large,US62944T1051,USD,NYQ,"NVR, Inc."
+NWS,News Corp (Class B),US,SP500,large,JP3832370005,USD,NMS,News Corporation
+NWSA,News Corp (Class A),US,SP500,large,JP3832370005,USD,NMS,News Corporation
+NXPI,NXP Semiconductors,US,SP500,large,NL0009538784,USD,NMS,NXP Semiconductors N.V.
+O,Realty Income,US,SP500,large,-,USD,NYQ,Realty Income Corporation
+ODFL,Old Dominion,US,SP500,large,US6795801009,USD,NMS,"Old Dominion Freight Line, Inc."
+OKE,Oneok,US,SP500,large,US6826801036,USD,NYQ,"ONEOK, Inc."
+OMC,Omnicom Group,US,SP500,large,US6819191064,USD,NYQ,Omnicom Group Inc.
+ON,ON Semiconductor,US,SP500,large,-,USD,NMS,ON Semiconductor Corporation
+ORCL,Oracle Corporation,US,SP500,large,-,USD,NYQ,Oracle Corporation
+ORLY,O'Reilly Automotive,US,SP500,large,-,USD,NMS,"O'Reilly Automotive, Inc."
+OTIS,Otis Worldwide,US,SP500,large,US68902V1070,USD,NYQ,Otis Worldwide Corporation
+OXY,Occidental Petroleum,US,SP500,large,-,USD,NYQ,Occidental Petroleum Corporation
+P,Everpure,US,SP500,large,US74624M1027,USD,NYQ,"Everpure, Inc."
+PANW,Palo Alto Networks,US,SP500,large,US6974351057,USD,NMS,"Palo Alto Networks, Inc."
+PAYX,Paychex,US,SP500,large,US7043261079,USD,NMS,"Paychex, Inc."
+PCAR,Paccar,US,SP500,large,US6937181088,USD,NMS,PACCAR Inc
+PCG,PG&E Corporation,US,SP500,large,-,USD,NYQ,PG&E Corporation
+PEG,Public Service Enterprise Group,US,SP500,large,US7445731067,USD,NYQ,Public Service Enterprise Group Incorporated
+PEP,PepsiCo,US,SP500,large,US7134481081,USD,NMS,"PepsiCo, Inc."
+PFE,Pfizer,US,SP500,large,US7170811035,USD,NYQ,Pfizer Inc.
+PFG,Principal Financial Group,US,SP500,large,US74251V1026,USD,NMS,"Principal Financial Group, Inc."
+PG,Procter & Gamble,US,SP500,large,-,USD,NYQ,The Procter & Gamble Company
+PGR,Progressive Corporation,US,SP500,large,-,USD,NYQ,The Progressive Corporation
+PH,Parker Hannifin,US,SP500,large,-,USD,NYQ,Parker-Hannifin Corporation
+PHM,PulteGroup,US,SP500,large,US7458671010,USD,NYQ,"PulteGroup, Inc."
+PKG,Packaging Corporation of America,US,SP500,large,-,USD,NYQ,Packaging Corporation of America
+PLD,Prologis,US,SP500,large,US74340W1036,USD,NYQ,"Prologis, Inc."
+PLTR,Palantir Technologies,US,SP500,large,-,USD,NMS,Palantir Technologies Inc.
+PM,Philip Morris International,US,SP500,large,AR0361136887,USD,NYQ,Philip Morris International Inc.
+PNC,PNC Financial Services,US,SP500,large,US6934751057,USD,NYQ,"The PNC Financial Services Group, Inc."
+PNR,Pentair,US,SP500,large,IE00BLS09M33,USD,NYQ,Pentair plc
+PNW,Pinnacle West Capital,US,SP500,large,-,USD,NYQ,Pinnacle West Capital Corporation
+PODD,Insulet Corporation,US,SP500,large,-,USD,NMS,Insulet Corporation
+PPG,PPG Industries,US,SP500,large,US6935061076,USD,NYQ,"PPG Industries, Inc."
+PPL,PPL Corporation,US,SP500,large,US69351T1060,USD,NYQ,PPL Corporation
+PRU,Prudential Financial,US,SP500,large,US7443201022,USD,NYQ,"Prudential Financial, Inc."
+PSA,Public Storage,US,SP500,large,US74460D1090,USD,NYQ,Public Storage
+PSKY,Paramount Skydance Corporation,US,SP500,large,-,USD,NMS,Paramount Skydance Corporation
+PSX,Phillips 66,US,SP500,large,US7185461040,USD,NYQ,Phillips 66
+PTC,PTC Inc.,US,SP500,large,US69370C1009,USD,NMS,PTC Inc.
+PWR,Quanta Services,US,SP500,large,US74762E1029,USD,NYQ,"Quanta Services, Inc."
+PYPL,PayPal,US,SP500,large,-,USD,NMS,"PayPal Holdings, Inc."
+Q,Qnity Electronics,US,SP500,large,US74743L1008,USD,NYQ,"Qnity Electronics, Inc."
+QCOM,Qualcomm,US,SP500,large,-,USD,NMS,QUALCOMM Incorporated
+RCL,Royal Caribbean Group,US,SP500,large,LR0008862868,USD,NYQ,Royal Caribbean Cruises Ltd.
+RDDT,Reddit,US,SP500,large,-,USD,NYQ,"Reddit, Inc."
+REG,Regency Centers,US,SP500,large,-,USD,NMS,Regency Centers Corporation
+REGN,Regeneron Pharmaceuticals,US,SP500,large,US75886F1075,USD,NMS,"Regeneron Pharmaceuticals, Inc."
+RF,Regions Financial Corporation,US,SP500,large,-,USD,NYQ,Regions Financial Corporation
+RJF,Raymond James Financial,US,SP500,large,US7547301090,USD,NYQ,"Raymond James Financial, Inc."
+RL,Ralph Lauren Corporation,US,SP500,large,-,USD,NYQ,Ralph Lauren Corporation
+RMD,ResMed|,US,SP500,large,US7611521078,USD,NYQ,ResMed Inc.
+ROK,Rockwell Automation,US,SP500,large,US7739031091,USD,NYQ,"Rockwell Automation, Inc."
+ROL,"Rollins, Inc.",US,SP500,large,US7757111049,USD,NYQ,"Rollins, Inc."
+ROP,Roper Technologies,US,SP500,large,US7766961061,USD,NMS,"Roper Technologies, Inc."
+ROST,Ross Stores,US,SP500,large,US7782961038,USD,NMS,"Ross Stores, Inc."
+RSG,Republic Services,US,SP500,large,US7607591002,USD,NYQ,"Republic Services, Inc."
+RTX,RTX Corporation,US,SP500,large,US75513E1010,USD,NYQ,RTX Corporation
+RVTY,Revvity,US,SP500,large,-,USD,NYQ,"Revvity, Inc."
+SBAC,SBA Communications,US,SP500,large,US78410G1040,USD,NMS,SBA Communications Corporation
+SBUX,Starbucks,US,SP500,large,-,USD,NMS,Starbucks Corporation
+SCHW,Charles Schwab Corporation,US,SP500,large,-,USD,NYQ,The Charles Schwab Corporation
+SHW,Sherwin-Williams,US,SP500,large,-,USD,NYQ,The Sherwin-Williams Company
+SJM,J.M. Smucker Company (The),US,SP500,large,-,USD,NYQ,The J. M. Smucker Company
+SLB,Schlumberger,US,SP500,large,AN8068571086,USD,NYQ,SLB N.V.
+SMCI,Supermicro,US,SP500,large,US86800U3023,USD,NMS,"Super Micro Computer, Inc."
+SNA,Snap-on,US,SP500,large,-,USD,NYQ,Snap-on Incorporated
+SNDK,Sandisk,US,SP500,large,CA8000541083,USD,NMS,Sandisk Corporation
+SNPS,Synopsys,US,SP500,large,US8716071076,USD,NMS,"Synopsys, Inc."
+SO,Southern Company,US,SP500,large,-,USD,NYQ,The Southern Company
+SOLV,Solventum,US,SP500,large,-,USD,NYQ,Solventum Corporation
+SPG,Simon Property Group,US,SP500,large,US8288061091,USD,NYQ,"Simon Property Group, Inc."
+SPGI,S&P Global,US,SP500,large,US78409V1044,USD,NYQ,S&P Global Inc.
+SRE,Sempra,US,SP500,large,-,USD,NYQ,Sempra
+STE,Steris,US,SP500,large,-,USD,NYQ,STERIS plc
+STLD,Steel Dynamics,US,SP500,large,US8581191009,USD,NMS,"Steel Dynamics, Inc."
+STT,State Street Corporation,US,SP500,large,-,USD,NYQ,State Street Corporation
+STX,Seagate Technology,US,SP500,large,-,USD,NMS,Seagate Technology Holdings plc
+STZ,Constellation Brands,US,SP500,large,US21036P1084,USD,NYQ,"Constellation Brands, Inc."
+SW,Smurfit Westrock,US,SP500,large,-,USD,NYQ,Smurfit Westrock Plc
+SWK,Stanley Black & Decker,US,SP500,large,US8545021011,USD,NYQ,"Stanley Black & Decker, Inc."
+SWKS,Skyworks Solutions,US,SP500,large,US83088M1027,USD,NMS,"Skyworks Solutions, Inc."
+SYF,Synchrony Financial,US,SP500,large,US87165B1035,USD,NYQ,Synchrony Financial
+SYK,Stryker Corporation,US,SP500,large,-,USD,NYQ,Stryker Corporation
+SYY,Sysco,US,SP500,large,-,USD,NYQ,Sysco Corporation
+T,AT&T,US,SP500,large,US00206R1023,USD,NYQ,AT&T Inc.
+TDG,TransDigm Group,US,SP500,large,-,USD,NYQ,TransDigm Group Incorporated
+TDY,Teledyne Technologies,US,SP500,large,-,USD,NYQ,Teledyne Technologies Incorporated
+TECH,Bio-Techne,US,SP500,large,US09073M1045,USD,NMS,Bio-Techne Corporation
+TEL,TE Connectivity,US,SP500,large,-,USD,NYQ,TE Connectivity plc
+TER,Teradyne,US,SP500,large,US8807701029,USD,NMS,"Teradyne, Inc."
+TFC,Truist Financial,US,SP500,large,US89832Q1094,USD,NYQ,Truist Financial Corporation
+TGT,Target Corporation,US,SP500,large,-,USD,NYQ,Target Corporation
+TJX,TJX Companies,US,SP500,large,US8725401090,USD,NYQ,"The TJX Companies, Inc."
+TKO,TKO Group Holdings,US,SP500,large,US87256C1018,USD,NYQ,"TKO Group Holdings, Inc."
+TMO,Thermo Fisher Scientific,US,SP500,large,US8835561023,USD,NYQ,Thermo Fisher Scientific Inc.
+TMUS,T-Mobile US,US,SP500,large,-,USD,NMS,"T-Mobile US, Inc."
+TPL,Texas Pacific Land Corporation,US,SP500,large,-,USD,NYQ,Texas Pacific Land Corporation
+TPR,"Tapestry, Inc.",US,SP500,large,-,USD,NYQ,"Tapestry, Inc."
+TRGP,Targa Resources,US,SP500,large,-,USD,NYQ,Targa Resources Corp.
+TRMB,Trimble Inc.,US,SP500,large,-,USD,NMS,Trimble Inc.
+TROW,T. Rowe Price,US,SP500,large,US74144T1088,USD,NMS,"T. Rowe Price Group, Inc."
+TRV,Travelers Companies (The),US,SP500,large,-,USD,NYQ,"The Travelers Companies, Inc."
+TSCO,Tractor Supply,US,SP500,large,-,USD,NMS,Tractor Supply Company
+TSLA,"Tesla, Inc.",US,SP500,large,-,USD,NMS,"Tesla, Inc."
+TSN,Tyson Foods,US,SP500,large,US9024941034,USD,NYQ,"Tyson Foods, Inc."
+TT,Trane Technologies,US,SP500,large,IE00BK9ZQ967,USD,NYQ,Trane Technologies plc
+TTWO,Take-Two Interactive,US,SP500,large,-,USD,NMS,"Take-Two Interactive Software, Inc."
+TXN,Texas Instruments,US,SP500,large,-,USD,NMS,Texas Instruments Incorporated
+TXT,Textron,US,SP500,large,US8832031012,USD,NYQ,Textron Inc.
+TYL,Tyler Technologies,US,SP500,large,US9022521051,USD,NYQ,"Tyler Technologies, Inc."
+UAL,United Airlines Holdings,US,SP500,large,US9100471096,USD,NMS,"United Airlines Holdings, Inc."
+UBER,Uber,US,SP500,large,US90353T1007,USD,NYQ,"Uber Technologies, Inc."
+UDR,"UDR, Inc.",US,SP500,large,US9026531049,USD,NYQ,"UDR, Inc."
+UHS,Universal Health Services,US,SP500,large,US9139031002,USD,NYQ,"Universal Health Services, Inc."
+ULTA,Ulta Beauty,US,SP500,large,US90384S3031,USD,NMS,"Ulta Beauty, Inc."
+UNH,UnitedHealth Group,US,SP500,large,-,USD,NYQ,UnitedHealth Group Incorporated
+UNP,Union Pacific Corporation,US,SP500,large,-,USD,NYQ,Union Pacific Corporation
+UPS,United Parcel Service,US,SP500,large,US9113121068,USD,NYQ,"United Parcel Service, Inc."
+URI,United Rentals,US,SP500,large,US9113631090,USD,NYQ,"United Rentals, Inc."
+USB,U.S. Bancorp,US,SP500,large,US9029733048,USD,NYQ,U.S. Bancorp
+V,Visa Inc.,US,SP500,large,US92826C8394,USD,NYQ,Visa Inc.
+VEEV,Veeva Systems,US,SP500,large,US9224751084,USD,NYQ,Veeva Systems Inc.
+VICI,Vici Properties,US,SP500,large,US9256521090,USD,NYQ,VICI Properties Inc.
+VLO,Valero Energy,US,SP500,large,-,USD,NYQ,Valero Energy Corporation
+VLTO,Veralto,US,SP500,large,US92338C1036,USD,NYQ,Veralto Corporation
+VMC,Vulcan Materials Company,US,SP500,large,-,USD,NYQ,Vulcan Materials Company
+VMRK,Vivmark Residential,US,SP500,large,-,USD,NYQ,Vivmark Residential
+VRSK,Verisk Analytics,US,SP500,large,US92345Y1064,USD,NMS,"Verisk Analytics, Inc."
+VRSN,Verisign,US,SP500,large,US92343E1029,USD,NMS,"VeriSign, Inc."
+VRT,Vertiv,US,SP500,large,-,USD,NYQ,Vertiv Holdings Co
+VRTX,Vertex Pharmaceuticals,US,SP500,large,-,USD,NMS,Vertex Pharmaceuticals Incorporated
+VST,Vistra Corp.,US,SP500,large,US92840M1027,USD,NYQ,Vistra Corp.
+VTR,Ventas,US,SP500,large,US92276F1003,USD,NYQ,"Ventas, Inc."
+VTRS,Viatris,US,SP500,large,US92556V1061,USD,NMS,Viatris Inc.
+VZ,Verizon,US,SP500,large,ARDEUT112927,USD,NYQ,Verizon Communications Inc.
+WAB,Wabtec,US,SP500,large,US9297401088,USD,NYQ,Westinghouse Air Brake Technologies Corporation
+WAT,Waters Corporation,US,SP500,large,-,USD,NYQ,Waters Corporation
+WBD,Warner Bros. Discovery,US,SP500,large,-,USD,NMS,"Warner Bros. Discovery, Inc."
+WDAY,"Workday, Inc.",US,SP500,large,US98138H1014,USD,NMS,"Workday, Inc."
+WDC,Western Digital,US,SP500,large,-,USD,NMS,Western Digital Corporation
+WEC,WEC Energy Group,US,SP500,large,US92939U1060,USD,NYQ,"WEC Energy Group, Inc."
+WELL,Welltower,US,SP500,large,US95040Q1040,USD,NYQ,Welltower Inc.
+WFC,Wells Fargo,US,SP500,large,-,USD,NYQ,Wells Fargo & Company
+WM,Waste Management,US,SP500,large,US94106L1098,USD,NYQ,"Waste Management, Inc."
+WMB,Williams Companies,US,SP500,large,-,USD,NYQ,"The Williams Companies, Inc."
+WMT,Walmart,US,SP500,large,CA93267J1012,USD,NMS,Walmart Inc.
+WRB,W. R. Berkley Corporation,US,SP500,large,-,USD,NYQ,W. R. Berkley Corporation
+WSM,"Williams-Sonoma, Inc.",US,SP500,large,US9699041011,USD,NYQ,"Williams-Sonoma, Inc."
+WST,West Pharmaceutical Services,US,SP500,large,US9553061055,USD,NYQ,"West Pharmaceutical Services, Inc."
+WTW,Willis Towers Watson,US,SP500,large,-,USD,NMS,Willis Towers Watson Public Limited Company
+WY,Weyerhaeuser,US,SP500,large,-,USD,NYQ,Weyerhaeuser Company
+WYNN,Wynn Resorts,US,SP500,large,US9831341071,USD,NMS,"Wynn Resorts, Limited"
+XEL,Xcel Energy,US,SP500,large,US98389B1008,USD,NMS,Xcel Energy Inc.
+XOM,ExxonMobil,US,SP500,large,-,USD,NYQ,ExxonMobil Holdings Corporation
+XYL,Xylem Inc.,US,SP500,large,US98419M1009,USD,NYQ,Xylem Inc.
+XYZ,"Block, Inc.",US,SP500,large,-,USD,NYQ,"Block, Inc."
+YUM,Yum! Brands,US,SP500,large,US9884981013,USD,NYQ,"Yum! Brands, Inc."
+ZBH,Zimmer Biomet,US,SP500,large,-,USD,NYQ,"Zimmer Biomet Holdings, Inc."
+ZBRA,Zebra Technologies,US,SP500,large,-,USD,NMS,Zebra Technologies Corporation
+ZTS,Zoetis,US,SP500,large,US98978V1035,USD,NYQ,Zoetis Inc.
