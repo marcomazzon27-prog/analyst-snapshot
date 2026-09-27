@@ -54,6 +54,14 @@ def main():
                                 "broker":r.get("Firm"),"action":str(r.get("Action","")).lower(),
                                 "rating_from":fg,"rating_to":tg,
                                 "rating_from_num":grade(fg),"rating_to_num":grade(tg)})
+            nest = {}
+            try:                                   # numero di stime per esercizio -> breadth corretta
+                ee = tk.earnings_estimate
+                if ee is not None and len(ee):
+                    for per, r in ee.iterrows():
+                        nest[str(per).strip().lower()] = r.get("numberOfAnalysts")
+            except Exception:
+                pass
             er = tk.eps_revisions
             if er is not None and len(er):
                 e = er.reset_index()
@@ -62,7 +70,8 @@ def main():
                     per = str(r[pc]).strip().lower()
                     if per not in ("0y","+1y"): continue
                     rev.append({"ticker":t,"as_of":today,"fy":1 if per=="0y" else 2,
-                                "n_up_30d":r.get("upLast30days"),"n_down_30d":r.get("downLast30days")})
+                                "n_up_30d":r.get("upLast30days"),"n_down_30d":r.get("downLast30days"),
+                                "n_est":nest.get(per)})
         except Exception:
             failed.append(t)
         if i % 50 == 0:
