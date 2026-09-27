@@ -230,6 +230,43 @@ def persistence(e):
     return {"cutoff": cut, "n_brokers": int(len(j)), "rank_corr": float(rho)}
 
 
+def backtest(e, horizon_days=92, train_days=730, min_train=10, min_test=5):
+    """Test fuori campione ripetuto ogni trimestre.
+
+    A ogni data di taglio c: punteggio di ogni broker calcolato SOLO sulle analisi il cui esito
+    a 3 mesi era già noto in c (ultimi 2 anni); poi si guarda come sono andate le sue analisi
+    nei 3 mesi successivi. Se la classifica ha valore, i due ordinamenti sono correlati (rho>0)
+    e i broker del terzo alto fanno meglio di quelli del terzo basso (spread>0)."""
+    d = e[e[f"alpha_{MAIN}"].notna()][["broker", "event_date", f"alpha_{MAIN}"]].copy()
+    if d.empty: return {"periods": [], "ranks": {}}
+    d["t"] = pd.to_datetime(d["event_date"]); a = f"alpha_{MAIN}"
+    start = d["t"].min() + pd.Timedelta(days=365); end = d["t"].max()
+    periods, ranks = [], {}
+    for c in pd.date_range(start, end, freq="QE"):
+        tr = d[(d["t"] > c - pd.Timedelta(days=train_days)) & (d["t"] <= c - pd.Timedelta(days=horizon_days))]
+        te = d[(d["t"] > c) & (d["t"] <= c + pd.Timedelta(days=horizon_days))]
+        if len(tr) < 200 or len(te) < 100: continue
+        g = tr.groupby("broker")[a].agg(["sum", "count"]); g = g[g["count"] >= min_train]
+        sc = shrink(g["sum"], g["count"], tr[a].mean())
+        for rk, (b, _) in enumerate(sc.sort_values(ascending=False).items(), 1):
+            ranks.setdefault(b, []).append([c.date().isoformat(), rk, len(sc)])
+        h = te.groupby("broker")[a].agg(["mean", "count"]); h = h[h["count"] >= min_test]
+        j = pd.concat([sc.rename("score"), h], axis=1, join="inner")
+        if len(j) < 8: continue
+        rho = j["score"].rank().corr(j["mean"].rank())
+        q = j["score"].rank(pct=True)
+        top, bot = j[q > 2 / 3], j[q <= 1 / 3]
+        spread = np.average(top["mean"], weights=top["count"]) - np.average(bot["mean"], weights=bot["count"])
+        periods.append({"cutoff": c.date().isoformat(), "n_brokers": int(len(j)), "rho": float(rho), "spread": float(spread)})
+    out = {"periods": periods, "ranks": ranks}
+    if len(periods) >= 4:
+        r = np.array([p["rho"] for p in periods]); sp = np.array([p["spread"] for p in periods])
+        out.update(n=len(periods), mean_rho=float(r.mean()), pos_share=float((r > 0).mean()),
+                   t_stat=float(r.mean() / (r.std(ddof=1) / np.sqrt(len(r)))) if r.std(ddof=1) > 0 else 0.0,
+                   mean_spread=float(sp.mean()))
+    return out
+
+
 def main():
     con = sqlite3.connect(DB)
     ev, wide = load(con)
@@ -242,6 +279,7 @@ def main():
     skill, diag = ml_skill(e)
     t = broker_table(e, skill)
     pers = persistence(e)
+    bt = backtest(e)
     as_of = con.execute("SELECT MAX(run_date) FROM snapshot").fetchone()[0]
     e.to_sql("event_eval", con, if_exists="replace", index=False)
     t.to_sql("broker_score", con, if_exists="replace", index=False)
@@ -258,11 +296,22 @@ def main():
          "n_pt": int(e["pt_hit"].notna().sum())}
     out = {"as_of": as_of, "built_at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
            "horizon": MAIN, "min_n": MIN_N, "weights": W, "global": g, "model": diag, "persistence": pers,
+           "backtest": {k: v for k, v in bt.items() if k != "ranks"}, "rank_hist": bt.get("ranks", {}),
+           "coverage": {"first_event": e["event_date"].min(), "n_events": int(len(e)),
+                        "by_year": {str(y): int(n) for y, n in e[f"alpha_{MAIN}"].notna().groupby(e["event_date"].str[:4]).sum().items()}},
            "benchmarks": {k: (BENCH.get(k) if BENCH.get(k) in wide.columns else "media equipesata") for k in bench.columns},
            "cols": cols, "rows": [[clean(r[c]) for c in cols] for r in t.to_dict("records")]}
     (SITE / "brokers.json").write_text(json.dumps(out, separators=(",", ":"), ensure_ascii=False, default=str))
 
     hist = DATA / "broker_ranking_history.csv"
+    prev = {}
+    if hist.exists():
+        h0 = pd.read_csv(hist); h0 = h0[h0["as_of"] != as_of]
+        if len(h0):
+            last = h0[h0["as_of"] == h0["as_of"].max()]
+            prev = dict(zip(last["broker"], last["rank"]))
+    out["prev_rank"] = {b: int(r) for b, r in prev.items()}
+    (SITE / "brokers.json").write_text(json.dumps(out, separators=(",", ":"), ensure_ascii=False, default=str))
     new = t[t["rank"].notna()][["rank", "broker", "score", "n_eval", "hit", "alpha", "ml"]].copy()
     new.insert(0, "as_of", as_of)
     if hist.exists():
@@ -271,7 +320,7 @@ def main():
     new.round(5).to_csv(hist, index=False)
     ranked = t[t["rank"].notna()]
     print(f"broker valutati: {len(t)}, in classifica: {len(ranked)}; analisi valutate a {MAIN}: {g['n_eval']}; "
-          f"modello: {diag}; persistenza: {pers}")
+          f"modello: {diag}; persistenza: {pers}; backtest: { {k: v for k, v in bt.items() if k not in ('ranks', 'periods')} }")
     print(ranked.head(10)[["rank", "broker", "score", "n_eval", "hit", "alpha", "ml"]].to_string(index=False))
 
 

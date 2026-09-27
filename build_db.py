@@ -24,6 +24,7 @@ except Exception:                      # pragma: no cover
 
 ROOT = Path(__file__).parent
 DATA, BUILD, SITE = ROOT / "data", ROOT / "build", ROOT / "site"
+EVENTS_DAYS_IN_JSON = 730             # analisi esportate al terminale (lo storico completo resta nel db)
 REV_HISTORY_IN_JSON = 60               # snapshot di revisioni esportati al terminale
 
 SCHEMA = """
@@ -173,6 +174,8 @@ def build():
     # --- rating: dedup tra snapshot, first_seen = prima notte in cui compare
     rfiles = snapshot_files("ratings")
     first_snap = rfiles[0][0] if rfiles else None
+    rbf = DATA / "ratings_backfill.csv.gz"          # storico completo scaricato una volta (non point-in-time)
+    if rbf.exists(): rfiles = [("backfill", rbf)] + rfiles
     events = {}
     for snap, p in rfiles:
         df = pd.read_csv(p); new = 0
@@ -191,12 +194,13 @@ def build():
             if tnum is None and nn(r.rating_to) and grade(r.rating_to): tnum, reg = grade(r.rating_to), 1
             events[eid] = dict(event_id=eid, ticker=r.ticker, event_date=r.event_date, broker=nn(r.broker),
                                action=nn(r.action), rating_from=nn(r.rating_from), rating_to=nn(r.rating_to),
-                               from_num=fnum, to_num=tnum, first_seen=snap, last_seen=snap, n_seen=1,
-                               is_backfill=int(snap == first_snap), regraded=reg,
+                               from_num=fnum, to_num=tnum, first_seen=None if snap == "backfill" else snap, last_seen=snap, n_seen=1,
+                               is_backfill=int(snap in (first_snap, "backfill")), regraded=reg,
                                pt_action=nn(r.pt_action), pt_from=nn(r.pt_from), pt_to=nn(r.pt_to),
                                close_at_event=None)
             new += 1
-        con.execute("INSERT INTO snapshot(run_date) VALUES(?) ON CONFLICT DO NOTHING", (snap,))
+        if snap != "backfill":
+            con.execute("INSERT INTO snapshot(run_date) VALUES(?) ON CONFLICT DO NOTHING", (snap,))
         con.execute("INSERT INTO ingest_log VALUES(?,?,?,?,?)", (str(p.relative_to(ROOT)), "ratings", snap, len(df), new))
     # --- prezzi: prima lo storico scaricato una volta, poi i file notturni (più recenti sovrascrivono)
     bf = DATA / "prices_backfill.csv.gz"
@@ -254,7 +258,8 @@ def export(con):
     bi = {b: i for i, b in enumerate(brokers)}
     ev = q("""SELECT ticker, event_date, broker, action, rating_from, rating_to, from_num, to_num,
                      first_seen, is_backfill, pt_from, pt_to, pt_action, close_at_event
-              FROM rating_event ORDER BY event_date DESC, ticker""")
+              FROM rating_event WHERE event_date >= date((SELECT MAX(run_date) FROM snapshot), ?)
+              ORDER BY event_date DESC, ticker""", f"-{EVENTS_DAYS_IN_JSON} days")
     snaps = [r[0] for r in q("SELECT DISTINCT as_of FROM revision ORDER BY as_of DESC LIMIT ?", REV_HISTORY_IN_JSON)]
     rev = q(f"""SELECT ticker, as_of, fy, n_up_30d, n_down_30d, n_est FROM revision
                 WHERE as_of IN ({','.join('?'*len(snaps))}) ORDER BY as_of""", *snaps) if snaps else []
