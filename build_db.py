@@ -198,7 +198,13 @@ def build():
             new += 1
         con.execute("INSERT INTO snapshot(run_date) VALUES(?) ON CONFLICT DO NOTHING", (snap,))
         con.execute("INSERT INTO ingest_log VALUES(?,?,?,?,?)", (str(p.relative_to(ROOT)), "ratings", snap, len(df), new))
-    # --- prezzi (i file più recenti sovrascrivono) e target di consenso
+    # --- prezzi: prima lo storico scaricato una volta, poi i file notturni (più recenti sovrascrivono)
+    bf = DATA / "prices_backfill.csv.gz"
+    if bf.exists():
+        df = pd.read_csv(bf).dropna()
+        con.executemany("INSERT OR REPLACE INTO price VALUES(?,?,?)",
+                        [(r.ticker, r.date, float(r.close)) for r in df.itertuples(index=False)])
+        con.execute("INSERT INTO ingest_log VALUES(?,?,?,?,?)", (str(bf.relative_to(ROOT)), "prices", "backfill", len(df), len(df)))
     for snap, p in snapshot_files("prices"):
         df = pd.read_csv(p).dropna()
         con.executemany("INSERT OR REPLACE INTO price VALUES(?,?,?)",

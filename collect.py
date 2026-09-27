@@ -27,6 +27,19 @@ def grade(x):
         if len(k)>4 and k in s: return v
     return None                      # mai default a 3: creerebbe upgrade/downgrade finti
 
+# indici di riferimento (ticker Yahoo) per misurare i rendimenti in eccesso
+BENCH = {"US": "SPY", "UKX": "^FTSE", "MCX": "^FTMC", "IT": "FTSEMIB.MI", "DE": "^GDAXI",
+         "FR": "^FCHI", "EU": "^STOXX50E"}
+
+
+def bench_for(panel, indices):
+    idx = str(indices or "")
+    if panel == "US": return "US"
+    if panel == "UK": return "MCX" if "MCX" in idx else "UKX"
+    if panel in ("IT", "DE", "FR"): return panel
+    return "EU"
+
+
 def pt(x):
     try:
         v = float(x)
@@ -132,7 +145,7 @@ def main():
     (out/"targets").mkdir(exist_ok=True)
     pd.DataFrame(tgt, columns=["ticker","as_of","pt_mean","pt_median","pt_high","pt_low","price"]
                  ).to_csv(out/"targets"/f"{today}.csv", index=False)
-    n_px = closes(tickers, out, today)
+    n_px = closes(tickers + list(BENCH.values()), out, today)
     pd.DataFrame({"run_date":[today],"tickers":[len(tickers)],"failed":[len(failed)],
                   "rating_rows":[len(rat)],"revision_rows":[len(rev)],
                   "target_rows":[len(tgt)],"price_tickers":[n_px],
