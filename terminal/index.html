@@ -104,6 +104,8 @@ tbody tr{cursor:pointer} tbody tr:hover td{background:var(--card2)}
 .p-wr{background:var(--warn-soft);color:var(--warn)}
 .mkt{font-size:11px;font-weight:700;letter-spacing:.03em;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:1px 5px}
 .rt{color:var(--muted)} .rt b{color:var(--ink);font-weight:600}
+table.mini td{white-space:normal}
+table.mini td.num{white-space:nowrap}
 .more{display:block;margin:10px auto 0;border:1px solid var(--line);background:var(--card);border-radius:10px;padding:7px 14px;cursor:pointer;color:var(--ink2)}
 .note{background:var(--warn-soft);color:var(--warn);border-radius:12px;padding:12px 14px;margin:0 0 16px;font-size:13px}
 .empty-state{padding:30px 18px;text-align:center;color:var(--muted)}
@@ -307,7 +309,7 @@ function pHome(){
   const br=breadthRows().filter(r=>inMkt(r.t)&&r.b!=null);
   const best=[...br].sort((a,b)=>b.b-a.b).slice(0,6),worst=[...br].sort((a,b)=>a.b-b.b).slice(0,6);
   const W=WINS.find(w=>w[0]==st.win)[1];
-  const mini=(rows,f)=>rows.length?`<div class="tw"><table><tbody>${rows.map(f).join("")}</tbody></table></div>`:`<div class="empty-state">Nessun dato.</div>`;
+  const mini=(rows,f)=>rows.length?`<div class="tw"><table class="mini"><tbody>${rows.map(f).join("")}</tbody></table></div>`:`<div class="empty-state">Nessun dato.</div>`;
   return `<h1>Panoramica</h1><p class="lead">Cosa hanno fatto gli analisti nel periodo ${W} fino al ${fd(ASOF)}. Nessuna classifica di titoli da comprare: solo i fatti.</p>
   ${toolbar()}
   <div class="grid kpis">
@@ -435,12 +437,13 @@ async function pTicker(t){
       <div class="stat"><span>Upside vs ultima chiusura</span><b class="${pcls(up)}">${pct(up)}</b></div>
       <div class="stat"><span>Rating medio (1 = Strong Buy, 5 = Sell)</span><b>${nf(avg,2)}</b></div>
       ${rng}
-      <div class="dist">${bc.length?`<div style="width:${100*nb/bc.length}%;background:var(--up)"></div><div style="width:${100*nh/bc.length}%;background:var(--muted);opacity:.45"></div><div style="width:${100*ns/bc.length}%;background:var(--dn)"></div>`:""}</div>
-      <div class="mut" style="font-size:12.5px"><span class="up">${nb} Buy</span> · ${nh} Hold · <span class="dn">${ns} Sell</span></div>
+      ${bc.length?"":`<div class="mut" style="font-size:12.5px;margin-top:8px">Yahoo non fornisce i rating dei singoli broker su questo titolo: sono disponibili target di consenso e revisioni.</div>`}
+      <div class="dist" ${bc.length?"":'style="display:none"'}>${bc.length?`<div style="width:${100*nb/bc.length}%;background:var(--up)"></div><div style="width:${100*nh/bc.length}%;background:var(--muted);opacity:.45"></div><div style="width:${100*ns/bc.length}%;background:var(--dn)"></div>`:""}</div>
+      <div class="mut" style="font-size:12.5px;${bc.length?"":"display:none"}"><span class="up">${nb} Buy</span> · ${nh} Hold · <span class="dn">${ns} Sell</span></div>
       ${rl.length?`<div style="margin-top:14px">${rl.map(r=>{const den=r[5]||(r[3]+r[4]);const b=den?(r[3]-r[4])/den:null;return `<div class="stat"><span>Revisioni EPS ${r[2]===1?"FY corrente":"FY prossimo"} (30g)</span><span><span class="up">${r[3]}↑</span> <span class="dn">${r[4]}↓</span> · <b class="${pcls(b)}">${pct(b==null?null:b*100,0)}</b></span></div>`}).join("")}</div>`:""}
     </div></div>
   </div>
-  <div class="card" style="margin-top:16px"><div class="hd"><h2>Posizione attuale di ogni broker</h2><small>ultimo rating per broker</small></div>${table("co-b",bcols,bc,{def:"r",desc:false,limit:60})}</div>
+  <div class="card" style="margin-top:16px"><div class="hd"><h2>Posizione attuale di ogni broker</h2><small>ultimo rating per broker</small></div>${bc.length?table("co-b",bcols,bc,{def:"r",desc:false,limit:60}):`<div class="empty-state">Nessun rating per broker disponibile per questo titolo.</div>`}</div>
   <div class="card" style="margin-top:16px"><div class="hd"><h2>Storico analisi</h2><small>${ev.length} eventi</small></div>${table("co-h",hcols,ev,{def:"d",limit:60})}</div>`;}
 
 function rangeBar(lo,hi,mean,px){const a=Math.min(lo,px),b=Math.max(hi,px),sp=(b-a)||1,p=v=>(100*(v-a)/sp).toFixed(1)+"%";
