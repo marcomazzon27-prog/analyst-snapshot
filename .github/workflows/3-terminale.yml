@@ -1,0 +1,42 @@
+name: 3-terminale
+# Dopo ogni snapshot notturno riuscito: ricostruisce il database da tutti i CSV
+# e pubblica il terminale su GitHub Pages. Si può lanciare anche a mano.
+on:
+  workflow_run:
+    workflows: ["analyst-snapshot"]
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: terminale
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install pandas
+      - name: Database
+        run: python build_db.py && cp build/analyst.db site/
+      - name: Salva storico salute pipeline
+        run: |
+          git config user.name analyst-snapshot; git config user.email actions@github.com
+          git add data/health_history.csv
+          if git diff --staged --quiet; then exit 0; fi
+          git commit -m "health-$(date -u +%F)"
+          for i in 1 2 3 4 5; do git pull --rebase --autostash origin main && git push && exit 0; sleep 10; done; exit 1
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site }
+      - id: deploy
+        uses: actions/deploy-pages@v4
