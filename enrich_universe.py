@@ -10,7 +10,7 @@ import requests
 
 # borse Wikidata (etichetta inglese) accettate per ciascun suffisso Yahoo
 EXCH = {"": ("New York Stock Exchange", "Nasdaq"), ".L": ("London Stock Exchange",),
-        ".MI": ("Italian Stock Exchange", "Borsa Italiana"), ".DE": ("Frankfurt Stock Exchange", "Xetra"),
+        ".MI": ("Italian Stock Exchange", "Borsa Italiana", "Euronext Milan"), ".DE": ("Frankfurt Stock Exchange", "Xetra"),
         ".PA": ("Euronext Paris",), ".AS": ("Amsterdam Stock Exchange", "Euronext Amsterdam"),
         ".MC": ("Madrid Stock Exchange", "Bolsa de Madrid"), ".BR": ("Euronext Brussels",),
         ".HE": ("Nasdaq Helsinki Ltd",), ".IR": ("Euronext Dublin", "Irish Stock Exchange"),
@@ -42,6 +42,55 @@ def wikidata_isins():
     for b in r.json()["results"]["bindings"]:
         out.setdefault((key(b["ticker"]["value"]), b["exl"]["value"]), set()).add(b["isin"]["value"])
     return out
+
+
+STOP = {"plc", "spa", "sa", "se", "ag", "nv", "n", "v", "p", "a", "s", "group", "holdings", "holding", "inc",
+        "corporation", "corp", "company", "co", "ltd", "limited", "the", "kgaa", "and", "gruppo", "groupe", "reit"}
+
+
+def nname(x):
+    import unicodedata
+    x = unicodedata.normalize("NFKD", str(x)).encode("ascii", "ignore").decode().lower()
+    words = [w for w in re.split(r"[^a-z0-9]+", x.replace("&", " and ")) if w and w not in STOP]
+    return " ".join(words)
+
+
+def wikidata_names():
+    """{nome_normalizzato: {isin}} per le società europee/USA con ISIN su Wikidata."""
+    q = """SELECT ?isin ?l WHERE { ?item wdt:P946 ?isin . ?item rdfs:label ?l . FILTER(lang(?l)="en") }"""
+    r = requests.get("https://query.wikidata.org/sparql", params={"query": q, "format": "json"},
+                     headers={"User-Agent": "analyst-snapshot/1.0 (GitHub Actions)",
+                              "Accept": "application/sparql-results+json"}, timeout=120)
+    r.raise_for_status()
+    out = {}
+    for b in r.json()["results"]["bindings"]:
+        i = b["isin"]["value"]
+        if ISIN_RE.match(i) and i[:2] in OK_CC:
+            out.setdefault(nname(b["l"]["value"]), set()).add(i)
+    return out
+
+
+def from_wikidata_names(u):
+    """Ripiego per i titoli senza ISIN: nome identico (normalizzato) e un solo ISIN plausibile."""
+    miss = u.index[u["isin"].isna() | (u["isin"] == "-")]
+    if not len(miss): return 0
+    try:
+        wn = wikidata_names()
+    except Exception as e:
+        print("wikidata (nomi) non raggiungibile:", e); return 0
+    n = 0
+    for i in miss:
+        sfx = split(str(u.at[i, "ticker"]))[1]
+        for col in ("name", "long_name"):
+            v = u.at[i, col]
+            if not isinstance(v, str): continue
+            c = wn.get(nname(v), set())
+            pref = [x for x in c if x[:2] == CC.get(sfx)]
+            pick = pref if pref else list(c)
+            if len(set(pick)) == 1:
+                u.at[i, "isin"] = pick[0]; n += 1; break
+    print(f"wikidata (nomi): ISIN per altri {n} titoli")
+    return n
 
 
 def from_wikidata(u):
@@ -79,6 +128,7 @@ def main():
     # ISIN arrivati da yfinance con paese implausibile -> scartati
     bad = u["isin"].notna() & (u["isin"] != "-") & ~u["isin"].astype(str).str[:2].isin(OK_CC)
     u.loc[bad, "isin"] = "-"
+    from_wikidata_names(u)
     todo = u.index[u["isin"].isna() | u["long_name"].isna() | u["currency"].isna()].tolist()[: a.max]
     print(f"da completare: {len(todo)}")
     ok = 0
