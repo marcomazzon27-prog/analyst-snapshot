@@ -26,8 +26,8 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
       - run: pip install pandas scikit-learn "yfinance>=0.2.54"
-      - name: Storico prezzi 3 anni (solo la prima volta)
-        run: python backfill_prices.py
+      - name: Storico completo rating e 10 anni di prezzi (solo la prima volta)
+        run: python backfill_history.py
         continue-on-error: true
       - name: Database
         run: python build_db.py
@@ -35,11 +35,11 @@ jobs:
         run: python score_brokers.py
         continue-on-error: true
       - run: cp build/analyst.db site/
-      - name: Salva storici (salute pipeline, classifica broker, prezzi)
+      - name: Salva storici (salute pipeline, classifica broker, rating e prezzi)
         run: |
           git config user.name analyst-snapshot; git config user.email actions@github.com
           git add data/health_history.csv
-          for f in data/broker_ranking_history.csv data/prices_backfill.csv.gz; do if [ -f "$f" ]; then git add "$f"; fi; done
+          for f in data/broker_ranking_history.csv data/prices_backfill.csv.gz data/ratings_backfill.csv.gz; do if [ -f "$f" ]; then git add "$f"; fi; done
           if git diff --staged --quiet; then exit 0; fi
           git commit -m "storici-$(date -u +%F)"
           for i in 1 2 3 4 5; do git pull --rebase --autostash origin main && git push && exit 0; sleep 10; done; exit 1
