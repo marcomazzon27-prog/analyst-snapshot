@@ -182,7 +182,8 @@ h2.sec{font-size:16px;margin:4px 0 12px}
   .page{padding:18px 16px 96px}
   .two{grid-template-columns:1fr}
   .bottomnav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:30;background:var(--card);border-top:1px solid var(--line);
-    padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));overflow-x:auto}
+    padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));overflow-x:auto;scrollbar-width:none}
+  .bottomnav::-webkit-scrollbar{display:none}
   .bottomnav a{flex:1 0 64px;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10.5px;color:var(--muted);padding:4px}
   .bottomnav a svg{width:20px;height:20px}
   .bottomnav a[aria-current="page"]{color:var(--acc)}
