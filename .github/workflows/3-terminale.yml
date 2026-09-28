@@ -35,7 +35,9 @@ jobs:
         run: python score_brokers.py
         continue-on-error: true
       - name: Investitori istituzionali (rating e pagine)
-        run: if [ -d data/13f/holdings ]; then python inst_score.py; else echo "13F non ancora scaricati"; fi
+        run: |
+          if [ -f data/feed.json ]; then cp data/feed.json site/; fi
+          if [ -d data/13f/holdings ]; then python inst_score.py; else echo "13F non ancora scaricati"; fi
         continue-on-error: true
       - run: cp build/analyst.db site/
       - name: Salva storici (salute pipeline, classifica broker, rating e prezzi)
