@@ -290,15 +290,95 @@ def export(con):
                    for t in ("universe", "snapshot", "rating_event", "revision", "price", "target", "ingest_log")},
     }
     (SITE / "terminal.json").write_text(json.dumps(out, separators=(",", ":"), ensure_ascii=False))
-    # serie storiche per titolo, caricate dal terminale solo quando apri la scheda
+    # serie storiche per titolo (ultimi 3 anni), caricate dal terminale solo quando apri la scheda
     tdir = SITE / "t"; tdir.mkdir(exist_ok=True)
+    as_of = out["meta"]["as_of"] or dt.date.today().isoformat()
+    start = (dt.date.fromisoformat(as_of) - dt.timedelta(days=3 * 366)).isoformat()
     series = {}
-    for t, d, c in q("SELECT ticker, date, close FROM price ORDER BY ticker, date"):
-        s_ = series.setdefault(t, {"d": [], "c": [], "tg": []}); s_["d"].append(d); s_["c"].append(c)
+    for t, d, c in q("SELECT ticker, date, close FROM price WHERE date >= ? ORDER BY ticker, date", start):
+        s_ = series.setdefault(t, {"d": [], "c": [], "tg": [], "apt": []}); s_["d"].append(d); s_["c"].append(c)
     for t, a, m in q("SELECT ticker, as_of, pt_mean FROM target WHERE pt_mean IS NOT NULL ORDER BY ticker, as_of"):
-        series.setdefault(t, {"d": [], "c": [], "tg": []})["tg"].append([a, m])
+        series.setdefault(t, {"d": [], "c": [], "tg": [], "apt": []})["tg"].append([a, m])
+    apt = avg_target_history(con, as_of)
+    for t, v in apt.items():
+        if t in series: series[t]["apt"] = v
     for t, s_ in series.items():
         (tdir / f"{t}.json").write_text(json.dumps(s_, separators=(",", ":")))
+    export_indices(con, series, apt, as_of)
+
+
+WEEKS = 112                            # ~26 mesi di storico del target medio
+
+
+def week_ends(as_of):
+    d = dt.date.fromisoformat(as_of)
+    d -= dt.timedelta(days=(d.weekday() - 4) % 7)      # ultimo venerdì
+    return [(d - dt.timedelta(weeks=k)).isoformat() for k in range(WEEKS, -1, -1)]
+
+
+def avg_target_history(con, as_of):
+    """Target medio degli analisti nel tempo: a ogni venerdì, media dell'ultimo target di
+    ciascun broker emesso nei 12 mesi precedenti (come il "previous average price target")."""
+    wk = week_ends(as_of)
+    first = (dt.date.fromisoformat(wk[0]) - dt.timedelta(days=366)).isoformat()
+    ev = {}
+    for t, d, b, p in con.execute("""SELECT ticker, event_date, broker, pt_to FROM rating_event
+                                     WHERE pt_to IS NOT NULL AND broker IS NOT NULL AND event_date >= ?
+                                     ORDER BY ticker, event_date""", (first,)):
+        ev.setdefault(t, []).append((d, b, p))
+    out = {}
+    for t, rows in ev.items():
+        res, last, k = [], {}, 0
+        for w in wk:
+            while k < len(rows) and rows[k][0] <= w:
+                last[rows[k][1]] = (rows[k][0], rows[k][2]); k += 1
+            lo = (dt.date.fromisoformat(w) - dt.timedelta(days=365)).isoformat()
+            v = [p for d, p in last.values() if d > lo]
+            if v: res.append([w, round(sum(v) / len(v), 4), len(v)])
+        if res: out[t] = res
+    return out
+
+
+INDEX_BENCH = {"SP500": "SPY", "UKX": "^FTSE", "MCX": "^FTMC", "FTSEMIB": "FTSEMIB.MI",
+               "DAX": "^GDAXI", "CAC": "^FCHI", "SX5E": "^STOXX50E"}
+
+
+def export_indices(con, series, apt, as_of):
+    """Vista aggregata per indice: livello dell'indice e upside implicito mediano dei componenti nel tempo."""
+    idir = SITE / "idx"; idir.mkdir(exist_ok=True)
+    members = {}
+    for t, idx in con.execute("SELECT ticker, indices FROM universe"):
+        for k in str(idx or "").split(";"):
+            if k: members.setdefault(k, []).append(t)
+    wk = week_ends(as_of)
+    close_at = {}
+    for t, s_ in series.items():
+        d, c = s_["d"], s_["c"]
+        if d: close_at[t] = (d, c)
+
+    def px(t, w):
+        if t not in close_at: return None
+        d, c = close_at[t]
+        import bisect as _b
+        i = _b.bisect_right(d, w) - 1
+        return c[i] if i >= 0 else None
+
+    for key, tk in members.items():
+        up = []
+        for w in wk:
+            vals = []
+            for t in tk:
+                a = next((x[1] for x in reversed(apt.get(t, [])) if x[0] <= w), None) if t in apt else None
+                if a is None: continue
+                p = px(t, w)
+                if p: vals.append(a / p - 1)
+            if len(vals) >= 5:
+                vals.sort(); m = len(vals)
+                up.append([w, round(vals[m // 2], 5), round(vals[m // 4], 5), round(vals[(3 * m) // 4], 5), m])
+        b = series.get(INDEX_BENCH.get(key, ""), {})
+        (idir / f"{key}.json").write_text(json.dumps(
+            {"key": key, "bench": INDEX_BENCH.get(key), "d": b.get("d", []), "c": b.get("c", []),
+             "up": up, "members": tk}, separators=(",", ":")))
 
 
 if __name__ == "__main__":
