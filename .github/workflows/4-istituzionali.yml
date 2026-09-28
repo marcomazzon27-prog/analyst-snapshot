@@ -1,0 +1,84 @@
+name: 4-istituzionali
+# Investitori istituzionali (13F SEC + short europei).
+#  - backfill (a mano, la prima volta): storico dai "Form 13F Data Sets" SEC, a blocchi di 10 data set
+#    con un commit dopo ogni blocco; se si interrompe basta rilanciarlo, riprende da dove era.
+#  - update (ogni 3 ore): nuovi 13F da EDGAR per i gestori seguiti, short CONSOB/AMF/FCA, mappa CUSIP->ticker,
+#    prezzi settimanali; se c'è qualcosa di nuovo rilancia il terminale (workflow 3) e manda le notifiche.
+# Secrets facoltativi: OPENFIGI_KEY (mappatura più veloce), NTFY_TOPIC (notifiche push), SEC_UA (User-Agent SEC).
+on:
+  schedule:
+    - cron: "23 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "backfill = storico 13F (riprende da dove era) · update = novità"
+        type: choice
+        options: [update, backfill]
+        default: update
+      max_sets:
+        description: "backfill: quanti data set trimestrali elaborare in questo giro (tutti = 60)"
+        default: "60"
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: istituzionali
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    env:
+      SEC_UA: ${{ secrets.SEC_UA }}
+      OPENFIGI_KEY: ${{ secrets.OPENFIGI_KEY }}
+      NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install pandas requests openpyxl "yfinance>=0.2.54"
+      - name: Funzione di salvataggio
+        run: |
+          git config user.name analyst-snapshot; git config user.email actions@github.com
+          cat > /tmp/save.sh <<'SH'
+          #!/bin/bash
+          for f in data/13f data/shorts data/feed.json; do if [ -e "$f" ]; then git add -A "$f"; fi; done
+          if git diff --staged --quiet; then echo "niente da salvare"; exit 0; fi
+          git commit -q -m "$1-$(date -u +%F-%H%M)"
+          for i in 1 2 3 4 5; do git pull -q --rebase --autostash origin main && git push -q && echo "salvato" && echo changed > /tmp/changed && exit 0; sleep 10; done
+          exit 1
+          SH
+          chmod +x /tmp/save.sh
+      - name: Backfill 13F dai data set SEC
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'backfill'
+        run: |
+          left=${{ inputs.max_sets }}
+          while [ "$left" -gt 0 ]; do
+            n=$(( left < 10 ? left : 10 ))
+            set +e; python inst_13f.py backfill --max-sets $n; rc=$?; set -e
+            /tmp/save.sh 13f-backfill
+            if [ $rc -ne 0 ]; then echo "fine (codice $rc)"; break; fi
+            left=$(( left - n ))
+          done
+      - name: Nuovi 13F da EDGAR
+        if: github.event_name == 'schedule' || inputs.mode == 'update'
+        run: python inst_13f.py live
+        continue-on-error: true
+      - name: Posizioni corte europee (CONSOB, AMF, FCA)
+        run: python inst_shorts.py
+        continue-on-error: true
+      - name: Mappa CUSIP -> ticker e prezzi settimanali
+        run: |
+          new=$(git status --porcelain data/13f/holdings | wc -l)
+          if [ "$new" -gt 0 ] || [ "$(date -u +%H)" -lt 3 ] || [ ! -f data/13f/prices_weekly.csv.gz ] || [ "${{ inputs.mode }}" = "backfill" ]; then
+            python inst_map.py --max-new 4000
+          else
+            python inst_map.py --max-new 500 --no-prices
+          fi
+        continue-on-error: true
+      - name: Salva
+        run: /tmp/save.sh istituzionali
+      - name: Aggiorna il terminale
+        run: if [ -f /tmp/changed ]; then gh workflow run 3-terminale.yml --ref main; else echo "nessuna novità"; fi
