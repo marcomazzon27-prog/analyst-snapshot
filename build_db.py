@@ -237,6 +237,12 @@ def build():
     for t, d, c in con.execute("SELECT ticker, date, close FROM price ORDER BY ticker, date"):
         px.setdefault(t, ([], []))[0].append(d); px[t][1].append(c)
     usmap = dict(con.execute("SELECT ticker, us_ticker FROM universe WHERE us_ticker IS NOT NULL").fetchall())
+    usmap, bad = validate_us(px, usmap)
+    if bad:                                    # quotazione USA non coerente col titolo: via i suoi dati
+        con.executemany("UPDATE universe SET us_ticker=NULL WHERE ticker=?", [(t,) for t in bad])
+        for k in [k for k, e in events.items() if e["ticker"] in bad and e.get("src") == bad[e["ticker"]]]:
+            del events[k]
+        print("quotazioni USA scartate (prezzi non correlati):", bad)
     conv = normalize_targets(events, px, usmap)
     fix_consensus_targets(con, px, usmap)
     print(f"target convertiti dalla quotazione USA: {conv}")
@@ -275,6 +281,22 @@ def px_at(px, t, d, maxgap=7):
     i = bisect.bisect_right(s_[0], str(d)) - 1
     if i < 0 or (dt.date.fromisoformat(str(d)) - dt.date.fromisoformat(s_[0][i])).days > maxgap: return None
     return s_[1][i]
+
+
+def validate_us(px, usmap, min_corr=0.5):
+    """Tiene la quotazione USA solo se i rendimenti settimanali dell'ultimo anno sono correlati
+    con quelli del titolo europeo: protegge da abbinamenti sbagliati (ticker omonimi)."""
+    import numpy as np
+    ok, bad = {}, {}
+    for t, us in usmap.items():
+        a, b = px.get(t), px.get(us)
+        if not a or not b: bad[t] = us; continue
+        sa = pd.Series(a[1], index=pd.to_datetime(a[0])).resample("W").last()
+        sb = pd.Series(b[1], index=pd.to_datetime(b[0])).resample("W").last()
+        j = pd.concat([sa, sb], axis=1).dropna().tail(60).pct_change().dropna()
+        c = j.iloc[:, 0].corr(j.iloc[:, 1]) if len(j) >= 20 else np.nan
+        (ok if c == c and c >= min_corr else bad)[t] = us
+    return ok, bad
 
 
 def normalize_targets(events, px, usmap):
