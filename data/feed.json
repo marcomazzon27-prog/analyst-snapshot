@@ -1,1 +1,5002 @@
-[]
+[
+{
+"id": "short-CONSOB-IT0001233417-Helikon Long Short Equity Fund Master ICAV-2026-08-25-1.29",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "A2A: Helikon Long Short Equity Fund Master ICAV",
+"text": "nuova posizione corta (1.29%, CONSOB, 2026-08-25)",
+"date": "2026-08-25",
+"important": true,
+"link": "#/t/A2A.MI"
+},
+{
+"id": "short-CONSOB-IT0004056880-Capital Fund Management SA-2026-08-25-1.3",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Amplifon: Capital Fund Management SA",
+"text": "nuova posizione corta (1.30%, CONSOB, 2026-08-25)",
+"date": "2026-08-25",
+"important": true,
+"link": "#/t/AMP.MI"
+},
+{
+"id": "short-CONSOB-IT0004056880-Ilex Capital Partners (UK) LLP-2026-09-25-0.59",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Amplifon: Ilex Capital Partners (UK) LLP",
+"text": "nuova posizione corta (0.59%, CONSOB, 2026-09-25)",
+"date": "2026-09-25",
+"important": false,
+"link": "#/t/AMP.MI"
+},
+{
+"id": "short-CONSOB-IT0004056880-Point72 (DIFC) Limited-2026-07-31-0.51",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Amplifon: Point72 (DIFC) Limited",
+"text": "nuova posizione corta (0.51%, CONSOB, 2026-07-31)",
+"date": "2026-07-31",
+"important": false,
+"link": "#/t/AMP.MI"
+},
+{
+"id": "short-CONSOB-IT0005119810-Capital Fund Management SA-2026-07-21-0.53",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Avio: Capital Fund Management SA",
+"text": "nuova posizione corta (0.53%, CONSOB, 2026-07-21)",
+"date": "2026-07-21",
+"important": false,
+"link": "#/t/AVIO.MI"
+},
+{
+"id": "short-CONSOB-IT0005119810-Citadel Advisors LLC-2026-09-25-0.69",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Avio: Citadel Advisors LLC",
+"text": "nuova posizione corta (0.69%, CONSOB, 2026-09-25)",
+"date": "2026-09-25",
+"important": false,
+"link": "#/t/AVIO.MI"
+},
+{
+"id": "short-CONSOB-IT0005119810-Jupiter Asset Management Limited-2026-08-13-0.82",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Avio: Jupiter Asset Management Limited",
+"text": "nuova posizione corta (0.82%, CONSOB, 2026-08-13)",
+"date": "2026-08-13",
+"important": false,
+"link": "#/t/AVIO.MI"
+},
+{
+"id": "short-CONSOB-IT0005119810-PDT Partners, LLC-2026-07-30-3.2",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Avio: PDT Partners, LLC",
+"text": "nuova posizione corta (3.20%, CONSOB, 2026-07-30)",
+"date": "2026-07-30",
+"important": true,
+"link": "#/t/AVIO.MI"
+},
+{
+"id": "short-CONSOB-IT0005119810-Tudor Capital Europe LLP-2026-09-25-0.7",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Avio: Tudor Capital Europe LLP",
+"text": "nuova posizione corta (0.70%, CONSOB, 2026-09-25)",
+"date": "2026-09-25",
+"important": false,
+"link": "#/t/AVIO.MI"
+},
+{
+"id": "short-CONSOB-IT0005119810-Two Sigma Investments, LP-2026-09-17-2.29",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Avio: Two Sigma Investments, LP",
+"text": "nuova posizione corta (2.29%, CONSOB, 2026-09-17)",
+"date": "2026-09-17",
+"important": true,
+"link": "#/t/AVIO.MI"
+},
+{
+"id": "short-CONSOB-IT0005119810-WorldQuant, LLC-2026-09-15-0.71",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Avio: WorldQuant, LLC",
+"text": "nuova posizione corta (0.71%, CONSOB, 2026-09-15)",
+"date": "2026-09-15",
+"important": false,
+"link": "#/t/AVIO.MI"
+},
+{
+"id": "short-CONSOB-IT0000066123-AQR Capital Management, LLC-2026-09-11-0.5",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "BPER Banca: AQR Capital Management, LLC",
+"text": "nuova posizione corta (0.50%, CONSOB, 2026-09-11)",
+"date": "2026-09-11",
+"important": false,
+"link": "#/t/BPE.MI"
+},
+{
+"id": "short-CONSOB-IT0004764699-AQR Capital Management, LLC-2026-09-10-0.68",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Brunello Cucinelli: AQR Capital Management, LLC",
+"text": "nuova posizione corta (0.68%, CONSOB, 2026-09-10)",
+"date": "2026-09-10",
+"important": false,
+"link": "#/t/BC.MI"
+},
+{
+"id": "short-CONSOB-IT0004764699-Boldhaven Management LLP-2026-08-03-0.72",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Brunello Cucinelli: Boldhaven Management LLP",
+"text": "nuova posizione corta (0.72%, CONSOB, 2026-08-03)",
+"date": "2026-08-03",
+"important": false,
+"link": "#/t/BC.MI"
+},
+{
+"id": "short-CONSOB-IT0004764699-JPMorgan Asset Management (UK) Limited-2026-07-16-0.9",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Brunello Cucinelli: JPMorgan Asset Management (UK) Limited",
+"text": "nuova posizione corta (0.90%, CONSOB, 2026-07-16)",
+"date": "2026-07-16",
+"important": false,
+"link": "#/t/BC.MI"
+},
+{
+"id": "short-CONSOB-IT0001347308-BlackRock Advisors, LLC-2026-09-21-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Buzzi: BlackRock Advisors, LLC",
+"text": "nuova posizione corta (0.60%, CONSOB, 2026-09-21)",
+"date": "2026-09-21",
+"important": false,
+"link": "#/t/BZU.MI"
+},
+{
+"id": "short-CONSOB-IT0001347308-BlackRock Financial Management, Inc.-2026-09-25-0.69",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Buzzi: BlackRock Financial Management, Inc.",
+"text": "nuova posizione corta (0.69%, CONSOB, 2026-09-25)",
+"date": "2026-09-25",
+"important": false,
+"link": "#/t/BZU.MI"
+},
+{
+"id": "short-CONSOB-IT0001347308-BlackRock Institutional Trust Company, National Association-2026-09-10-0.5",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Buzzi: BlackRock Institutional Trust Company, National Association",
+"text": "nuova posizione corta (0.50%, CONSOB, 2026-09-10)",
+"date": "2026-09-10",
+"important": false,
+"link": "#/t/BZU.MI"
+},
+{
+"id": "short-CONSOB-IT0001347308-Capital Fund Management SA-2026-08-25-0.69",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Buzzi: Capital Fund Management SA",
+"text": "nuova posizione corta (0.69%, CONSOB, 2026-08-25)",
+"date": "2026-08-25",
+"important": false,
+"link": "#/t/BZU.MI"
+},
+{
+"id": "short-CONSOB-IT0001347308-Marshall Wace LLP-2026-09-22-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Buzzi: Marshall Wace LLP",
+"text": "nuova posizione corta (0.60%, CONSOB, 2026-09-22)",
+"date": "2026-09-22",
+"important": false,
+"link": "#/t/BZU.MI"
+},
+{
+"id": "short-CONSOB-IT0005218380-Two Sigma Investments, LP-2026-06-04-0.59",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Banco BPM: Two Sigma Investments, LP",
+"text": "nuova posizione corta (0.59%, CONSOB, 2026-06-04)",
+"date": "2026-06-04",
+"important": false,
+"link": "#/t/BAMI.MI"
+},
+{
+"id": "short-CONSOB-IT0003492391-AQR Capital Management, LLC-2026-09-24-0.69",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Diasorin: AQR Capital Management, LLC",
+"text": "nuova posizione corta (0.69%, CONSOB, 2026-09-24)",
+"date": "2026-09-24",
+"important": false,
+"link": "#/t/DIA.MI"
+},
+{
+"id": "short-CONSOB-IT0003492391-Capital Fund Management SA-2026-09-24-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Diasorin: Capital Fund Management SA",
+"text": "nuova posizione corta (0.60%, CONSOB, 2026-09-24)",
+"date": "2026-09-24",
+"important": false,
+"link": "#/t/DIA.MI"
+},
+{
+"id": "short-CONSOB-IT0003492391-Citadel Advisors LLC-2026-09-23-0.69",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Diasorin: Citadel Advisors LLC",
+"text": "nuova posizione corta (0.69%, CONSOB, 2026-09-23)",
+"date": "2026-09-23",
+"important": false,
+"link": "#/t/DIA.MI"
+},
+{
+"id": "short-CONSOB-IT0003492391-JPMorgan Asset Management (UK) Limited-2026-09-18-0.63",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Diasorin: JPMorgan Asset Management (UK) Limited",
+"text": "nuova posizione corta (0.63%, CONSOB, 2026-09-18)",
+"date": "2026-09-18",
+"important": false,
+"link": "#/t/DIA.MI"
+},
+{
+"id": "short-CONSOB-IT0005599938-Capital Fund Management SA-2026-09-24-0.52",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Fincantieri: Capital Fund Management SA",
+"text": "nuova posizione corta (0.52%, CONSOB, 2026-09-24)",
+"date": "2026-09-24",
+"important": false,
+"link": "#/t/FCT.MI"
+},
+{
+"id": "short-CONSOB-IT0005599938-Connor, Clark & Lunn Investment Management Ltd.-2026-09-22-0.7",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Fincantieri: Connor, Clark & Lunn Investment Management Ltd.",
+"text": "nuova posizione corta (0.70%, CONSOB, 2026-09-22)",
+"date": "2026-09-22",
+"important": false,
+"link": "#/t/FCT.MI"
+},
+{
+"id": "short-CONSOB-IT0005599938-JPMorgan Asset Management (UK) Limited-2026-03-20-1.03",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Fincantieri: JPMorgan Asset Management (UK) Limited",
+"text": "nuova posizione corta (1.03%, CONSOB, 2026-03-20)",
+"date": "2026-03-20",
+"important": true,
+"link": "#/t/FCT.MI"
+},
+{
+"id": "short-CONSOB-IT0005599938-PDT Partners, LLC-2026-07-15-1.0",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Fincantieri: PDT Partners, LLC",
+"text": "nuova posizione corta (1.00%, CONSOB, 2026-07-15)",
+"date": "2026-07-15",
+"important": true,
+"link": "#/t/FCT.MI"
+},
+{
+"id": "short-CONSOB-IT0005090300-D. E. Shaw & Co., L.P.-2026-07-24-0.59",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "INWIT: D. E. Shaw & Co., L.P.",
+"text": "nuova posizione corta (0.59%, CONSOB, 2026-07-24)",
+"date": "2026-07-24",
+"important": false,
+"link": "#/t/INW.MI"
+},
+{
+"id": "short-CONSOB-IT0005090300-JPMorgan Asset Management (UK) Limited-2026-03-24-0.8",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "INWIT: JPMorgan Asset Management (UK) Limited",
+"text": "nuova posizione corta (0.80%, CONSOB, 2026-03-24)",
+"date": "2026-03-24",
+"important": false,
+"link": "#/t/INW.MI"
+},
+{
+"id": "short-CONSOB-NL0015000LU4-Two Sigma Investments, LP-2026-08-18-0.89",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Iveco: Two Sigma Investments, LP",
+"text": "nuova posizione corta (0.89%, CONSOB, 2026-08-18)",
+"date": "2026-08-18",
+"important": false,
+"link": "#/t/IVG.MI"
+},
+{
+"id": "short-CONSOB-IT0003856405-Two Sigma Investments, LP-2026-09-11-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Leonardo: Two Sigma Investments, LP",
+"text": "nuova posizione corta (0.60%, CONSOB, 2026-09-11)",
+"date": "2026-09-11",
+"important": false,
+"link": "#/t/LDO.MI"
+},
+{
+"id": "short-CONSOB-IT0005541336-BlackRock Financial Management, Inc.-2026-09-15-0.52",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Lottomatica Group: BlackRock Financial Management, Inc.",
+"text": "nuova posizione corta (0.52%, CONSOB, 2026-09-15)",
+"date": "2026-09-15",
+"important": false,
+"link": "#/t/LTMC.MI"
+},
+{
+"id": "short-CONSOB-IT0005541336-Capital Fund Management SA-2026-09-15-1.32",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Lottomatica Group: Capital Fund Management SA",
+"text": "nuova posizione corta (1.32%, CONSOB, 2026-09-15)",
+"date": "2026-09-15",
+"important": true,
+"link": "#/t/LTMC.MI"
+},
+{
+"id": "short-CONSOB-IT0004965148-AQR Capital Management, LLC-2026-09-25-0.51",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Moncler: AQR Capital Management, LLC",
+"text": "nuova posizione corta (0.51%, CONSOB, 2026-09-25)",
+"date": "2026-09-25",
+"important": false,
+"link": "#/t/MONC.MI"
+},
+{
+"id": "short-CONSOB-IT0004965148-Ilex Capital Partners (UK) LLP-2026-09-24-1.76",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Moncler: Ilex Capital Partners (UK) LLP",
+"text": "nuova posizione corta (1.76%, CONSOB, 2026-09-24)",
+"date": "2026-09-24",
+"important": true,
+"link": "#/t/MONC.MI"
+},
+{
+"id": "short-CONSOB-IT0004965148-Two Sigma Investments, LP-2026-09-24-0.91",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Moncler: Two Sigma Investments, LP",
+"text": "nuova posizione corta (0.91%, CONSOB, 2026-09-24)",
+"date": "2026-09-24",
+"important": false,
+"link": "#/t/MONC.MI"
+},
+{
+"id": "short-CONSOB-IT0004965148-WorldQuant, LLC-2026-09-23-0.5",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Moncler: WorldQuant, LLC",
+"text": "nuova posizione corta (0.50%, CONSOB, 2026-09-23)",
+"date": "2026-09-23",
+"important": false,
+"link": "#/t/MONC.MI"
+},
+{
+"id": "short-CONSOB-IT0005366767-AQR Capital Management, LLC-2026-09-18-0.5",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Nexi: AQR Capital Management, LLC",
+"text": "nuova posizione corta (0.50%, CONSOB, 2026-09-18)",
+"date": "2026-09-18",
+"important": false,
+"link": "#/t/NEXI.MI"
+},
+{
+"id": "short-CONSOB-IT0005366767-BlackRock Financial Management, Inc.-2026-08-18-1.09",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Nexi: BlackRock Financial Management, Inc.",
+"text": "nuova posizione corta (1.09%, CONSOB, 2026-08-18)",
+"date": "2026-08-18",
+"important": true,
+"link": "#/t/NEXI.MI"
+},
+{
+"id": "short-CONSOB-IT0005366767-CAISSE DE DEPOT ET PLACEMENT DU QUEBEC-2026-07-31-0.56",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Nexi: CAISSE DE DEPOT ET PLACEMENT DU QUEBEC",
+"text": "nuova posizione corta (0.56%, CONSOB, 2026-07-31)",
+"date": "2026-07-31",
+"important": false,
+"link": "#/t/NEXI.MI"
+},
+{
+"id": "short-CONSOB-IT0005366767-Capital Fund Management SA-2026-09-24-0.8",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Nexi: Capital Fund Management SA",
+"text": "nuova posizione corta (0.80%, CONSOB, 2026-09-24)",
+"date": "2026-09-24",
+"important": false,
+"link": "#/t/NEXI.MI"
+},
+{
+"id": "short-CONSOB-IT0005366767-ExodusPoint Capital Management LP-2026-07-30-1.01",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Nexi: ExodusPoint Capital Management LP",
+"text": "nuova posizione corta (1.01%, CONSOB, 2026-07-30)",
+"date": "2026-07-30",
+"important": true,
+"link": "#/t/NEXI.MI"
+},
+{
+"id": "short-CONSOB-IT0005366767-Two Sigma Investments, LP-2026-09-22-0.69",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Nexi: Two Sigma Investments, LP",
+"text": "nuova posizione corta (0.69%, CONSOB, 2026-09-22)",
+"date": "2026-09-22",
+"important": false,
+"link": "#/t/NEXI.MI"
+},
+{
+"id": "short-CONSOB-NL00150001Q9-AQR Capital Management, LLC-2026-09-23-0.5",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Stellantis: AQR Capital Management, LLC",
+"text": "nuova posizione corta (0.50%, CONSOB, 2026-09-23)",
+"date": "2026-09-23",
+"important": false,
+"link": "#/t/STLAM.MI"
+},
+{
+"id": "short-CONSOB-NL00150001Q9-Arrowstreet Capital, Limited Partnership-2026-09-04-0.7",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Stellantis: Arrowstreet Capital, Limited Partnership",
+"text": "nuova posizione corta (0.70%, CONSOB, 2026-09-04)",
+"date": "2026-09-04",
+"important": false,
+"link": "#/t/STLAM.MI"
+},
+{
+"id": "short-CONSOB-NL00150001Q9-Citadel Advisors Europe Limited-2026-09-25-0.5",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Stellantis: Citadel Advisors Europe Limited",
+"text": "nuova posizione corta (0.50%, CONSOB, 2026-09-25)",
+"date": "2026-09-25",
+"important": false,
+"link": "#/t/STLAM.MI"
+},
+{
+"id": "short-CONSOB-NL00150001Q9-Jericho Capital Asset Management LP-2026-09-17-1.3",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Stellantis: Jericho Capital Asset Management LP",
+"text": "nuova posizione corta (1.30%, CONSOB, 2026-09-17)",
+"date": "2026-09-17",
+"important": true,
+"link": "#/t/STLAM.MI"
+},
+{
+"id": "short-CONSOB-NL00150001Q9-KGH Ltd.-2026-07-08-1.0",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Stellantis: KGH Ltd.",
+"text": "nuova posizione corta (1.00%, CONSOB, 2026-07-08)",
+"date": "2026-07-08",
+"important": true,
+"link": "#/t/STLAM.MI"
+},
+{
+"id": "short-CONSOB-NL00150001Q9-Kintbury Capital LLP-2026-08-18-0.8",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Stellantis: Kintbury Capital LLP",
+"text": "nuova posizione corta (0.80%, CONSOB, 2026-08-18)",
+"date": "2026-08-18",
+"important": false,
+"link": "#/t/STLAM.MI"
+},
+{
+"id": "short-CONSOB-NL00150001Q9-Marshall Wace LLP-2026-09-25-1.83",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Stellantis: Marshall Wace LLP",
+"text": "nuova posizione corta (1.83%, CONSOB, 2026-09-25)",
+"date": "2026-09-25",
+"important": true,
+"link": "#/t/STLAM.MI"
+},
+{
+"id": "short-CONSOB-NL00150001Q9-Two Sigma Investments, LP-2026-09-25-0.91",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Stellantis: Two Sigma Investments, LP",
+"text": "nuova posizione corta (0.91%, CONSOB, 2026-09-25)",
+"date": "2026-09-25",
+"important": false,
+"link": "#/t/STLAM.MI"
+},
+{
+"id": "short-AMF-FR0000120693-AKO CAPITAL LLP-2026-08-19-0.57",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AKO CAPITAL LLP",
+"text": "short da 0.51% a 0.57% (0.57%, AMF, 2026-08-19)",
+"date": "2026-08-19",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AKO CAPITAL LLP-2026-07-29-0.65",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AKO CAPITAL LLP",
+"text": "short da 0.51% a 0.65% (0.65%, AMF, 2026-07-29)",
+"date": "2026-07-29",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AKO CAPITAL LLP-2026-04-22-0.7",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AKO CAPITAL LLP",
+"text": "short da 0.51% a 0.70% (0.70%, AMF, 2026-04-22)",
+"date": "2026-04-22",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AKO CAPITAL LLP-2026-04-08-0.61",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AKO CAPITAL LLP",
+"text": "short da 0.51% a 0.61% (0.61%, AMF, 2026-04-08)",
+"date": "2026-04-08",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AKO CAPITAL LLP-2026-01-30-0.58",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AKO CAPITAL LLP",
+"text": "short da 0.51% a 0.58% (0.58%, AMF, 2026-01-30)",
+"date": "2026-01-30",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AKO CAPITAL LLP-2025-11-04-0.61",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AKO CAPITAL LLP",
+"text": "short da 0.51% a 0.61% (0.61%, AMF, 2025-11-04)",
+"date": "2025-11-04",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000125338-ALKEON CAPITAL MANAGEMENT, LLC-2026-06-18-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Capgemini: ALKEON CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.54% a 0.60% (0.60%, AMF, 2026-06-18)",
+"date": "2026-06-18",
+"important": false,
+"link": "#/t/CAP.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-09-23-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 0.60% (0.60%, AMF, 2026-09-23)",
+"date": "2026-09-23",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-09-21-0.59",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 0.59% (0.59%, AMF, 2026-09-21)",
+"date": "2026-09-21",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-09-18-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 0.60% (0.60%, AMF, 2026-09-18)",
+"date": "2026-09-18",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-09-14-0.59",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 0.59% (0.59%, AMF, 2026-09-14)",
+"date": "2026-09-14",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-09-11-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 0.60% (0.60%, AMF, 2026-09-11)",
+"date": "2026-09-11",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-09-10-0.59",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 0.59% (0.59%, AMF, 2026-09-10)",
+"date": "2026-09-10",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-09-08-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 0.60% (0.60%, AMF, 2026-09-08)",
+"date": "2026-09-08",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-09-04-0.59",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 0.59% (0.59%, AMF, 2026-09-04)",
+"date": "2026-09-04",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-08-19-0.68",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 0.68% (0.68%, AMF, 2026-08-19)",
+"date": "2026-08-19",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-08-06-0.79",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 0.79% (0.79%, AMF, 2026-08-06)",
+"date": "2026-08-06",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-07-24-0.89",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 0.89% (0.89%, AMF, 2026-07-24)",
+"date": "2026-07-24",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-07-14-0.98",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 0.98% (0.98%, AMF, 2026-07-14)",
+"date": "2026-07-14",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-06-25-1.08",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.08% (1.08%, AMF, 2026-06-25)",
+"date": "2026-06-25",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-06-12-1.19",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.19% (1.19%, AMF, 2026-06-12)",
+"date": "2026-06-12",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-06-01-1.29",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.29% (1.29%, AMF, 2026-06-01)",
+"date": "2026-06-01",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-05-29-1.3",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.30% (1.30%, AMF, 2026-05-29)",
+"date": "2026-05-29",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-05-28-1.29",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.29% (1.29%, AMF, 2026-05-28)",
+"date": "2026-05-28",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-04-02-1.32",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.32% (1.32%, AMF, 2026-04-02)",
+"date": "2026-04-02",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-03-16-1.2",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.20% (1.20%, AMF, 2026-03-16)",
+"date": "2026-03-16",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-03-04-1.12",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.12% (1.12%, AMF, 2026-03-04)",
+"date": "2026-03-04",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-03-02-1.09",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.09% (1.09%, AMF, 2026-03-02)",
+"date": "2026-03-02",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-02-19-1.1",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.10% (1.10%, AMF, 2026-02-19)",
+"date": "2026-02-19",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-02-16-1.09",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.09% (1.09%, AMF, 2026-02-16)",
+"date": "2026-02-16",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-02-13-1.1",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.10% (1.10%, AMF, 2026-02-13)",
+"date": "2026-02-13",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-02-12-1.09",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.09% (1.09%, AMF, 2026-02-12)",
+"date": "2026-02-12",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-02-02-1.1",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.10% (1.10%, AMF, 2026-02-02)",
+"date": "2026-02-02",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-01-26-1.09",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.09% (1.09%, AMF, 2026-01-26)",
+"date": "2026-01-26",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-01-12-1.1",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.10% (1.10%, AMF, 2026-01-12)",
+"date": "2026-01-12",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2025-11-14-1.0",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 1.00% (1.00%, AMF, 2025-11-14)",
+"date": "2025-11-14",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2025-10-20-0.9",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 0.90% (0.90%, AMF, 2025-10-20)",
+"date": "2025-10-20",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2025-10-06-0.82",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 0.82% (0.82%, AMF, 2025-10-06)",
+"date": "2025-10-06",
+"important": true,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2025-09-29-0.71",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 0.71% (0.71%, AMF, 2025-09-29)",
+"date": "2025-09-29",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2025-09-18-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
+"text": "short da 0.50% a 0.60% (0.60%, AMF, 2025-09-18)",
+"date": "2025-09-18",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000131906-BLACKROCK ADVISORS, LLC-2026-09-22-1.11",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: BLACKROCK ADVISORS, LLC",
+"text": "short da 0.50% a 1.11% (1.11%, AMF, 2026-09-22)",
+"date": "2026-09-22",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-BLACKROCK ADVISORS, LLC-2026-09-16-1.0",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: BLACKROCK ADVISORS, LLC",
+"text": "short da 0.50% a 1.00% (1.00%, AMF, 2026-09-16)",
+"date": "2026-09-16",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-BLACKROCK ADVISORS, LLC-2026-09-10-0.9",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: BLACKROCK ADVISORS, LLC",
+"text": "short da 0.50% a 0.90% (0.90%, AMF, 2026-09-10)",
+"date": "2026-09-10",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-BLACKROCK ADVISORS, LLC-2026-09-03-0.82",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: BLACKROCK ADVISORS, LLC",
+"text": "short da 0.50% a 0.82% (0.82%, AMF, 2026-09-03)",
+"date": "2026-09-03",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-BLACKROCK ADVISORS, LLC-2026-08-18-0.71",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: BLACKROCK ADVISORS, LLC",
+"text": "short da 0.50% a 0.71% (0.71%, AMF, 2026-08-18)",
+"date": "2026-08-18",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-BLACKROCK ADVISORS, LLC-2026-07-16-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: BLACKROCK ADVISORS, LLC",
+"text": "short da 0.50% a 0.60% (0.60%, AMF, 2026-07-16)",
+"date": "2026-07-16",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-07-24-0.91",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.91% (0.91%, AMF, 2026-07-24)",
+"date": "2026-07-24",
+"important": true,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-06-30-0.83",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.83% (0.83%, AMF, 2026-06-30)",
+"date": "2026-06-30",
+"important": true,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-04-02-0.7",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.70% (0.70%, AMF, 2026-04-02)",
+"date": "2026-04-02",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-04-01-0.64",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.64% (0.64%, AMF, 2026-04-01)",
+"date": "2026-04-01",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-03-30-0.59",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.59% (0.59%, AMF, 2026-03-30)",
+"date": "2026-03-30",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-03-20-0.63",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.63% (0.63%, AMF, 2026-03-20)",
+"date": "2026-03-20",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-03-18-0.76",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.76% (0.76%, AMF, 2026-03-18)",
+"date": "2026-03-18",
+"important": true,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-03-13-0.89",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.89% (0.89%, AMF, 2026-03-13)",
+"date": "2026-03-13",
+"important": true,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-02-24-0.96",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.96% (0.96%, AMF, 2026-02-24)",
+"date": "2026-02-24",
+"important": true,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-02-13-1.0",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 1.00% (1.00%, AMF, 2026-02-13)",
+"date": "2026-02-13",
+"important": true,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2025-06-26-1.14",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 1.14% (1.14%, AMF, 2025-06-26)",
+"date": "2025-06-26",
+"important": true,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2025-05-02-1.04",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 1.04% (1.04%, AMF, 2025-05-02)",
+"date": "2025-05-02",
+"important": true,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2025-04-07-0.99",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.99% (0.99%, AMF, 2025-04-07)",
+"date": "2025-04-07",
+"important": true,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2025-02-26-1.02",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 1.02% (1.02%, AMF, 2025-02-26)",
+"date": "2025-02-26",
+"important": true,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2025-02-20-0.95",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.95% (0.95%, AMF, 2025-02-20)",
+"date": "2025-02-20",
+"important": true,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2025-01-27-0.58",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.58% (0.58%, AMF, 2025-01-27)",
+"date": "2025-01-27",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2025-01-22-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.60% (0.60%, AMF, 2025-01-22)",
+"date": "2025-01-22",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2024-11-29-0.59",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.59% (0.59%, AMF, 2024-11-29)",
+"date": "2024-11-29",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2024-11-21-0.69",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.69% (0.69%, AMF, 2024-11-21)",
+"date": "2024-11-21",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2024-11-01-0.7",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.70% (0.70%, AMF, 2024-11-01)",
+"date": "2024-11-01",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2024-10-14-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.60% (0.60%, AMF, 2024-10-14)",
+"date": "2024-10-14",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2024-06-26-0.59",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.59% (0.59%, AMF, 2024-06-26)",
+"date": "2024-06-26",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2024-06-19-0.69",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.69% (0.69%, AMF, 2024-06-19)",
+"date": "2024-06-19",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2024-06-18-0.71",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.71% (0.71%, AMF, 2024-06-18)",
+"date": "2024-06-18",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2024-02-21-0.84",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.84% (0.84%, AMF, 2024-02-21)",
+"date": "2024-02-21",
+"important": true,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2023-10-10-0.74",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.74% (0.74%, AMF, 2023-10-10)",
+"date": "2023-10-10",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2023-10-04-0.69",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.69% (0.69%, AMF, 2023-10-04)",
+"date": "2023-10-04",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2023-10-02-0.7",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.70% (0.70%, AMF, 2023-10-02)",
+"date": "2023-10-02",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2023-09-28-0.69",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.69% (0.69%, AMF, 2023-09-28)",
+"date": "2023-09-28",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2023-09-06-0.7",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.70% (0.70%, AMF, 2023-09-06)",
+"date": "2023-09-06",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2023-06-08-0.61",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.50% a 0.61% (0.61%, AMF, 2023-06-08)",
+"date": "2023-06-08",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120693-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-09-15-0.59",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.52% a 0.59% (0.59%, AMF, 2026-09-15)",
+"date": "2026-09-15",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000120693-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-05-15-0.67",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Pernod Ricard: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.52% a 0.67% (0.67%, AMF, 2026-05-15)",
+"date": "2026-05-15",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000131906-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-06-24-0.63",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.56% a 0.63% (0.63%, AMF, 2026-06-24)",
+"date": "2026-06-24",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-06-19-0.79",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.56% a 0.79% (0.79%, AMF, 2026-06-19)",
+"date": "2026-06-19",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-06-01-0.92",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.56% a 0.92% (0.92%, AMF, 2026-06-01)",
+"date": "2026-06-01",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-02-13-0.87",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.56% a 0.87% (0.87%, AMF, 2026-02-13)",
+"date": "2026-02-13",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-02-05-0.94",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.56% a 0.94% (0.94%, AMF, 2026-02-05)",
+"date": "2026-02-05",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-02-03-0.79",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.56% a 0.79% (0.79%, AMF, 2026-02-03)",
+"date": "2026-02-03",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-01-15-0.64",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.56% a 0.64% (0.64%, AMF, 2026-01-15)",
+"date": "2026-01-15",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-09-23-1.51",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 0.50% a 1.51% (1.51%, AMF, 2026-09-23)",
+"date": "2026-09-23",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-09-17-1.41",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 0.50% a 1.41% (1.41%, AMF, 2026-09-17)",
+"date": "2026-09-17",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-09-07-1.3",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 0.50% a 1.30% (1.30%, AMF, 2026-09-07)",
+"date": "2026-09-07",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-08-28-1.03",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 0.50% a 1.03% (1.03%, AMF, 2026-08-28)",
+"date": "2026-08-28",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-09-02-1.2",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 0.50% a 1.20% (1.20%, AMF, 2026-09-02)",
+"date": "2026-09-02",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-09-01-1.14",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 0.50% a 1.14% (1.14%, AMF, 2026-09-01)",
+"date": "2026-09-01",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-08-27-0.95",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 0.50% a 0.95% (0.95%, AMF, 2026-08-27)",
+"date": "2026-08-27",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-08-05-0.81",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 0.50% a 0.81% (0.81%, AMF, 2026-08-05)",
+"date": "2026-08-05",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-07-31-0.71",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 0.50% a 0.71% (0.71%, AMF, 2026-07-31)",
+"date": "2026-07-31",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-07-30-0.93",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 0.50% a 0.93% (0.93%, AMF, 2026-07-30)",
+"date": "2026-07-30",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-07-28-0.89",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 0.50% a 0.89% (0.89%, AMF, 2026-07-28)",
+"date": "2026-07-28",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-07-16-0.9",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 0.50% a 0.90% (0.90%, AMF, 2026-07-16)",
+"date": "2026-07-16",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-07-01-0.86",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 0.50% a 0.86% (0.86%, AMF, 2026-07-01)",
+"date": "2026-07-01",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-06-25-0.7",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 0.50% a 0.70% (0.70%, AMF, 2026-06-25)",
+"date": "2026-06-25",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-05-29-0.63",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 0.50% a 0.63% (0.63%, AMF, 2026-05-29)",
+"date": "2026-05-29",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-09-23-1.85",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.85% (1.85%, AMF, 2026-09-23)",
+"date": "2026-09-23",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-09-16-1.72",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.72% (1.72%, AMF, 2026-09-16)",
+"date": "2026-09-16",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-09-09-1.63",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.63% (1.63%, AMF, 2026-09-09)",
+"date": "2026-09-09",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-09-07-1.58",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.58% (1.58%, AMF, 2026-09-07)",
+"date": "2026-09-07",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-09-03-1.61",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.61% (1.61%, AMF, 2026-09-03)",
+"date": "2026-09-03",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-08-31-1.53",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.53% (1.53%, AMF, 2026-08-31)",
+"date": "2026-08-31",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-08-27-1.42",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.42% (1.42%, AMF, 2026-08-27)",
+"date": "2026-08-27",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-08-24-1.32",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.32% (1.32%, AMF, 2026-08-24)",
+"date": "2026-08-24",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-08-13-1.29",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.29% (1.29%, AMF, 2026-08-13)",
+"date": "2026-08-13",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-08-12-1.3",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.30% (1.30%, AMF, 2026-08-12)",
+"date": "2026-08-12",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-08-04-1.2",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.20% (1.20%, AMF, 2026-08-04)",
+"date": "2026-08-04",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-08-03-1.18",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.18% (1.18%, AMF, 2026-08-03)",
+"date": "2026-08-03",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-07-29-1.28",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.28% (1.28%, AMF, 2026-07-29)",
+"date": "2026-07-29",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-07-23-1.37",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.37% (1.37%, AMF, 2026-07-23)",
+"date": "2026-07-23",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-07-15-1.41",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.41% (1.41%, AMF, 2026-07-15)",
+"date": "2026-07-15",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-07-14-1.39",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.39% (1.39%, AMF, 2026-07-14)",
+"date": "2026-07-14",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-07-02-1.49",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.49% (1.49%, AMF, 2026-07-02)",
+"date": "2026-07-02",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-07-01-1.55",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.55% (1.55%, AMF, 2026-07-01)",
+"date": "2026-07-01",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-06-29-1.43",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.43% (1.43%, AMF, 2026-06-29)",
+"date": "2026-06-29",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-06-23-1.32",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.32% (1.32%, AMF, 2026-06-23)",
+"date": "2026-06-23",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-06-19-1.21",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.21% (1.21%, AMF, 2026-06-19)",
+"date": "2026-06-19",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-06-12-1.13",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.13% (1.13%, AMF, 2026-06-12)",
+"date": "2026-06-12",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-06-04-1.01",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 1.01% (1.01%, AMF, 2026-06-04)",
+"date": "2026-06-04",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-06-01-0.9",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 0.90% (0.90%, AMF, 2026-06-01)",
+"date": "2026-06-01",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-05-25-0.82",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 0.82% (0.82%, AMF, 2026-05-25)",
+"date": "2026-05-25",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-05-22-0.78",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 0.78% (0.78%, AMF, 2026-05-22)",
+"date": "2026-05-22",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-05-20-0.81",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 0.81% (0.81%, AMF, 2026-05-20)",
+"date": "2026-05-20",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-05-13-0.75",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 0.75% (0.75%, AMF, 2026-05-13)",
+"date": "2026-05-13",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-05-08-0.8",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 0.80% (0.80%, AMF, 2026-05-08)",
+"date": "2026-05-08",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-05-07-0.7",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 0.52% a 0.70% (0.70%, AMF, 2026-05-07)",
+"date": "2026-05-07",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-09-21-1.11",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.11% (1.11%, AMF, 2026-09-21)",
+"date": "2026-09-21",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-09-18-1.08",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.08% (1.08%, AMF, 2026-09-18)",
+"date": "2026-09-18",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-09-17-1.1",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.10% (1.10%, AMF, 2026-09-17)",
+"date": "2026-09-17",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-09-16-1.09",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.09% (1.09%, AMF, 2026-09-16)",
+"date": "2026-09-16",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-09-10-1.12",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.12% (1.12%, AMF, 2026-09-10)",
+"date": "2026-09-10",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-08-21-1.08",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.08% (1.08%, AMF, 2026-08-21)",
+"date": "2026-08-21",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-08-19-1.18",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.18% (1.18%, AMF, 2026-08-19)",
+"date": "2026-08-19",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-08-17-1.25",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.25% (1.25%, AMF, 2026-08-17)",
+"date": "2026-08-17",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-08-14-1.31",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.31% (1.31%, AMF, 2026-08-14)",
+"date": "2026-08-14",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-08-13-1.48",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.48% (1.48%, AMF, 2026-08-13)",
+"date": "2026-08-13",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-08-11-1.58",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.58% (1.58%, AMF, 2026-08-11)",
+"date": "2026-08-11",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-08-10-1.73",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.73% (1.73%, AMF, 2026-08-10)",
+"date": "2026-08-10",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-08-06-1.87",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.87% (1.87%, AMF, 2026-08-06)",
+"date": "2026-08-06",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-08-05-1.98",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.98% (1.98%, AMF, 2026-08-05)",
+"date": "2026-08-05",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-08-04-2.38",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 2.38% (2.38%, AMF, 2026-08-04)",
+"date": "2026-08-04",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-07-31-2.49",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 2.49% (2.49%, AMF, 2026-07-31)",
+"date": "2026-07-31",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-07-30-2.59",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 2.59% (2.59%, AMF, 2026-07-30)",
+"date": "2026-07-30",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-07-22-1.99",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.99% (1.99%, AMF, 2026-07-22)",
+"date": "2026-07-22",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-07-16-2.09",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 2.09% (2.09%, AMF, 2026-07-16)",
+"date": "2026-07-16",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-07-15-2.19",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 2.19% (2.19%, AMF, 2026-07-15)",
+"date": "2026-07-15",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-07-14-2.25",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 2.25% (2.25%, AMF, 2026-07-14)",
+"date": "2026-07-14",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-07-09-2.39",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 2.39% (2.39%, AMF, 2026-07-09)",
+"date": "2026-07-09",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-07-08-2.47",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 2.47% (2.47%, AMF, 2026-07-08)",
+"date": "2026-07-08",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-07-02-2.51",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 2.51% (2.51%, AMF, 2026-07-02)",
+"date": "2026-07-02",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-07-01-2.47",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 2.47% (2.47%, AMF, 2026-07-01)",
+"date": "2026-07-01",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-06-30-2.39",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 2.39% (2.39%, AMF, 2026-06-30)",
+"date": "2026-06-30",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-06-23-2.24",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 2.24% (2.24%, AMF, 2026-06-23)",
+"date": "2026-06-23",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-06-19-2.14",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 2.14% (2.14%, AMF, 2026-06-19)",
+"date": "2026-06-19",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-06-18-2.01",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 2.01% (2.01%, AMF, 2026-06-18)",
+"date": "2026-06-18",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-06-17-1.94",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.94% (1.94%, AMF, 2026-06-17)",
+"date": "2026-06-17",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-06-12-1.81",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.81% (1.81%, AMF, 2026-06-12)",
+"date": "2026-06-12",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-06-10-1.71",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.71% (1.71%, AMF, 2026-06-10)",
+"date": "2026-06-10",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-06-05-1.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.60% (1.60%, AMF, 2026-06-05)",
+"date": "2026-06-05",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-05-29-1.52",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.52% (1.52%, AMF, 2026-05-29)",
+"date": "2026-05-29",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-05-27-1.45",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.45% (1.45%, AMF, 2026-05-27)",
+"date": "2026-05-27",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-05-19-1.39",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.39% (1.39%, AMF, 2026-05-19)",
+"date": "2026-05-19",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-05-18-1.47",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.47% (1.47%, AMF, 2026-05-18)",
+"date": "2026-05-18",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-05-14-1.57",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.57% (1.57%, AMF, 2026-05-14)",
+"date": "2026-05-14",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-05-07-1.61",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.61% (1.61%, AMF, 2026-05-07)",
+"date": "2026-05-07",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-05-05-1.54",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.54% (1.54%, AMF, 2026-05-05)",
+"date": "2026-05-05",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-05-04-1.47",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.47% (1.47%, AMF, 2026-05-04)",
+"date": "2026-05-04",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-04-27-1.5",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.50% (1.50%, AMF, 2026-04-27)",
+"date": "2026-04-27",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-04-23-1.41",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.41% (1.41%, AMF, 2026-04-23)",
+"date": "2026-04-23",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-04-20-1.33",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.33% (1.33%, AMF, 2026-04-20)",
+"date": "2026-04-20",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-04-17-1.25",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.25% (1.25%, AMF, 2026-04-17)",
+"date": "2026-04-17",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-04-14-1.1",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.10% (1.10%, AMF, 2026-04-14)",
+"date": "2026-04-14",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-04-10-1.03",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 1.03% (1.03%, AMF, 2026-04-10)",
+"date": "2026-04-10",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-04-09-0.98",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 0.98% (0.98%, AMF, 2026-04-09)",
+"date": "2026-04-09",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-04-08-0.86",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 0.86% (0.86%, AMF, 2026-04-08)",
+"date": "2026-04-08",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-04-07-0.76",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 0.76% (0.76%, AMF, 2026-04-07)",
+"date": "2026-04-07",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-CITADEL ADVISORS LLC-2026-03-31-0.62",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: CITADEL ADVISORS LLC",
+"text": "short da 0.50% a 0.62% (0.62%, AMF, 2026-03-31)",
+"date": "2026-03-31",
+"important": false,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000130577-CONTOUR ASSET MANAGEMENT LLC-2026-09-08-1.0",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: CONTOUR ASSET MANAGEMENT LLC",
+"text": "short da 0.67% a 1.00% (1.00%, AMF, 2026-09-08)",
+"date": "2026-09-08",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-CONTOUR ASSET MANAGEMENT LLC-2026-08-07-0.9",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: CONTOUR ASSET MANAGEMENT LLC",
+"text": "short da 0.67% a 0.90% (0.90%, AMF, 2026-08-07)",
+"date": "2026-08-07",
+"important": false,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-CONTOUR ASSET MANAGEMENT LLC-2026-07-17-0.84",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: CONTOUR ASSET MANAGEMENT LLC",
+"text": "short da 0.67% a 0.84% (0.84%, AMF, 2026-07-17)",
+"date": "2026-07-17",
+"important": false,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-CONTOUR ASSET MANAGEMENT LLC-2026-07-01-0.73",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: CONTOUR ASSET MANAGEMENT LLC",
+"text": "short da 0.67% a 0.73% (0.73%, AMF, 2026-07-01)",
+"date": "2026-07-01",
+"important": false,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-09-24-0.81",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: D. E. SHAW & CO., L.P.",
+"text": "short da 0.50% a 0.81% (0.81%, AMF, 2026-09-24)",
+"date": "2026-09-24",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-09-18-0.73",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: D. E. SHAW & CO., L.P.",
+"text": "short da 0.50% a 0.73% (0.73%, AMF, 2026-09-18)",
+"date": "2026-09-18",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-09-09-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: D. E. SHAW & CO., L.P.",
+"text": "short da 0.50% a 0.60% (0.60%, AMF, 2026-09-09)",
+"date": "2026-09-09",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-09-04-0.59",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: D. E. SHAW & CO., L.P.",
+"text": "short da 0.50% a 0.59% (0.59%, AMF, 2026-09-04)",
+"date": "2026-09-04",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-08-28-0.56",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: D. E. SHAW & CO., L.P.",
+"text": "short da 0.50% a 0.56% (0.56%, AMF, 2026-08-28)",
+"date": "2026-08-28",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-09-02-0.62",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: D. E. SHAW & CO., L.P.",
+"text": "short da 0.50% a 0.62% (0.62%, AMF, 2026-09-02)",
+"date": "2026-09-02",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-08-24-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: D. E. SHAW & CO., L.P.",
+"text": "short da 0.50% a 0.60% (0.60%, AMF, 2026-08-24)",
+"date": "2026-08-24",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-08-19-0.58",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: D. E. SHAW & CO., L.P.",
+"text": "short da 0.50% a 0.58% (0.58%, AMF, 2026-08-19)",
+"date": "2026-08-19",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-08-04-0.61",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: D. E. SHAW & CO., L.P.",
+"text": "short da 0.50% a 0.61% (0.61%, AMF, 2026-08-04)",
+"date": "2026-08-04",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-07-30-0.58",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: D. E. SHAW & CO., L.P.",
+"text": "short da 0.50% a 0.58% (0.58%, AMF, 2026-07-30)",
+"date": "2026-07-30",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-07-17-0.61",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: D. E. SHAW & CO., L.P.",
+"text": "short da 0.50% a 0.61% (0.61%, AMF, 2026-07-17)",
+"date": "2026-07-17",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-07-15-0.59",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: D. E. SHAW & CO., L.P.",
+"text": "short da 0.50% a 0.59% (0.59%, AMF, 2026-07-15)",
+"date": "2026-07-15",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-07-08-0.63",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: D. E. SHAW & CO., L.P.",
+"text": "short da 0.50% a 0.63% (0.63%, AMF, 2026-07-08)",
+"date": "2026-07-08",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000130577-D1 CAPITAL PARTNERS L.P.-2026-07-30-1.02",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: D1 CAPITAL PARTNERS L.P.",
+"text": "short da 0.59% a 1.02% (1.02%, AMF, 2026-07-30)",
+"date": "2026-07-30",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-D1 CAPITAL PARTNERS L.P.-2026-07-16-0.95",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: D1 CAPITAL PARTNERS L.P.",
+"text": "short da 0.59% a 0.95% (0.95%, AMF, 2026-07-16)",
+"date": "2026-07-16",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-D1 CAPITAL PARTNERS L.P.-2026-06-19-0.84",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: D1 CAPITAL PARTNERS L.P.",
+"text": "short da 0.59% a 0.84% (0.84%, AMF, 2026-06-19)",
+"date": "2026-06-19",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-D1 CAPITAL PARTNERS L.P.-2026-06-11-0.74",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: D1 CAPITAL PARTNERS L.P.",
+"text": "short da 0.59% a 0.74% (0.74%, AMF, 2026-06-11)",
+"date": "2026-06-11",
+"important": false,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-D1 CAPITAL PARTNERS L.P.-2026-06-05-0.65",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: D1 CAPITAL PARTNERS L.P.",
+"text": "short da 0.59% a 0.65% (0.65%, AMF, 2026-06-05)",
+"date": "2026-06-05",
+"important": false,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000120271-ELLIOTT INVESTMENT MANAGEMENT L.P.-2026-08-25-0.77",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "TotalEnergies: ELLIOTT INVESTMENT MANAGEMENT L.P.",
+"text": "short da 0.52% a 0.77% (0.77%, AMF, 2026-08-25)",
+"date": "2026-08-25",
+"important": true,
+"link": "#/t/TTE.PA"
+},
+{
+"id": "short-AMF-FR0000120271-ELLIOTT INVESTMENT MANAGEMENT L.P.-2026-05-06-0.88",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "TotalEnergies: ELLIOTT INVESTMENT MANAGEMENT L.P.",
+"text": "short da 0.52% a 0.88% (0.88%, AMF, 2026-05-06)",
+"date": "2026-05-06",
+"important": true,
+"link": "#/t/TTE.PA"
+},
+{
+"id": "short-AMF-FR0000120271-ELLIOTT INVESTMENT MANAGEMENT L.P.-2026-04-22-0.91",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "TotalEnergies: ELLIOTT INVESTMENT MANAGEMENT L.P.",
+"text": "short da 0.52% a 0.91% (0.91%, AMF, 2026-04-22)",
+"date": "2026-04-22",
+"important": true,
+"link": "#/t/TTE.PA"
+},
+{
+"id": "short-AMF-FR0000120271-ELLIOTT INVESTMENT MANAGEMENT L.P.-2026-04-14-0.89",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "TotalEnergies: ELLIOTT INVESTMENT MANAGEMENT L.P.",
+"text": "short da 0.52% a 0.89% (0.89%, AMF, 2026-04-14)",
+"date": "2026-04-14",
+"important": true,
+"link": "#/t/TTE.PA"
+},
+{
+"id": "short-AMF-FR0000120271-ELLIOTT INVESTMENT MANAGEMENT L.P.-2026-02-19-0.91",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "TotalEnergies: ELLIOTT INVESTMENT MANAGEMENT L.P.",
+"text": "short da 0.52% a 0.91% (0.91%, AMF, 2026-02-19)",
+"date": "2026-02-19",
+"important": true,
+"link": "#/t/TTE.PA"
+},
+{
+"id": "short-AMF-FR0000120271-ELLIOTT INVESTMENT MANAGEMENT L.P.-2026-01-14-0.8",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "TotalEnergies: ELLIOTT INVESTMENT MANAGEMENT L.P.",
+"text": "short da 0.52% a 0.80% (0.80%, AMF, 2026-01-14)",
+"date": "2026-01-14",
+"important": true,
+"link": "#/t/TTE.PA"
+},
+{
+"id": "short-AMF-FR0000120271-ELLIOTT INVESTMENT MANAGEMENT L.P.-2025-11-21-0.79",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "TotalEnergies: ELLIOTT INVESTMENT MANAGEMENT L.P.",
+"text": "short da 0.52% a 0.79% (0.79%, AMF, 2025-11-21)",
+"date": "2025-11-21",
+"important": true,
+"link": "#/t/TTE.PA"
+},
+{
+"id": "short-AMF-FR0000120271-ELLIOTT INVESTMENT MANAGEMENT L.P.-2025-09-09-0.89",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "TotalEnergies: ELLIOTT INVESTMENT MANAGEMENT L.P.",
+"text": "short da 0.52% a 0.89% (0.89%, AMF, 2025-09-09)",
+"date": "2025-09-09",
+"important": true,
+"link": "#/t/TTE.PA"
+},
+{
+"id": "short-AMF-FR0000120271-ELLIOTT INVESTMENT MANAGEMENT L.P.-2025-06-09-0.9",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "TotalEnergies: ELLIOTT INVESTMENT MANAGEMENT L.P.",
+"text": "short da 0.52% a 0.90% (0.90%, AMF, 2025-06-09)",
+"date": "2025-06-09",
+"important": true,
+"link": "#/t/TTE.PA"
+},
+{
+"id": "short-AMF-FR0000120271-ELLIOTT INVESTMENT MANAGEMENT L.P.-2025-04-11-0.8",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "TotalEnergies: ELLIOTT INVESTMENT MANAGEMENT L.P.",
+"text": "short da 0.52% a 0.80% (0.80%, AMF, 2025-04-11)",
+"date": "2025-04-11",
+"important": true,
+"link": "#/t/TTE.PA"
+},
+{
+"id": "short-AMF-FR0000120271-ELLIOTT INVESTMENT MANAGEMENT L.P.-2025-03-31-0.7",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "TotalEnergies: ELLIOTT INVESTMENT MANAGEMENT L.P.",
+"text": "short da 0.52% a 0.70% (0.70%, AMF, 2025-03-31)",
+"date": "2025-03-31",
+"important": false,
+"link": "#/t/TTE.PA"
+},
+{
+"id": "short-AMF-FR0000120271-ELLIOTT INVESTMENT MANAGEMENT L.P.-2025-03-12-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "TotalEnergies: ELLIOTT INVESTMENT MANAGEMENT L.P.",
+"text": "short da 0.52% a 0.60% (0.60%, AMF, 2025-03-12)",
+"date": "2025-03-12",
+"important": false,
+"link": "#/t/TTE.PA"
+},
+{
+"id": "short-AMF-FR0000051807-EXODUSPOINT CAPITAL MANAGEMENT, LP-2026-09-18-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: EXODUSPOINT CAPITAL MANAGEMENT, LP",
+"text": "short da 0.52% a 0.60% (0.60%, AMF, 2026-09-18)",
+"date": "2026-09-18",
+"important": false,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-EXODUSPOINT CAPITAL MANAGEMENT, LP-2026-09-14-0.59",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: EXODUSPOINT CAPITAL MANAGEMENT, LP",
+"text": "short da 0.52% a 0.59% (0.59%, AMF, 2026-09-14)",
+"date": "2026-09-14",
+"important": false,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-EXODUSPOINT CAPITAL MANAGEMENT, LP-2026-09-09-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: EXODUSPOINT CAPITAL MANAGEMENT, LP",
+"text": "short da 0.52% a 0.60% (0.60%, AMF, 2026-09-09)",
+"date": "2026-09-09",
+"important": false,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000120404-ILEX CAPITAL PARTNERS (UK) LLP-2026-09-24-1.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Accor: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.54% a 1.60% (1.60%, AMF, 2026-09-24)",
+"date": "2026-09-24",
+"important": true,
+"link": "#/t/AC.PA"
+},
+{
+"id": "short-AMF-FR0000120404-ILEX CAPITAL PARTNERS (UK) LLP-2026-08-27-1.5",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Accor: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.54% a 1.50% (1.50%, AMF, 2026-08-27)",
+"date": "2026-08-27",
+"important": true,
+"link": "#/t/AC.PA"
+},
+{
+"id": "short-AMF-FR0000120404-ILEX CAPITAL PARTNERS (UK) LLP-2026-08-12-1.44",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Accor: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.54% a 1.44% (1.44%, AMF, 2026-08-12)",
+"date": "2026-08-12",
+"important": true,
+"link": "#/t/AC.PA"
+},
+{
+"id": "short-AMF-FR0000120404-ILEX CAPITAL PARTNERS (UK) LLP-2026-08-03-1.32",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Accor: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.54% a 1.32% (1.32%, AMF, 2026-08-03)",
+"date": "2026-08-03",
+"important": true,
+"link": "#/t/AC.PA"
+},
+{
+"id": "short-AMF-FR0000120404-ILEX CAPITAL PARTNERS (UK) LLP-2026-07-01-1.2",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Accor: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.54% a 1.20% (1.20%, AMF, 2026-07-01)",
+"date": "2026-07-01",
+"important": true,
+"link": "#/t/AC.PA"
+},
+{
+"id": "short-AMF-FR0000120404-ILEX CAPITAL PARTNERS (UK) LLP-2026-06-15-1.11",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Accor: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.54% a 1.11% (1.11%, AMF, 2026-06-15)",
+"date": "2026-06-15",
+"important": true,
+"link": "#/t/AC.PA"
+},
+{
+"id": "short-AMF-FR0000120404-ILEX CAPITAL PARTNERS (UK) LLP-2026-06-12-1.06",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Accor: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.54% a 1.06% (1.06%, AMF, 2026-06-12)",
+"date": "2026-06-12",
+"important": true,
+"link": "#/t/AC.PA"
+},
+{
+"id": "short-AMF-FR0000120404-ILEX CAPITAL PARTNERS (UK) LLP-2026-06-08-0.94",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Accor: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.54% a 0.94% (0.94%, AMF, 2026-06-08)",
+"date": "2026-06-08",
+"important": true,
+"link": "#/t/AC.PA"
+},
+{
+"id": "short-AMF-FR0000120404-ILEX CAPITAL PARTNERS (UK) LLP-2026-06-04-0.85",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Accor: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.54% a 0.85% (0.85%, AMF, 2026-06-04)",
+"date": "2026-06-04",
+"important": true,
+"link": "#/t/AC.PA"
+},
+{
+"id": "short-AMF-FR0000120404-ILEX CAPITAL PARTNERS (UK) LLP-2026-05-06-0.79",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Accor: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.54% a 0.79% (0.79%, AMF, 2026-05-06)",
+"date": "2026-05-06",
+"important": true,
+"link": "#/t/AC.PA"
+},
+{
+"id": "short-AMF-FR0000120404-ILEX CAPITAL PARTNERS (UK) LLP-2026-04-21-0.87",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Accor: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.54% a 0.87% (0.87%, AMF, 2026-04-21)",
+"date": "2026-04-21",
+"important": true,
+"link": "#/t/AC.PA"
+},
+{
+"id": "short-AMF-FR0000120404-ILEX CAPITAL PARTNERS (UK) LLP-2026-04-17-0.75",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Accor: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.54% a 0.75% (0.75%, AMF, 2026-04-17)",
+"date": "2026-04-17",
+"important": false,
+"link": "#/t/AC.PA"
+},
+{
+"id": "short-AMF-FR0000051807-JERICHO CAPITAL ASSET MANAGEMENT L.P.-2025-06-04-1.18",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: JERICHO CAPITAL ASSET MANAGEMENT L.P.",
+"text": "short da 0.58% a 1.18% (1.18%, AMF, 2025-06-04)",
+"date": "2025-06-04",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-JERICHO CAPITAL ASSET MANAGEMENT L.P.-2025-06-03-0.88",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: JERICHO CAPITAL ASSET MANAGEMENT L.P.",
+"text": "short da 0.58% a 0.88% (0.88%, AMF, 2025-06-03)",
+"date": "2025-06-03",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-JERICHO CAPITAL ASSET MANAGEMENT L.P.-2025-05-29-0.71",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Teleperformance: JERICHO CAPITAL ASSET MANAGEMENT L.P.",
+"text": "short da 0.58% a 0.71% (0.71%, AMF, 2025-05-29)",
+"date": "2025-05-29",
+"important": false,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000120172-KINTBURY CAPITAL LLP-2026-09-09-0.61",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: KINTBURY CAPITAL LLP",
+"text": "short da 0.52% a 0.61% (0.61%, AMF, 2026-09-09)",
+"date": "2026-09-09",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-KINTBURY CAPITAL LLP-2026-07-29-0.59",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: KINTBURY CAPITAL LLP",
+"text": "short da 0.52% a 0.59% (0.59%, AMF, 2026-07-29)",
+"date": "2026-07-29",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-KINTBURY CAPITAL LLP-2026-07-28-0.79",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: KINTBURY CAPITAL LLP",
+"text": "short da 0.52% a 0.79% (0.79%, AMF, 2026-07-28)",
+"date": "2026-07-28",
+"important": true,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-KINTBURY CAPITAL LLP-2026-07-24-0.82",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: KINTBURY CAPITAL LLP",
+"text": "short da 0.52% a 0.82% (0.82%, AMF, 2026-07-24)",
+"date": "2026-07-24",
+"important": true,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-KINTBURY CAPITAL LLP-2026-07-16-0.77",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: KINTBURY CAPITAL LLP",
+"text": "short da 0.52% a 0.77% (0.77%, AMF, 2026-07-16)",
+"date": "2026-07-16",
+"important": true,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-KINTBURY CAPITAL LLP-2026-05-13-0.82",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: KINTBURY CAPITAL LLP",
+"text": "short da 0.52% a 0.82% (0.82%, AMF, 2026-05-13)",
+"date": "2026-05-13",
+"important": true,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-KINTBURY CAPITAL LLP-2026-03-05-0.7",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: KINTBURY CAPITAL LLP",
+"text": "short da 0.52% a 0.70% (0.70%, AMF, 2026-03-05)",
+"date": "2026-03-05",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000120172-KINTBURY CAPITAL LLP-2026-02-19-0.61",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Carrefour: KINTBURY CAPITAL LLP",
+"text": "short da 0.52% a 0.61% (0.61%, AMF, 2026-02-19)",
+"date": "2026-02-19",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-AMF-FR0000125338-MARSHALL WACE LLP-2026-09-23-0.71",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Capgemini: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.71% (0.71%, AMF, 2026-09-23)",
+"date": "2026-09-23",
+"important": false,
+"link": "#/t/CAP.PA"
+},
+{
+"id": "short-AMF-FR0000125338-MARSHALL WACE LLP-2026-09-17-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Capgemini: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.60% (0.60%, AMF, 2026-09-17)",
+"date": "2026-09-17",
+"important": false,
+"link": "#/t/CAP.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-09-17-0.57",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.57% (0.57%, AMF, 2026-09-17)",
+"date": "2026-09-17",
+"important": false,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-09-08-0.67",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.67% (0.67%, AMF, 2026-09-08)",
+"date": "2026-09-08",
+"important": false,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-08-31-0.78",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.78% (0.78%, AMF, 2026-08-31)",
+"date": "2026-08-31",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-08-07-0.89",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.89% (0.89%, AMF, 2026-08-07)",
+"date": "2026-08-07",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-07-29-0.9",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.90% (0.90%, AMF, 2026-07-29)",
+"date": "2026-07-29",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-07-27-0.89",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.89% (0.89%, AMF, 2026-07-27)",
+"date": "2026-07-27",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-07-23-0.9",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.90% (0.90%, AMF, 2026-07-23)",
+"date": "2026-07-23",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-06-23-0.81",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.81% (0.81%, AMF, 2026-06-23)",
+"date": "2026-06-23",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-06-22-0.79",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.79% (0.79%, AMF, 2026-06-22)",
+"date": "2026-06-22",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-06-08-0.8",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.80% (0.80%, AMF, 2026-06-08)",
+"date": "2026-06-08",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-06-04-0.78",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.78% (0.78%, AMF, 2026-06-04)",
+"date": "2026-06-04",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-05-27-0.87",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.87% (0.87%, AMF, 2026-05-27)",
+"date": "2026-05-27",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-05-21-0.98",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.98% (0.98%, AMF, 2026-05-21)",
+"date": "2026-05-21",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-05-19-1.05",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.05% (1.05%, AMF, 2026-05-19)",
+"date": "2026-05-19",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-05-11-1.17",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.17% (1.17%, AMF, 2026-05-11)",
+"date": "2026-05-11",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-04-17-1.27",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.27% (1.27%, AMF, 2026-04-17)",
+"date": "2026-04-17",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-04-10-1.38",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.38% (1.38%, AMF, 2026-04-10)",
+"date": "2026-04-10",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-04-02-1.49",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.49% (1.49%, AMF, 2026-04-02)",
+"date": "2026-04-02",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-03-19-1.53",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.53% (1.53%, AMF, 2026-03-19)",
+"date": "2026-03-19",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-03-09-1.41",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.41% (1.41%, AMF, 2026-03-09)",
+"date": "2026-03-09",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-03-03-1.3",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.30% (1.30%, AMF, 2026-03-03)",
+"date": "2026-03-03",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-02-25-1.28",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.28% (1.28%, AMF, 2026-02-25)",
+"date": "2026-02-25",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-02-24-1.3",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.30% (1.30%, AMF, 2026-02-24)",
+"date": "2026-02-24",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-02-23-1.29",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.29% (1.29%, AMF, 2026-02-23)",
+"date": "2026-02-23",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-02-18-1.37",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.37% (1.37%, AMF, 2026-02-18)",
+"date": "2026-02-18",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-02-02-1.4",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.40% (1.40%, AMF, 2026-02-02)",
+"date": "2026-02-02",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-01-09-1.31",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.31% (1.31%, AMF, 2026-01-09)",
+"date": "2026-01-09",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-12-04-1.28",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.28% (1.28%, AMF, 2025-12-04)",
+"date": "2025-12-04",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-11-28-1.3",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.30% (1.30%, AMF, 2025-11-28)",
+"date": "2025-11-28",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-11-27-1.29",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.29% (1.29%, AMF, 2025-11-27)",
+"date": "2025-11-27",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-11-04-1.31",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.31% (1.31%, AMF, 2025-11-04)",
+"date": "2025-11-04",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-10-30-1.23",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.23% (1.23%, AMF, 2025-10-30)",
+"date": "2025-10-30",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-10-21-1.11",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.11% (1.11%, AMF, 2025-10-21)",
+"date": "2025-10-21",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-10-07-1.0",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.00% (1.00%, AMF, 2025-10-07)",
+"date": "2025-10-07",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-10-06-0.99",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.99% (0.99%, AMF, 2025-10-06)",
+"date": "2025-10-06",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-10-03-1.01",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.01% (1.01%, AMF, 2025-10-03)",
+"date": "2025-10-03",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-10-02-0.99",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.99% (0.99%, AMF, 2025-10-02)",
+"date": "2025-10-02",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-10-01-1.0",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.00% (1.00%, AMF, 2025-10-01)",
+"date": "2025-10-01",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-09-29-0.99",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.99% (0.99%, AMF, 2025-09-29)",
+"date": "2025-09-29",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-09-23-1.0",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 1.00% (1.00%, AMF, 2025-09-23)",
+"date": "2025-09-23",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-09-19-0.95",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.95% (0.95%, AMF, 2025-09-19)",
+"date": "2025-09-19",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-08-15-0.8",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.80% (0.80%, AMF, 2025-08-15)",
+"date": "2025-08-15",
+"important": true,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-07-25-0.7",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.70% (0.70%, AMF, 2025-07-25)",
+"date": "2025-07-25",
+"important": false,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2025-07-21-0.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Publicis: MARSHALL WACE LLP",
+"text": "short da 0.50% a 0.60% (0.60%, AMF, 2025-07-21)",
+"date": "2025-07-21",
+"important": false,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-09-15-2.16",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 2.16% (2.16%, AMF, 2026-09-15)",
+"date": "2026-09-15",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-09-07-2.21",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 2.21% (2.21%, AMF, 2026-09-07)",
+"date": "2026-09-07",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-09-03-2.17",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 2.17% (2.17%, AMF, 2026-09-03)",
+"date": "2026-09-03",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-09-02-2.2",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 2.20% (2.20%, AMF, 2026-09-02)",
+"date": "2026-09-02",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-08-26-2.11",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 2.11% (2.11%, AMF, 2026-08-26)",
+"date": "2026-08-26",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-08-21-2.01",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 2.01% (2.01%, AMF, 2026-08-21)",
+"date": "2026-08-21",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-06-02-1.42",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.42% (1.42%, AMF, 2026-06-02)",
+"date": "2026-06-02",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-08-13-1.91",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.91% (1.91%, AMF, 2026-08-13)",
+"date": "2026-08-13",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-07-28-1.88",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.88% (1.88%, AMF, 2026-07-28)",
+"date": "2026-07-28",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-07-17-1.9",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.90% (1.90%, AMF, 2026-07-17)",
+"date": "2026-07-17",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-07-08-1.83",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.83% (1.83%, AMF, 2026-07-08)",
+"date": "2026-07-08",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-06-19-1.7",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.70% (1.70%, AMF, 2026-06-19)",
+"date": "2026-06-19",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-06-10-1.6",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.60% (1.60%, AMF, 2026-06-10)",
+"date": "2026-06-10",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-06-05-1.51",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.51% (1.51%, AMF, 2026-06-05)",
+"date": "2026-06-05",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-05-22-1.39",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.39% (1.39%, AMF, 2026-05-22)",
+"date": "2026-05-22",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-05-20-1.41",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.41% (1.41%, AMF, 2026-05-20)",
+"date": "2026-05-20",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-05-13-1.39",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.39% (1.39%, AMF, 2026-05-13)",
+"date": "2026-05-13",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-05-12-1.41",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.41% (1.41%, AMF, 2026-05-12)",
+"date": "2026-05-12",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-04-30-1.34",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.34% (1.34%, AMF, 2026-04-30)",
+"date": "2026-04-30",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-04-16-1.22",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.22% (1.22%, AMF, 2026-04-16)",
+"date": "2026-04-16",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-04-15-1.19",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.19% (1.19%, AMF, 2026-04-15)",
+"date": "2026-04-15",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-04-08-1.2",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.20% (1.20%, AMF, 2026-04-08)",
+"date": "2026-04-08",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-03-30-1.1",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.10% (1.10%, AMF, 2026-03-30)",
+"date": "2026-03-30",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-03-11-1.01",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.01% (1.01%, AMF, 2026-03-11)",
+"date": "2026-03-11",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-03-09-0.94",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.94% (0.94%, AMF, 2026-03-09)",
+"date": "2026-03-09",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-03-05-0.82",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.82% (0.82%, AMF, 2026-03-05)",
+"date": "2026-03-05",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-03-04-0.78",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.78% (0.78%, AMF, 2026-03-04)",
+"date": "2026-03-04",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-03-02-0.87",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.87% (0.87%, AMF, 2026-03-02)",
+"date": "2026-03-02",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-02-19-0.98",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.98% (0.98%, AMF, 2026-02-19)",
+"date": "2026-02-19",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-02-18-1.04",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.04% (1.04%, AMF, 2026-02-18)",
+"date": "2026-02-18",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-02-16-1.29",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.29% (1.29%, AMF, 2026-02-16)",
+"date": "2026-02-16",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-02-05-1.38",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.38% (1.38%, AMF, 2026-02-05)",
+"date": "2026-02-05",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-02-03-1.47",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.47% (1.47%, AMF, 2026-02-03)",
+"date": "2026-02-03",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-01-21-1.58",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.58% (1.58%, AMF, 2026-01-21)",
+"date": "2026-01-21",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-01-13-1.61",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.61% (1.61%, AMF, 2026-01-13)",
+"date": "2026-01-13",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-01-09-1.53",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.53% (1.53%, AMF, 2026-01-09)",
+"date": "2026-01-09",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-12-30-1.4",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.40% (1.40%, AMF, 2025-12-30)",
+"date": "2025-12-30",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-12-12-1.32",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.32% (1.32%, AMF, 2025-12-12)",
+"date": "2025-12-12",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-12-08-1.2",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.20% (1.20%, AMF, 2025-12-08)",
+"date": "2025-12-08",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-12-02-1.16",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.16% (1.16%, AMF, 2025-12-02)",
+"date": "2025-12-02",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-12-01-1.27",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.27% (1.27%, AMF, 2025-12-01)",
+"date": "2025-12-01",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-11-19-1.39",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.39% (1.39%, AMF, 2025-11-19)",
+"date": "2025-11-19",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-11-13-1.4",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.40% (1.40%, AMF, 2025-11-13)",
+"date": "2025-11-13",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-11-11-1.39",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.39% (1.39%, AMF, 2025-11-11)",
+"date": "2025-11-11",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-11-07-1.4",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.40% (1.40%, AMF, 2025-11-07)",
+"date": "2025-11-07",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-11-06-1.39",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.39% (1.39%, AMF, 2025-11-06)",
+"date": "2025-11-06",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-11-04-1.4",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.40% (1.40%, AMF, 2025-11-04)",
+"date": "2025-11-04",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-10-17-1.39",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.39% (1.39%, AMF, 2025-10-17)",
+"date": "2025-10-17",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-10-13-1.4",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.40% (1.40%, AMF, 2025-10-13)",
+"date": "2025-10-13",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-10-08-1.38",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.38% (1.38%, AMF, 2025-10-08)",
+"date": "2025-10-08",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-09-16-1.41",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.41% (1.41%, AMF, 2025-09-16)",
+"date": "2025-09-16",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-09-12-1.38",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.38% (1.38%, AMF, 2025-09-12)",
+"date": "2025-09-12",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-09-10-1.41",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.41% (1.41%, AMF, 2025-09-10)",
+"date": "2025-09-10",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-09-05-1.32",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.32% (1.32%, AMF, 2025-09-05)",
+"date": "2025-09-05",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-09-02-1.21",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.21% (1.21%, AMF, 2025-09-02)",
+"date": "2025-09-02",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-08-28-1.19",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.19% (1.19%, AMF, 2025-08-28)",
+"date": "2025-08-28",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-08-26-1.2",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.20% (1.20%, AMF, 2025-08-26)",
+"date": "2025-08-26",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-08-05-1.12",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.12% (1.12%, AMF, 2025-08-05)",
+"date": "2025-08-05",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-08-01-1.04",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.04% (1.04%, AMF, 2025-08-01)",
+"date": "2025-08-01",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-07-31-0.99",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.99% (0.99%, AMF, 2025-07-31)",
+"date": "2025-07-31",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-07-28-0.86",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.86% (0.86%, AMF, 2025-07-28)",
+"date": "2025-07-28",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-07-25-0.9",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.90% (0.90%, AMF, 2025-07-25)",
+"date": "2025-07-25",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-07-24-0.89",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.89% (0.89%, AMF, 2025-07-24)",
+"date": "2025-07-24",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-07-18-0.95",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.95% (0.95%, AMF, 2025-07-18)",
+"date": "2025-07-18",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-07-17-1.02",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.02% (1.02%, AMF, 2025-07-17)",
+"date": "2025-07-17",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-07-16-0.99",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.99% (0.99%, AMF, 2025-07-16)",
+"date": "2025-07-16",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-07-11-0.66",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.66% (0.66%, AMF, 2025-07-11)",
+"date": "2025-07-11",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-07-04-0.79",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.79% (0.79%, AMF, 2025-07-04)",
+"date": "2025-07-04",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-07-03-0.8",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.80% (0.80%, AMF, 2025-07-03)",
+"date": "2025-07-03",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-07-02-0.79",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.79% (0.79%, AMF, 2025-07-02)",
+"date": "2025-07-02",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-05-12-0.89",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.89% (0.89%, AMF, 2025-05-12)",
+"date": "2025-05-12",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-04-22-0.9",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.90% (0.90%, AMF, 2025-04-22)",
+"date": "2025-04-22",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-04-15-0.82",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.82% (0.82%, AMF, 2025-04-15)",
+"date": "2025-04-15",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-04-08-0.72",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.72% (0.72%, AMF, 2025-04-08)",
+"date": "2025-04-08",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-04-07-0.8",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.80% (0.80%, AMF, 2025-04-07)",
+"date": "2025-04-07",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-03-28-0.79",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.79% (0.79%, AMF, 2025-03-28)",
+"date": "2025-03-28",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-03-27-0.8",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.80% (0.80%, AMF, 2025-03-27)",
+"date": "2025-03-27",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-03-26-0.79",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.79% (0.79%, AMF, 2025-03-26)",
+"date": "2025-03-26",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-03-14-0.8",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.80% (0.80%, AMF, 2025-03-14)",
+"date": "2025-03-14",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-03-11-0.74",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.74% (0.74%, AMF, 2025-03-11)",
+"date": "2025-03-11",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-03-10-0.68",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.68% (0.68%, AMF, 2025-03-10)",
+"date": "2025-03-10",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-02-17-0.79",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.79% (0.79%, AMF, 2025-02-17)",
+"date": "2025-02-17",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2025-01-07-0.88",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.88% (0.88%, AMF, 2025-01-07)",
+"date": "2025-01-07",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-12-18-0.95",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.95% (0.95%, AMF, 2024-12-18)",
+"date": "2024-12-18",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-12-04-1.27",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.27% (1.27%, AMF, 2024-12-04)",
+"date": "2024-12-04",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-12-02-1.33",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.33% (1.33%, AMF, 2024-12-02)",
+"date": "2024-12-02",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-11-19-1.29",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.29% (1.29%, AMF, 2024-11-19)",
+"date": "2024-11-19",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-11-13-1.39",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.39% (1.39%, AMF, 2024-11-13)",
+"date": "2024-11-13",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-11-07-1.49",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.49% (1.49%, AMF, 2024-11-07)",
+"date": "2024-11-07",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-11-04-1.58",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.58% (1.58%, AMF, 2024-11-04)",
+"date": "2024-11-04",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-10-30-1.68",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.68% (1.68%, AMF, 2024-10-30)",
+"date": "2024-10-30",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-10-24-1.77",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.77% (1.77%, AMF, 2024-10-24)",
+"date": "2024-10-24",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-10-09-1.84",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.84% (1.84%, AMF, 2024-10-09)",
+"date": "2024-10-09",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-10-07-1.92",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.92% (1.92%, AMF, 2024-10-07)",
+"date": "2024-10-07",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-10-02-1.8",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.80% (1.80%, AMF, 2024-10-02)",
+"date": "2024-10-02",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-09-30-1.71",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.71% (1.71%, AMF, 2024-09-30)",
+"date": "2024-09-30",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-09-25-1.64",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.64% (1.64%, AMF, 2024-09-25)",
+"date": "2024-09-25",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-09-19-1.51",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.51% (1.51%, AMF, 2024-09-19)",
+"date": "2024-09-19",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-09-10-1.41",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.41% (1.41%, AMF, 2024-09-10)",
+"date": "2024-09-10",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-08-05-1.31",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.31% (1.31%, AMF, 2024-08-05)",
+"date": "2024-08-05",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-07-29-1.28",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.28% (1.28%, AMF, 2024-07-29)",
+"date": "2024-07-29",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-07-15-1.31",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.31% (1.31%, AMF, 2024-07-15)",
+"date": "2024-07-15",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-07-09-1.21",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.21% (1.21%, AMF, 2024-07-09)",
+"date": "2024-07-09",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-07-04-1.19",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.19% (1.19%, AMF, 2024-07-04)",
+"date": "2024-07-04",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-06-28-1.2",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.20% (1.20%, AMF, 2024-06-28)",
+"date": "2024-06-28",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-06-11-1.1",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.10% (1.10%, AMF, 2024-06-11)",
+"date": "2024-06-11",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-06-04-1.09",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.09% (1.09%, AMF, 2024-06-04)",
+"date": "2024-06-04",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-05-20-1.19",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.19% (1.19%, AMF, 2024-05-20)",
+"date": "2024-05-20",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-05-16-1.2",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.20% (1.20%, AMF, 2024-05-16)",
+"date": "2024-05-16",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-05-15-1.19",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.19% (1.19%, AMF, 2024-05-15)",
+"date": "2024-05-15",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-05-02-1.23",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.23% (1.23%, AMF, 2024-05-02)",
+"date": "2024-05-02",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-04-24-1.19",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.19% (1.19%, AMF, 2024-04-24)",
+"date": "2024-04-24",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-04-22-1.2",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.20% (1.20%, AMF, 2024-04-22)",
+"date": "2024-04-22",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-04-18-1.19",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.19% (1.19%, AMF, 2024-04-18)",
+"date": "2024-04-18",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-04-16-1.2",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.20% (1.20%, AMF, 2024-04-16)",
+"date": "2024-04-16",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-04-08-1.1",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.10% (1.10%, AMF, 2024-04-08)",
+"date": "2024-04-08",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-04-04-1.08",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.08% (1.08%, AMF, 2024-04-04)",
+"date": "2024-04-04",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-03-22-1.19",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.19% (1.19%, AMF, 2024-03-22)",
+"date": "2024-03-22",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-03-19-1.28",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.28% (1.28%, AMF, 2024-03-19)",
+"date": "2024-03-19",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-02-27-1.3",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.30% (1.30%, AMF, 2024-02-27)",
+"date": "2024-02-27",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-02-21-1.2",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.20% (1.20%, AMF, 2024-02-21)",
+"date": "2024-02-21",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-02-20-1.16",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.16% (1.16%, AMF, 2024-02-20)",
+"date": "2024-02-20",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-02-16-1.03",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.03% (1.03%, AMF, 2024-02-16)",
+"date": "2024-02-16",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-02-15-0.94",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.94% (0.94%, AMF, 2024-02-15)",
+"date": "2024-02-15",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-02-09-0.86",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.86% (0.86%, AMF, 2024-02-09)",
+"date": "2024-02-09",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-02-02-0.97",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.97% (0.97%, AMF, 2024-02-02)",
+"date": "2024-02-02",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-01-30-1.05",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.05% (1.05%, AMF, 2024-01-30)",
+"date": "2024-01-30",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-01-25-1.19",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.19% (1.19%, AMF, 2024-01-25)",
+"date": "2024-01-25",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-01-22-1.28",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.28% (1.28%, AMF, 2024-01-22)",
+"date": "2024-01-22",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2024-01-17-1.31",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.31% (1.31%, AMF, 2024-01-17)",
+"date": "2024-01-17",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-12-07-1.2",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.20% (1.20%, AMF, 2023-12-07)",
+"date": "2023-12-07",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-11-29-1.1",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.10% (1.10%, AMF, 2023-11-29)",
+"date": "2023-11-29",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-11-20-1.0",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.00% (1.00%, AMF, 2023-11-20)",
+"date": "2023-11-20",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-11-13-0.9",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.90% (0.90%, AMF, 2023-11-13)",
+"date": "2023-11-13",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-11-08-0.82",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.82% (0.82%, AMF, 2023-11-08)",
+"date": "2023-11-08",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-10-25-0.78",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.78% (0.78%, AMF, 2023-10-25)",
+"date": "2023-10-25",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-10-24-0.8",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.80% (0.80%, AMF, 2023-10-24)",
+"date": "2023-10-24",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-10-17-0.7",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.70% (0.70%, AMF, 2023-10-17)",
+"date": "2023-10-17",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-09-21-0.69",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.69% (0.69%, AMF, 2023-09-21)",
+"date": "2023-09-21",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-09-18-0.79",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.79% (0.79%, AMF, 2023-09-18)",
+"date": "2023-09-18",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-09-07-0.8",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.80% (0.80%, AMF, 2023-09-07)",
+"date": "2023-09-07",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-08-09-0.79",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.79% (0.79%, AMF, 2023-08-09)",
+"date": "2023-08-09",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-07-31-0.89",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.89% (0.89%, AMF, 2023-07-31)",
+"date": "2023-07-31",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-07-07-0.97",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 0.97% (0.97%, AMF, 2023-07-07)",
+"date": "2023-07-07",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-06-16-1.06",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.06% (1.06%, AMF, 2023-06-16)",
+"date": "2023-06-16",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-06-12-1.19",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.19% (1.19%, AMF, 2023-06-12)",
+"date": "2023-06-12",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-05-31-1.21",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.21% (1.21%, AMF, 2023-05-31)",
+"date": "2023-05-31",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-05-24-1.14",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.14% (1.14%, AMF, 2023-05-24)",
+"date": "2023-05-24",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-05-09-1.09",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.09% (1.09%, AMF, 2023-05-09)",
+"date": "2023-05-09",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-05-03-1.19",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.19% (1.19%, AMF, 2023-05-03)",
+"date": "2023-05-03",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-04-24-1.29",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.29% (1.29%, AMF, 2023-04-24)",
+"date": "2023-04-24",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-04-14-1.39",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.39% (1.39%, AMF, 2023-04-14)",
+"date": "2023-04-14",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-03-27-1.4",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.40% (1.40%, AMF, 2023-03-27)",
+"date": "2023-03-27",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-03-20-1.33",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.33% (1.33%, AMF, 2023-03-20)",
+"date": "2023-03-20",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-03-17-1.27",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.27% (1.27%, AMF, 2023-03-17)",
+"date": "2023-03-17",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-02-16-1.19",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.19% (1.19%, AMF, 2023-02-16)",
+"date": "2023-02-16",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-02-09-1.28",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.28% (1.28%, AMF, 2023-02-09)",
+"date": "2023-02-09",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-02-02-1.33",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.33% (1.33%, AMF, 2023-02-02)",
+"date": "2023-02-02",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2023-01-25-1.48",
+"ts": "2026-09-28T21:52:04Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 0.56% a 1.48% (1.48%, AMF, 2023-01-25)",
+"date": "2023-01-25",
+"important": true,
+"link": "#/t/RNO.PA"
+}
+]
