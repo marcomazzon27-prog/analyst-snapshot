@@ -165,6 +165,7 @@ table.mini td.num{white-space:nowrap}
 .sc .row,.icard .row{display:flex;justify-content:space-between;gap:8px;font-size:13px;margin-top:6px} .sc .row span,.icard .row span{color:var(--muted)}
 .tech{display:flex;align-items:center;justify-content:space-between;gap:8px} .gauge{width:110px}
 details summary{cursor:pointer;font-size:12px;margin-top:6px}
+.cu{color:var(--muted);margin-left:2px;cursor:help}
 .pos{font-weight:700} .pos.mut{color:var(--ink2)}
 h2.sec{font-size:16px;margin:4px 0 12px}
 .icards{grid-template-columns:repeat(auto-fill,minmax(190px,1fr));margin-bottom:26px}
@@ -254,7 +255,7 @@ const norm=s=>String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase(
 const wl=()=>new Set(LS.get("asnp.wl",[]));
 function bdBack(iso,n){const d=new Date(iso+"T12:00:00Z");let k=0;while(k<n){d.setUTCDate(d.getUTCDate()-1);const w=d.getUTCDay();if(w&&w<6)k++;}return d.toISOString().slice(0,10);}
 
-function info(t){const u=U[t]||[];return{t,name:u[0]||u[6]||t,panel:u[1]||"",idx:(u[2]||"").split(";").filter(Boolean),isin:u[3]||"",cur:u[4]||"",lname:u[6]||"",exch:u[7]||""};}
+function info(t){const u=U[t]||[];return{t,name:u[0]||u[6]||t,panel:u[1]||"",idx:(u[2]||"").split(";").filter(Boolean),isin:u[3]||"",cur:u[4]||"",lname:u[6]||"",exch:u[7]||"",us:u[8]||""};}
 function inMkt(t){if(st.mkt==="ALL")return true;const i=info(t);return st.mkt==="EU50"?i.idx.includes("SX5E"):i.panel===st.mkt;}
 function cat(e){const f=e.fn,t=e.tn;
   if(f!=null&&t!=null&&Math.abs(t-f)>=2)return t<f?"DBL_UP":"DBL_DN";
@@ -273,7 +274,7 @@ async function load(){
   try{const r=await fetch("terminal.json",{cache:"no-cache"});if(!r.ok)throw new Error("HTTP "+r.status);raw=await r.json();}
   catch(err){document.getElementById("page").innerHTML=`<div class="card empty-state">Dati non disponibili (${esc(err.message)}). Il file terminal.json lo pubblica il workflow 3-terminale.</div>`;return;}
   D=raw;U=D.universe||{};BR=D.brokers||[];ASOF=D.meta.as_of;
-  EV=D.events.map(r=>({t:r[0],d:r[1],b:BR[r[2]]||"—",a:r[3],rf:r[4],rt:r[5],fn:r[6],tn:r[7],fs:r[8],bf:r[9],pf:r[10],pt:r[11],pa:r[12],cx:r[13]}));
+  EV=D.events.map(r=>({t:r[0],d:r[1],b:BR[r[2]]||"—",a:r[3],rf:r[4],rt:r[5],fn:r[6],tn:r[7],fs:r[8],bf:r[9],pf:r[10],pt:r[11],pa:r[12],cx:r[13],cu:r[14]}));
   EV.forEach(e=>e.c=cat(e));
   IDX=Object.keys(U).map(t=>{const i=info(t);const base=t.split(".")[0];
     return{t,i,k:[norm(t),norm(base)],n:norm(i.name+" "+i.lname),isin:norm(i.isin)}});
@@ -313,8 +314,9 @@ function go(h){qi.value="";res.style.display="none";qi.blur();location.hash="#/"
 function seg(key,opts,label){return `${label?`<span class="lbl">${label}</span>`:""}<div class="seg">${opts.map(([v,l])=>`<button type="button" data-set="${key}" data-v="${v}" aria-pressed="${String(st[key])===String(v)}">${l}</button>`).join("")}</div>`;}
 function coCell(t){const i=info(t);return `<div class="tk"><b title="${esc(i.name)}">${esc(i.name)}</b><span>${esc(t)} · ${esc(MKT_LBL[i.panel]||i.panel)}</span></div>`;}
 function rating(e){const f=e.rf?`${esc(e.rf)} → `:"";return `<span class="rt">${f}<b>${esc(e.rt||"–")}</b></span>`;}
+const cuMark=e=>e.cu?`<sup class="cu" title="Target riportato sulla quotazione USA ${esc(e.cu)} e convertito nella valuta locale">≈</sup>`:"";
 function ptCell(e){if(!e.pt)return'<span class="mut">–</span>';const c=ptChg(e);
-  return `${e.pf?`<span class="mut">${nf(e.pf)} → </span>`:""}<b>${nf(e.pt)}</b>${c!=null?` <span class="${pcls(c)}" style="font-size:12px">${pct(c)}</span>`:""}`;}
+  return `${e.pf?`<span class="mut">${nf(e.pf)} → </span>`:""}<b>${nf(e.pt)}</b>${cuMark(e)}${c!=null?` <span class="${pcls(c)}" style="font-size:12px">${pct(c)}</span>`:""}`;}
 /* tabella ordinabile: cols=[{k,l,v(row)->valore ordinamento,h(row)->html,num}] */
 function table(id,cols,rows,{def,desc=true,limit=100,rowAttr}={}){
   const s=st.sort[id]||(st.sort[id]={k:def||cols[0].k,desc});
@@ -542,7 +544,7 @@ const ACT={up:"Upgrade",down:"Downgrade",init:"Inizio copertura",main:"Conferma"
 function actCell(e){const a=ACT[e.a]||e.a||"–";const c=e.a==="up"?"up":e.a==="down"?"dn":"";return `<span class="${c}">${a}</span>`;}
 
 function donut(b,h,s,label){const n=b+h+s,R=62,r=46,C=2*Math.PI;let a0=-Math.PI/2;
-  const seg=(v,col)=>{if(!v)return"";const a1=a0+C*v/n-(n>1&&v<n?.03:0);const big=a1-a0>Math.PI?1:0;
+  const seg=(v,col)=>{if(!v)return"";if(v===n)return `<circle cx="80" cy="80" r="${(R+r)/2}" fill="none" stroke="${col}" stroke-width="${R-r}"/>`;const a1=a0+C*v/n-(n>1&&v<n?.03:0);const big=a1-a0>Math.PI?1:0;
     const p=`M${80+R*Math.cos(a0)},${80+R*Math.sin(a0)}A${R},${R} 0 ${big} 1 ${80+R*Math.cos(a1)},${80+R*Math.sin(a1)}L${80+r*Math.cos(a1)},${80+r*Math.sin(a1)}A${r},${r} 0 ${big} 0 ${80+r*Math.cos(a0)},${80+r*Math.sin(a0)}Z`;
     a0+=C*v/n;return `<path d="${p}" fill="${col}"/>`;};
   return `<svg viewBox="0 0 160 160" class="donut" role="img" aria-label="${b} Buy, ${h} Hold, ${s} Sell">
@@ -651,7 +653,7 @@ async function pTicker(t){
   const acols=[
     {k:"b",l:"Broker",v:e=>e.b,h:e=>`<a href="#/brokers/${encodeURIComponent(e.b)}"><b>${esc(e.b)}</b></a>${R[e.b]?.rank?`<div class="mut" style="font-size:11.5px">${R[e.b].rank}° in classifica</div>`:""}`},
     {k:"p",l:"Posizione",v:e=>e.tn,h:posPill},
-    {k:"pt",l:"Target",num:1,v:e=>e.pt,h:e=>e.pt?`<b>${nf(e.pt)}</b>`:'<span class="mut">–</span>'},
+    {k:"pt",l:"Target",num:1,v:e=>e.pt,h:e=>e.pt?`<b>${nf(e.pt)}</b>${cuMark(e)}`:'<span class="mut">–</span>'},
     {k:"un",l:"Upside / downside",num:1,v:upNow,h:e=>`<span class="${pcls(upNow(e))}">${pct(upNow(e),2)}</span>`},
     {k:"pf",l:"Target precedente",num:1,v:e=>e.pf,h:e=>e.pf?nf(e.pf):'<span class="mut">–</span>'},
     {k:"a",l:"Azione",v:e=>e.a,h:actCell},
@@ -673,7 +675,7 @@ async function pTicker(t){
       <button class="btn ${inW?"on":""}" style="width:100%;margin-top:6px" data-wl="${esc(t)}">${inW?"★ In watchlist":"☆ Aggiungi alla watchlist"}</button>
     </div>
   </div>
-  <div class="card" style="margin-top:16px"><div class="hd"><h2>Rating degli analisti</h2><small>${ev.length} analisi negli ultimi 2 anni</small></div>${ev.length?table("co-h",acols,ev,{def:"d",limit:10}):`<div class="empty-state">Nessuna analisi per broker disponibile per questo titolo.</div>`}</div>`;}
+  <div class="card" style="margin-top:16px"><div class="hd"><h2>Rating degli analisti</h2><small>${ev.length} analisi negli ultimi 2 anni${i.us?` · incluse quelle registrate sulla quotazione USA ${esc(i.us)} (≈ = target convertito in ${esc(i.cur||"valuta locale")})`:""}</small></div>${ev.length?table("co-h",acols,ev,{def:"d",limit:10}):`<div class="empty-state">Nessuna analisi per broker disponibile per questo titolo.</div>`}</div>`;}
 
 /* ---------- vista aggregata per indice ---------- */
 const IDX_ORDER=["SP500","UKX","MCX","FTSEMIB","DAX","CAC","SX5E"];
