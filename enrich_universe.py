@@ -156,6 +156,9 @@ def from_wikidata(u):
     return n
 
 
+ISIN_OVERRIDE = {"NEXI.MI": "IT0005366767"}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--universe", default="universe.csv")
@@ -167,8 +170,14 @@ def main():
     u = pd.read_csv(a.universe, dtype=str)
     for c in ("isin", "currency", "exchange", "long_name", "name"):
         if c not in u.columns: u[c] = None
+    for t, i in ISIN_OVERRIDE.items():
+        u.loc[u["ticker"] == t, "isin"] = i
+    # ISIN USA su un titolo quotato solo in Europa: quasi sempre un abbinamento sbagliato
+    u.loc[(u["panel"] != "US") & u["isin"].fillna("").str.startswith("US"), "isin"] = None
     from_wikidata(u)
     us_listings(u)
+    for t, i in ISIN_OVERRIDE.items():
+        u.loc[u["ticker"] == t, "isin"] = i
     # ISIN arrivati da yfinance con paese implausibile -> scartati
     bad = u["isin"].notna() & (u["isin"] != "-") & ~u["isin"].astype(str).str[:2].isin(OK_CC)
     u.loc[bad, "isin"] = "-"

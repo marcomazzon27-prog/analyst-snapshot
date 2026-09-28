@@ -31,6 +31,16 @@ point-in-time è l'unica cosa che non puoi ricomprare dopo.
 `build_db.py` (workflow 3-terminale) ricostruisce ogni notte il database SQLite e il
 terminale web su GitHub Pages.
 
+## Investitori istituzionali (workflow 4)
+
+- `inst_13f.py`: portafogli 13F dai **SEC Form 13F Data Sets** (dal 2013), poi ogni 3 ore i depositi nuovi da EDGAR.
+- `inst_map.py`: CUSIP → ticker (ISIN dell'universo, poi OpenFIGI) e prezzi settimanali rettificati.
+- `inst_shorts.py`: posizioni corte nette europee (CONSOB, AMF per detentore; FCA aggregato).
+- `inst_score.py` (nel workflow 3): score "chi seguire" con test fuori campione, pagine Investitori, gestore e "chi possiede".
+- Prima volta: Actions → 4-istituzionali → Run workflow → `backfill`. Poi gira da solo.
+- Secrets facoltativi: `OPENFIGI_KEY` (mappatura più rapida), `NTFY_TOPIC` (notifiche push sul telefono con l'app ntfy), `SEC_UA`.
+- I 13F non contengono short né liquidità: la liquidità è mostrata come n.d.
+
 ## Nota sui costi
 
 Actions è gratis illimitato sui repo pubblici. Su repo privato consuma dal monte
