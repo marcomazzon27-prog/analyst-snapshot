@@ -29,7 +29,8 @@ REV_HISTORY_IN_JSON = 60               # snapshot di revisioni esportati al term
 
 SCHEMA = """
 CREATE TABLE universe(ticker TEXT PRIMARY KEY, name TEXT, long_name TEXT, panel TEXT,
-  indices TEXT, cap_tier TEXT, isin TEXT, currency TEXT, exchange TEXT);
+  indices TEXT, cap_tier TEXT, isin TEXT, currency TEXT, exchange TEXT,
+  us_ticker TEXT);                   -- quotazione USA/ADR (fonte aggiuntiva di rating per i titoli europei)
 
 CREATE TABLE snapshot(               -- un record per notte di raccolta
   run_date TEXT PRIMARY KEY, tickers INT, failed INT, rating_rows INT,
@@ -43,7 +44,10 @@ CREATE TABLE rating_event(           -- evento unico, deduplicato tra snapshot
   is_backfill INT,                   -- 1 = arrivato col primo carico, non point-in-time
   regraded INT,                      -- 1 = grade numerico ricalcolato con la mappa attuale
   pt_action TEXT, pt_from REAL, pt_to REAL,   -- target price dell'analisi (se fornito)
-  close_at_event REAL);              -- chiusura del giorno dell'analisi (o l'ultima prima)
+  close_at_event REAL,
+  src TEXT,                          -- listing da cui arriva il dato (titolo stesso o quotazione USA)
+  pt_ccy_from TEXT,                  -- se valorizzato: target riportato dalla quotazione USA e convertito
+  pt_to_raw REAL, pt_from_raw REAL);              -- chiusura del giorno dell'analisi (o l'ultima prima)
 CREATE INDEX ix_ev_t ON rating_event(ticker, event_date);
 CREATE INDEX ix_ev_d ON rating_event(event_date);
 CREATE INDEX ix_ev_b ON rating_event(broker);
@@ -158,7 +162,7 @@ def build():
     con = sqlite3.connect(dbp); con.executescript(SCHEMA)
 
     u = pd.read_csv(ROOT / "universe.csv", dtype=str)
-    ucols = ["ticker", "name", "long_name", "panel", "indices", "cap_tier", "isin", "currency", "exchange"]
+    ucols = ["ticker", "name", "long_name", "panel", "indices", "cap_tier", "isin", "currency", "exchange", "us_ticker"]
     for c in ucols:
         if c not in u.columns: u[c] = None
     u.loc[u["isin"] == "-", "isin"] = None
@@ -176,10 +180,12 @@ def build():
     first_snap = rfiles[0][0] if rfiles else None
     rbf = DATA / "ratings_backfill.csv.gz"          # storico completo scaricato una volta (non point-in-time)
     if rbf.exists(): rfiles = [("backfill", rbf)] + rfiles
+    rbu = DATA / "ratings_backfill_us.csv.gz"       # storico dalle quotazioni USA/ADR dei titoli europei
+    if rbu.exists(): rfiles = [("backfill", rbu)] + rfiles
     events = {}
     for snap, p in rfiles:
         df = pd.read_csv(p); new = 0
-        for c in ("pt_action", "pt_from", "pt_to"):
+        for c in ("pt_action", "pt_from", "pt_to", "src"):
             if c not in df.columns: df[c] = None
         for r in df.itertuples(index=False):
             key = "|".join(str(nn(x)) for x in (r.ticker, r.event_date, r.broker, r.action, r.rating_from, r.rating_to))
@@ -188,6 +194,7 @@ def build():
                 ev = events[eid]; ev["last_seen"] = snap; ev["n_seen"] += 1
                 if nn(r.pt_to) is not None:        # i target arrivano dagli snapshot più recenti
                     ev["pt_action"], ev["pt_from"], ev["pt_to"] = nn(r.pt_action), nn(r.pt_from), nn(r.pt_to)
+                    if nn(r.src) and nn(r.src) != r.ticker: ev["src"] = nn(r.src)
                 continue
             fnum, tnum, reg = nn(r.rating_from_num), nn(r.rating_to_num), 0
             if fnum is None and nn(r.rating_from) and grade(r.rating_from): fnum, reg = grade(r.rating_from), 1
@@ -197,7 +204,8 @@ def build():
                                from_num=fnum, to_num=tnum, first_seen=None if snap == "backfill" else snap, last_seen=snap, n_seen=1,
                                is_backfill=int(snap in (first_snap, "backfill")), regraded=reg,
                                pt_action=nn(r.pt_action), pt_from=nn(r.pt_from), pt_to=nn(r.pt_to),
-                               close_at_event=None)
+                               close_at_event=None, src=nn(r.src) or r.ticker, pt_ccy_from=None,
+                               pt_to_raw=nn(r.pt_to), pt_from_raw=nn(r.pt_from))
             new += 1
         if snap != "backfill":
             con.execute("INSERT INTO snapshot(run_date) VALUES(?) ON CONFLICT DO NOTHING", (snap,))
@@ -209,6 +217,11 @@ def build():
         con.executemany("INSERT OR REPLACE INTO price VALUES(?,?,?)",
                         [(r.ticker, r.date, float(r.close)) for r in df.itertuples(index=False)])
         con.execute("INSERT INTO ingest_log VALUES(?,?,?,?,?)", (str(bf.relative_to(ROOT)), "prices", "backfill", len(df), len(df)))
+    bu = DATA / "prices_backfill_us.csv.gz"
+    if bu.exists():
+        df = pd.read_csv(bu).dropna()
+        con.executemany("INSERT OR IGNORE INTO price VALUES(?,?,?)",
+                        [(r.ticker, r.date, float(r.close)) for r in df.itertuples(index=False)])
     for snap, p in snapshot_files("prices"):
         df = pd.read_csv(p).dropna()
         con.executemany("INSERT OR REPLACE INTO price VALUES(?,?,?)",
@@ -223,6 +236,10 @@ def build():
     px = {}
     for t, d, c in con.execute("SELECT ticker, date, close FROM price ORDER BY ticker, date"):
         px.setdefault(t, ([], []))[0].append(d); px[t][1].append(c)
+    usmap = dict(con.execute("SELECT ticker, us_ticker FROM universe WHERE us_ticker IS NOT NULL").fetchall())
+    conv = normalize_targets(events, px, usmap)
+    fix_consensus_targets(con, px, usmap)
+    print(f"target convertiti dalla quotazione USA: {conv}")
     for e in events.values():                  # chiusura del giorno dell'analisi (o precedente)
         s_ = px.get(e["ticker"])
         if s_:
@@ -252,12 +269,57 @@ def build():
     con.close()
 
 
+def px_at(px, t, d, maxgap=7):
+    s_ = px.get(t)
+    if not s_: return None
+    i = bisect.bisect_right(s_[0], str(d)) - 1
+    if i < 0 or (dt.date.fromisoformat(str(d)) - dt.date.fromisoformat(s_[0][i])).days > maxgap: return None
+    return s_[1][i]
+
+
+def normalize_targets(events, px, usmap):
+    """Titoli europei con quotazione USA/ADR: Yahoo riporta spesso i target nella valuta (e per
+    azione ADR) della quotazione USA, anche sul ticker europeo. Per ogni analisi si decide a quale
+    prezzo si riferisce il target (quello più vicino in scala logaritmica, o la quotazione USA se il
+    dato arriva da lì) e lo si converte nella valuta locale col rapporto dei prezzi dello stesso giorno
+    (che incorpora cambio e rapporto ADR)."""
+    import math
+    n = 0
+    for e in events.values():
+        us = usmap.get(e["ticker"])
+        if not us or not e["pt_to"]: continue
+        pl, pu = px_at(px, e["ticker"], e["event_date"]), px_at(px, us, e["event_date"])
+        if not pl or not pu: continue
+        from_us = e.get("src") == us or abs(math.log(e["pt_to"] / pu)) < abs(math.log(e["pt_to"] / pl))
+        if not from_us: continue
+        f = pu / pl
+        e["pt_to"] = round(e["pt_to"] / f, 4)
+        if e["pt_from"]: e["pt_from"] = round(e["pt_from"] / f, 4)
+        e["pt_ccy_from"] = us; n += 1
+    return n
+
+
+def fix_consensus_targets(con, px, usmap):
+    """Stessa logica per il target di consenso Yahoo dei titoli europei con quotazione USA."""
+    import math
+    rows = con.execute(f"SELECT ticker, as_of, pt_mean, pt_median, pt_high, pt_low, price FROM target WHERE ticker IN "
+                       f"({','.join('?' * len(usmap))})", tuple(usmap)).fetchall() if usmap else []
+    for t, a, m, md, h, l, cur in rows:
+        pl, pu = px_at(px, t, a), px_at(px, usmap[t], a)
+        if not (m and pl and pu): continue
+        ref = cur or m                   # Yahoo dà il prezzo corrente nella stessa valuta dei target
+        if abs(math.log(ref / pu)) < abs(math.log(ref / pl)):
+            f = pu / pl
+            con.execute("UPDATE target SET pt_mean=?, pt_median=?, pt_high=?, pt_low=?, price=? WHERE ticker=? AND as_of=?",
+                        (m / f, md / f if md else None, h / f if h else None, l / f if l else None, pl, t, a))
+
+
 def export(con):
     q = lambda s, *a: con.execute(s, a).fetchall()
     brokers = [r[0] for r in q("SELECT DISTINCT broker FROM rating_event WHERE broker IS NOT NULL ORDER BY broker")]
     bi = {b: i for i, b in enumerate(brokers)}
     ev = q("""SELECT ticker, event_date, broker, action, rating_from, rating_to, from_num, to_num,
-                     first_seen, is_backfill, pt_from, pt_to, pt_action, close_at_event
+                     first_seen, is_backfill, pt_from, pt_to, pt_action, close_at_event, pt_ccy_from
               FROM rating_event WHERE event_date >= date((SELECT MAX(run_date) FROM snapshot), ?)
               ORDER BY event_date DESC, ticker""", f"-{EVENTS_DAYS_IN_JSON} days")
     snaps = [r[0] for r in q("SELECT DISTINCT as_of FROM revision ORDER BY as_of DESC LIMIT ?", REV_HISTORY_IN_JSON)]
@@ -277,10 +339,10 @@ def export(con):
                  "as_of": q("SELECT MAX(run_date) FROM snapshot")[0][0],
                  "repo": "marcomazzon27-prog/analyst-snapshot"},
         "universe": {r[0]: list(r[1:]) for r in q(
-            "SELECT ticker, name, panel, indices, isin, currency, cap_tier, long_name, exchange FROM universe")},
+            "SELECT ticker, name, panel, indices, isin, currency, cap_tier, long_name, exchange, us_ticker FROM universe")},
         "brokers": brokers,
-        "events": [[t, d, bi.get(b, -1), a, rf, rt, fn, tn, fs, bf, pf, pt, pa, cx]
-                   for t, d, b, a, rf, rt, fn, tn, fs, bf, pf, pt, pa, cx in ev],
+        "events": [[t, d, bi.get(b, -1), a, rf, rt, fn, tn, fs, bf, pf, pt, pa, cx, cu]
+                   for t, d, b, a, rf, rt, fn, tn, fs, bf, pf, pt, pa, cx, cu in ev],
         "revisions": [list(r) for r in rev],
         "last": last,
         "targets": tg,

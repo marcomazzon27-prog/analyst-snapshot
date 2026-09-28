@@ -146,7 +146,7 @@ df = (df.groupby("ticker", as_index=False)
              indices=("indices", lambda s: ";".join(dict.fromkeys(s))), cap_tier=("cap_tier", "first")))
 
 old = Path("universe.csv")
-keep = ["isin", "currency", "exchange", "long_name"]
+keep = ["isin", "currency", "exchange", "long_name", "us_ticker"]
 if old.exists():
     o = pd.read_csv(old)
     o = o[[c for c in ["ticker"] + keep if c in o.columns]]

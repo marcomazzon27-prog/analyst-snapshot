@@ -48,6 +48,29 @@ def pt(x):
         return None
 
 
+def rating_rows(t, ud, limit, src, unmapped=None):
+    """Righe rating da un DataFrame upgrades_downgrades di yfinance.
+    src = listing da cui arriva il dato (il titolo stesso o la sua quotazione USA/ADR)."""
+    out = []
+    if ud is None or not len(ud): return out
+    d = ud.reset_index()
+    if limit: d = d.head(limit)
+    dc = next((c for c in d.columns if "date" in str(c).lower()), d.columns[0])
+    for _, r in d.iterrows():
+        fg, tg = r.get("FromGrade"), r.get("ToGrade")
+        if unmapped is not None:
+            unmapped.update(x for x in (fg, tg) if isinstance(x, str) and x.strip() and grade(x) is None)
+        out.append({"ticker": t, "event_date": pd.to_datetime(r[dc]).date().isoformat(),
+                    "broker": r.get("Firm"), "action": str(r.get("Action", "")).lower(),
+                    "rating_from": fg, "rating_to": tg,
+                    "rating_from_num": grade(fg), "rating_to_num": grade(tg),
+                    # target price dell'analisi (yfinance >= 0.2.44); 0 = non fornito
+                    "pt_action": r.get("priceTargetAction"),
+                    "pt_to": pt(r.get("currentPriceTarget")), "pt_from": pt(r.get("priorPriceTarget")),
+                    "src": src})
+    return out
+
+
 def closes(tickers, out, today):
     """Chiusure giornaliere. Primo giro: 1 anno di storico; poi gli ultimi 5 giorni
     (così una notte saltata si recupera). File append-only data/prices/YYYY-MM-DD.csv."""
@@ -86,27 +109,18 @@ def main():
     import yfinance as yf
     u = pd.read_csv(a.universe)
     tickers = u["ticker"].dropna().astype(str).tolist()
+    # quotazione USA/ADR dei titoli europei: su Yahoo i broker spesso sono registrati solo lì
+    usmap = {r.ticker: r.us_ticker for r in u.itertuples() if isinstance(getattr(r, "us_ticker", None), str) and r.us_ticker}
     today = dt.date.today().isoformat()
     rat, rev, tgt, unmapped, failed = [], [], [], set(), []
 
     for i, t in enumerate(tickers, 1):
         try:
             tk = yf.Ticker(t)
-            ud = tk.upgrades_downgrades
-            if ud is not None and len(ud):
-                d = ud.reset_index().head(40)
-                dc = next((c for c in d.columns if "date" in str(c).lower()), d.columns[0])
-                for _, r in d.iterrows():
-                    fg, tg = r.get("FromGrade"), r.get("ToGrade")
-                    unmapped.update(x for x in (fg,tg) if isinstance(x,str) and x.strip() and grade(x) is None)
-                    rat.append({"ticker":t,"event_date":pd.to_datetime(r[dc]).date().isoformat(),
-                                "broker":r.get("Firm"),"action":str(r.get("Action","")).lower(),
-                                "rating_from":fg,"rating_to":tg,
-                                "rating_from_num":grade(fg),"rating_to_num":grade(tg),
-                                # target price dell'analisi (yfinance >= 0.2.44); 0 = non fornito
-                                "pt_action":r.get("priceTargetAction"),
-                                "pt_to":pt(r.get("currentPriceTarget")),
-                                "pt_from":pt(r.get("priorPriceTarget"))})
+            for src, sym in ((t, t), (usmap.get(t), usmap.get(t))):
+                if not sym: continue
+                ud = tk.upgrades_downgrades if sym == t else yf.Ticker(sym).upgrades_downgrades
+                rat.extend(rating_rows(t, ud, 40, src, unmapped))
             nest = {}
             try:                                   # numero di stime per esercizio -> breadth corretta
                 ee = tk.earnings_estimate
@@ -145,7 +159,7 @@ def main():
     (out/"targets").mkdir(exist_ok=True)
     pd.DataFrame(tgt, columns=["ticker","as_of","pt_mean","pt_median","pt_high","pt_low","price"]
                  ).to_csv(out/"targets"/f"{today}.csv", index=False)
-    n_px = closes(tickers + list(BENCH.values()), out, today)
+    n_px = closes(tickers + sorted(set(usmap.values())) + list(BENCH.values()), out, today)
     pd.DataFrame({"run_date":[today],"tickers":[len(tickers)],"failed":[len(failed)],
                   "rating_rows":[len(rat)],"revision_rows":[len(rev)],
                   "target_rows":[len(tgt)],"price_tickers":[n_px],

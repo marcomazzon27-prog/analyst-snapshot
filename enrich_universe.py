@@ -93,6 +93,49 @@ def from_wikidata_names(u):
     return n
 
 
+# quotazioni USA (azioni o ADR su NYSE/Nasdaq) di titoli europei: lì Yahoo registra molti più broker
+US_OVERRIDE = {"RACE.MI": "RACE", "STLAM.MI": "STLA", "STLAP.PA": "STLA", "STMMI.MI": "STM", "STMPA.PA": "STM",
+               "ENI.MI": "E", "TEN.MI": "TS", "SAP.DE": "SAP", "ASML.AS": "ASML", "INGA.AS": "ING",
+               "NOKIA.HE": "NOK", "BBVA.MC": "BBVA", "SAN.MC": "SAN", "ABI.BR": "BUD", "ARGX.BR": "ARGX",
+               "MT.AS": "MT", "TTE.PA": "TTE", "SAN.PA": "SNY", "DBK.DE": "DB", "SHEL.L": "SHEL", "BP.L": "BP",
+               "AZN.L": "AZN", "ULVR.L": "UL", "GSK.L": "GSK", "HSBA.L": "HSBC", "RIO.L": "RIO", "DGE.L": "DEO",
+               "NG.L": "NGG", "VOD.L": "VOD", "REL.L": "RELX", "LLOY.L": "LYG", "NWG.L": "NWG", "BATS.L": "BTI",
+               "IHG.L": "IHG", "BARC.L": "BCS", "SN.L": "SNN", "HLN.L": "HLN"}
+EU_EXCH = {sfx: ex for sfx, ex in EXCH.items() if sfx}
+
+
+def us_listings(u):
+    """us_ticker per i titoli europei: override noti + Wikidata (stessa società quotata anche a NYSE/Nasdaq)."""
+    if "us_ticker" not in u.columns: u["us_ticker"] = None
+    wd = {}
+    try:
+        q = """SELECT ?item ?ticker ?exl WHERE { ?item p:P414 ?st . ?st ps:P414 ?ex ; pq:P249 ?ticker .
+               ?item wdt:P946 ?isin . ?ex rdfs:label ?exl . FILTER(lang(?exl)="en") }"""
+        r = requests.get("https://query.wikidata.org/sparql", params={"query": q, "format": "json"},
+                         headers={"User-Agent": "analyst-snapshot/1.0 (GitHub Actions)",
+                                  "Accept": "application/sparql-results+json"}, timeout=90)
+        r.raise_for_status()
+        items = {}
+        for b in r.json()["results"]["bindings"]:
+            items.setdefault(b["item"]["value"], set()).add((b["exl"]["value"], b["ticker"]["value"].strip().upper()))
+        for lst in items.values():
+            us = sorted(tk for ex, tk in lst if ex in ("New York Stock Exchange", "Nasdaq") and re.fullmatch(r"[A-Z.\-]{1,6}", tk))
+            if len(us) != 1: continue
+            for ex, tk in lst:
+                for sfx, names in EU_EXCH.items():
+                    if ex in names: wd[(key(tk), sfx)] = us[0].replace(".", "-")
+    except Exception as e:
+        print("wikidata (quotazioni USA) non raggiungibile:", e)
+    n = 0
+    for i, t in u["ticker"].items():
+        base, sfx = split(str(t))
+        if not sfx: continue
+        v = US_OVERRIDE.get(t) or wd.get((key(base), sfx))
+        if v: u.at[i, "us_ticker"] = v; n += 1
+    print(f"quotazioni USA/ADR: {n} titoli europei")
+    return n
+
+
 def from_wikidata(u):
     try:
         wd = wikidata_isins()
@@ -125,6 +168,7 @@ def main():
     for c in ("isin", "currency", "exchange", "long_name", "name"):
         if c not in u.columns: u[c] = None
     from_wikidata(u)
+    us_listings(u)
     # ISIN arrivati da yfinance con paese implausibile -> scartati
     bad = u["isin"].notna() & (u["isin"] != "-") & ~u["isin"].astype(str).str[:2].isin(OK_CC)
     u.loc[bad, "isin"] = "-"

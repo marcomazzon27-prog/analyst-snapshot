@@ -12,10 +12,12 @@ Uso: python backfill_history.py [--force]
 import argparse, time
 from pathlib import Path
 import pandas as pd
-from collect import BENCH, grade, pt
+from collect import BENCH, grade, pt, rating_rows
 
 RAT = Path("data/ratings_backfill.csv.gz")
 PX = Path("data/prices_backfill.csv.gz")
+RAT_US = Path("data/ratings_backfill_us.csv.gz")      # storico dalle quotazioni USA/ADR dei titoli europei
+PX_US = Path("data/prices_backfill_us.csv.gz")
 YEARS = 10
 
 
@@ -45,7 +47,21 @@ def ratings(tickers, sleep):
     print(f"rating storici: {len(df)} righe, {df['ticker'].nunique()} titoli, dal {df['event_date'].min()}; falliti {len(failed)}")
 
 
-def prices(tickers):
+def ratings_us(usmap, sleep):
+    import yfinance as yf
+    rows = []
+    for t, us in usmap.items():
+        try:
+            rows += rating_rows(t, yf.Ticker(us).upgrades_downgrades, None, us)
+        except Exception as e:
+            print(us, "fallito", e)
+        time.sleep(sleep)
+    df = pd.DataFrame(rows)
+    df.to_csv(RAT_US, index=False)
+    print(f"rating da quotazioni USA: {len(df)} righe per {df['ticker'].nunique() if len(df) else 0} titoli europei")
+
+
+def prices(tickers, out=PX):
     import yfinance as yf
     frames = []
     for k in range(0, len(tickers), 100):
@@ -61,7 +77,7 @@ def prices(tickers):
     p = pd.concat(frames).dropna()
     p["date"] = pd.to_datetime(p["date"]).dt.date.astype(str)
     p["close"] = p["close"].astype(float).round(4)
-    p[["ticker", "date", "close"]].sort_values(["ticker", "date"]).to_csv(PX, index=False)
+    p[["ticker", "date", "close"]].sort_values(["ticker", "date"]).to_csv(out, index=False)
     print(f"prezzi storici: {len(p)} righe, {p['ticker'].nunique()} titoli, dal {p['date'].min()}")
 
 
@@ -70,7 +86,13 @@ def main():
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--sleep", type=float, default=0.3)
     a = ap.parse_args()
-    tickers = pd.read_csv("universe.csv")["ticker"].dropna().astype(str).tolist()
+    u = pd.read_csv("universe.csv")
+    tickers = u["ticker"].dropna().astype(str).tolist()
+    usmap = {r.ticker: r.us_ticker for r in u.itertuples() if isinstance(getattr(r, "us_ticker", None), str) and r.us_ticker}
+    if usmap and (a.force or not RAT_US.exists()):
+        ratings_us(usmap, a.sleep)
+    if usmap and (a.force or not PX_US.exists()):
+        prices(sorted(set(usmap.values())), PX_US)
     if a.force or not RAT.exists():
         ratings(tickers, a.sleep)
     need_px = a.force or not PX.exists()
