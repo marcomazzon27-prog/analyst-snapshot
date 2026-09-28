@@ -28,7 +28,9 @@ ROOT = Path(__file__).parent
 D13 = ROOT / "data" / "13f"
 HOLD = D13 / "holdings"
 FEED = ROOT / "data" / "feed.json"
-UA = os.environ.get("SEC_UA") or "analyst-snapshot research (github.com/marcomazzon27-prog/analyst-snapshot)"
+# la SEC rifiuta (403) le richieste senza un contatto nel formato "Nome email": di default si usa l'alias
+# noreply di GitHub del proprietario del repo; con il secret SEC_UA si può mettere un contatto diverso
+UA = os.environ.get("SEC_UA") or "analyst-snapshot marcomazzon27-prog@users.noreply.github.com"
 H = {"User-Agent": UA, "Accept-Encoding": "gzip, deflate"}
 DATASETS_PAGE = "https://www.sec.gov/data-research/sec-markets-data/form-13f-data-sets"
 

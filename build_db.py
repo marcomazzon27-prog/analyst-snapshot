@@ -356,10 +356,14 @@ def export(con):
     tg = {t: [m, md, h, l, a] for t, a, m, md, h, l in q(
         """SELECT ticker, as_of, pt_mean, pt_median, pt_high, pt_low FROM (SELECT t.*, ROW_NUMBER() OVER
            (PARTITION BY ticker ORDER BY as_of DESC) rn FROM target t) WHERE rn = 1""")}
+    # controllo di plausibilità: target di consenso lontanissimo dal prezzo = dato Yahoo errato (es. FME.DE 8075 € su 40 €)
+    bad_tg = sorted(t for t, g in tg.items() if t in last and g[0] and last[t][1] and not 0.25 <= g[0] / last[t][1] <= 4)
+    for t in bad_tg: tg.pop(t)
+    if bad_tg: print("target di consenso scartati perché implausibili:", bad_tg)
     out = {
         "meta": {"built_at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
                  "as_of": q("SELECT MAX(run_date) FROM snapshot")[0][0],
-                 "repo": "marcomazzon27-prog/analyst-snapshot"},
+                 "repo": "marcomazzon27-prog/analyst-snapshot", "bad_targets": bad_tg},
         "universe": {r[0]: list(r[1:]) for r in q(
             "SELECT ticker, name, panel, indices, isin, currency, cap_tier, long_name, exchange, us_ticker FROM universe")},
         "brokers": brokers,
