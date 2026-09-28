@@ -55,16 +55,19 @@ N_AUTO = 400                     # gestori scelti automaticamente (per valore, t
 
 # ---------------------------------------------------------------- utilità
 def get(url, stream=False, tries=4):
+    last = None
     for k in range(tries):
         try:
             r = requests.get(url, headers=H, timeout=120, stream=stream)
             if r.status_code == 200: return r
-            if r.status_code in (403, 429): time.sleep(5 * (k + 1)); continue
+            last = f"HTTP {r.status_code}: {r.text[:300]!r}" if not stream else f"HTTP {r.status_code}"
+            if r.status_code in (403, 429, 503): time.sleep(5 * (k + 1)); continue
             r.raise_for_status()
         except requests.RequestException as e:
-            if k == tries - 1: raise
+            last = repr(e)
+            if k == tries - 1: break
             time.sleep(3 * (k + 1))
-    raise RuntimeError(f"GET fallita: {url}")
+    raise RuntimeError(f"GET fallita: {url} ({last}; User-Agent: {UA})")
 
 
 def sec_date(s):
@@ -129,8 +132,14 @@ def dataset_links():
     except Exception as e:
         print("pagina data set non leggibile:", e)
     base = "https://www.sec.gov/files/structureddata/data/form-13f-data-sets/"
-    return [f"{base}{y}q{q}_form13f.zip" for y in range(2023, 2012, -1) for q in (4, 3, 2, 1)
-            if (y, q) >= (2013, 2)]
+    # elenco della pagina SEC a settembre 2026 (dal 2024 i file coprono finestre di deposito di 3 mesi)
+    new = ["01mar2026-31may2026", "01dec2025-28feb2026", "01sep2025-30nov2025", "01jun2025-31aug2025",
+           "01mar2025-31may2025", "01dec2024-28feb2025", "01sep2024-30nov2024", "01jun2024-31aug2024",
+           "01mar2024-31may2024", "01jan2024-29feb2024"]
+    out = ["https://www.sec.gov/files/datastandardsinnovation/data/form-13f-data-sets/01jun2026-31aug2026_form13f.zip"]
+    out += [f"{base}{w}_form13f.zip" for w in new]
+    out += [f"{base}{y}q{q}_form13f.zip" for y in range(2023, 2012, -1) for q in (4, 3, 2, 1) if (y, q) >= (2013, 2)]
+    return out
 
 
 def read_tsv(z, name, usecols, chunks=False):
