@@ -54,13 +54,21 @@ N_AUTO = 400                     # gestori scelti automaticamente (per valore, t
 
 
 # ---------------------------------------------------------------- utilità
+COOL = {"n": 0}
+
+
 def get(url, stream=False, tries=4):
     last = None
     for k in range(tries):
         try:
             r = requests.get(url, headers=H, timeout=120, stream=stream)
             if r.status_code == 200: return r
-            last = f"HTTP {r.status_code}: {r.text[:300]!r}" if not stream else f"HTTP {r.status_code}"
+            txt = r.text[:600] if r.status_code != 200 else ""
+            last = f"HTTP {r.status_code}: {txt[:300]!r}"
+            if r.status_code == 403 and "Threshold" in txt and COOL["n"] < 2:
+                # blocco temporaneo della SEC: si riapre dopo 10 minuti senza richieste dallo stesso IP
+                COOL["n"] += 1; print("SEC: soglia di richieste superata, pausa di 10 minuti", flush=True)
+                time.sleep(620); continue
             if r.status_code in (403, 429, 503): time.sleep(5 * (k + 1)); continue
             r.raise_for_status()
         except requests.RequestException as e:
