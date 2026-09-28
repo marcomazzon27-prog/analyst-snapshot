@@ -205,11 +205,14 @@ h2.sec{font-size:16px;margin:4px 0 12px}
     <header>
       <div class="search">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Cerca per nome, ISIN o ticker…" aria-label="Cerca titolo">
+        <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Cerca titolo (nome, ISIN, ticker) o investitore…" aria-label="Cerca titolo">
         <kbd>/</kbd>
         <div id="results" role="listbox"></div>
       </div>
-      <div class="hdr-right"><span class="mut hide-m" id="asof"></span></div>
+      <div class="hdr-right"><span class="mut hide-m" id="asof"></span>
+        <div style="position:relative"><button class="iconbtn" id="bell" type="button" aria-label="Novità"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></button>
+          <span id="bellN" style="display:none;position:absolute;top:-5px;right:-5px;background:var(--dn);color:#fff;border-radius:99px;font-size:10.5px;font-weight:700;padding:1px 5px;pointer-events:none"></span>
+          <div id="feedP" style="display:none;position:absolute;right:0;top:calc(100% + 8px);width:min(420px,calc(100vw - 32px));background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 32px rgba(15,23,42,.18);z-index:50"></div></div></div>
     </header>
     <div class="page" id="page"><div class="empty-state">Caricamento dati…</div></div>
   </div>
@@ -233,10 +236,12 @@ const IC={
  broker:'<rect x="4" y="7" width="16" height="13" rx="2"/><path d="M9 7V5h6v2"/>',
  star:'<path d="m12 4 2.5 5 5.5.8-4 3.9.9 5.5L12 16.7 7.1 19.2l.9-5.5-4-3.9 5.5-.8z"/>',
  trophy:'<path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3"/><path d="M7 5H4v2a3 3 0 0 0 3 3"/>',
+ inst:'<path d="M3 21h18"/><path d="M4 10h16"/><path d="M12 3 3 8h18z"/><path d="M6 10v8M10 10v8M14 10v8M18 10v8"/>',
+ bell:'<path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 20a2 2 0 0 0 4 0"/>',
  db:'<ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/>'};
 const svg=n=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${IC[n]}</svg>`;
 const PAGES=[["home","Panoramica","home"],["moves","Movimenti","moves"],["targets","Target price","target"],
-  ["revisions","Revisioni","rev"],["ranking","Classifica broker","trophy"],["brokers","Broker","broker"],["watchlist","Watchlist","star"],["pipeline","Dati","db"]];
+  ["revisions","Revisioni","rev"],["ranking","Classifica broker","trophy"],["investors","Investitori","inst"],["brokers","Broker","broker"],["watchlist","Watchlist","star"],["pipeline","Dati","db"]];
 const MKTS=[["ALL","Tutti"],["US","USA"],["UK","UK"],["IT","Italia"],["DE","Germania"],["FR","Francia"],["EU50","Euro Stoxx 50"]];
 const MKT_LBL={US:"USA",UK:"UK",IT:"IT",DE:"DE",FR:"FR",NL:"NL",ES:"ES",BE:"BE",FI:"FI",IE:"IE",PT:"PT"};
 const IDX_LBL={SP500:"S&P 500",UKX:"FTSE 100",MCX:"FTSE 250",FTSEMIB:"FTSE MIB",DAX:"DAX 40",CAC:"CAC 40",SX5E:"Euro Stoxx 50"};
@@ -281,7 +286,7 @@ async function load(){
   document.getElementById("asof").textContent=`Dati al ${fd(ASOF)} · aggiornato ${D.meta.built_at}`;
   const last=(D.snapshots||[]).slice(-1)[0];
   document.getElementById("status").innerHTML=`<span><span class="dot" style="background:${last&&!last[2]?"var(--up)":"var(--warn)"}"></span>Pipeline ${last&&!last[2]?"ok":"da controllare"}</span><span>Snapshot ${fd(ASOF)}</span>`;
-  addEventListener("hashchange",render);render();
+  addEventListener("hashchange",render);render();loadFeed();loadInst();
 }
 
 /* ---------- ricerca ---------- */
@@ -291,10 +296,14 @@ function search(q){q=norm(q.trim());if(!q)return[];const out=[];
     if(x.k[0]===q||x.k[1]===q)s=100;else if(x.isin&&x.isin===q)s=95;else if(x.k[0].startsWith(q)||x.k[1].startsWith(q))s=70;
     else if(x.isin&&q.length>=4&&x.isin.startsWith(q))s=65;else if(x.n.startsWith(q))s=60;else if((" "+x.n).includes(" "+q))s=50;else if(x.n.includes(q))s=40;
     if(s)out.push([s,x]);}
+  if(INST&&q.length>=3)for(const m of INST.managers){const n=norm(m.name);const s=n.startsWith(q)?55:(" "+n).includes(" "+q)?45:0;
+    if(s)out.push([s,{mg:m,i:{name:m.name}}]);}
   return out.sort((a,b)=>b[0]-a[0]||a[1].i.name.localeCompare(b[1].i.name)).slice(0,10).map(a=>a[1]);}
 function showRes(){if(!qi.value.trim()){res.style.display="none";return;}
   res.style.display="block";
-  res.innerHTML=hits.length?hits.map((x,k)=>{const l=lastPx(x.t);return `<div class="r${k===hi?" on":""}" data-t="${esc(x.t)}" role="option">
+  res.innerHTML=hits.length?hits.map((x,k)=>{if(x.mg)return `<div class="r${k===hi?" on":""}" data-inv="${esc(x.mg.cik)}" role="option"><span class="mkt">13F</span>
+    <div style="min-width:0;flex:1"><div class="nm">${esc(x.mg.name)}</div><div class="sub">Investitore istituzionale${x.mg.rank?` · ${x.mg.rank}° in classifica`:""}</div></div><span class="mut">${usd(x.mg.aum)}</span></div>`;
+    const l=lastPx(x.t);return `<div class="r${k===hi?" on":""}" data-t="${esc(x.t)}" role="option">
     <span class="mkt">${esc(MKT_LBL[x.i.panel]||x.i.panel)}</span>
     <div style="min-width:0;flex:1"><div class="nm">${esc(x.i.name)}</div><div class="sub">${esc(x.t)}${x.i.isin?" · "+esc(x.i.isin):""}</div></div>
     ${l?`<span class="mut">${nf(l[1])}</span>`:""}</div>`}).join(""):`<div class="empty">Nessun titolo trovato. Prova con il nome, l'ISIN (es. IT0003132476) o il ticker.</div>`;}
@@ -302,9 +311,9 @@ qi.addEventListener("input",()=>{hits=search(qi.value);hi=0;showRes();});
 qi.addEventListener("keydown",e=>{
   if(e.key==="ArrowDown"){hi=Math.min(hi+1,hits.length-1);showRes();e.preventDefault();}
   else if(e.key==="ArrowUp"){hi=Math.max(hi-1,0);showRes();e.preventDefault();}
-  else if(e.key==="Enter"&&hits[hi]){go("t/"+hits[hi].t);}
+  else if(e.key==="Enter"&&hits[hi]){go(hits[hi].mg?"inv/"+hits[hi].mg.cik:"t/"+hits[hi].t);}
   else if(e.key==="Escape"){qi.value="";showRes();qi.blur();}});
-res.addEventListener("mousedown",e=>{const r=e.target.closest(".r");if(r){e.preventDefault();go("t/"+r.dataset.t);}});
+res.addEventListener("mousedown",e=>{const r=e.target.closest(".r");if(r){e.preventDefault();go(r.dataset.inv?"inv/"+r.dataset.inv:"t/"+r.dataset.t);}});
 qi.addEventListener("blur",()=>setTimeout(()=>res.style.display="none",120));
 qi.addEventListener("focus",()=>{if(qi.value.trim())showRes();});
 addEventListener("keydown",e=>{if(e.key==="/"&&document.activeElement!==qi){e.preventDefault();qi.focus();}});
@@ -734,15 +743,147 @@ async function idxCards(){const out=[];for(const k of IDX_ORDER){const j=await l
    <div class="mut" style="font-size:11.5px">${S.b} Buy · ${S.h} Hold · ${S.s} Sell</div></a>`);}
   return out.length?`<h2 class="sec">Indici</h2><div class="grid icards">${out.join("")}</div>`:"";}
 
+/* ---------- investitori istituzionali (13F SEC + short europei) ---------- */
+let INST=null;const INVC={},OWNC={};
+async function loadInst(){if(INST)return INST;INST=await getJSON("inst.json");if(INST)INST.byCik=Object.fromEntries(INST.managers.map(m=>[m.cik,m]));return INST;}
+const usd=v=>{if(v==null||!isFinite(v))return"–";const a=Math.abs(v);return a>=1e9?"$"+nf(v/1e9,a>=1e11?0:1)+" mld":a>=1e6?"$"+nf(v/1e6,a>=1e8?0:1)+" mln":"$"+nf(v/1e3,0)+"k";};
+const pp=(v,d=1)=>v==null||!isFinite(v)?"–":pct(v*100,d);
+const pr=(v,d=0)=>v==null||!isFinite(v)?"–":nf(v*100,d)+"%";
+const CHG={new:["Nuova","p-up"],add:["Incremento","p-in"],trim:["Riduzione","p-wr"],exit:["Uscita","p-dn"],hold:["Invariata","p-nt"]};
+const chgPill=c=>CHG[c]?`<span class="pill ${CHG[c][1]}">${CHG[c][0]}</span>`:'<span class="mut">–</span>';
+const tLink=(tk,iss,ut)=>ut&&U[ut]?`<a href="#/t/${encodeURIComponent(ut)}"><b>${esc(info(ut).name)}</b></a><div class="mut" style="font-size:12px">${esc(tk||"")}</div>`:`<b>${esc(iss||tk||"–")}</b><div class="mut" style="font-size:12px">${esc(tk||"ticker n.d.")}</div>`;
+const rkCell=r=>r?`<span class="rk ${r<=3?"g"+r:""}">${r}</span>`:'<span class="mut">n.c.</span>';
+function lineChart(rows,{labels=["Portafoglio","SPY"],fmt=v=>nf(v,0)}={}){if(!rows||rows.length<3)return `<div class="empty-state">Storico non ancora sufficiente.</div>`;
+  const W=860,H=280,L=46,R=12,T=12,B=26;const t0=Date.parse(rows[0][0]),t1=Date.parse(rows.at(-1)[0]);
+  const vs=rows.flatMap(r=>[r[1],r[2]]).filter(isFinite);let mn=Math.min(...vs),mx=Math.max(...vs);const pd=(mx-mn)*.06||1;mn-=pd;mx+=pd;
+  const X=d=>L+(W-L-R)*(Date.parse(d)-t0)/Math.max(1,t1-t0),Y=v=>T+(H-T-B)*(1-(v-mn)/(mx-mn));
+  const path=k=>rows.map((r,i)=>`${i?"L":"M"}${X(r[0]).toFixed(1)},${Y(r[k]).toFixed(1)}`).join("");
+  const yt=[...Array(5)].map((_,k)=>mn+(mx-mn)*k/4);const yrs=[];for(let y=new Date(t0).getUTCFullYear()+1;y<=new Date(t1).getUTCFullYear();y++)yrs.push(y);
+  const step=Math.ceil(yrs.length/8)||1;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Portafoglio follower contro SPY">
+   ${yt.map(v=>`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${fmt(v)}</text>`).join("")}
+   ${yrs.filter((_,i)=>i%step===0).map(y=>{const x=X(y+"-01-01");return `<text x="${x}" y="${H-7}" text-anchor="middle">${y}</text>`}).join("")}
+   <path d="${path(2)}" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="4 3"/>
+   <path d="${path(1)}" fill="none" stroke="var(--acc)" stroke-width="2.2"/></svg>
+   <div class="legend"><span><i style="background:var(--acc)"></i>${labels[0]} ${nf(rows.at(-1)[1],0)}</span><span><i style="background:var(--muted)"></i>${labels[1]} ${nf(rows.at(-1)[2],0)}</span><span class="mut">base 100 al ${fd(rows[0][0])}</span></div>`;}
+function bars(items){return items.map(([k,v,s])=>`<div class="stat"><span>${k}</span><span style="display:flex;align-items:center;gap:8px"><i style="display:block;height:8px;border-radius:99px;background:var(--acc);width:${Math.max(3,1.4*(v||0))}px"></i><b>${v==null?"–":nf(v,0)}</b>${s?`<span class="mut" style="font-size:12px">${s}</span>`:""}</span></div>`).join("");}
+function oosText(o){if(!o||!o.n_years)return {t:"Non ancora misurabile",c:"",d:esc(o?.note||"Serve uno storico più lungo.")};
+  const d=`In ${o.n_years} anni di test fuori campione (score calcolato solo con i dati disponibili a fine anno, confrontato con l'alpha follower dei 12 mesi successivi): ρ medio ${nf(o.rho_mean,2)}, il 20% migliore ha battuto la media di ${pct((o.top20_minus_all||0)*100,1)} l'anno, in ${o.years_top20_beats} anni su ${o.n_years}.`;
+  return o.verdict==="Utile"?{t:"Utile",c:"up",d}:o.verdict==="Debole"?{t:"Debole",c:"warnc",d}:{t:"Non predittivo",c:"dn",d:d+" Per ora lo score descrive il passato più che anticipare il futuro."};}
+async function pInvestors(){const j=await loadInst();
+  if(!j)return `<h1>Investitori istituzionali</h1><div class="card empty-state">I dati 13F non sono ancora stati elaborati. Li scarica il workflow <b>4-istituzionali</b> (modalità <i>backfill</i> la prima volta), poi il workflow 3 pubblica questa pagina.</div>`;
+  st.iv??="rank";const M=j.managers,ranked=M.filter(m=>m.rank),rows=st.iv==="rank"?ranked:M;const o=oosText(j.oos);
+  const cols=[{k:"rank",l:"#",v:m=>m.rank,h:m=>rkCell(m.rank)},
+    {k:"name",l:"Gestore",v:m=>m.name,h:m=>`<b>${esc(m.name)}</b><div class="mut" style="font-size:12px">${esc((m.top||[]).join(" · "))}</div>`},
+    {k:"score",l:"Score",v:m=>m.score,h:m=>m.score==null?'<span class="mut">–</span>':`<div class="bar-s"><i style="width:${Math.max(4,m.score)}px"></i><b>${nf(m.score,0)}</b></div>`},
+    {k:"follow",l:"Alpha follower",num:1,v:m=>m.follow,h:m=>`<span class="${pcls(m.follow)}">${pp(m.follow)}</span><div class="mut" style="font-size:12px">${m.ann!=null?pp(m.ann)+" vs "+pp(m.ann_spy):""}</div>`},
+    {k:"hit",l:"Trade riusciti",num:1,v:m=>m.hit,h:m=>m.hit==null?'<span class="mut">–</span>':`<b>${pr(m.hit)}</b><div class="mut" style="font-size:12px">${m.ntr} trade</div>`},
+    {k:"consist",l:"Trimestri battuti",num:1,v:m=>m.consist,h:m=>pr(m.consist)},
+    {k:"dd",l:"Max drawdown",num:1,v:m=>m.dd,h:m=>`<span class="dn">${m.dd==null?"–":pct(m.dd*100,0)}</span>`},
+    {k:"aum",l:"Valore 13F",num:1,v:m=>m.aum,h:m=>usd(m.aum)},
+    {k:"npos",l:"Posizioni",num:1,v:m=>m.npos,h:m=>`${m.npos}${m.nopt?`<div class="mut" style="font-size:12px">+${m.nopt} opzioni</div>`:""}`},
+    {k:"turn",l:"Rotazione",num:1,v:m=>m.turn,h:m=>pr(m.turn)},
+    {k:"filed",l:"Ultimo 13F",num:1,v:m=>m.filed,h:m=>`${fd(m.filed)}<div class="mut" style="font-size:12px">${esc(m.q)}${m.active?"":" · inattivo"}</div>`}];
+  const cons=t=>(j.consensus||[]).filter(c=>c[0]===t);
+  const clist=(t,cls)=>{const x=cons(t);return x.length?x.map(c=>`<div class="stat"><span>${tLink(c[1],c[2],c[4])}</span><b class="${cls}">${c[3]} ${c[3]===1?"gestore":"gestori"}</b></div>`).join(""):`<div class="empty-state">Nessun dato per l'ultimo trimestre.</div>`};
+  const feed=(j.feed||[]).slice(0,12);
+  return `<h1>Investitori istituzionali</h1><p class="lead">Chi conviene seguire, secondo i portafogli 13F depositati alla SEC dal ${esc(quarterOf(j.periods[0]))} al ${esc(quarterOf(j.periods[1]))}. Lo score misura quanto avrebbe guadagnato chi copiava ogni portafoglio nel momento in cui è diventato pubblico, più l'esito dei singoli acquisti e vendite. Aggiornato ${esc(j.updated)}.</p>
+  <div class="grid kpis">
+    ${kpiS("Gestori seguiti",j.n_managers,"")}${kpiS("In classifica",j.n_ranked,"",`almeno ${j.min_q} trimestri`)}
+    ${kpiS("Ultimo trimestre",quarterOf(j.last_q),"")}${kpiS("Valore mappato a ticker",pr(j.coverage),"","ultimi 12 mesi")}
+    ${kpiS("Affidabilità score",o.t,o.c)}</div>
+  <div class="note" style="margin-top:16px;${o.c==="up"?"background:var(--up-soft);color:var(--up)":""}">${o.d}</div>
+  <div class="card"><div class="hd"><h2>Classifica gestori</h2><div>${seg("iv",[["rank","In classifica"],["all","Tutti"]])}</div></div>${table("inv",cols,rows,{def:st.iv==="rank"?"rank":"aum",desc:st.iv!=="rank",limit:100,rowAttr:m=>`data-go="inv/${m.cik}"`})}</div>
+  <div class="grid two" style="margin-top:16px">
+    <div class="card"><div class="hd"><h2>Nuovi acquisti dei top 50</h2><small>${esc(quarterOf(j.last_q))}</small></div><div class="bd">${clist("buy","up")}</div></div>
+    <div class="card"><div class="hd"><h2>Uscite dei top 50</h2><small>${esc(quarterOf(j.last_q))}</small></div><div class="bd">${clist("sell","dn")}</div></div></div>
+  <div class="grid two" style="margin-top:16px">
+    <div class="card"><div class="hd"><h2>Titoli più posseduti</h2><small>n. gestori seguiti</small></div><div class="bd">${(j.popular||[]).map(p=>`<div class="stat"><span>${tLink(p[0],p[1],p[4])}</span><span><b>${p[2]}</b> <span class="mut">${usd(p[3])}</span></span></div>`).join("")}</div></div>
+    <div class="card"><div class="hd"><h2>Novità</h2><small>13F e short</small></div><div class="bd">${feed.length?feed.map(feedRow).join(""):`<div class="empty-state">Ancora nessuna novità registrata.</div>`}</div></div></div>
+  ${oosCard(j.oos)}
+  <div class="card" style="margin-top:16px"><div class="hd"><h2>Come è calcolato</h2></div><div class="bd method"><ul>
+    <li><b>Fonte</b>: SEC Form 13F Data Sets (storico strutturato dal 2013), integrati ogni 3 ore con i depositi nuovi da EDGAR. Gestori: i ~400 portafogli concentrati più grandi (10–750 posizioni, almeno 200 M$, esclusi banche, assicurazioni, fondi pensione e wealth manager) più una lista curata.</li>
+    <li><b>Portafoglio follower</b>: si compra il 13F alla prima chiusura settimanale dopo il deposito (fino a 45 giorni dopo il trimestre) e lo si tiene fino al deposito successivo. Pesi = valore dichiarato; rendimenti con dividendi.</li>
+    <li><b>Trade</b>: nuove posizioni, incrementi (&gt;20%), riduzioni (&gt;20%) e uscite con peso almeno 0,5%. Esito: titolo meno SPY a 13, 26 e 52 settimane dal deposito; per le vendite conta se il titolo è poi andato peggio.</li>
+    <li><b>Score 0–100</b> sugli ultimi ${j.lookback} anni: alpha follower ${j.weights.follow*100}%, alpha dei trade ${j.weights.trade*100}%, trade riusciti ${j.weights.hit*100}%, trimestri battuti ${j.weights.consist*100}%, drawdown ${j.weights.dd*100}%. Ogni misura è avvicinata alla media in proporzione al campione, poi convertita in percentile.</li>
+    ${(j.notes||[]).map(n=>`<li>${esc(n)}</li>`).join("")}</ul></div></div>`;}
+function quarterOf(p){if(!p)return"–";const[y,m]=p.split("-");return `T${Math.ceil(+m/3)} ${y}`;}
+function oosCard(o){const Y=o?.years||[];return `<div class="card" style="margin-top:16px"><div class="hd"><h2>Test fuori campione</h2><small>${Y.length} anni</small></div>
+  ${Y.length?`<div class="tw"><table class="mini"><thead><tr><th>Anno</th><th class="num">Gestori</th><th class="num">ρ score → alpha</th><th class="num">Top 20%</th><th class="num">Media</th><th class="num">Ultimo 20%</th></tr></thead><tbody>${[...Y].reverse().map(y=>`<tr><td>${y.year}</td><td class="num">${y.n}</td><td class="num ${pcls(y.rho)}">${nf(y.rho,2)}</td><td class="num ${pcls(y.top20)}">${pp(y.top20)}</td><td class="num ${pcls(y.all)}">${pp(y.all)}</td><td class="num ${pcls(y.bottom20)}">${pp(y.bottom20)}</td></tr>`).join("")}</tbody></table></div>`:`<div class="empty-state">${esc(o?.note||"Storico troppo corto.")}</div>`}</div>`;}
+async function pInvestor(cik){await loadInst();const j=INVC[cik]||(INVC[cik]=await getJSON(`inv/${cik}.json`));
+  if(!j)return `<p><a class="mut" href="#/investors">← Investitori</a></p><div class="card empty-state">Gestore non trovato.</div>`;
+  const pcols=[{k:"t",l:"Titolo",v:r=>r[1],h:r=>tLink(r[0],r[1],r[6])},{k:"w",l:"Peso",num:1,v:r=>r[3],h:r=>`<b>${pr(r[3],1)}</b>`},
+    {k:"v",l:"Valore",num:1,v:r=>r[2],h:r=>usd(r[2])},{k:"c",l:"Variazione",v:r=>r[4],h:r=>chgPill(r[4])},
+    {k:"d",l:"Δ azioni",num:1,v:r=>r[5],h:r=>r[4]==="new"?'<span class="mut">–</span>':`<span class="${pcls(r[5])}">${pp(r[5],0)}</span>`}];
+  const ocols=[{k:"t",l:"Sottostante",v:r=>r[1],h:r=>tLink(r[0],r[1],r[5])},{k:"p",l:"Tipo",v:r=>r[2],h:r=>`<span class="pill ${r[2]==="PUT"?"p-dn":"p-up"}">${r[2]==="PUT"?"Put":"Call"}</span>`},
+    {k:"v",l:"Nozionale",num:1,v:r=>r[3],h:r=>usd(r[3])},{k:"s",l:"Azioni sottostanti",num:1,v:r=>r[4],h:r=>nf(r[4],0)}];
+  const tcols=[{k:"d",l:"Data",v:r=>r[0],h:r=>fd(r[0])},{k:"t",l:"Titolo",v:r=>r[2],h:r=>tLink(r[1],r[2],r[8])},{k:"y",l:"Operazione",v:r=>r[3],h:r=>chgPill(r[3])},
+    {k:"w",l:"Peso",num:1,v:r=>r[4],h:r=>pr(r[4],1)},{k:"x13",l:"vs SPY 3M",num:1,v:r=>r[5],h:r=>`<span class="${pcls(r[5])}">${pp(r[5])}</span>`},
+    {k:"x26",l:"6M",num:1,v:r=>r[6],h:r=>`<span class="${pcls(r[6])}">${pp(r[6])}</span>`},{k:"x52",l:"12M",num:1,v:r=>r[7],h:r=>`<span class="${pcls(r[7])}">${pp(r[7])}</span>`}];
+  const ts=j.tstats||{},P=j.pct||{};const hist=j.hist||[];const mxv=Math.max(1,...hist.map(h=>h[1]||0));
+  return `<p><a class="mut" href="#/investors">← Investitori</a></p>
+  <div class="co-head"><div><h1>${esc(j.name)}</h1><div class="co-meta"><a class="pill p-nt" href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${esc(j.cik)}&type=13F" target="_blank" rel="noopener">CIK ${esc(j.cik)} · EDGAR ↗</a><span>13F ${esc(quarterOf(j.period))} depositato il ${fd(j.filed)}</span>${j.active?"":'<span class="pill p-wr">non deposita da oltre 6 mesi</span>'}</div></div>
+   <div class="px">${j.rank?`<div class="v">${j.rank}°</div><div class="mut">score ${nf(j.score,0)}/100</div>`:`<div class="mut">Non in classifica<br><span style="font-size:12px">servono ${INST?.min_q||12} trimestri</span></div>`}</div></div>
+  <div class="grid kpis">${kpiS("Valore 13F",usd(j.aum),"",`${j.npos} posizioni azionarie`)}${kpiS("Alpha follower (5a)",pp(j.follow),pcls(j.follow),j.ann!=null?`${pp(j.ann)} l'anno vs SPY ${pp(j.ann_spy)}`:"")}
+   ${kpiS("Trade riusciti (6M)",pr(ts.hit26),"",`${ts.n||0} trade · media ${pp(ts.avg26)}`)}${kpiS("Max drawdown",j.dd==null?"–":pct(j.dd*100,0),"dn",j.ir!=null?`information ratio ${nf(j.ir,2)}`:"")}
+   ${kpiS("Opzioni (nozionale)",j.nopt?usd((j.call||0)+(j.put||0)):"nessuna","",j.nopt?`<span class="up">call ${usd(j.call)}</span> · <span class="dn">put ${usd(j.put)}</span>`:"")}
+   ${kpiS("Liquidità","n.d.","mut","i 13F non riportano la cassa")}</div>
+  <div class="grid two" style="margin-top:16px">
+   <div class="card"><div class="hd"><h2>Se lo avessi copiato</h2><small>portafoglio follower vs SPY</small></div><div class="bd">${lineChart(j.curve)}</div></div>
+   <div class="card"><div class="hd"><h2>Componenti dello score</h2><small>percentile tra i gestori</small></div><div class="bd">${j.rank?bars([["Alpha follower",P.follow,pp(j.follow)],["Alpha dei trade",P.trade,pp(j.trade)],["Trade riusciti",P.hit,pr(j.hit)],["Trimestri battuti",P.consist,pr(j.consist)],["Drawdown contenuto",P.dd,j.dd==null?"":pct(j.dd*100,0)]]):'<div class="empty-state">Storico insufficiente per la classifica.</div>'}
+    <div class="stat"><span>Rotazione media del portafoglio</span><b>${pr(j.turn)}</b></div><div class="stat"><span>Esito medio dei trade a 3 · 6 · 12 mesi</span><b>${pp(ts.avg13)} · ${pp(ts.avg26)} · ${pp(ts.avg52)}</b></div></div></div></div>
+  <div class="card" style="margin-top:16px"><div class="hd"><h2>Portafoglio ${esc(quarterOf(j.period))}</h2><small>${j.npos} posizioni${j.more?` · mostrate le prime 300`:""}</small></div>${table("inv-p",pcols,j.pos,{def:"w",limit:25})}</div>
+  ${j.exits?.length?`<div class="card" style="margin-top:16px"><div class="hd"><h2>Uscite nel trimestre</h2><small>${j.exits.length} titoli venduti del tutto</small></div><div class="bd">${j.exits.slice(0,20).map(r=>`<div class="stat"><span>${tLink(r[0],r[1],r[3])}</span><span class="mut">prima ${usd(r[2])}</span></div>`).join("")}</div></div>`:""}
+  <div class="grid two" style="margin-top:16px">
+   <div class="card"><div class="hd"><h2>Opzioni</h2><small>valore del sottostante, non del premio</small></div>${j.opts?.length?table("inv-o",ocols,j.opts,{def:"v",limit:15}):'<div class="empty-state">Nessuna opzione nel 13F.</div>'}</div>
+   <div class="card"><div class="hd"><h2>Short su titoli europei</h2><small>CONSOB · AMF, soglia 0,5%</small></div>${j.shorts?.length?`<div class="bd">${j.shorts.map(s=>`<div class="stat"><span>${s[5]&&U[s[5]]?`<a href="#/t/${encodeURIComponent(s[5])}"><b>${esc(info(s[5]).name)}</b></a>`:`<b>${esc(s[0])}</b>`}<div class="mut" style="font-size:12px">${esc(s[1])} · ${esc(s[4])} · ${fd(s[3])}</div></span><b class="dn">−${nf(s[2],2)}%</b></div>`).join("")}</div>`:'<div class="empty-state">Nessuna posizione corta pubblica abbinata a questo gestore. Negli USA gli short per detentore non sono pubblici.</div>'}</div></div>
+  <div class="card" style="margin-top:16px"><div class="hd"><h2>Trade recenti e com'è andata</h2><small>rendimento del titolo meno SPY dopo il deposito (vendite: segno invertito)</small></div>${j.trades?.length?table("inv-t",tcols,j.trades,{def:"d",limit:20}):'<div class="empty-state">Nessun trade rilevante.</div>'}</div>
+  <div class="card" style="margin-top:16px"><div class="hd"><h2>Storico</h2><small>valore 13F e numero di posizioni per trimestre</small></div><div class="bd">${hist.slice().reverse().slice(0,16).map(h=>`<div class="stat"><span>${esc(quarterOf(h[0]))}</span><span style="display:flex;align-items:center;gap:8px"><i style="display:block;height:8px;border-radius:99px;background:var(--acc);width:${Math.max(3,180*(h[1]||0)/mxv)}px"></i><b>${usd(h[1])}</b><span class="mut">${h[2]} pos.</span></span></div>`).join("")}</div></div>`;}
+async function ownCard(t){const j=await loadInst();if(!j||!(j.own||[]).includes(t))return "";
+  const o=OWNC[t]||(OWNC[t]=await getJSON(`own/${encodeURIComponent(t)}.json`));if(!o)return "";
+  const hcols=[{k:"r",l:"#",v:r=>r[8],h:r=>rkCell(r[8])},{k:"n",l:"Gestore",v:r=>r[1],h:r=>`<b>${esc(r[1])}</b><div class="mut" style="font-size:12px">${esc(quarterOf(r[2]))}</div>`},
+    {k:"v",l:"Valore",num:1,v:r=>r[3],h:r=>usd(r[3])},{k:"w",l:"Peso nel portafoglio",num:1,v:r=>r[4],h:r=>pr(r[4],1)},
+    {k:"c",l:"Variazione",v:r=>r[6],h:r=>chgPill(r[6])},{k:"d",l:"Δ azioni",num:1,v:r=>r[7],h:r=>r[6]==="new"?'<span class="mut">–</span>':`<span class="${pcls(r[7])}">${pp(r[7],0)}</span>`}];
+  const hh=o.hist||[];const nb=o.holders.filter(r=>r[6]==="new"||r[6]==="add").length,ns=o.holders.filter(r=>r[6]==="trim").length+(o.exits||[]).length;
+  const top=o.holders.filter(r=>r[8]&&r[8]<=50).length;
+  const sh=o.shorts||[];
+  return `<div class="card" style="margin-top:16px"><div class="hd"><h2>Investitori istituzionali</h2><small>13F SEC${o.us&&o.us!==t?` sulla quotazione USA ${esc(o.us)}`:""} · ${o.nhold} gestori seguiti · ${top} tra i top 50</small></div>
+   <div class="grid kpis" style="padding:0 16px 8px">${kpiS("Gestori che lo hanno",o.nhold,"",hh.length>1?`${hh.at(-2)[1]} il trimestre prima`:"")}${kpiS("Comprano / aumentano",nb,"up")}${kpiS("Riducono / escono",ns,"dn")}
+    ${kpiS("Short dichiarati",o.short_tot!=null?nf(o.short_tot,2)+"%":"n.d.",o.short_tot?"dn":"mut",o.short_tot!=null?`${sh.length} posizioni ≥ 0,5%`:(info(t).panel==="US"?"non pubblici per detentore negli USA":"nessuna sopra soglia"))}</div>
+   ${o.holders.length?table("own-h",hcols,o.holders,{def:"v",limit:10,rowAttr:r=>`data-go="inv/${r[0]}"`}):'<div class="empty-state">Nessun gestore seguito lo possiede nell\'ultimo trimestre.</div>'}
+   ${o.exits?.length?`<div class="bd"><div class="kk">Usciti nell'ultimo trimestre</div>${o.exits.map(r=>`<a class="pill p-dn" style="margin:3px" href="#/inv/${r[0]}">${esc(r[1])}</a>`).join("")}</div>`:""}
+   ${o.opts?.length?`<div class="bd"><div class="kk">Opzioni dichiarate</div>${o.opts.slice(0,12).map(r=>`<div class="stat"><span><a href="#/inv/${r[0]}"><b>${esc(r[1])}</b></a></span><span><span class="pill ${r[2]==="PUT"?"p-dn":"p-up"}">${r[2]==="PUT"?"Put":"Call"}</span> ${usd(r[3])}</span></div>`).join("")}</div>`:""}
+   ${sh.length?`<div class="bd"><div class="kk">Posizioni corte nette pubblicate</div>${sh.map(s=>`<div class="stat"><span>${s[4]?`<a href="#/inv/${s[4]}"><b>${esc(s[0])}</b></a>`:`<b>${esc(s[0])}</b>`}<div class="mut" style="font-size:12px">${esc(s[3])} · ${fd(s[2])}</div></span><b class="dn">−${nf(s[1],2)}%</b></div>`).join("")}</div>`:""}
+   <div class="bd mut" style="font-size:12px">${esc(o.short_note)} Liquidità dei gestori: n.d. (i 13F non la riportano).</div></div>`;}
+/* ---------- notifiche ---------- */
+let FEED=[];
+function feedRow(e){return `<a class="stat" style="text-decoration:none;color:inherit" href="${esc(e.link||"#/investors")}"><span><b>${esc(e.title)}</b>${e.important?' <span class="pill p-wr">importante</span>':""}<div class="mut" style="font-size:12px">${esc(e.text)}</div></span><span class="mut" style="white-space:nowrap">${fd((e.date||e.ts||"").slice(0,10))}</span></a>`;}
+async function loadFeed(){const f=await getJSON("feed.json");if(!f)return;FEED=f;const seen=LS.get("asnp.feedSeen","");
+  const un=FEED.filter(e=>e.ts>seen);const b=document.getElementById("bellN");b.textContent=un.length>99?"99+":un.length;b.style.display=un.length?"":"none";
+  if(window.Notification&&Notification.permission==="granted"){const told=LS.get("asnp.feedTold","");
+    un.filter(e=>e.important&&e.ts>told).slice(0,3).forEach(e=>{try{new Notification(e.title,{body:e.text,tag:e.id})}catch(_){}});
+    if(un.length)LS.set("asnp.feedTold",un[0].ts);}}
+function toggleFeed(){const p=document.getElementById("feedP");if(p.style.display==="block"){p.style.display="none";return;}
+  const seen=LS.get("asnp.feedSeen","");
+  p.innerHTML=`<div class="hd" style="padding:12px 14px"><b>Novità</b><span>${window.Notification&&Notification.permission!=="granted"?'<button class="btn" type="button" id="notifOn" style="padding:4px 10px">Attiva notifiche</button>':""}</span></div>
+   <div style="max-height:60vh;overflow:auto;padding:0 14px 10px">${FEED.length?FEED.slice(0,40).map(e=>`<div style="${e.ts>seen?"":"opacity:.7"}">${feedRow(e)}</div>`).join(""):'<div class="empty-state">Nessuna novità per ora.</div>'}</div>
+   <div class="mut" style="font-size:11.5px;padding:8px 14px;border-top:1px solid var(--line)">Nuovi 13F dei gestori seguiti e variazioni degli short europei, controllati ogni 3 ore. Per le notifiche sul telefono: app ntfy, argomento configurato nel secret NTFY_TOPIC.</div>`;
+  p.style.display="block";if(FEED[0])LS.set("asnp.feedSeen",FEED[0].ts);document.getElementById("bellN").style.display="none";
+  const n=document.getElementById("notifOn");if(n)n.onclick=async()=>{await Notification.requestPermission();p.style.display="none";toggleFeed();};}
+document.getElementById("bell").onclick=e=>{e.stopPropagation();toggleFeed();};
+document.addEventListener("click",e=>{const p=document.getElementById("feedP");if(p.style.display==="block"&&!e.target.closest("#feedP"))p.style.display="none";});
+setInterval(loadFeed,10*60*1000);
+
 /* ---------- router ---------- */
 function navHtml(cur){return PAGES.map(([k,l,ic])=>`<a href="#/${k}" ${cur===k?'aria-current="page"':""}>${svg(ic)}<span>${l}</span></a>`).join("");}
 let seq=0;
 async function render(){if(!D)return;const my=++seq;
   const [p,...rest]=(location.hash.replace(/^#\/?/,"")||"home").split("/");const arg=rest.join("/");
-  const cur=p==="t"||p==="idx"?"":p;document.getElementById("nav").innerHTML=navHtml(cur);document.getElementById("bnav").innerHTML=navHtml(cur);
-  const f={home:pHome,moves:pMoves,targets:pTargets,revisions:pRevisions,brokers:pBrokers,ranking:pRanking,idx:pIndex,watchlist:pWatch,pipeline:pPipeline,t:pTicker}[p]||pHome;
+  const cur=p==="t"||p==="idx"?"":p==="inv"?"investors":p;document.getElementById("nav").innerHTML=navHtml(cur);document.getElementById("bnav").innerHTML=navHtml(cur);
+  const f={home:pHome,moves:pMoves,targets:pTargets,revisions:pRevisions,brokers:pBrokers,ranking:pRanking,idx:pIndex,watchlist:pWatch,pipeline:pPipeline,t:pTicker,investors:pInvestors,inv:pInvestor}[p]||pHome;
   const html=await f(decodeURIComponent(arg||""));if(my!==seq)return;
   document.getElementById("page").innerHTML=html;
+  if(p==="t"&&U[decodeURIComponent(arg)]){const t=decodeURIComponent(arg);ownCard(t).then(h=>{if(my!==seq||!h)return;const pg=document.getElementById("page");pg.insertAdjacentHTML("beforeend",h);});}
   document.title=p==="t"&&U[arg]?`${info(decodeURIComponent(arg)).name} · ASNP`:"ASNP · Analyst Snapshot";}
 document.getElementById("page").addEventListener("click",e=>{
   const b=e.target.closest("[data-set]");if(b){const k=b.dataset.set;st[k]=isNaN(b.dataset.v)?b.dataset.v:+b.dataset.v;if(k==="mkt"||k==="win")LS.set("asnp."+k,st[k]);st.limit={};render();return;}
