@@ -49,13 +49,21 @@ def find_header(raw, word="isin"):
 
 def consob():
     url = CONSOB_FALLBACK
+    ses = requests.Session()
+    ses.headers.update(BH | {"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                             "Accept-Language": "it-IT,it;q=0.9,en;q=0.8"})
     try:
-        html = requests.get(CONSOB_PAGE, headers=BH, timeout=60).text
+        html = ses.get(CONSOB_PAGE, timeout=60).text                # anche per i cookie di sessione del sito
         m = re.search(r'href="([^"]*PncPubbl\.xlsx[^"]*)"', html)
         if m: url = m.group(1) if m.group(1).startswith("http") else "https://www.consob.it" + m.group(1)
     except Exception as e:
         print("pagina CONSOB non leggibile, uso il link noto:", e)
-    b = requests.get(url, headers=BH, timeout=90).content
+    r = ses.get(url, timeout=90, headers={"Referer": CONSOB_PAGE,
+                                         "Accept": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,*/*"})
+    b = r.content
+    if b[:2] != b"PK":
+        raise ValueError(f"il sito non ha restituito un file Excel (HTTP {r.status_code}, "
+                         f"{r.headers.get('content-type')}, {b[:80]!r})")
     xl = pd.ExcelFile(io.BytesIO(b))
     rows = []
     for sh in xl.sheet_names:
