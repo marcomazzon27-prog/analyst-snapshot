@@ -1,0 +1,468 @@
+cusip,ticker,name,sec_type,src
+00846U101,A,Agilent Technologies,Common Stock,universe
+037833100,AAPL,Apple Inc.,Common Stock,universe
+00287Y109,ABBV,AbbVie,Common Stock,universe
+009066101,ABNB,Airbnb,Common Stock,universe
+002824100,ABT,Abbott Laboratories,Common Stock,universe
+00724F101,ADBE,Adobe Inc.,Common Stock,universe
+032654105,ADI,Analog Devices,Common Stock,universe
+039483102,ADM,Archer Daniels Midland,Common Stock,universe
+053015103,ADP,Automatic Data Processing,Common Stock,universe
+052769106,ADSK,Autodesk,Common Stock,universe
+023608102,AEE,Ameren,Common Stock,universe
+025537101,AEP,American Electric Power,Common Stock,universe
+00130H105,AES,AES Corporation,Common Stock,universe
+001055102,AFL,Aflac,Common Stock,universe
+026874784,AIG,American International Group,Common Stock,universe
+04621X108,AIZ,Assurant,Common Stock,universe
+363576109,AJG,Arthur J. Gallagher & Co.,Common Stock,universe
+00971T101,AKAM,Akamai Technologies,Common Stock,universe
+012653101,ALB,Albemarle Corporation,Common Stock,universe
+016255101,ALGN,Align Technology,Common Stock,universe
+020002101,ALL,Allstate,Common Stock,universe
+038222105,AMAT,Applied Materials,Common Stock,universe
+007903107,AMD,Advanced Micro Devices,Common Stock,universe
+031100100,AME,Ametek,Common Stock,universe
+031162100,AMGN,Amgen,Common Stock,universe
+03076C106,AMP,Ameriprise Financial,Common Stock,universe
+03027X100,AMT,American Tower,Common Stock,universe
+023135106,AMZN,Amazon,Common Stock,universe
+040413106,ANET,Arista Networks,Common Stock,universe
+831865209,AOS,A. O. Smith,Common Stock,universe
+037411105,APA,APA Corporation,Common Stock,universe
+009158106,APD,Air Products,Common Stock,universe
+032095101,APH,Amphenol,Common Stock,universe
+037612306,APO,Apollo Global Management,Common Stock,universe
+03831W108,APP,AppLovin,Common Stock,universe
+015271109,ARE,Alexandria Real Estate Equities,Common Stock,universe
+03990B101,ARES,Ares Management,Common Stock,universe
+049560105,ATO,Atmos Energy,Common Stock,universe
+11135F101,AVGO,Broadcom,Common Stock,universe
+053611109,AVY,Avery Dennison,Common Stock,universe
+030420103,AWK,American Water Works,Common Stock,universe
+87651B104,AXON,Axon Enterprise,Common Stock,universe
+025816109,AXP,American Express,Common Stock,universe
+053332102,AZO,AutoZone,Common Stock,universe
+097023105,BA,Boeing,Common Stock,universe
+060505104,BAC,Bank of America,Common Stock,universe
+058498106,BALL,Ball Corporation,Common Stock,universe
+071813109,BAX,Baxter International,Common Stock,universe
+086516101,BBY,Best Buy,Common Stock,universe
+075887109,BDX,Becton Dickinson,Common Stock,universe
+093712107,BE,Bloom Energy,Common Stock,universe
+354613101,BEN,Franklin Resources,Common Stock,universe
+115637100,BF-B,Brown–Forman,Common Stock,universe
+09062X103,BIIB,Biogen,Common Stock,universe
+09857L108,BKNG,Booking Holdings,Common Stock,universe
+05722G100,BKR,Baker Hughes,Common Stock,universe
+09247X101,BLK,BlackRock,Common Stock,universe
+110122108,BMY,Bristol Myers Squibb,Common Stock,universe
+064058100,BNY,BNY Mellon,Common Stock,universe
+11133T103,BR,Broadridge Financial Solutions,Common Stock,universe
+084670108,BRK-B,Berkshire Hathaway,Common Stock,universe
+115236101,BRO,Brown & Brown,Common Stock,universe
+101137107,BSX,Boston Scientific,Common Stock,universe
+09253U108,BX,Blackstone Inc.,Common Stock,universe
+101121101,BXP,"BXP, Inc.",Common Stock,universe
+172967424,C,Citigroup,Common Stock,universe
+14149Y108,CAH,Cardinal Health,Common Stock,universe
+14448C104,CARR,Carrier Global,Common Stock,universe
+147528103,CASY,Casey's,Common Stock,universe
+149123101,CAT,Caterpillar Inc.,Common Stock,universe
+171232101,CB,Chubb Limited,Common Stock,universe
+12503M108,CBOE,Cboe Global Markets,Common Stock,universe
+12504L109,CBRE,CBRE Group,Common Stock,universe
+22822V101,CCI,Crown Castle,Common Stock,universe
+127387108,CDNS,Cadence Design Systems,Common Stock,universe
+12514G108,CDW,CDW Corporation,Common Stock,universe
+210371100,CEG,Constellation Energy,Common Stock,universe
+125269100,CF,CF Industries,Common Stock,universe
+174610105,CFG,Citizens Financial Group,Common Stock,universe
+171340102,CHD,Church & Dwight,Common Stock,universe
+12541W209,CHRW,C.H. Robinson,Common Stock,universe
+16117M305,CHTR,Charter Communications,Common Stock,universe
+125509109,CI,Cigna,Common Stock,universe
+171779309,CIEN,Ciena,Common Stock,universe
+172062101,CINF,Cincinnati Financial,Common Stock,universe
+194162103,CL,Colgate-Palmolive,Common Stock,universe
+189054109,CLX,Clorox,Common Stock,universe
+20030N200,CMCSA,Comcast,Common Stock,universe
+12572Q105,CME,CME Group,Common Stock,universe
+169656105,CMG,Chipotle Mexican Grill,Common Stock,universe
+231021106,CMI,Cummins,Common Stock,universe
+125896100,CMS,CMS Energy,Common Stock,universe
+15135B101,CNC,Centene Corporation,Common Stock,universe
+15189T107,CNP,CenterPoint Energy,Common Stock,universe
+14040H105,COF,Capital One,Common Stock,universe
+192479103,COHR,Coherent Corp.,Common Stock,universe
+19260Q107,COIN,Coinbase,Common Stock,universe
+216648402,COO,Cooper Companies (The),Common Stock,universe
+20825C104,COP,ConocoPhillips,Common Stock,universe
+03073E105,COR,Cencora,Common Stock,universe
+22160K105,COST,Costco,Common Stock,universe
+339041105,CPAY,Corpay,Common Stock,universe
+217204106,CPRT,Copart,Common Stock,universe
+133131102,CPT,Camden Property Trust,Common Stock,universe
+159864107,CRL,Charles River Laboratories,Common Stock,universe
+79466L302,CRM,Salesforce,Common Stock,universe
+22788C105,CRWD,CrowdStrike,Common Stock,universe
+17275R102,CSCO,Cisco,Common Stock,universe
+22160N109,CSGP,CoStar Group,Common Stock,universe
+126408103,CSX,CSX Corporation,Common Stock,universe
+172908105,CTAS,Cintas,Common Stock,universe
+192446102,CTSH,Cognizant,Common Stock,universe
+22052L104,CTVA,Corteva,Common Stock,universe
+146869102,CVNA,Carvana,Common Stock,universe
+126650100,CVS,CVS Health,Common Stock,universe
+166764100,CVX,Chevron Corporation,Common Stock,universe
+25746U109,D,Dominion Energy,Common Stock,universe
+247361702,DAL,Delta Air Lines,Common Stock,universe
+25809K105,DASH,DoorDash,Common Stock,universe
+263534109,DD,DuPont,Common Stock,universe
+23804L103,DDOG,Datadog,Common Stock,universe
+244199105,DE,Deere & Company,Common Stock,universe
+243537107,DECK,Deckers Brands,Common Stock,universe
+24703L103,DELL,Dell Technologies,Common Stock,universe
+256677105,DG,Dollar General,Common Stock,universe
+23331A109,DHI,D. R. Horton,Common Stock,universe
+235851102,DHR,Danaher Corporation,Common Stock,universe
+254687106,DIS,Walt Disney Company (The),Common Stock,universe
+253868103,DLR,Digital Realty,Common Stock,universe
+256746108,DLTR,Dollar Tree,Common Stock,universe
+42250P103,DOC,Healthpeak Properties,Common Stock,universe
+260003108,DOV,Dover Corporation,Common Stock,universe
+260543103,DOW,Dow Inc.,Common Stock,universe
+25754A201,DPZ,Domino's,Common Stock,universe
+237194105,DRI,Darden Restaurants,Common Stock,universe
+233331107,DTE,DTE Energy,Common Stock,universe
+26441C204,DUK,Duke Energy,Common Stock,universe
+23918K108,DVA,DaVita,Common Stock,universe
+25179M103,DVN,Devon Energy,Common Stock,universe
+252131107,DXCM,Dexcom,Common Stock,universe
+278642103,EBAY,eBay Inc.,Common Stock,universe
+278768106,ECHO,EchoStar,Common Stock,universe
+278865100,ECL,Ecolab,Common Stock,universe
+209115104,ED,Consolidated Edison,Common Stock,universe
+294429105,EFX,Equifax,Common Stock,universe
+281020107,EIX,Edison International,Common Stock,universe
+518439104,EL,Estée Lauder Companies (The),Common Stock,universe
+036752103,ELV,Elevance Health,Common Stock,universe
+29084Q100,EME,Emcor,Common Stock,universe
+291011104,EMR,Emerson Electric,Common Stock,universe
+26875P101,EOG,EOG Resources,Common Stock,universe
+29444U502,EQIX,Equinix,Common Stock,universe
+26884L109,EQT,EQT Corporation,Common Stock,universe
+29530P102,ERIE,Erie Indemnity,Common Stock,universe
+30040W108,ES,Eversource Energy,Common Stock,universe
+297178105,ESS,Essex Property Trust,Common Stock,universe
+29364G103,ETR,Entergy,Common Stock,universe
+30034W106,EVRG,Evergy,Common Stock,universe
+28176E108,EW,Edwards Lifesciences,Common Stock,universe
+30161N101,EXC,Exelon,Common Stock,universe
+165167107,EXE,Expand Energy,Common Stock,universe
+302130109,EXPD,Expeditors International,Common Stock,universe
+30212P303,EXPE,Expedia Group,Common Stock,universe
+30225T102,EXR,Extra Space Storage,Common Stock,universe
+345370860,F,Ford Motor Company,Common Stock,universe
+25278X109,FANG,Diamondback Energy,Common Stock,universe
+311900104,FAST,Fastenal,Common Stock,universe
+35671D857,FCX,Freeport-McMoRan,Common Stock,universe
+303075105,FDS,FactSet,Common Stock,universe
+31428X106,FDX,FedEx,Common Stock,universe
+314352105,FDXF,FedEx Freight,Common Stock,universe
+337932107,FE,FirstEnergy,Common Stock,universe
+31488V107,FERG,Ferguson Enterprises,Common Stock,universe
+315616102,FFIV,"F5, Inc.",Common Stock,universe
+303250104,FICO,Fair Isaac,Common Stock,universe
+31620M106,FIS,Fidelity National Information Services,Common Stock,universe
+337738108,FISV,Fiserv,Common Stock,universe
+316773100,FITB,Fifth Third Bancorp,Common Stock,universe
+199908104,FIX,Comfort Systems USA,Common Stock,universe
+35137L105,FOX,Fox Corporation (Class B),Common Stock,universe
+313745101,FRT,Federal Realty Investment Trust,Common Stock,universe
+336433107,FSLR,First Solar,Common Stock,universe
+34959E109,FTNT,Fortinet,Common Stock,universe
+34959J108,FTV,Fortive,Common Stock,universe
+369550108,GD,General Dynamics,Common Stock,universe
+380237107,GDDY,GoDaddy,Common Stock,universe
+369604103,GE,GE Aerospace,Common Stock,universe
+36266G107,GEHC,GE HealthCare,Common Stock,universe
+668771108,GEN,Gen Digital,Common Stock,universe
+36828A101,GEV,GE Vernova,Common Stock,universe
+375558103,GILD,Gilead Sciences,Common Stock,universe
+370334104,GIS,General Mills,Common Stock,universe
+37959E102,GL,Globe Life,Common Stock,universe
+219350105,GLW,Corning Inc.,Common Stock,universe
+37045V100,GM,General Motors,Common Stock,universe
+368736104,GNRC,Generac,Common Stock,universe
+02079K107,GOOG,Alphabet Inc. (Class C),Common Stock,universe
+372460105,GPC,Genuine Parts Company,Common Stock,universe
+37940X102,GPN,Global Payments,Common Stock,universe
+38141G104,GS,Goldman Sachs,Common Stock,universe
+384802104,GWW,W. W. Grainger,Common Stock,universe
+406216101,HAL,Halliburton,Common Stock,universe
+418056107,HAS,Hasbro,Common Stock,universe
+40412C101,HCA,HCA Healthcare,Common Stock,universe
+437076102,HD,Home Depot (The),Common Stock,universe
+416515104,HIG,Hartford (The),Common Stock,universe
+446413106,HII,Huntington Ingalls Industries,Common Stock,universe
+43300A203,HLT,Hilton Worldwide,Common Stock,universe
+438516106,HON,Honeywell Technologies,Common Stock,universe
+43849R105,HONA,Honeywell Aerospace,Common Stock,universe
+770700102,HOOD,Robinhood Markets,Common Stock,universe
+42824C109,HPE,Hewlett Packard Enterprise,Common Stock,universe
+40434L105,HPQ,HP Inc.,Common Stock,universe
+440452100,HRL,Hormel Foods,Common Stock,universe
+806407102,HSIC,Henry Schein,Common Stock,universe
+44107P104,HST,Host Hotels & Resorts,Common Stock,universe
+427866108,HSY,Hershey Company (The),Common Stock,universe
+443510607,HUBB,Hubbell Incorporated,Common Stock,universe
+444859102,HUM,Humana,Common Stock,universe
+03965L100,HWM,Howmet Aerospace,Common Stock,universe
+45841N107,IBKR,Interactive Brokers,Common Stock,universe
+459200101,IBM,IBM,Common Stock,universe
+45866F104,ICE,Intercontinental Exchange,Common Stock,universe
+45168D104,IDXX,Idexx Laboratories,Common Stock,universe
+45167R104,IEX,IDEX Corporation,Common Stock,universe
+459506101,IFF,International Flavors & Fragrances,Common Stock,universe
+452327109,ILMN,"Illumina, Inc.",Common Stock,universe
+45337C102,INCY,Incyte,Common Stock,universe
+458140100,INTC,Intel,Common Stock,universe
+461202103,INTU,Intuit,Common Stock,universe
+46187W107,INVH,Invitation Homes,Common Stock,universe
+460146103,IP,International Paper,Common Stock,universe
+46266C105,IQV,IQVIA,Common Stock,universe
+45687V106,IR,Ingersoll Rand,Common Stock,universe
+46284V101,IRM,Iron Mountain,Common Stock,universe
+46120E602,ISRG,Intuitive Surgical,Common Stock,universe
+366651107,IT,Gartner,Common Stock,universe
+452308109,ITW,Illinois Tool Works,Common Stock,universe
+469814107,J,Jacobs Solutions,Common Stock,universe
+445658107,JBHT,J.B. Hunt,Common Stock,universe
+466313103,JBL,Jabil,Common Stock,universe
+426281101,JKHY,Jack Henry & Associates,Common Stock,universe
+478160104,JNJ,Johnson & Johnson,Common Stock,universe
+46625H100,JPM,JPMorgan Chase,Common Stock,universe
+49271V100,KDP,Keurig Dr Pepper,Common Stock,universe
+493267108,KEY,KeyCorp,Common Stock,universe
+49338L103,KEYS,Keysight Technologies,Common Stock,universe
+500754106,KHC,Kraft Heinz,Common Stock,universe
+49446R109,KIM,Kimco Realty,Common Stock,universe
+48248M102,KKR,KKR & Co.,Common Stock,universe
+482480100,KLAC,KLA Corporation,Common Stock,universe
+494368103,KMB,Kimberly-Clark,Common Stock,universe
+49456B101,KMI,Kinder Morgan,Common Stock,universe
+191216100,KO,Coca-Cola Company (The),Common Stock,universe
+501044101,KR,Kroger,Common Stock,universe
+49177J102,KVUE,Kenvue,Common Stock,universe
+540424108,L,Loews Corporation,Common Stock,universe
+525327102,LDOS,Leidos,Common Stock,universe
+526057104,LEN,Lennar,Common Stock,universe
+50540R409,LH,Labcorp,Common Stock,universe
+502431109,LHX,L3Harris,Common Stock,universe
+526107107,LII,Lennox International,Common Stock,universe
+55024U109,LITE,Lumentum,Common Stock,universe
+532457108,LLY,Lilly (Eli),Common Stock,universe
+539830109,LMT,Lockheed Martin,Common Stock,universe
+018802108,LNT,Alliant Energy,Common Stock,universe
+548661107,LOW,Lowe's,Common Stock,universe
+512807108,LRCX,Lam Research,Common Stock,universe
+550021109,LULU,Lululemon Athletica,Common Stock,universe
+844741108,LUV,Southwest Airlines,Common Stock,universe
+517834107,LVS,Las Vegas Sands,Common Stock,universe
+538034109,LYV,Live Nation Entertainment,Common Stock,universe
+57636Q104,MA,Mastercard,Common Stock,universe
+59522J103,MAA,Mid-America Apartment Communities,Common Stock,universe
+571903202,MAR,Marriott International,Common Stock,universe
+574599106,MAS,Masco,Common Stock,universe
+580135101,MCD,McDonald's,Common Stock,universe
+595017104,MCHP,Microchip Technology,Common Stock,universe
+58155Q103,MCK,McKesson Corporation,Common Stock,universe
+615369105,MCO,Moody's Corporation,Common Stock,universe
+609207105,MDLZ,Mondelez International,Common Stock,universe
+59156R108,MET,MetLife,Common Stock,universe
+30303M102,META,Meta Platforms,Common Stock,universe
+552953101,MGM,MGM Resorts,Common Stock,universe
+579780206,MKC,McCormick & Company,Common Stock,universe
+573284106,MLM,Martin Marietta Materials,Common Stock,universe
+88579Y101,MMM,3M,Common Stock,universe
+611740101,MNST,Monster Beverage,Common Stock,universe
+02209S103,MO,Altria,Common Stock,universe
+61945C103,MOS,Mosaic Company (The),Common Stock,universe
+56585A102,MPC,Marathon Petroleum,Common Stock,universe
+609839105,MPWR,Monolithic Power Systems,Common Stock,universe
+58933Y105,MRK,Merck & Co.,Common Stock,universe
+60770K107,MRNA,Moderna,Common Stock,universe
+571748102,MRSH,Marsh McLennan,Common Stock,universe
+573874104,MRVL,Marvell Technology,Common Stock,universe
+617446448,MS,Morgan Stanley,Common Stock,universe
+55354G100,MSCI,MSCI,Common Stock,universe
+594918104,MSFT,Microsoft,Common Stock,universe
+620076307,MSI,Motorola Solutions,Common Stock,universe
+55261F104,MTB,M&T Bank,Common Stock,universe
+592688105,MTD,Mettler Toledo,Common Stock,universe
+595112103,MU,Micron Technology,Common Stock,universe
+631103108,NDAQ,"Nasdaq, Inc.",Common Stock,universe
+655663102,NDSN,Nordson Corporation,Common Stock,universe
+302571104,NEE,NextEra Energy,Common Stock,universe
+651639106,NEM,Newmont,Common Stock,universe
+64110L106,NFLX,Netflix,Common Stock,universe
+65473P105,NI,NiSource,Common Stock,universe
+654106103,NKE,"Nike, Inc.",Common Stock,universe
+666807102,NOC,Northrop Grumman,Common Stock,universe
+81762P102,NOW,ServiceNow,Common Stock,universe
+629377508,NRG,NRG Energy,Common Stock,universe
+655844108,NSC,Norfolk Southern,Common Stock,universe
+64120L104,NTAP,NetApp,Common Stock,universe
+665859104,NTRS,Northern Trust,Common Stock,universe
+670346105,NUE,Nucor,Common Stock,universe
+67066G104,NVDA,Nvidia,Common Stock,universe
+62944T105,NVR,"NVR, Inc.",Common Stock,universe
+65249B109,NWS,News Corp (Class B),Common Stock,universe
+756109104,O,Realty Income,Common Stock,universe
+679580100,ODFL,Old Dominion,Common Stock,universe
+682680103,OKE,Oneok,Common Stock,universe
+681919106,OMC,Omnicom Group,Common Stock,universe
+682189105,ON,ON Semiconductor,Common Stock,universe
+68389X105,ORCL,Oracle Corporation,Common Stock,universe
+67103H107,ORLY,O'Reilly Automotive,Common Stock,universe
+68902V107,OTIS,Otis Worldwide,Common Stock,universe
+674599105,OXY,Occidental Petroleum,Common Stock,universe
+74624M102,P,Everpure,Common Stock,universe
+697435105,PANW,Palo Alto Networks,Common Stock,universe
+704326107,PAYX,Paychex,Common Stock,universe
+693718108,PCAR,Paccar,Common Stock,universe
+69331C108,PCG,PG&E Corporation,Common Stock,universe
+744573106,PEG,Public Service Enterprise Group,Common Stock,universe
+713448108,PEP,PepsiCo,Common Stock,universe
+717081103,PFE,Pfizer,Common Stock,universe
+74251V102,PFG,Principal Financial Group,Common Stock,universe
+742718109,PG,Procter & Gamble,Common Stock,universe
+743315103,PGR,Progressive Corporation,Common Stock,universe
+701094104,PH,Parker Hannifin,Common Stock,universe
+745867101,PHM,PulteGroup,Common Stock,universe
+695156109,PKG,Packaging Corporation of America,Common Stock,universe
+74340W103,PLD,Prologis,Common Stock,universe
+69608A108,PLTR,Palantir Technologies,Common Stock,universe
+718172109,PM,Philip Morris International,Common Stock,universe
+693475105,PNC,PNC Financial Services,Common Stock,universe
+723484101,PNW,Pinnacle West Capital,Common Stock,universe
+693506107,PPG,PPG Industries,Common Stock,universe
+69351T106,PPL,PPL Corporation,Common Stock,universe
+744320102,PRU,Prudential Financial,Common Stock,universe
+74460D109,PSA,Public Storage,Common Stock,universe
+69932A204,PSKY,Paramount Skydance Corporation,Common Stock,universe
+718546104,PSX,Phillips 66,Common Stock,universe
+69370C100,PTC,PTC Inc.,Common Stock,universe
+74762E102,PWR,Quanta Services,Common Stock,universe
+70450Y103,PYPL,PayPal,Common Stock,universe
+74743L100,Q,Qnity Electronics,Common Stock,universe
+747525103,QCOM,Qualcomm,Common Stock,universe
+75734B100,RDDT,Reddit,Common Stock,universe
+758849103,REG,Regency Centers,Common Stock,universe
+75886F107,REGN,Regeneron Pharmaceuticals,Common Stock,universe
+7591EP100,RF,Regions Financial Corporation,Common Stock,universe
+754730109,RJF,Raymond James Financial,Common Stock,universe
+751212101,RL,Ralph Lauren Corporation,Common Stock,universe
+761152107,RMD,ResMed|,Common Stock,universe
+773903109,ROK,Rockwell Automation,Common Stock,universe
+775711104,ROL,"Rollins, Inc.",Common Stock,universe
+776696106,ROP,Roper Technologies,Common Stock,universe
+778296103,ROST,Ross Stores,Common Stock,universe
+760759100,RSG,Republic Services,Common Stock,universe
+75513E101,RTX,RTX Corporation,Common Stock,universe
+78410G104,SBAC,SBA Communications,Common Stock,universe
+855244109,SBUX,Starbucks,Common Stock,universe
+808513105,SCHW,Charles Schwab Corporation,Common Stock,universe
+824348106,SHW,Sherwin-Williams,Common Stock,universe
+832696405,SJM,J.M. Smucker Company (The),Common Stock,universe
+86800U104,SMCI,Supermicro,Common Stock,universe
+833034101,SNA,Snap-on,Common Stock,universe
+80004C200,SNDK,Sandisk,Common Stock,universe
+871607107,SNPS,Synopsys,Common Stock,universe
+842587107,SO,Southern Company,Common Stock,universe
+83444M101,SOLV,Solventum,Common Stock,universe
+828806109,SPG,Simon Property Group,Common Stock,universe
+78409V104,SPGI,S&P Global,Common Stock,universe
+859152100,STE,Steris,Common Stock,universe
+858119100,STLD,Steel Dynamics,Common Stock,universe
+857477103,STT,State Street Corporation,Common Stock,universe
+21036P108,STZ,Constellation Brands,Common Stock,universe
+854502101,SWK,Stanley Black & Decker,Common Stock,universe
+83088M102,SWKS,Skyworks Solutions,Common Stock,universe
+87165B103,SYF,Synchrony Financial,Common Stock,universe
+863667101,SYK,Stryker Corporation,Common Stock,universe
+871829107,SYY,Sysco,Common Stock,universe
+00206R102,T,AT&T,Common Stock,universe
+893641100,TDG,TransDigm Group,Common Stock,universe
+879360105,TDY,Teledyne Technologies,Common Stock,universe
+09073M104,TECH,Bio-Techne,Common Stock,universe
+880770102,TER,Teradyne,Common Stock,universe
+89832Q109,TFC,Truist Financial,Common Stock,universe
+87612E106,TGT,Target Corporation,Common Stock,universe
+872540109,TJX,TJX Companies,Common Stock,universe
+87256C101,TKO,TKO Group Holdings,Common Stock,universe
+883556102,TMO,Thermo Fisher Scientific,Common Stock,universe
+872590104,TMUS,T-Mobile US,Common Stock,universe
+88262P102,TPL,Texas Pacific Land Corporation,Common Stock,universe
+876030107,TPR,"Tapestry, Inc.",Common Stock,universe
+87612G101,TRGP,Targa Resources,Common Stock,universe
+896239100,TRMB,Trimble Inc.,Common Stock,universe
+74144T108,TROW,T. Rowe Price,Common Stock,universe
+89417E109,TRV,Travelers Companies (The),Common Stock,universe
+892356106,TSCO,Tractor Supply,Common Stock,universe
+88160R101,TSLA,"Tesla, Inc.",Common Stock,universe
+902494103,TSN,Tyson Foods,Common Stock,universe
+874054109,TTWO,Take-Two Interactive,Common Stock,universe
+882508104,TXN,Texas Instruments,Common Stock,universe
+883203101,TXT,Textron,Common Stock,universe
+902252105,TYL,Tyler Technologies,Common Stock,universe
+910047109,UAL,United Airlines Holdings,Common Stock,universe
+90353T100,UBER,Uber,Common Stock,universe
+902653104,UDR,"UDR, Inc.",Common Stock,universe
+913903100,UHS,Universal Health Services,Common Stock,universe
+90384S303,ULTA,Ulta Beauty,Common Stock,universe
+91324P102,UNH,UnitedHealth Group,Common Stock,universe
+907818108,UNP,Union Pacific Corporation,Common Stock,universe
+911312106,UPS,United Parcel Service,Common Stock,universe
+911363109,URI,United Rentals,Common Stock,universe
+902973304,USB,U.S. Bancorp,Common Stock,universe
+92826C839,V,Visa Inc.,Common Stock,universe
+922475108,VEEV,Veeva Systems,Common Stock,universe
+925652109,VICI,Vici Properties,Common Stock,universe
+91913Y100,VLO,Valero Energy,Common Stock,universe
+92338C103,VLTO,Veralto,Common Stock,universe
+929160109,VMC,Vulcan Materials Company,Common Stock,universe
+29476L107,VMRK,Vivmark Residential,Common Stock,universe
+92345Y106,VRSK,Verisk Analytics,Common Stock,universe
+92343E102,VRSN,Verisign,Common Stock,universe
+92537N108,VRT,Vertiv,Common Stock,universe
+92532F100,VRTX,Vertex Pharmaceuticals,Common Stock,universe
+92840M102,VST,Vistra Corp.,Common Stock,universe
+92276F100,VTR,Ventas,Common Stock,universe
+92556V106,VTRS,Viatris,Common Stock,universe
+92343V104,VZ,Verizon,Common Stock,universe
+929740108,WAB,Wabtec,Common Stock,universe
+941848103,WAT,Waters Corporation,Common Stock,universe
+934423104,WBD,Warner Bros. Discovery,Common Stock,universe
+98138H101,WDAY,"Workday, Inc.",Common Stock,universe
+958102105,WDC,Western Digital,Common Stock,universe
+92939U106,WEC,WEC Energy Group,Common Stock,universe
+95040Q104,WELL,Welltower,Common Stock,universe
+949746101,WFC,Wells Fargo,Common Stock,universe
+94106L109,WM,Waste Management,Common Stock,universe
+969457100,WMB,Williams Companies,Common Stock,universe
+931142103,WMT,Walmart,Common Stock,universe
+084423102,WRB,W. R. Berkley Corporation,Common Stock,universe
+969904101,WSM,"Williams-Sonoma, Inc.",Common Stock,universe
+955306105,WST,West Pharmaceutical Services,Common Stock,universe
+962166104,WY,Weyerhaeuser,Common Stock,universe
+983134107,WYNN,Wynn Resorts,Common Stock,universe
+98389B100,XEL,Xcel Energy,Common Stock,universe
+30231G102,XOM,ExxonMobil,Common Stock,universe
+98419M100,XYL,Xylem Inc.,Common Stock,universe
+852234103,XYZ,"Block, Inc.",Common Stock,universe
+988498101,YUM,Yum! Brands,Common Stock,universe
+98956P102,ZBH,Zimmer Biomet,Common Stock,universe
+989207105,ZBRA,Zebra Technologies,Common Stock,universe
+98978V103,ZTS,Zoetis,Common Stock,universe
