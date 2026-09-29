@@ -1,5 +1,35 @@
 [
 {
+"id": "short-CONSOB-IT0003492391-Citadel Advisors LLC-2026-09-28-0.59",
+"ts": "2026-09-29T20:02:46Z",
+"type": "short",
+"title": "Diasorin: Citadel Advisors LLC",
+"text": "short da 0.69% a 0.59% (0.59%, CONSOB, 2026-09-28)",
+"date": "2026-09-28",
+"important": false,
+"link": "#/t/DIA.MI"
+},
+{
+"id": "short-CONSOB-IT0004965148-Ilex Capital Partners (UK) LLP-2026-09-28-1.69",
+"ts": "2026-09-29T20:02:46Z",
+"type": "short",
+"title": "Moncler: Ilex Capital Partners (UK) LLP",
+"text": "short da 1.76% a 1.69% (1.69%, CONSOB, 2026-09-28)",
+"date": "2026-09-28",
+"important": true,
+"link": "#/t/MONC.MI"
+},
+{
+"id": "short-CONSOB-IT0004764699-AQR Capital Management, LLC-2026-09-28-0.59",
+"ts": "2026-09-29T20:02:46Z",
+"type": "short",
+"title": "Brunello Cucinelli: AQR Capital Management, LLC",
+"text": "short da 0.68% a 0.59% (0.59%, CONSOB, 2026-09-28)",
+"date": "2026-09-28",
+"important": false,
+"link": "#/t/BC.MI"
+},
+{
 "id": "short-FCA-GB00B06QFB75-Totale dichiarato (aggregato FCA)-2026-09-21-0.21",
 "ts": "2026-09-29T13:05:42Z",
 "type": "short",
