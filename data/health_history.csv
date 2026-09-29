@@ -2,3 +2,4 @@ run_date,tickers,failed,rating_rows,revision_rows,unmapped_grades,target_rows,pr
 2026-09-25,853,0,19899,1702,Mixed; Negative,,,
 2026-09-27,986,0,20085,1968,,985.0,985.0,19655.0
 2026-09-28,986,0,20085,1968,,985.0,993.0,19654.0
+2026-09-29,986,0,21461,1968,Developing,985.0,1034.0,20277.0
