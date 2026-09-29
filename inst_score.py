@@ -266,17 +266,56 @@ def nkey(s):
 def load_shorts():
     p = ROOT / "data" / "shorts" / "positions.csv.gz"
     if not p.exists(): return pd.DataFrame(columns=["source", "holder", "issuer", "isin", "pct", "pos_date", "current"])
-    s = pd.read_csv(p, dtype=str)
-    s["pct"] = pd.to_numeric(s["pct"], errors="coerce")
-    s["current"] = s["current"].astype(str) == "True"
-    return s
+    from inst_shorts import fix_current
+    return fix_current(pd.read_csv(p, dtype=str))
 
 
 # ---------------------------------------------------------------- export
+def shorts_only(feed):
+    """Finché i 13F non sono scaricati: pubblica comunque gli short europei (pagine titolo + pagina Investitori)."""
+    u = pd.read_csv(ROOT / "universe.csv", dtype=str)
+    isin2u = {i: t for t, i in zip(u["ticker"], u["isin"]) if isinstance(i, str) and len(i) == 12}
+    sh = load_shorts()
+    sh = sh[sh["isin"].isin(isin2u)].copy()
+    sh["t"] = sh["isin"].map(isin2u)
+    now = pd.Timestamp.today()
+    odir = SITE / "own"; odir.mkdir(exist_ok=True)
+    own, top = [], []
+    for ut, g in sh.groupby("t"):
+        cur = g[g["current"]].sort_values("pct", ascending=False)
+        hist = g[pd.to_datetime(g["pos_date"], errors="coerce") >= now - pd.DateOffset(years=3)]
+        if (hist["source"] == "FCA").all():
+            series = hist.groupby("pos_date")["pct"].sum().sort_index().tail(300).reset_index().values.tolist()
+        else:
+            th = hist.groupby("holder")["pct"].max().sort_values(ascending=False).head(8).index
+            series = [[h, hist[hist["holder"] == h].sort_values("pos_date")[["pos_date", "pct"]].values.tolist()] for h in th]
+        dump(odir / f"{ut}.json", {"t": ut, "us": None, "isin": g["isin"].iloc[0], "holders": [], "nhold": 0, "exits": [],
+             "opts": [], "hist": [], "pending13f": True,
+             "shorts": [[r.holder, r4(r.pct, 3), r.pos_date, r.source, None] for r in cur.itertuples()],
+             "short_tot": r4(cur["pct"].sum(), 3) if len(cur) else None, "short_hist": series,
+             "short_note": "Posizioni corte nette >= 0,5% del capitale pubblicate da CONSOB/AMF (per detentore) "
+                           "o FCA (aggregato); per i titoli USA non esiste un dato per detentore."})
+        own.append(ut)
+        if len(cur): top.append([ut, r4(cur["pct"].sum(), 3), int(len(cur)), cur["source"].iloc[0], cur["pos_date"].max()])
+    top.sort(key=lambda x: -(x[1] or 0))
+    cs = sh[sh["current"] & (sh["source"] != "FCA")].copy()
+    cs["hk"] = cs["holder"].str.upper().str.replace(r"[^A-Z0-9 ]", "", regex=True).str.split().str[:2].str.join(" ")
+    cs["holder"] = cs.groupby("hk")["holder"].transform("first")
+    holders = (cs.groupby("holder").agg(n=("t", "nunique"), tot=("pct", "sum"))
+               .sort_values("n", ascending=False).head(25).reset_index().values.tolist())
+    dump(SITE / "inst.json", {"updated": dt.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), "pending13f": True,
+         "managers": [], "own": own, "feed": feed[:100], "short_top": top[:40],
+         "short_holders": [[h, int(n), r4(t, 2)] for h, n, t in holders],
+         "notes": ["I portafogli 13F sono in attesa del primo scaricamento dalla SEC."]})
+    print(f"solo short: {len(own)} titoli dell'universo con posizioni corte pubblicate")
+
+
 def main():
     SITE.mkdir(exist_ok=True)
     feed = load_feed()
     dump(SITE / "feed.json", feed[:200])
+    if not periods():
+        shorts_only(feed); return
     H, F, M, P = load()
     nm = names_of(M, F)
     port, tot, av = build_portfolios(H, F)

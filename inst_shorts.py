@@ -129,6 +129,24 @@ def fca():
     return pd.concat(fr) if fr else pd.DataFrame()
 
 
+def fix_current(df):
+    """Una sola posizione corrente per (fonte, detentore, titolo): l'ultima dichiarata.
+    AMF pubblica ogni variazione (anche la discesa sotto 0,5%): è corrente solo se l'ultima è >= 0,5%."""
+    df = df.reset_index(drop=True)
+    df["pct"] = pd.to_numeric(df["pct"], errors="coerce")
+    df["current"] = df["current"].astype(str) == "True"
+    k = df["holder"].astype(str).str.upper().str.replace(r"[^A-Z0-9]", "", regex=True)
+    df["_k"] = df["source"] + "|" + k + "|" + df["isin"]
+    df = df.sort_values("pos_date")
+    last = ~df.duplicated("_k", keep="last")
+    amf = df["source"] == "AMF"
+    df.loc[amf, "current"] = last[amf] & (df.loc[amf, "pct"] >= 0.5)
+    c = df[~amf & df["current"]]
+    dup = c.duplicated("_k", keep="last")
+    df.loc[dup[dup].index, "current"] = False
+    return df.drop(columns="_k")
+
+
 def main():
     parts = []
     for name, fn in (("CONSOB", consob), ("AMF", amf), ("FCA", fca)):
@@ -141,20 +159,26 @@ def main():
     new["isin"] = new["isin"].str.upper().str.strip()
     new = new[new["isin"].str.match(r"^[A-Z]{2}[A-Z0-9]{9}\d$", na=False) & new["pct"].notna()]
     new["pos_date"] = pd.to_datetime(new["pos_date"]).dt.date.astype(str)
+    new = fix_current(new)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     old = pd.read_csv(OUT, dtype=str) if OUT.exists() else pd.DataFrame(columns=new.columns)
     new.to_csv(OUT, index=False, compression="gzip")
     # --- feed: nuove posizioni o variazioni correnti sui titoli dell'universo
     u = pd.read_csv(ROOT / "universe.csv", dtype=str)
     isin2t = dict(zip(u["isin"], u["ticker"])); isin2n = dict(zip(u["isin"], u["name"]))
-    cur = new[new["current"].astype(str) == "True"]
-    oc = old[old["current"].astype(str) == "True"] if len(old) else old
+    cur = new[new["current"]]
+    if len(old): old = fix_current(old)
+    oc = old[old["current"]] if len(old) else old
     prev = {(r.source, r.holder, r.isin): float(r.pct) for r in oc.itertuples()} if len(oc) else {}
-    feed = load_feed(); seen = {e["id"] for e in feed}; n = 0
+    feed = load_feed()
+    lim = (dt.date.today() - dt.timedelta(days=30)).isoformat()
+    feed = [e for e in feed if e.get("type") != "short" or str(e.get("date", "")) >= lim]   # niente storico nel feed
+    seen = {e["id"] for e in feed}; n = 0
+    recent = (dt.date.today() - dt.timedelta(days=14)).isoformat()
     if prev:                                                   # al primo giro non si notifica lo storico
         for r in cur.itertuples():
             t = isin2t.get(r.isin)
-            if not t: continue
+            if not t or str(r.pos_date) < recent: continue
             p0 = prev.get((r.source, r.holder, r.isin))
             if p0 is not None and abs(p0 - r.pct) < 0.05: continue
             eid = f"short-{r.source}-{r.isin}-{r.holder}-{r.pos_date}-{r.pct}"
