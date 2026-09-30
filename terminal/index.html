@@ -89,15 +89,16 @@ h1{font-size:24px;letter-spacing:-.02em;margin:0 0 4px}
 
 .tw{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:13.5px}
-th{font-size:12px;font-weight:600;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none;background:var(--card)}
+th{font-size:12px;font-weight:600;color:var(--muted);text-align:left;padding:10px 10px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none;background:var(--card)}
 th.num,td.num{text-align:right}
 th[aria-sort]::after{content:" ↓";color:var(--acc)} th[aria-sort="ascending"]::after{content:" ↑"}
-td{padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:middle}
+td{padding:10px 10px;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:middle}
 tr:last-child td{border-bottom:0}
 tbody tr{cursor:pointer} tbody tr:hover td{background:var(--card2)}
 .tk{display:flex;flex-direction:column;line-height:1.25}
-.tk b{font-weight:600;max-width:260px;overflow:hidden;text-overflow:ellipsis}
-.tk span{font-size:12px;color:var(--muted)}
+.tk b{font-weight:600;max-width:210px;overflow:hidden;text-overflow:ellipsis}
+.tk span{font-size:12px;color:var(--muted);max-width:210px;overflow:hidden;text-overflow:ellipsis}
+.bk{display:inline-block;max-width:150px;overflow:hidden;text-overflow:ellipsis;vertical-align:bottom}
 .pill{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap}
 .p-up{background:var(--up-soft);color:var(--up)} .p-dn{background:var(--dn-soft);color:var(--dn)}
 .p-in{background:var(--info-soft);color:var(--info)} .p-nt{background:var(--card2);color:var(--muted);border:1px solid var(--line)}
@@ -322,11 +323,18 @@ function go(h){qi.value="";res.style.display="none";qi.blur();location.hash="#/"
 
 /* ---------- componenti ---------- */
 function seg(key,opts,label){return `${label?`<span class="lbl">${label}</span>`:""}<div class="seg">${opts.map(([v,l])=>`<button type="button" data-set="${key}" data-v="${v}" aria-pressed="${String(st[key])===String(v)}">${l}</button>`).join("")}</div>`;}
-function coCell(t){const i=info(t);return `<div class="tk"><b title="${esc(i.name)}">${esc(i.name)}</b><span>${esc(t)} · ${esc(MKT_LBL[i.panel]||i.panel)}</span></div>`;}
+function coCell(t){const i=info(t),f=(D.fund||{})[t];return `<div class="tk"><b title="${esc(i.name)}">${esc(i.name)}</b><span>${esc(t)} · ${esc(MKT_LBL[i.panel]||i.panel)}${f&&f[0]?` · cap. ${big(f[0],f[1])}`:""}</span></div>`;}
 function rating(e){const f=e.rf?`${esc(e.rf)} → `:"";return `<span class="rt">${f}<b>${esc(e.rt||"–")}</b></span>`;}
 const cuMark=e=>e.cu?`<sup class="cu" title="Target riportato sulla quotazione USA ${esc(e.cu)} e convertito nella valuta locale">≈</sup>`:"";
+const FX_EUR={EUR:1,USD:.92,GBP:1.17,CHF:1.05,DKK:.134,SEK:.088,NOK:.087};   // solo per ordinare le capitalizzazioni
+function fundOf(t){return (D.fund||{})[t]||null;}
+function capOf(t){const f=fundOf(t);return f&&f[0]?f[0]*(FX_EUR[f[1]]??1):null;}
+const big=(v,cur)=>{if(v==null||!isFinite(v))return"–";const a=Math.abs(v),c=cur?" "+cur:"";
+  return a>=1e12?nf(v/1e12,2)+" T"+c:a>=1e9?nf(v/1e9,a>=1e11?0:1)+" mld"+c:a>=1e6?nf(v/1e6,a>=1e8?0:1)+" mln"+c:nf(v,0)+c;};
+function capCell(t){const f=fundOf(t);return f&&f[0]?`${big(f[0])}<div class="mut" style="font-size:11.5px">${esc(f[1]||"")}</div>`:'<span class="mut">–</span>';}
 function ptCell(e){if(!e.pt)return'<span class="mut">–</span>';const c=ptChg(e);
-  return `${e.pf?`<span class="mut">${nf(e.pf)} → </span>`:""}<b>${nf(e.pt)}</b>${cuMark(e)}${c!=null?` <span class="${pcls(c)}" style="font-size:12px">${pct(c)}</span>`:""}`;}
+  return `${e.pf?`<span class="mut">${nf(e.pf)} → </span>`:""}<b>${nf(e.pt)}</b>${cuMark(e)}`;}
+function ptChgCell(e){const c=ptChg(e);return c==null?'<span class="mut">–</span>':`<span class="${pcls(c)}">${pct(c)}</span>`;}
 /* tabella ordinabile: cols=[{k,l,v(row)->valore ordinamento,h(row)->html,num}] */
 function table(id,cols,rows,{def,desc=true,limit=100,rowAttr}={}){
   const s=st.sort[id]||(st.sort[id]={k:def||cols[0].k,desc});
@@ -342,9 +350,10 @@ const EVCOLS=[
   {k:"d",l:"Data",v:e=>e.d,h:e=>fd(e.d)},
   {k:"t",l:"Titolo",v:e=>info(e.t).name,h:e=>coCell(e.t)},
   {k:"c",l:"Evento · rating",v:e=>RANK[e.c],h:e=>`<span class="pill ${CAT[e.c][1]}">${CAT[e.c][0]}</span><div style="font-size:12.5px;margin-top:3px">${rating(e)}</div>`},
-  {k:"b",l:"Broker",v:e=>e.b,h:e=>esc(e.b)},
-  {k:"pt",l:"Target",num:1,v:e=>ptChg(e)??(e.pt?0:null),h:ptCell},
-  {k:"cx",l:"Chiusura giorno",num:1,v:e=>e.cx,h:e=>nf(e.cx)},
+  {k:"b",l:"Broker",v:e=>e.b,h:e=>`<span class="bk" title="${esc(e.b)}">${esc(e.b)}</span>`},
+  {k:"pt",l:"Target",num:1,v:e=>e.pt,h:ptCell},
+  {k:"ptc",l:"Var. target",num:1,v:ptChg,h:ptChgCell},
+  {k:"cx",l:"Chiusura",num:1,v:e=>e.cx,h:e=>nf(e.cx)},
   {k:"ue",l:"Upside giorno",num:1,v:upEv,h:e=>`<span class="${pcls(upEv(e))}">${pct(upEv(e))}</span>`},
   {k:"un",l:"Upside oggi",num:1,v:upNow,h:e=>`<span class="${pcls(upNow(e))}">${pct(upNow(e))}</span>`}];
 const rowT=e=>`data-go="t/${esc(e.t)}"`;
@@ -373,9 +382,9 @@ async function pHome(){
   </div>
   <div class="grid two" style="margin-top:16px">
     <div class="card"><div class="hd"><h2>Movimenti rilevanti</h2><a class="mut" href="#/moves">Tutti →</a></div>
-      ${mini(rel,e=>`<tr data-go="t/${esc(e.t)}"><td>${coCell(e.t)}</td><td><span class="pill ${CAT[e.c][1]}">${CAT[e.c][0]}</span><div class="mut" style="font-size:12px;margin-top:3px">${esc(e.b)} · ${fd(e.d)}</div></td><td class="num">${ptCell(e)}</td></tr>`)}</div>
+      ${mini(rel,e=>`<tr data-go="t/${esc(e.t)}"><td>${coCell(e.t)}</td><td><span class="pill ${CAT[e.c][1]}">${CAT[e.c][0]}</span><div class="mut" style="font-size:12px;margin-top:3px">${esc(e.b)} · ${fd(e.d)}</div></td><td class="num">${ptCell(e)}<div style="font-size:12px">${ptChg(e)!=null?`target ${ptChgCell(e)}`:""}</div></td></tr>`)}</div>
     <div class="card"><div class="hd"><h2>Variazioni di target più ampie</h2><a class="mut" href="#/targets">Tutte →</a></div>
-      ${mini(pts,e=>`<tr data-go="t/${esc(e.t)}"><td>${coCell(e.t)}</td><td><div>${esc(e.b)}</div><div class="mut" style="font-size:12px">${fd(e.d)}</div></td><td class="num">${ptCell(e)}<div style="font-size:12px" class="${pcls(upNow(e))}">vs chiusura ${pct(upNow(e))}</div></td></tr>`)}</div>
+      ${mini(pts,e=>`<tr data-go="t/${esc(e.t)}"><td>${coCell(e.t)}</td><td><div>${esc(e.b)}</div><div class="mut" style="font-size:12px">${fd(e.d)}</div></td><td class="num">${ptCell(e)}<div style="font-size:12px">target ${ptChgCell(e)} · <span class="${pcls(upNow(e))}">vs chiusura ${pct(upNow(e))}</span></div></td></tr>`)}</div>
     <div class="card"><div class="hd"><h2>Revisioni EPS più positive</h2><small>FY corrente</small></div>
       ${mini(best,r=>`<tr data-go="t/${esc(r.t)}"><td>${coCell(r.t)}</td><td class="num"><span class="up">${r.up}↑</span> <span class="dn">${r.dn}↓</span></td><td class="num"><b class="${pcls(r.b)}">${pct(r.b*100,0)}</b></td></tr>`)}</div>
     <div class="card"><div class="hd"><h2>Revisioni EPS più negative</h2><small>FY corrente</small></div>
@@ -398,6 +407,7 @@ function consRows(){return Object.entries(D.targets||{}).filter(([t])=>inMkt(t)&
 function pTargets(){
   const ev=winEvents().filter(e=>e.pt);const cr=consRows();
   const cols=[{k:"t",l:"Titolo",v:r=>info(r.t).name,h:r=>coCell(r.t)},
+    {k:"cap",l:"Capitalizz.",num:1,v:r=>capOf(r.t),h:r=>capCell(r.t)},
     {k:"px",l:"Ultima chiusura",num:1,v:r=>r.px,h:r=>nf(r.px)},
     {k:"mean",l:"Target medio",num:1,v:r=>r.mean,h:r=>`<b>${nf(r.mean)}</b>`},
     {k:"lo",l:"Min",num:1,v:r=>r.lo,h:r=>nf(r.lo)},{k:"hi",l:"Max",num:1,v:r=>r.hi,h:r=>nf(r.hi)},
@@ -670,7 +680,7 @@ async function pTicker(t){
     {k:"d",l:"Data",num:1,v:e=>e.d,h:e=>fd(e.d)}];
   return `<p><a class="mut" href="javascript:history.back()">← Indietro</a></p>
   <div class="co-head"><div><h1>${esc(i.name)} <span class="mut" style="font-weight:500;font-size:.62em">(${esc(t)})</span></h1>
-    <div class="co-meta">${i.isin?`<code>${esc(i.isin)}</code>`:`<span class="mut">ISIN n.d.</span>`}<span class="mkt">${esc(MKT_LBL[i.panel]||i.panel)}</span>${i.idx.map(x=>`<a class="pill p-nt" href="#/idx/${x}">${esc(IDX_LBL[x]||x)}</a>`).join("")}${i.cur?`<span>${esc(i.cur)}</span>`:""}</div></div>
+    <div class="co-meta">${i.isin?`<code>${esc(i.isin)}</code>`:`<span class="mut">ISIN n.d.</span>`}<span class="mkt">${esc(MKT_LBL[i.panel]||i.panel)}</span>${i.idx.map(x=>`<a class="pill p-nt" href="#/idx/${x}">${esc(IDX_LBL[x]||x)}</a>`).join("")}${i.cur?`<span>${esc(i.cur)}</span>`:""}${fundOf(t)?.[0]?`<span>Cap. <b>${big(fundOf(t)[0],fundOf(t)[1])}</b></span>`:""}${fundOf(t)?.[4]?`<span>Trimestrale ${fd(fundOf(t)[4])}</span>`:""}</div></div>
     <div class="px">${l?`<div class="v">${nf(l[1])}</div><div class="${pcls(ch)}">${pct(ch,2)} <span class="mut">chiusura ${fd(l[0])}</span></div>`:`<div class="mut">Prezzo non ancora disponibile</div>`}</div></div>
   <div class="fc-grid">
     ${consBox(nb,nh,ns,avg,note,"rating")}
@@ -685,8 +695,39 @@ async function pTicker(t){
       <button class="btn ${inW?"on":""}" style="width:100%;margin-top:6px" data-wl="${esc(t)}">${inW?"★ In watchlist":"☆ Aggiungi alla watchlist"}</button>
     </div>
   </div>
+  ${fundCard(t,s?.f,l)}
   <div class="card" style="margin-top:16px"><div class="hd"><h2>Rating degli analisti</h2><small>${ev.length} analisi negli ultimi 2 anni${i.us?` · incluse quelle registrate sulla quotazione USA ${esc(i.us)} (≈ = target convertito in ${esc(i.cur||"valuta locale")})`:""}</small></div>${ev.length?table("co-h",acols,ev,{def:"d",limit:10}):`<div class="empty-state">Nessuna analisi per broker disponibile per questo titolo.</div>`}</div>`;}
 
+
+/* ---------- fondamentali (Yahoo, aggiornati al mese o il giorno dopo la trimestrale) ---------- */
+const FROWS=[["revenue","Ricavi"],["_g","Crescita ricavi"],["gross_profit","Utile lordo"],["_gm","Margine lordo"],["ebit","EBIT"],["_om","Margine EBIT"],
+  ["ebitda","EBITDA"],["net_income","Utile netto"],["_nm","Margine netto"],["eps","EPS diluito"],["cfo","Flusso di cassa operativo"],["capex","Capex"],["fcf","Free cash flow"],
+  ["net_debt","Debito netto (− = cassa netta)"],["equity","Patrimonio netto"],["total_assets","Totale attivo"]];
+function fundCard(t,f,l){if(!f)return "";st.fq??="a";const I=f.info||{},S=(st.fq==="q"?f.quarterly:f.annual)||f.annual||f.quarterly;
+  const fc=I.financialCurrency||I.currency||"",fr=fundOf(t)||[];
+  const k=(a,v,s)=>kpiS(a,v,"",s);
+  const x=(n,d=1)=>n==null?"–":nf(n,d)+"x";
+  let tbl='<div class="empty-state">Bilanci non disponibili su Yahoo per questo titolo.</div>';
+  if(S&&S.periods){const P=S.periods.map((d,i)=>i).reverse(),val=(key,i)=>{const r=S[key];if(!r)return null;return r[i];};
+    const ratio=(a,b,i)=>{const x=val(a,i),y=val(b,i);return x!=null&&y?x/y*100:null;};
+    const cell=(key,i)=>{if(key==="_g"){const lag=st.fq==="q"?4:1;const a=val("revenue",i),b=val("revenue",i+lag);return a!=null&&b?`<span class="${pcls(a/b-1)}">${pct((a/b-1)*100,1)}</span>`:"–";}
+      const pc=v=>v==null?"–":nf(v,1)+"%";
+      if(key==="_gm")return pc(ratio("gross_profit","revenue",i));if(key==="_om")return pc(ratio("ebit","revenue",i));if(key==="_nm")return pc(ratio("net_income","revenue",i));
+      const v=val(key,i);if(v==null)return"–";const neg=v<0&&["ebit","ebitda","net_income","cfo","fcf","eps","gross_profit"].includes(key);
+      return `<span class="${neg?"dn":""}">${key==="eps"?nf(v,2):big(v)}</span>`;};
+    const NEED={_g:"revenue",_gm:"gross_profit",_om:"ebit",_nm:"net_income"};
+    const rows=FROWS.filter(([key])=>key.startsWith("_")?S.revenue&&S[NEED[key]]:S[key]);
+    tbl=`<div class="tw"><table class="mini"><thead><tr><th>${esc(fc)}</th>${P.map(i=>`<th class="num">${st.fq==="q"?esc(S.periods[i].slice(0,7)):"FY "+esc(S.periods[i].slice(0,4))}</th>`).join("")}</tr></thead>
+      <tbody>${rows.map(([key,lab])=>`<tr style="cursor:default"><td>${lab}</td>${P.map(i=>`<td class="num">${cell(key,i)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;}
+  const H=(f.earnings||{}).history||[];
+  return `<div class="card" style="margin-top:16px"><div class="hd"><h2>Fondamentali</h2><div>${seg("fq",[["a","Annuale"],["q","Trimestrale"]])}</div></div>
+   <div class="grid kpis" style="padding:0 16px 8px">${k("Capitalizzazione",big(fr[0]),`${esc(fr[1]||"")}${I.sharesOutstanding?` · ${big(I.sharesOutstanding)} azioni`:""}`)}${k("Enterprise value",big(I.enterpriseValue),`${esc({GBp:"GBP"}[I.currency]||I.currency||"")}${I.enterpriseToEbitda?` · EV/EBITDA ${x(I.enterpriseToEbitda)}`:""}`)}
+    ${k("P/E",x(I.trailingPE),I.forwardPE?`forward ${x(I.forwardPE)}`:"")}${k("P/B",x(I.priceToBook),I.beta!=null?`beta ${nf(I.beta,2)}`:"")}
+    ${k("Rendimento dividendo",I.dividendYield!=null?nf(I.dividendYield>1?I.dividendYield:I.dividendYield*100,2)+"%":"–",I.payoutRatio!=null?`payout ${nf(I.payoutRatio*100,0)}%`:"")}
+    ${k("Prossima trimestrale",fd((f.earnings||{}).next),I.sector?esc(I.sector):"")}</div>
+   ${tbl}
+   ${H.length?`<div class="bd"><div class="kk">Ultime trimestrali: EPS stimato e riportato</div><div class="tw"><table class="mini"><thead><tr><th>Data</th><th class="num">Stima</th><th class="num">Riportato</th><th class="num">Sorpresa</th></tr></thead><tbody>${[...H].reverse().slice(0,6).map(h=>`<tr style="cursor:default"><td>${fd(h[0])}</td><td class="num">${nf(h[1],2)}</td><td class="num"><b>${nf(h[2],2)}</b></td><td class="num ${pcls(h[3])}">${h[3]==null?"–":pct(h[3],1)}</td></tr>`).join("")}</tbody></table></div></div>`:""}
+   <div class="bd mut" style="font-size:12px">Fonte Yahoo Finance · bilanci in ${esc(fc||"valuta di bilancio")} · capitalizzazione = azioni × ultima chiusura · aggiornati il ${fd(f.fetched)} (ogni mese e il giorno dopo ogni trimestrale).</div></div>`;}
 /* ---------- vista aggregata per indice ---------- */
 const IDX_ORDER=["SP500","UKX","MCX","FTSEMIB","DAX","CAC","SX5E"];
 const IDXC={};
