@@ -377,6 +377,21 @@ def export(con):
         "tables": {t: q(f"SELECT COUNT(*) FROM {t}")[0][0]
                    for t in ("universe", "snapshot", "rating_event", "revision", "price", "target", "ingest_log")},
     }
+    fund = load_fundamentals()
+    ccy = {r[0]: r[1] for r in q("SELECT ticker, currency FROM universe")}
+    out["fund"] = {}
+    for t, f in fund.items():
+        i = f.get("info") or {}
+        sh, l = i.get("sharesOutstanding"), last.get(t)
+        cap = None
+        if sh and l and l[1]:
+            cap = sh * l[1] / (100 if ccy.get(t) in ("GBp", "GBX", "ILA") else 1)   # prezzi in pence -> sterline
+        elif i.get("marketCap"):
+            cap = i["marketCap"]
+        cur = {"GBp": "GBP", "GBX": "GBP", "ILA": "ILS"}.get(ccy.get(t), ccy.get(t) or i.get("currency"))
+        e = f.get("earnings") or {}
+        out["fund"][t] = [round(cap) if cap else None, cur, i.get("trailingPE"), i.get("forwardPE"),
+                          e.get("next"), i.get("sector"), f.get("fetched")]
     (SITE / "terminal.json").write_text(json.dumps(out, separators=(",", ":"), ensure_ascii=False))
     # serie storiche per titolo (ultimi 3 anni), caricate dal terminale solo quando apri la scheda
     tdir = SITE / "t"; tdir.mkdir(exist_ok=True)
@@ -390,9 +405,21 @@ def export(con):
     apt = avg_target_history(con, as_of)
     for t, v in apt.items():
         if t in series: series[t]["apt"] = v
+    for t, f in fund.items():
+        series.setdefault(t, {"d": [], "c": [], "tg": [], "apt": []})["f"] = f
     for t, s_ in series.items():
-        (tdir / f"{t}.json").write_text(json.dumps(s_, separators=(",", ":")))
+        (tdir / f"{t}.json").write_text(json.dumps(s_, separators=(",", ":"), ensure_ascii=False))
     export_indices(con, series, apt, as_of)
+
+
+def load_fundamentals():
+    """data/fundamentals/<TICKER>.json scritti da fundamentals.py (workflow 5)."""
+    out = {}
+    for p in sorted((DATA / "fundamentals").glob("*.json")):
+        try: out[p.stem] = json.loads(p.read_text())
+        except Exception as e: print("fondamentali illeggibili:", p.name, e)
+    print(f"fondamentali: {len(out)} titoli")
+    return out
 
 
 WEEKS = 112                            # ~26 mesi di storico del target medio
