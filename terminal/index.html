@@ -723,7 +723,7 @@ function fundCard(t,f,l){if(!f)return "";st.fq??="a";const I=f.info||{},S=(st.fq
   return `<div class="card" style="margin-top:16px"><div class="hd"><h2>Fondamentali</h2><div>${seg("fq",[["a","Annuale"],["q","Trimestrale"]])}</div></div>
    <div class="grid kpis" style="padding:0 16px 8px">${k("Capitalizzazione",big(fr[0]),`${esc(fr[1]||"")}${I.sharesOutstanding?` · ${big(I.sharesOutstanding)} azioni`:""}`)}${k("Enterprise value",big(I.enterpriseValue),`${esc({GBp:"GBP"}[I.currency]||I.currency||"")}${I.enterpriseToEbitda?` · EV/EBITDA ${x(I.enterpriseToEbitda)}`:""}`)}
     ${k("P/E",x(I.trailingPE),I.forwardPE?`forward ${x(I.forwardPE)}`:"")}${k("P/B",x(I.priceToBook),I.beta!=null?`beta ${nf(I.beta,2)}`:"")}
-    ${k("Rendimento dividendo",I.dividendYield!=null?nf(I.dividendYield>1?I.dividendYield:I.dividendYield*100,2)+"%":"–",I.payoutRatio!=null?`payout ${nf(I.payoutRatio*100,0)}%`:"")}
+    ${k("Rendimento dividendo",I.dividendYield!=null?nf(I.dividendYield,2)+"%":"–",I.payoutRatio!=null?`payout ${nf(I.payoutRatio*100,0)}%`:"")}
     ${k("Prossima trimestrale",fd((f.earnings||{}).next),I.sector?esc(I.sector):"")}</div>
    ${tbl}
    ${H.length?`<div class="bd"><div class="kk">Ultime trimestrali: EPS stimato e riportato</div><div class="tw"><table class="mini"><thead><tr><th>Data</th><th class="num">Stima</th><th class="num">Riportato</th><th class="num">Sorpresa</th></tr></thead><tbody>${[...H].reverse().slice(0,6).map(h=>`<tr style="cursor:default"><td>${fd(h[0])}</td><td class="num">${nf(h[1],2)}</td><td class="num"><b>${nf(h[2],2)}</b></td><td class="num ${pcls(h[3])}">${h[3]==null?"–":pct(h[3],1)}</td></tr>`).join("")}</tbody></table></div></div>`:""}
