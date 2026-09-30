@@ -1,0 +1,39 @@
+name: 5-fondamentali
+# Fondamentali per titolo (capitalizzazione, multipli, bilanci annuali e trimestrali, date delle trimestrali).
+# Ogni giorno feriale dopo lo snapshot: aggiorna i titoli che hanno pubblicato i conti il giorno prima
+# e quelli con dati più vecchi di 30 giorni; poi rilancia il terminale. La prima volta: Run workflow (tutti i titoli).
+on:
+  schedule:
+    - cron: "40 6 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      max:
+        description: "quanti titoli al massimo in questo giro"
+        default: "1200"
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: fondamentali
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install pandas "yfinance>=0.2.54" lxml
+      - name: Fondamentali
+        run: python fundamentals.py --max ${{ inputs.max || '400' }}
+      - name: Salva e aggiorna il terminale
+        run: |
+          git config user.name analyst-snapshot; git config user.email actions@github.com
+          git add data/fundamentals
+          if git diff --staged --quiet; then echo "nessuna novità"; exit 0; fi
+          git commit -q -m "fondamentali-$(date -u +%F)"
+          for i in 1 2 3 4 5; do if git pull -q --rebase --autostash origin main && git push -q; then gh workflow run 3-terminale.yml --ref main; exit 0; fi; sleep 10; done; exit 1
