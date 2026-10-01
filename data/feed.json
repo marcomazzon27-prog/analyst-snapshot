@@ -1,5 +1,35 @@
 [
 {
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-09-29-2.02",
+"ts": "2026-10-01T13:31:22Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 1.95% a 2.02% (2.02%, AMF, 2026-09-29)",
+"date": "2026-09-29",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-BLACKROCK ADVISORS, LLC-2026-09-29-1.22",
+"ts": "2026-10-01T13:31:22Z",
+"type": "short",
+"title": "Renault: BLACKROCK ADVISORS, LLC",
+"text": "short da 1.11% a 1.22% (1.22%, AMF, 2026-09-29)",
+"date": "2026-09-29",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-09-29-1.61",
+"ts": "2026-10-01T13:31:22Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 1.51% a 1.61% (1.61%, AMF, 2026-09-29)",
+"date": "2026-09-29",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
 "id": "short-FCA-GB00BG12Y042-Totale dichiarato (aggregato FCA)-2026-09-22-4.19",
 "ts": "2026-09-30T18:01:47Z",
 "type": "short",
