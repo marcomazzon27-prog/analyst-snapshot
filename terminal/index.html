@@ -12,17 +12,17 @@
   --bg:#f4f5f7; --card:#ffffff; --card2:#f9fafb; --line:#e5e7eb; --ink:#0f172a; --ink2:#334155; --muted:#64748b;
   --acc:#0f766e; --acc-soft:#e6f4f2; --acc-ink:#ffffff; --up:#15803d; --up-soft:#e8f5ec; --dn:#b91c1c; --dn-soft:#fdecec;
   --warn:#b45309; --warn-soft:#fef3e2; --info:#1d4ed8; --info-soft:#e8effd; --shadow:0 1px 2px rgba(15,23,42,.05),0 1px 3px rgba(15,23,42,.04);
-  --r:14px; color-scheme:light;
+  --r:14px; color-scheme:light; --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4;
 }
 :root[data-theme="dark"]{
   --bg:#0b0f14; --card:#121821; --card2:#0f141b; --line:#222c38; --ink:#e7edf4; --ink2:#c3cdd9; --muted:#8593a3;
   --acc:#2dd4bf; --acc-soft:#0f2b2a; --acc-ink:#04201d; --up:#4ade80; --up-soft:#12281b; --dn:#f87171; --dn-soft:#2d1515;
-  --warn:#fbbf24; --warn-soft:#2b220f; --info:#93b4ff; --info-soft:#141f38; --shadow:none; color-scheme:dark;
+  --warn:#fbbf24; --warn-soft:#2b220f; --info:#93b4ff; --info-soft:#141f38; --shadow:none; color-scheme:dark; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181;
 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
   --bg:#0b0f14; --card:#121821; --card2:#0f141b; --line:#222c38; --ink:#e7edf4; --ink2:#c3cdd9; --muted:#8593a3;
   --acc:#2dd4bf; --acc-soft:#0f2b2a; --acc-ink:#04201d; --up:#4ade80; --up-soft:#12281b; --dn:#f87171; --dn-soft:#2d1515;
-  --warn:#fbbf24; --warn-soft:#2b220f; --info:#93b4ff; --info-soft:#141f38; --shadow:none; color-scheme:dark; }}
+  --warn:#fbbf24; --warn-soft:#2b220f; --info:#93b4ff; --info-soft:#141f38; --shadow:none; color-scheme:dark; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; }}
 *{box-sizing:border-box}
 html,body{margin:0}
 body{background:var(--bg);color:var(--ink);font:14px/1.5 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -193,6 +193,22 @@ h2.sec{font-size:16px;margin:4px 0 12px}
   .px{text-align:left}
   .co-head{align-items:flex-start}
 }
+
+.cbox{border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:0}
+.cbox .kk{margin-bottom:6px}
+.piebox{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.piebox svg .pc{font-size:15px;font-weight:700;fill:var(--ink)} .piebox svg .ps{font-size:10px;fill:var(--muted)}
+.pleg{flex:1;min-width:170px;display:flex;flex-direction:column;gap:6px;font-size:13px}
+.pleg div{display:grid;grid-template-columns:10px 1fr auto;column-gap:8px;align-items:center}
+.pleg i{width:10px;height:10px;border-radius:3px;display:block} .pleg small{grid-column:2/4;color:var(--muted);font-size:11.5px;margin-top:-3px}
+.chart .pc2{font-size:11px;fill:var(--ink);font-weight:600}
+#ctip{position:fixed;z-index:99;pointer-events:none;display:none;background:var(--ink);color:var(--card);padding:6px 9px;border-radius:8px;font-size:12px;line-height:1.4;white-space:pre-line;max-width:280px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.hb{display:flex;flex-direction:column}
+.hbr{display:grid;grid-template-columns:minmax(110px,36%) 1fr 70px;gap:10px;align-items:center;padding:5px 0;color:inherit;text-decoration:none;border-bottom:1px dashed var(--line)}
+.hbr:last-child{border-bottom:0} a.hbr[href]:hover{background:var(--card2)}
+.hbl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px} .hbl small{display:block;color:var(--muted);font-size:11px}
+.hbt{height:10px;background:var(--card2);border-radius:99px;overflow:hidden} .hbt i{display:block;height:100%;border-radius:99px}
+.hbr b{text-align:right;font-size:13px}
 </style>
 </head>
 <body>
@@ -381,6 +397,10 @@ async function pHome(){
     ${kpi("Upgrade",ups,"up")}${kpi("Downgrade",dns,"dn")}${kpi("Inizi copertura",ini,"")}${kpi("Target alzati",ptu,"up")}${kpi("Target tagliati",ptd,"dn")}${kpi("Titoli toccati",new Set(ev.map(e=>e.t)).size,"")}
   </div>
   <div class="grid two" style="margin-top:16px">
+    <div class="card"><div class="hd"><h2>Tipo di movimenti</h2><small>${ev.length} analisi · ${W}</small></div><div class="bd">${pie([["Upgrade",ups],["Downgrade",dns],["Inizi copertura",ini],["Conferme",ev.length-ups-dns-ini]],{colors:["var(--up)","var(--dn)","var(--s1)","var(--muted)"],fmt:v=>nf(v,0)+" analisi",center:nf(ev.length,0),sub:"analisi"})}</div></div>
+    <div class="card"><div class="hd"><h2>Upside verso il target di consenso</h2><small>titoli del mercato scelto</small></div><div class="bd">${histo(consRows().map(r=>r.up),{bins:14})}</div></div>
+  </div>
+  <div class="grid two" style="margin-top:16px">
     <div class="card"><div class="hd"><h2>Movimenti rilevanti</h2><a class="mut" href="#/moves">Tutti →</a></div>
       ${mini(rel,e=>`<tr data-go="t/${esc(e.t)}"><td>${coCell(e.t)}</td><td><span class="pill ${CAT[e.c][1]}">${CAT[e.c][0]}</span><div class="mut" style="font-size:12px;margin-top:3px">${esc(e.b)} · ${fd(e.d)}</div></td><td class="num">${ptCell(e)}<div style="font-size:12px">${ptChg(e)!=null?`target ${ptChgCell(e)}`:""}</div></td></tr>`)}</div>
     <div class="card"><div class="hd"><h2>Variazioni di target più ampie</h2><a class="mut" href="#/targets">Tutte →</a></div>
@@ -415,6 +435,10 @@ function pTargets(){
   const note=!cr.length&&!EV.some(e=>e.pt)?`<div class="note">Non ci sono ancora target price nel database: la raccolta li aggiunge dalla prossima notte (i dati del 25/09 sono stati raccolti prima della modifica).</div>`:"";
   return `<h1>Target price</h1><p class="lead">Target di ogni analisi confrontato con la chiusura del giorno e con l'ultima chiusura; sotto, il consenso per titolo.</p>
   ${note}${toolbar()}
+  <div class="grid two" style="margin-bottom:16px">
+    <div class="card"><div class="hd"><h2>Upside del consenso</h2><small>${cr.length} titoli</small></div><div class="bd">${histo(cr.map(r=>r.up),{bins:14})}</div></div>
+    <div class="card"><div class="hd"><h2>Variazione dei target nel periodo</h2><small>${ev.filter(e=>ptChg(e)!=null).length} revisioni di target</small></div><div class="bd">${histo(ev.map(ptChg),{bins:14,unit:"analisi"})}</div></div>
+  </div>
   <div class="card" style="margin-bottom:16px"><div class="hd"><h2>Analisi con target nel periodo</h2><small>${ev.length}</small></div>${table("pt",EVCOLS,ev,{def:"d",rowAttr:rowT})}</div>
   <div class="card"><div class="hd"><h2>Consenso per titolo</h2><small>${cr.length} titoli</small></div>${table("cons",cols,cr,{def:"up",rowAttr:rowT})}</div>`;}
 
@@ -432,6 +456,10 @@ function pRevisions(){st.fy??=1;const rows=breadthRows(st.fy).filter(r=>inMkt(r.
     {k:"d",l:"Δ vs notte prima",num:1,v:r=>r.d,h:r=>`<span class="${pcls(r.d)}">${r.d==null?"–":pct(r.d*100,0)}</span>`}];
   return `<h1>Revisioni EPS</h1><p class="lead">Breadth = (revisioni al rialzo − al ribasso) / numero di analisti. ${dates.length<2?"Con un solo snapshot la variazione notte su notte non è ancora calcolabile.":""}</p>
   <div class="toolbar">${seg("mkt",MKTS,"Mercato")}${seg("fy",[[1,"Esercizio corrente"],[2,"Prossimo esercizio"]],"")}</div>
+  <div class="grid two" style="margin-bottom:16px">
+    <div class="card"><div class="hd"><h2>Distribuzione della breadth</h2><small>${rows.filter(r=>r.b!=null).length} titoli</small></div><div class="bd">${histo(rows.map(r=>r.b==null?null:r.b*100),{lo:-100,hi:100,bins:10})}</div></div>
+    <div class="card"><div class="hd"><h2>Titoli per direzione delle revisioni</h2></div><div class="bd">${pie([["Positive",rows.filter(r=>r.b>.1).length],["Stabili",rows.filter(r=>r.b!=null&&Math.abs(r.b)<=.1).length],["Negative",rows.filter(r=>r.b<-.1).length]],{fmt:v=>nf(v,0)+" titoli",center:nf(rows.filter(r=>r.b!=null).length,0),sub:"titoli",colors:["var(--up)","var(--muted)","var(--dn)"]})}</div></div>
+  </div>
   <div class="card"><div class="hd"><h2>Breadth per titolo</h2><small>${rows.length} titoli</small></div>${table("rev",cols,rows,{def:"b",rowAttr:r=>`data-go="t/${esc(r.t)}"`})}</div>`;}
 
 async function pBrokers(arg){if(arg)await loadRank();
@@ -519,6 +547,7 @@ async function pRanking(){
     ${kpiS("Affidabilità classifica",rel.t,rel.c)}
   </div>
   <div class="note" style="margin-top:16px;${rel.c==="up"?"background:var(--up-soft);color:var(--up)":""}">${rel.d} ${m.informative===false?`Il modello ML non trova differenze significative tra broker (R² fuori campione ≤ 0): la colonna "Abilità ML" resta vuota e il punteggio usa le altre metriche.`:m.oos_r2!=null?`Il modello ML spiega fuori campione il ${nf(m.oos_r2*100,1)}% della variabilità dei rendimenti.`:""}</div>
+  <div class="card" style="margin-bottom:16px"><div class="hd"><h2>I 15 broker con il punteggio più alto</h2><small>punteggio 0–100</small></div><div class="bd">${hbars(ranked.slice().sort((a,b)=>a.rank-b.rank).slice(0,15).map(r=>[r.broker,r.score,"#/brokers/"+encodeURIComponent(r.broker),`${r.n_eval} analisi valutate`]),{max:100})}</div></div>
   <div class="card"><div class="hd"><h2>Classifica</h2><small>${ranked.length} broker</small></div>${table("rank",cols,ranked,{def:"rank",desc:false,limit:200,rowAttr:r=>`data-go="brokers/${encodeURIComponent(r.broker)}"`})}</div>
   ${other.length?`<div class="card" style="margin-top:16px"><div class="hd"><h2>Campione insufficiente</h2><small>meno di ${j.min_n} analisi valutate</small></div>${table("rank-o",ocols,other,{def:"n_eval",limit:30,rowAttr:r=>`data-go="brokers/${encodeURIComponent(r.broker)}"`})}</div>`:""}
   ${btCard(j)}
@@ -720,14 +749,31 @@ function fundCard(t,f,l){if(!f)return "";st.fq??="a";const I=f.info||{},S=(st.fq
     tbl=`<div class="tw"><table class="mini"><thead><tr><th>${esc(fc)}</th>${P.map(i=>`<th class="num">${st.fq==="q"?esc(S.periods[i].slice(0,7)):"FY "+esc(S.periods[i].slice(0,4))}</th>`).join("")}</tr></thead>
       <tbody>${rows.map(([key,lab])=>`<tr style="cursor:default"><td>${lab}</td>${P.map(i=>`<td class="num">${cell(key,i)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;}
   const H=(f.earnings||{}).history||[];
+  const charts=fundCharts(S,f,H);
   return `<div class="card" style="margin-top:16px"><div class="hd"><h2>Fondamentali</h2><div>${seg("fq",[["a","Annuale"],["q","Trimestrale"]])}</div></div>
    <div class="grid kpis" style="padding:0 16px 8px">${k("Capitalizzazione",big(fr[0]),`${esc(fr[1]||"")}${I.sharesOutstanding?` · ${big(I.sharesOutstanding)} azioni`:""}`)}${k("Enterprise value",big(I.enterpriseValue),`${esc({GBp:"GBP"}[I.currency]||I.currency||"")}${I.enterpriseToEbitda?` · EV/EBITDA ${x(I.enterpriseToEbitda)}`:""}`)}
     ${k("P/E",x(I.trailingPE),I.forwardPE?`forward ${x(I.forwardPE)}`:"")}${k("P/B",x(I.priceToBook),I.beta!=null?`beta ${nf(I.beta,2)}`:"")}
     ${k("Rendimento dividendo",I.dividendYield!=null?nf(I.dividendYield,2)+"%":"–",I.payoutRatio!=null?`payout ${nf(I.payoutRatio*100,0)}%`:"")}
     ${k("Prossima trimestrale",fd((f.earnings||{}).next),I.sector?esc(I.sector):"")}</div>
+   ${charts}
    ${tbl}
    ${H.length?`<div class="bd"><div class="kk">Ultime trimestrali: EPS stimato e riportato</div><div class="tw"><table class="mini"><thead><tr><th>Data</th><th class="num">Stima</th><th class="num">Riportato</th><th class="num">Sorpresa</th></tr></thead><tbody>${[...H].reverse().slice(0,6).map(h=>`<tr style="cursor:default"><td>${fd(h[0])}</td><td class="num">${nf(h[1],2)}</td><td class="num"><b>${nf(h[2],2)}</b></td><td class="num ${pcls(h[3])}">${h[3]==null?"–":pct(h[3],1)}</td></tr>`).join("")}</tbody></table></div></div>`:""}
    <div class="bd mut" style="font-size:12px">Fonte Yahoo Finance · bilanci in ${esc(fc||"valuta di bilancio")} · capitalizzazione = azioni × ultima chiusura · aggiornati il ${fd(f.fetched)} (ogni mese e il giorno dopo ogni trimestrale).</div></div>`;}
+function fundCharts(S,f,H){if(!S||!S.periods)return "";const q=st.fq==="q";
+  const idx=S.periods.map((d,i)=>i).reverse(),lab=idx.map(i=>q?`T${Math.ceil(+S.periods[i].slice(5,7)/3)} ${S.periods[i].slice(2,4)}`:"FY "+S.periods[i].slice(0,4));
+  const col=k=>idx.map(i=>S[k]?S[k][i]:null),ratio=(a)=>idx.map(i=>S[a]&&S.revenue&&S[a][i]!=null&&S.revenue[i]?100*S[a][i]/S.revenue[i]:null);
+  const box=(t,h,sub)=>`<div class="cbox"><div class="kk">${t}${sub?` <span class="mut" style="font-weight:400">· ${sub}</span>`:""}</div>${h}</div>`;
+  const out=[];
+  if(S.revenue)out.push(box("Ricavi e utile netto",vbars(lab,[{name:"Ricavi",vals:col("revenue"),color:SER[0]},{name:"Utile netto",vals:col("net_income"),color:SER[1]}])));
+  const ms=[["Margine lordo","gross_profit"],["Margine EBIT","ebit"],["Margine netto","net_income"]].filter(([,k])=>S[k]&&S.revenue).map(([n,k],i)=>({name:n,vals:ratio(k),color:SER[i]}));
+  if(ms.length)out.push(box("Margini",lineChart2(lab,ms,{fmt:v=>nf(v,0)+"%"}),"% dei ricavi"));
+  if(S.fcf)out.push(box("Free cash flow",vbars(lab,[{name:"Free cash flow",vals:col("fcf"),color:SER[0]}],{polar:true}),"verde positivo, rosso negativo"));
+  const A=f.annual||S,j=0;
+  if(A&&A.total_assets&&A.equity){const ta=A.total_assets[j],eq=A.equity[j],db=(A.debt||[])[j]||0;
+    if(ta&&eq!=null){const parts=[["Patrimonio netto",Math.max(0,eq)],["Debito finanziario",db],["Altre passività",Math.max(0,ta-Math.max(0,eq)-db)]];
+      out.push(box("Come è finanziato l'attivo",pie(parts,{center:big(ta),sub:"totale attivo"}),"FY "+A.periods[j].slice(0,4)));}}
+  if(H.length>1){const hh=H.slice(-6);out.push(box("EPS: stima e riportato",vbars(hh.map(h=>fd(h[0])),[{name:"Stima",vals:hh.map(h=>h[1]),color:SER[0]},{name:"Riportato",vals:hh.map(h=>h[2]),color:SER[1]}],{fmt:v=>nf(v,2)}),"ultime trimestrali"));}
+  return out.length?`<div class="grid two" style="padding:0 16px 12px;gap:12px">${out.join("")}</div>`:"";}
 /* ---------- vista aggregata per indice ---------- */
 const IDX_ORDER=["SP500","UKX","MCX","FTSEMIB","DAX","CAC","SX5E"];
 const IDXC={};
@@ -775,6 +821,10 @@ async function pIndex(k){
       <div class="sc"><div class="kk">Revisioni utili (mediana)</div>${mbr!=null?`<b class="${pcls(mbr)}">${pct(mbr*100,0)}</b><div class="mut" style="font-size:12px">${brs.length} titoli, FY corrente</div>`:`<span class="mut">n.d.</span>`}</div>
     </div>
   </div>
+  ${(()=>{const sec={};let nc=0;j.members.forEach(t=>{const f=fundOf(t),c=capOf(t);if(!f||!c)return;nc++;sec[f[5]||"Altro"]=(sec[f[5]||"Altro"]||0)+c;});
+    return `<div class="grid two" style="margin-top:16px">
+    <div class="card"><div class="hd"><h2>Peso dei settori</h2><small>per capitalizzazione · ${nc} titoli</small></div><div class="bd">${pie(Object.entries(sec),{fmt:v=>"≈ "+big(v)+" EUR",center:"≈ "+big(Object.values(sec).reduce((a,b)=>a+b,0)),sub:"EUR"})}</div></div>
+    <div class="card"><div class="hd"><h2>Upside dei componenti</h2><small>verso il target medio</small></div><div class="bd">${histo(S.rows.map(r=>r.up),{bins:12})}</div></div></div>`;})()}
   <div class="card" style="margin-top:16px"><div class="hd"><h2>Componenti</h2><small>${S.rows.length} titoli</small></div>${table("idx-"+k,cols,S.rows,{def:"up",limit:50,rowAttr:r=>`data-go="t/${esc(r.t)}"`})}</div>`;}
 
 async function idxCards(){const out=[];for(const k of IDX_ORDER){const j=await loadIdx(k);if(!j||!j.c.length)continue;const S=idxStats(j.members);
@@ -785,6 +835,73 @@ async function idxCards(){const out=[];for(const k of IDX_ORDER){const j=await l
    <div class="mut" style="font-size:11.5px">${S.b} Buy · ${S.h} Hold · ${S.s} Sell</div></a>`);}
   return out.length?`<h2 class="sec">Indici</h2><div class="grid icards">${out.join("")}</div>`:"";}
 
+/* ---------- grafici (SVG, colori per ruolo: s1..s5 categorici validati, up/dn per segno) ---------- */
+const SER=["var(--s1)","var(--s2)","var(--s3)","var(--s4)","var(--s5)"];
+const tipA=s=>esc(s).replace(/\n/g,"&#10;");
+function legendHtml(items){return `<div class="legend">${items.map(([n,c,v])=>`<span><i style="background:${c}"></i>${esc(n)}${v!=null?` <b>${v}</b>`:""}</span>`).join("")}</div>`;}
+function niceTicks(lo,hi,n=4){if(lo===hi){hi=lo+1;}const span=hi-lo,step0=span/n,mag=10**Math.floor(Math.log10(step0)),st=[1,2,2.5,5,10].map(x=>x*mag).find(x=>x>=step0);
+  const a=Math.floor(lo/st)*st,b=Math.ceil(hi/st)*st,out=[];for(let v=a;v<=b+st/2;v+=st)out.push(+v.toFixed(10));return out;}
+/* barre verticali: labels[], series=[{name,vals,color}] ; polar=true colora per segno (serie singola) */
+function vbars(labels,series,{fmt=v=>big(v),polar=false,H=210,tipFmt}={}){
+  const all=series.flatMap(s=>s.vals).filter(v=>v!=null&&isFinite(v));if(!all.length)return '<div class="empty-state">Dati non disponibili.</div>';
+  const W=560,L=56,R=8,T=12,B=26;const tk=niceTicks(Math.min(0,...all),Math.max(0,...all));const lo=tk[0],hi=tk.at(-1);
+  const Y=v=>T+(H-T-B)*(1-(v-lo)/(hi-lo)),n=labels.length,gw=(W-L-R)/n,k=series.length,bw=Math.min(30,(gw*.72-(k-1)*2)/k);
+  let g="";tk.forEach(v=>{g+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${esc(fmt(v))}</text>`;});
+  g+=`<line x1="${L}" x2="${W-R}" y1="${Y(0)}" y2="${Y(0)}" stroke="var(--muted)" stroke-width="1"/>`;
+  labels.forEach((lb,i)=>{const x0=L+gw*i+(gw-(k*bw+(k-1)*2))/2;
+    series.forEach((s,j)=>{const v=s.vals[i];if(v==null||!isFinite(v))return;const y=Math.min(Y(v),Y(0)),h=Math.max(1,Math.abs(Y(v)-Y(0)));
+      const col=polar?(v>=0?"var(--up)":"var(--dn)"):s.color;
+      g+=`<rect x="${(x0+j*(bw+2)).toFixed(1)}" y="${y.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="2" fill="${col}" data-tip="${tipA(`${lb}\n${s.name}: ${(tipFmt||fmt)(v)}`)}"/>`;});
+    g+=`<text x="${(L+gw*i+gw/2).toFixed(1)}" y="${H-7}" text-anchor="middle">${esc(lb)}</text>`;});
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(series.map(s=>s.name).join(", "))}">${g}</svg>${series.length>1?legendHtml(series.map(s=>[s.name,s.color])):""}`;}
+/* linee: labels[], series=[{name,vals,color}] su un solo asse */
+function lineChart2(labels,series,{fmt=v=>nf(v,0)+"%",H=210}={}){
+  const all=series.flatMap(s=>s.vals).filter(v=>v!=null&&isFinite(v));if(all.length<2)return '<div class="empty-state">Dati non disponibili.</div>';
+  const W=560,L=56,R=30,T=12,B=26;const tk=niceTicks(Math.min(...all),Math.max(...all));const lo=tk[0],hi=tk.at(-1);
+  const n=labels.length,X=i=>L+(W-L-R)*(n>1?i/(n-1):.5),Y=v=>T+(H-T-B)*(1-(v-lo)/(hi-lo));
+  let g="";tk.forEach(v=>{g+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${esc(fmt(v))}</text>`;});
+  labels.forEach((lb,i)=>{g+=`<text x="${X(i).toFixed(1)}" y="${H-7}" text-anchor="middle">${esc(lb)}</text>`;});
+  series.forEach(s=>{let d="",pen=false;s.vals.forEach((v,i)=>{if(v==null||!isFinite(v)){pen=false;return;}d+=`${pen?"L":"M"}${X(i).toFixed(1)},${Y(v).toFixed(1)}`;pen=true;});
+    g+=`<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2"/>`;
+    s.vals.forEach((v,i)=>{if(v==null||!isFinite(v))return;g+=`<circle cx="${X(i).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="4" fill="${s.color}" stroke="var(--card)" stroke-width="2"/><circle cx="${X(i).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="10" fill="transparent" data-tip="${tipA(`${labels[i]}\n${s.name}: ${fmt(v)}`)}"/>`;});});
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img">${g}</svg>${legendHtml(series.map(s=>[s.name,s.color]))}`;}
+/* torta ad anello: parts=[[label,value]] (max 5, il resto in "Altro") */
+function pie(parts,{fmt=v=>big(v),center="",sub="",colors}={}){
+  parts=parts.map((p,i)=>[p[0],p[1],colors?colors[i]:null]).filter(p=>p[1]>0);if(!parts.length)return '<div class="empty-state">Dati non disponibili.</div>';
+  if(parts.length>5){parts.sort((a,b)=>b[1]-a[1]);const rest=parts.slice(4).reduce((a,p)=>a+p[1],0);parts=[...parts.slice(0,4),["Altro",rest,null]];}
+  parts.forEach((p,i)=>{p[2]=p[2]||(p[0]==="Altro"?"var(--muted)":SER[i]);});
+  const tot=parts.reduce((a,p)=>a+p[1],0),R=66,r=44,cx=80,cy=80;let a0=-Math.PI/2,g="";
+  parts.forEach(([lb,v,col])=>{const a1=a0+2*Math.PI*v/tot;
+    const tip=tipA(`${lb}: ${fmt(v)} (${nf(100*v/tot,1)}%)`);
+    if(parts.length===1){g+=`<circle cx="${cx}" cy="${cy}" r="${(R+r)/2}" fill="none" stroke="${col}" stroke-width="${R-r}" data-tip="${tip}"/>`;}
+    else{const p=(rad,ang)=>`${(cx+rad*Math.cos(ang)).toFixed(2)},${(cy+rad*Math.sin(ang)).toFixed(2)}`,lg=a1-a0>Math.PI?1:0;
+      g+=`<path d="M${p(R,a0)}A${R},${R} 0 ${lg} 1 ${p(R,a1)}L${p(r,a1)}A${r},${r} 0 ${lg} 0 ${p(r,a0)}Z" fill="${col}" stroke="var(--card)" stroke-width="2" data-tip="${tip}"/>`;}
+    a0=a1;});
+  return `<div class="piebox"><svg viewBox="0 0 160 160" width="150" height="150" role="img">${g}<text x="80" y="${sub?78:85}" text-anchor="middle" class="pc">${esc(center)}</text>${sub?`<text x="80" y="96" text-anchor="middle" class="ps">${esc(sub)}</text>`:""}</svg>
+   <div class="pleg">${parts.map(([lb,v,col])=>`<div><i style="background:${col}"></i><span>${esc(lb)}</span><b>${nf(100*v/tot,0)}%</b><small>${esc(fmt(v))}</small></div>`).join("")}</div></div>`;}
+/* istogramma: values[], bins tra lo e hi (valori fuori vanno nel primo/ultimo); colori per segno */
+function histo(values,{lo,hi,bins=12,fmt=v=>nf(v,0)+"%",unit="titoli",H=190,clickTo}={}){
+  const v=values.filter(x=>x!=null&&isFinite(x));if(v.length<3)return '<div class="empty-state">Dati insufficienti.</div>';
+  if(lo==null){const s=[...v].sort((a,b)=>a-b);lo=s[Math.floor(s.length*.02)];hi=s[Math.ceil(s.length*.98)-1];}
+  const w=(hi-lo)/bins,cnt=Array(bins).fill(0);v.forEach(x=>{cnt[Math.max(0,Math.min(bins-1,Math.floor((x-lo)/w)))]++;});
+  const W=560,L=40,R=20,T=12,B=28,mx=Math.max(...cnt),Y=c=>T+(H-T-B)*(1-c/mx),bw=(W-L-R)/bins;
+  const med=[...v].sort((a,b)=>a-b)[Math.floor(v.length/2)],Xv=x=>L+(W-L-R)*(Math.max(lo,Math.min(hi,x))-lo)/(hi-lo);
+  let g="";niceTicks(0,mx,3).filter(t=>t<=mx).forEach(t=>{g+=`<line x1="${L}" x2="${W-R}" y1="${Y(t)}" y2="${Y(t)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(t)+4}" text-anchor="end">${t}</text>`;});
+  cnt.forEach((c,i)=>{const a=lo+i*w,b=a+w,mid=(a+b)/2,col=a>=0?"var(--up)":b<=0?"var(--dn)":"var(--muted)";
+    if(c)g+=`<rect x="${(L+i*bw+1).toFixed(1)}" y="${Y(c).toFixed(1)}" width="${(bw-2).toFixed(1)}" height="${(H-B-Y(c)).toFixed(1)}" rx="2" fill="${col}" opacity=".85" data-tip="${tipA(`${i===0?"≤ ":""}${fmt(a)} … ${i===bins-1?"≥ ":""}${fmt(b)}\n${c} ${unit}`)}"/>`;});
+  const step=Math.ceil(bins/6);for(let i=0;i<=bins;i+=step)g+=`<text x="${(L+i*bw).toFixed(1)}" y="${H-9}" text-anchor="middle">${esc(fmt(lo+i*w))}</text>`;
+  if(lo<0&&hi>0)g+=`<line x1="${Xv(0)}" x2="${Xv(0)}" y1="${T}" y2="${H-B}" stroke="var(--muted)"/>`;
+  g+=`<line x1="${Xv(med)}" x2="${Xv(med)}" y1="${T-2}" y2="${H-B}" stroke="var(--ink)" stroke-width="1.5"/><text x="${Xv(med)+4}" y="${T+8}" class="pc2">mediana ${esc(fmt(med))}</text>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Distribuzione">${g}</svg><div class="mut" style="font-size:12px">${v.length} ${unit} · verde sopra zero, rosso sotto</div>`;}
+/* barre orizzontali in HTML (classifiche) : rows=[[label,value,href,sub]] */
+function hbars(rows,{fmt=v=>nf(v,0),color="var(--s1)",max}={}){if(!rows.length)return '<div class="empty-state">Nessun dato.</div>';
+  const m=max??(Math.max(...rows.map(r=>Math.abs(r[1]||0)))||1);
+  return `<div class="hb">${rows.map(([lb,v,href,sub])=>`<a class="hbr" ${href?`href="${href}"`:""} data-tip="${tipA(`${lb}: ${fmt(v)}`)}"><span class="hbl">${esc(lb)}${sub?`<small>${esc(sub)}</small>`:""}</span><span class="hbt"><i style="width:${Math.max(1.5,100*Math.abs(v||0)/m)}%;background:${typeof color==="function"?color(v):color}"></i></span><b>${esc(fmt(v))}</b></a>`).join("")}</div>`;}
+/* tooltip unico per tutti i grafici */
+(function(){const tip=document.createElement("div");tip.id="ctip";document.body.appendChild(tip);
+  document.addEventListener("mousemove",e=>{const t=e.target.closest&&e.target.closest("[data-tip]");if(!t){tip.style.display="none";return;}
+    tip.textContent=t.getAttribute("data-tip");tip.style.display="block";const x=Math.min(e.clientX+14,innerWidth-tip.offsetWidth-8),y=e.clientY+16+tip.offsetHeight>innerHeight?e.clientY-tip.offsetHeight-10:e.clientY+16;
+    tip.style.left=x+"px";tip.style.top=y+"px";});})();
 /* ---------- investitori istituzionali (13F SEC + short europei) ---------- */
 let INST=null;const INVC={},OWNC={};
 async function loadInst(){if(INST)return INST;INST=await getJSON("inst.json");if(INST)INST.byCik=Object.fromEntries(INST.managers.map(m=>[m.cik,m]));return INST;}
@@ -836,6 +953,7 @@ async function pInvestors(){const j=await loadInst();
     ${kpiS("Ultimo trimestre",quarterOf(j.last_q),"")}${kpiS("Valore mappato a ticker",pr(j.coverage),"","ultimi 12 mesi")}
     ${kpiS("Affidabilità score",o.t,o.c)}</div>
   <div class="note" style="margin-top:16px;${o.c==="up"?"background:var(--up-soft);color:var(--up)":""}">${o.d}</div>
+  ${ranked.length?`<div class="card" style="margin-bottom:16px"><div class="hd"><h2>I 15 gestori con lo score più alto</h2><small>score 0–100</small></div><div class="bd">${hbars(ranked.slice(0,15).map(m=>[m.name,m.score,"#/inv/"+m.cik,`alpha follower ${pp(m.follow)}`]),{max:100})}</div></div>`:""}
   <div class="card"><div class="hd"><h2>Classifica gestori</h2><div>${seg("iv",[["rank","In classifica"],["all","Tutti"]])}</div></div>${table("inv",cols,rows,{def:st.iv==="rank"?"rank":"aum",desc:st.iv!=="rank",limit:100,rowAttr:m=>`data-go="inv/${m.cik}"`})}</div>
   <div class="grid two" style="margin-top:16px">
     <div class="card"><div class="hd"><h2>Nuovi acquisti dei top 50</h2><small>${esc(quarterOf(j.last_q))}</small></div><div class="bd">${clist("buy","up")}</div></div>
@@ -854,6 +972,10 @@ function pInstPending(j){const T=j.short_top||[],Hs=j.short_holders||[],feed=(j.
   return `<h1>Investitori istituzionali</h1><p class="lead">Aggiornato ${esc(j.updated)}.</p>
   <div class="note">I portafogli 13F non sono ancora disponibili: la SEC sta rifiutando i download dai server di GitHub. Appena arrivano compaiono qui la classifica dei gestori, le loro pagine e i proprietari di ogni titolo. Nel frattempo sono attive le posizioni corte europee.</div>
   <div class="grid kpis">${kpiS("Titoli con short pubblicati",(j.own||[]).length,"","nell'universo del terminale")}${kpiS("Detentori con posizioni aperte",Hs.length>=25?"25+":Hs.length,"")}${kpiS("Fonti","CONSOB · AMF · FCA","",'soglia 0,5% del capitale')}${kpiS("Liquidità dei gestori","n.d.","mut","nessuna fonte pubblica")}</div>
+  <div class="grid two" style="margin-top:16px">
+   <div class="card"><div class="hd"><h2>I 12 titoli più shortati</h2><small>% del capitale</small></div><div class="bd">${hbars(T.slice(0,12).map(r=>[info(r[0]).name,r[1],"#/t/"+encodeURIComponent(r[0]),`${r[3]} · ${r[2]} ${r[2]===1?"posizione":"posizioni"}`]),{fmt:v=>nf(v,2)+"%",color:"var(--dn)"})}</div></div>
+   <div class="card"><div class="hd"><h2>Chi pesa di più negli short</h2><small>somma delle % sui titoli dell'universo</small></div><div class="bd">${pie(Hs.map(h=>[h[0],h[2]]),{fmt:v=>"somma "+nf(v,2)+"% su più titoli",center:(Hs.length>=25?"25+":Hs.length),sub:"detentori"})}</div></div>
+  </div>
   <div class="grid two" style="margin-top:16px">
    <div class="card"><div class="hd"><h2>Titoli più shortati</h2><small>somma delle posizioni pubblicate</small></div><div class="bd">${T.length?T.slice(0,25).map(r=>`<a class="stat" style="text-decoration:none;color:inherit" href="#/t/${encodeURIComponent(r[0])}"><span><b>${esc(info(r[0]).name)}</b><div class="mut" style="font-size:12px">${esc(r[0])} · ${r[2]} ${r[2]===1?"posizione":"posizioni"} · ${esc(r[3])} · ${fd(r[4])}</div></span><b class="dn">−${nf(r[1],2)}%</b></a>`).join(""):'<div class="empty-state">Nessuna posizione sui titoli dell\'universo.</div>'}</div></div>
    <div class="card"><div class="hd"><h2>Chi ha più posizioni corte</h2><small>titoli dell'universo · somma %</small></div><div class="bd">${Hs.map(h=>`<div class="stat"><span><b>${esc(h[0])}</b></span><span><b>${h[1]}</b> <span class="mut">titoli · ${nf(h[2],2)}%</span></span></div>`).join("")||'<div class="empty-state">–</div>'}</div></div></div>
