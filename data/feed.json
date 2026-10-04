@@ -1890,16 +1890,6 @@
 "link": "#/t/RNO.PA"
 },
 {
-"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-09-03-2.17",
-"ts": "2026-09-29T05:52:25Z",
-"type": "short",
-"title": "Renault: MARSHALL WACE LLP",
-"text": "short da 0.56% a 2.17% (2.17%, AMF, 2026-09-03)",
-"date": "2026-09-03",
-"important": true,
-"link": "#/t/RNO.PA"
-},
-{
 "id": "short-AMF-FR0000051807-MARSHALL WACE LLP-2026-09-18-1.6",
 "ts": "2026-09-28T21:57:37Z",
 "type": "short",
@@ -1936,16 +1926,6 @@
 "title": "Teleperformance: SQUAREPOINT OPS LLC",
 "text": "short da 0.52% a 0.81% (0.81%, AMF, 2026-09-23)",
 "date": "2026-09-23",
-"important": true,
-"link": "#/t/TEP.PA"
-},
-{
-"id": "short-AMF-FR0000051807-SQUAREPOINT OPS LLC-2026-09-03-0.78",
-"ts": "2026-09-28T21:57:37Z",
-"type": "short",
-"title": "Teleperformance: SQUAREPOINT OPS LLC",
-"text": "short da 0.52% a 0.78% (0.78%, AMF, 2026-09-03)",
-"date": "2026-09-03",
 "important": true,
 "link": "#/t/TEP.PA"
 },
