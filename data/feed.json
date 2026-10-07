@@ -1,5 +1,35 @@
 [
 {
+"id": "short-CONSOB-IT0005366767-BlackRock Financial Management, Inc.-2026-10-06-0.99",
+"ts": "2026-10-07T20:40:22Z",
+"type": "short",
+"title": "Nexi: BlackRock Financial Management, Inc.",
+"text": "short da 1.09% a 0.99% (0.99%, CONSOB, 2026-10-06)",
+"date": "2026-10-06",
+"important": false,
+"link": "#/t/NEXI.MI"
+},
+{
+"id": "short-CONSOB-IT0003856405-Two Sigma Investments, LP-2026-10-06-0.7",
+"ts": "2026-10-07T20:40:22Z",
+"type": "short",
+"title": "Leonardo: Two Sigma Investments, LP",
+"text": "short da 0.60% a 0.70% (0.70%, CONSOB, 2026-10-06)",
+"date": "2026-10-06",
+"important": false,
+"link": "#/t/LDO.MI"
+},
+{
+"id": "short-CONSOB-IT0005119810-PDT Partners, LLC-2026-10-06-3.09",
+"ts": "2026-10-07T20:40:22Z",
+"type": "short",
+"title": "Avio: PDT Partners, LLC",
+"text": "short da 3.20% a 3.09% (3.09%, CONSOB, 2026-10-06)",
+"date": "2026-10-06",
+"important": true,
+"link": "#/t/AVIO.MI"
+},
+{
 "id": "short-AMF-FR0000125007-AQR CAPITAL MANAGEMENT, LLC-2026-10-02-0.6",
 "ts": "2026-10-07T13:36:36Z",
 "type": "short",
