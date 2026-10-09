@@ -3990,16 +3990,6 @@
 "link": "#/t/BRBY.L"
 },
 {
-"id": "short-AMF-FR0000130577-CONTOUR ASSET MANAGEMENT LLC-2026-09-08-1.0",
-"ts": "2026-09-29T05:52:25Z",
-"type": "short",
-"title": "Publicis: CONTOUR ASSET MANAGEMENT LLC",
-"text": "short da 0.67% a 1.00% (1.00%, AMF, 2026-09-08)",
-"date": "2026-09-08",
-"important": true,
-"link": "#/t/PUB.PA"
-},
-{
 "id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-09-24-0.81",
 "ts": "2026-09-29T05:52:25Z",
 "type": "short",
@@ -4110,16 +4100,6 @@
 "link": "#/t/PUB.PA"
 },
 {
-"id": "short-AMF-FR0000130577-MARSHALL WACE LLP-2026-09-08-0.67",
-"ts": "2026-09-29T05:52:25Z",
-"type": "short",
-"title": "Publicis: MARSHALL WACE LLP",
-"text": "short da 0.50% a 0.67% (0.67%, AMF, 2026-09-08)",
-"date": "2026-09-08",
-"important": false,
-"link": "#/t/PUB.PA"
-},
-{
 "id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-09-15-2.16",
 "ts": "2026-09-29T05:52:25Z",
 "type": "short",
@@ -4146,16 +4126,6 @@
 "title": "Renault: SQUAREPOINT OPS LLC",
 "text": "short da 0.53% a 0.60% (0.60%, AMF, 2026-09-24)",
 "date": "2026-09-24",
-"important": false,
-"link": "#/t/RNO.PA"
-},
-{
-"id": "short-AMF-FR0000131906-SQUAREPOINT OPS LLC-2026-09-08-0.6",
-"ts": "2026-09-28T21:57:37Z",
-"type": "short",
-"title": "Renault: SQUAREPOINT OPS LLC",
-"text": "short da 0.53% a 0.60% (0.60%, AMF, 2026-09-08)",
-"date": "2026-09-08",
 "important": false,
 "link": "#/t/RNO.PA"
 },
@@ -4556,16 +4526,6 @@
 "title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
 "text": "short da 0.50% a 0.59% (0.59%, AMF, 2026-09-10)",
 "date": "2026-09-10",
-"important": false,
-"link": "#/t/RI.PA"
-},
-{
-"id": "short-AMF-FR0000120693-AQR CAPITAL MANAGEMENT, LLC-2026-09-08-0.6",
-"ts": "2026-09-28T21:52:04Z",
-"type": "short",
-"title": "Pernod Ricard: AQR CAPITAL MANAGEMENT, LLC",
-"text": "short da 0.50% a 0.60% (0.60%, AMF, 2026-09-08)",
-"date": "2026-09-08",
 "important": false,
 "link": "#/t/RI.PA"
 }
