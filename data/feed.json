@@ -4520,16 +4520,6 @@
 "link": "#/t/RNO.PA"
 },
 {
-"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-09-09-0.6",
-"ts": "2026-09-29T05:52:25Z",
-"type": "short",
-"title": "Renault: D. E. SHAW & CO., L.P.",
-"text": "short da 0.50% a 0.60% (0.60%, AMF, 2026-09-09)",
-"date": "2026-09-09",
-"important": false,
-"link": "#/t/RNO.PA"
-},
-{
 "id": "short-AMF-FR0000051807-EXODUSPOINT CAPITAL MANAGEMENT, LP-2026-09-18-0.6",
 "ts": "2026-09-29T05:52:25Z",
 "type": "short",
@@ -4550,16 +4540,6 @@
 "link": "#/t/TEP.PA"
 },
 {
-"id": "short-AMF-FR0000051807-EXODUSPOINT CAPITAL MANAGEMENT, LP-2026-09-09-0.6",
-"ts": "2026-09-29T05:52:25Z",
-"type": "short",
-"title": "Teleperformance: EXODUSPOINT CAPITAL MANAGEMENT, LP",
-"text": "short da 0.52% a 0.60% (0.60%, AMF, 2026-09-09)",
-"date": "2026-09-09",
-"important": false,
-"link": "#/t/TEP.PA"
-},
-{
 "id": "short-AMF-FR0000120404-ILEX CAPITAL PARTNERS (UK) LLP-2026-09-24-1.6",
 "ts": "2026-09-29T05:52:25Z",
 "type": "short",
@@ -4568,16 +4548,6 @@
 "date": "2026-09-24",
 "important": true,
 "link": "#/t/AC.PA"
-},
-{
-"id": "short-AMF-FR0000120172-KINTBURY CAPITAL LLP-2026-09-09-0.61",
-"ts": "2026-09-29T05:52:25Z",
-"type": "short",
-"title": "Carrefour: KINTBURY CAPITAL LLP",
-"text": "short da 0.52% a 0.61% (0.61%, AMF, 2026-09-09)",
-"date": "2026-09-09",
-"important": false,
-"link": "#/t/CA.PA"
 },
 {
 "id": "short-AMF-FR0000125338-MARSHALL WACE LLP-2026-09-23-0.71",
