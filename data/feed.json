@@ -4690,16 +4690,6 @@
 "link": "#/t/BPE.MI"
 },
 {
-"id": "short-CONSOB-IT0004764699-AQR Capital Management, LLC-2026-09-10-0.68",
-"ts": "2026-09-28T21:52:04Z",
-"type": "short",
-"title": "Brunello Cucinelli: AQR Capital Management, LLC",
-"text": "nuova posizione corta (0.68%, CONSOB, 2026-09-10)",
-"date": "2026-09-10",
-"important": false,
-"link": "#/t/BC.MI"
-},
-{
 "id": "short-CONSOB-IT0001347308-BlackRock Advisors, LLC-2026-09-21-0.6",
 "ts": "2026-09-28T21:52:04Z",
 "type": "short",
@@ -4716,16 +4706,6 @@
 "title": "Buzzi: BlackRock Financial Management, Inc.",
 "text": "nuova posizione corta (0.69%, CONSOB, 2026-09-25)",
 "date": "2026-09-25",
-"important": false,
-"link": "#/t/BZU.MI"
-},
-{
-"id": "short-CONSOB-IT0001347308-BlackRock Institutional Trust Company, National Association-2026-09-10-0.5",
-"ts": "2026-09-28T21:52:04Z",
-"type": "short",
-"title": "Buzzi: BlackRock Institutional Trust Company, National Association",
-"text": "nuova posizione corta (0.50%, CONSOB, 2026-09-10)",
-"date": "2026-09-10",
 "important": false,
 "link": "#/t/BZU.MI"
 },
