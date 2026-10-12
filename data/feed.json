@@ -4680,16 +4680,6 @@
 "link": "#/t/AVIO.MI"
 },
 {
-"id": "short-CONSOB-IT0000066123-AQR Capital Management, LLC-2026-09-11-0.5",
-"ts": "2026-09-28T21:52:04Z",
-"type": "short",
-"title": "BPER Banca: AQR Capital Management, LLC",
-"text": "nuova posizione corta (0.50%, CONSOB, 2026-09-11)",
-"date": "2026-09-11",
-"important": false,
-"link": "#/t/BPE.MI"
-},
-{
 "id": "short-CONSOB-IT0001347308-BlackRock Advisors, LLC-2026-09-21-0.6",
 "ts": "2026-09-28T21:52:04Z",
 "type": "short",
@@ -4778,16 +4768,6 @@
 "date": "2026-09-22",
 "important": false,
 "link": "#/t/FCT.MI"
-},
-{
-"id": "short-CONSOB-IT0003856405-Two Sigma Investments, LP-2026-09-11-0.6",
-"ts": "2026-09-28T21:52:04Z",
-"type": "short",
-"title": "Leonardo: Two Sigma Investments, LP",
-"text": "nuova posizione corta (0.60%, CONSOB, 2026-09-11)",
-"date": "2026-09-11",
-"important": false,
-"link": "#/t/LDO.MI"
 },
 {
 "id": "short-CONSOB-IT0005541336-BlackRock Financial Management, Inc.-2026-09-15-0.52",
