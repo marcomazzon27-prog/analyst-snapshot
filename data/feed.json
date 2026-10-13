@@ -1,5 +1,55 @@
 [
 {
+"id": "short-AMF-FR0010908533-TWO SIGMA INVESTMENTS, LP-2026-10-09-0.89",
+"ts": "2026-10-13T10:47:22Z",
+"type": "short",
+"title": "Edenred: TWO SIGMA INVESTMENTS, LP",
+"text": "short da 0.99% a 0.89% (0.89%, AMF, 2026-10-09)",
+"date": "2026-10-09",
+"important": false,
+"link": "#/t/EDEN.PA"
+},
+{
+"id": "short-AMF-FR0000131906-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-10-09-0.83",
+"ts": "2026-10-13T10:47:22Z",
+"type": "short",
+"title": "Renault: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "short da 0.65% a 0.83% (0.83%, AMF, 2026-10-09)",
+"date": "2026-10-09",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-10-09-2.19",
+"ts": "2026-10-13T10:47:22Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 2.24% a 2.19% (2.19%, AMF, 2026-10-09)",
+"date": "2026-10-09",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0010908533-ILEX CAPITAL PARTNERS (UK) LLP-2026-10-09-0.71",
+"ts": "2026-10-13T10:47:22Z",
+"type": "short",
+"title": "Edenred: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.61% a 0.71% (0.71%, AMF, 2026-10-09)",
+"date": "2026-10-09",
+"important": false,
+"link": "#/t/EDEN.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-10-09-2.24",
+"ts": "2026-10-13T10:47:22Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 2.11% a 2.24% (2.24%, AMF, 2026-10-09)",
+"date": "2026-10-09",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
 "id": "short-FCA-GB00BMX86B70-Totale dichiarato (aggregato FCA)-2026-09-28-0.41",
 "ts": "2026-10-12T21:19:26Z",
 "type": "short",
@@ -4948,55 +4998,5 @@
 "date": "2026-09-25",
 "important": true,
 "link": "#/t/SVS.L"
-},
-{
-"id": "short-FCA-GB00BGDT3G23-Totale dichiarato (aggregato FCA)-2026-09-25-11.26",
-"ts": "2026-09-29T13:05:42Z",
-"type": "short",
-"title": "Rightmove: Totale dichiarato (aggregato FCA)",
-"text": "short da 10.93% a 11.26% (11.26%, FCA, 2026-09-25)",
-"date": "2026-09-25",
-"important": true,
-"link": "#/t/RMV.L"
-},
-{
-"id": "short-FCA-GB0008782301-Totale dichiarato (aggregato FCA)-2026-09-25-9.67",
-"ts": "2026-09-29T13:05:42Z",
-"type": "short",
-"title": "Taylor Wimpey: Totale dichiarato (aggregato FCA)",
-"text": "short da 9.94% a 9.67% (9.67%, FCA, 2026-09-25)",
-"date": "2026-09-25",
-"important": true,
-"link": "#/t/TW.L"
-},
-{
-"id": "short-FCA-GB0031743007-Totale dichiarato (aggregato FCA)-2026-09-25-6.87",
-"ts": "2026-09-29T13:05:42Z",
-"type": "short",
-"title": "Burberry Group: Totale dichiarato (aggregato FCA)",
-"text": "short da 6.66% a 6.87% (6.87%, FCA, 2026-09-25)",
-"date": "2026-09-25",
-"important": true,
-"link": "#/t/BRBY.L"
-},
-{
-"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-09-24-0.81",
-"ts": "2026-09-29T05:52:25Z",
-"type": "short",
-"title": "Renault: D. E. SHAW & CO., L.P.",
-"text": "short da 0.50% a 0.81% (0.81%, AMF, 2026-09-24)",
-"date": "2026-09-24",
-"important": true,
-"link": "#/t/RNO.PA"
-},
-{
-"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-09-18-0.73",
-"ts": "2026-09-29T05:52:25Z",
-"type": "short",
-"title": "Renault: D. E. SHAW & CO., L.P.",
-"text": "short da 0.50% a 0.73% (0.73%, AMF, 2026-09-18)",
-"date": "2026-09-18",
-"important": false,
-"link": "#/t/RNO.PA"
 }
 ]
