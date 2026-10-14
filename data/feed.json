@@ -1,5 +1,25 @@
 [
 {
+"id": "short-CONSOB-IT0005119810-WorldQuant, LLC-2026-10-13-1.1",
+"ts": "2026-10-14T17:20:47Z",
+"type": "short",
+"title": "Avio: WorldQuant, LLC",
+"text": "short da 1.02% a 1.10% (1.10%, CONSOB, 2026-10-13)",
+"date": "2026-10-13",
+"important": true,
+"link": "#/t/AVIO.MI"
+},
+{
+"id": "short-CONSOB-IT0005366767-Two Sigma Investments, LP-2026-10-13-0.59",
+"ts": "2026-10-14T17:20:47Z",
+"type": "short",
+"title": "Nexi: Two Sigma Investments, LP",
+"text": "short da 0.69% a 0.59% (0.59%, CONSOB, 2026-10-13)",
+"date": "2026-10-13",
+"important": false,
+"link": "#/t/NEXI.MI"
+},
+{
 "id": "short-FCA-GB00B8C3BL03-Totale dichiarato (aggregato FCA)-2026-10-08-1.12",
 "ts": "2026-10-14T12:06:03Z",
 "type": "short",
@@ -4978,25 +4998,5 @@
 "date": "2026-09-29",
 "important": true,
 "link": "#/t/CTEC.L"
-},
-{
-"id": "short-CONSOB-IT0005366767-CAISSE DE DEPOT ET PLACEMENT DU QUEBEC-2026-09-30-0.47",
-"ts": "2026-10-01T20:23:16Z",
-"type": "short",
-"title": "Nexi: CAISSE DE DEPOT ET PLACEMENT DU QUEBEC",
-"text": "short da 0.56% a 0.47% (0.47%, CONSOB, 2026-09-30)",
-"date": "2026-09-30",
-"important": false,
-"link": "#/t/NEXI.MI"
-},
-{
-"id": "short-CONSOB-NL00150001Q9-Two Sigma Investments, LP-2026-09-30-1.03",
-"ts": "2026-10-01T20:23:16Z",
-"type": "short",
-"title": "Stellantis: Two Sigma Investments, LP",
-"text": "short da 0.91% a 1.03% (1.03%, CONSOB, 2026-09-30)",
-"date": "2026-09-30",
-"important": true,
-"link": "#/t/STLAM.MI"
 }
 ]
