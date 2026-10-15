@@ -1,5 +1,95 @@
 [
 {
+"id": "short-CONSOB-NL0015000LU4-Two Sigma Investments, LP-2026-10-14-1.1",
+"ts": "2026-10-15T17:10:33Z",
+"type": "short",
+"title": "Iveco: Two Sigma Investments, LP",
+"text": "short da 1.02% a 1.10% (1.10%, CONSOB, 2026-10-14)",
+"date": "2026-10-14",
+"important": true,
+"link": "#/t/IVG.MI"
+},
+{
+"id": "short-CONSOB-NL00150001Q9-Ilex Capital Partners (UK) LLP-2026-10-14-0.66",
+"ts": "2026-10-15T17:10:33Z",
+"type": "short",
+"title": "Stellantis: Ilex Capital Partners (UK) LLP",
+"text": "short da 0.53% a 0.66% (0.66%, CONSOB, 2026-10-14)",
+"date": "2026-10-14",
+"important": false,
+"link": "#/t/STLAM.MI"
+},
+{
+"id": "short-CONSOB-IT0005366767-BlackRock Financial Management, Inc.-2026-10-14-0.87",
+"ts": "2026-10-15T17:10:33Z",
+"type": "short",
+"title": "Nexi: BlackRock Financial Management, Inc.",
+"text": "short da 0.99% a 0.87% (0.87%, CONSOB, 2026-10-14)",
+"date": "2026-10-14",
+"important": false,
+"link": "#/t/NEXI.MI"
+},
+{
+"id": "short-CONSOB-IT0003492391-AQR Capital Management, LLC-2026-10-14-0.59",
+"ts": "2026-10-15T17:10:33Z",
+"type": "short",
+"title": "Diasorin: AQR Capital Management, LLC",
+"text": "short da 0.69% a 0.59% (0.59%, CONSOB, 2026-10-14)",
+"date": "2026-10-14",
+"important": false,
+"link": "#/t/DIA.MI"
+},
+{
+"id": "short-CONSOB-IT0004965148-Ilex Capital Partners (UK) LLP-2026-10-14-2.13",
+"ts": "2026-10-15T17:10:33Z",
+"type": "short",
+"title": "Moncler: Ilex Capital Partners (UK) LLP",
+"text": "short da 2.04% a 2.13% (2.13%, CONSOB, 2026-10-14)",
+"date": "2026-10-14",
+"important": true,
+"link": "#/t/MONC.MI"
+},
+{
+"id": "short-CONSOB-IT0005119810-PDT Partners, LLC-2026-10-14-3.23",
+"ts": "2026-10-15T17:10:33Z",
+"type": "short",
+"title": "Avio: PDT Partners, LLC",
+"text": "short da 3.10% a 3.23% (3.23%, CONSOB, 2026-10-14)",
+"date": "2026-10-14",
+"important": true,
+"link": "#/t/AVIO.MI"
+},
+{
+"id": "short-CONSOB-IT0005119810-Two Sigma Investments, LP-2026-10-14-1.88",
+"ts": "2026-10-15T17:10:33Z",
+"type": "short",
+"title": "Avio: Two Sigma Investments, LP",
+"text": "short da 1.93% a 1.88% (1.88%, CONSOB, 2026-10-14)",
+"date": "2026-10-14",
+"important": true,
+"link": "#/t/AVIO.MI"
+},
+{
+"id": "short-CONSOB-NL00150001Q9-Jupiter Asset Management Limited-2026-10-14-0.51",
+"ts": "2026-10-15T17:10:33Z",
+"type": "short",
+"title": "Stellantis: Jupiter Asset Management Limited",
+"text": "nuova posizione corta (0.51%, CONSOB, 2026-10-14)",
+"date": "2026-10-14",
+"important": false,
+"link": "#/t/STLAM.MI"
+},
+{
+"id": "short-CONSOB-IT0005119810-WorldQuant, LLC-2026-10-14-1.02",
+"ts": "2026-10-15T17:10:33Z",
+"type": "short",
+"title": "Avio: WorldQuant, LLC",
+"text": "short da 1.10% a 1.02% (1.02%, CONSOB, 2026-10-14)",
+"date": "2026-10-14",
+"important": true,
+"link": "#/t/AVIO.MI"
+},
+{
 "id": "short-FCA-GB00BLGZ9862-Totale dichiarato (aggregato FCA)-2026-10-09-0.2",
 "ts": "2026-10-15T11:42:47Z",
 "type": "short",
@@ -4908,95 +4998,5 @@
 "date": "2026-09-30",
 "important": true,
 "link": "#/t/GRG.L"
-},
-{
-"id": "short-FCA-GB00B1FH8J72-Totale dichiarato (aggregato FCA)-2026-09-30-3.04",
-"ts": "2026-10-02T17:55:00Z",
-"type": "short",
-"title": "Severn Trent: Totale dichiarato (aggregato FCA)",
-"text": "short da 2.85% a 3.04% (3.04%, FCA, 2026-09-30)",
-"date": "2026-09-30",
-"important": true,
-"link": "#/t/SVT.L"
-},
-{
-"id": "short-FCA-JE00BN574F90-Totale dichiarato (aggregato FCA)-2026-09-30-10.35",
-"ts": "2026-10-02T17:55:00Z",
-"type": "short",
-"title": "Wizz Air: Totale dichiarato (aggregato FCA)",
-"text": "short da 10.48% a 10.35% (10.35%, FCA, 2026-09-30)",
-"date": "2026-09-30",
-"important": true,
-"link": "#/t/WIZZ.L"
-},
-{
-"id": "short-FCA-GB00BDDN1T20-Totale dichiarato (aggregato FCA)-2026-09-30-3.25",
-"ts": "2026-10-02T17:55:00Z",
-"type": "short",
-"title": "XPS Pensions: Totale dichiarato (aggregato FCA)",
-"text": "short da 3.05% a 3.25% (3.25%, FCA, 2026-09-30)",
-"date": "2026-09-30",
-"important": true,
-"link": "#/t/XPS.L"
-},
-{
-"id": "short-FCA-GB0004300496-Totale dichiarato (aggregato FCA)-2026-09-30-7.34",
-"ts": "2026-10-02T17:55:00Z",
-"type": "short",
-"title": "Pan African Resources: Totale dichiarato (aggregato FCA)",
-"text": "short da 7.14% a 7.34% (7.34%, FCA, 2026-09-30)",
-"date": "2026-09-30",
-"important": true,
-"link": "#/t/PAF.L"
-},
-{
-"id": "short-FCA-GB00BKDRYJ47-Totale dichiarato (aggregato FCA)-2026-09-30-0.42",
-"ts": "2026-10-02T17:55:00Z",
-"type": "short",
-"title": "Airtel Africa: Totale dichiarato (aggregato FCA)",
-"text": "short da 0.20% a 0.42% (0.42%, FCA, 2026-09-30)",
-"date": "2026-09-30",
-"important": false,
-"link": "#/t/AAF.L"
-},
-{
-"id": "short-FCA-GB00B1V9NW54-Totale dichiarato (aggregato FCA)-2026-09-30-4.38",
-"ts": "2026-10-02T17:55:00Z",
-"type": "short",
-"title": "Hilton Food Group: Totale dichiarato (aggregato FCA)",
-"text": "short da 4.60% a 4.38% (4.38%, FCA, 2026-09-30)",
-"date": "2026-09-30",
-"important": true,
-"link": "#/t/HFG.L"
-},
-{
-"id": "short-FCA-GB00BF345X11-Totale dichiarato (aggregato FCA)-2026-09-30-2.25",
-"ts": "2026-10-02T17:55:00Z",
-"type": "short",
-"title": "Supermarket Income REIT: Totale dichiarato (aggregato FCA)",
-"text": "short da 2.12% a 2.25% (2.25%, FCA, 2026-09-30)",
-"date": "2026-09-30",
-"important": true,
-"link": "#/t/SUPR.L"
-},
-{
-"id": "short-FCA-GB0005576813-Totale dichiarato (aggregato FCA)-2026-09-30-5.5",
-"ts": "2026-10-02T17:55:00Z",
-"type": "short",
-"title": "Howdens Joinery: Totale dichiarato (aggregato FCA)",
-"text": "short da 5.28% a 5.50% (5.50%, FCA, 2026-09-30)",
-"date": "2026-09-30",
-"important": true,
-"link": "#/t/HWDN.L"
-},
-{
-"id": "short-FCA-GB0033986497-Totale dichiarato (aggregato FCA)-2026-09-30-3.97",
-"ts": "2026-10-02T17:55:00Z",
-"type": "short",
-"title": "ITV: Totale dichiarato (aggregato FCA)",
-"text": "short da 3.88% a 3.97% (3.97%, FCA, 2026-09-30)",
-"date": "2026-09-30",
-"important": true,
-"link": "#/t/ITV.L"
 }
 ]
