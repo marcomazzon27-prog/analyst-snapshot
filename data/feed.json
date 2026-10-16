@@ -1,5 +1,45 @@
 [
 {
+"id": "short-CONSOB-IT0005119810-Two Sigma Investments, LP-2026-10-15-1.95",
+"ts": "2026-10-16T16:47:05Z",
+"type": "short",
+"title": "Avio: Two Sigma Investments, LP",
+"text": "short da 1.88% a 1.95% (1.95%, CONSOB, 2026-10-15)",
+"date": "2026-10-15",
+"important": true,
+"link": "#/t/AVIO.MI"
+},
+{
+"id": "short-CONSOB-NL00150001Q9-Jupiter Asset Management Limited-2026-10-15-0.62",
+"ts": "2026-10-16T16:47:05Z",
+"type": "short",
+"title": "Stellantis: Jupiter Asset Management Limited",
+"text": "short da 0.51% a 0.62% (0.62%, CONSOB, 2026-10-15)",
+"date": "2026-10-15",
+"important": false,
+"link": "#/t/STLAM.MI"
+},
+{
+"id": "short-CONSOB-IT0004176001-AQR Capital Management, LLC-2026-10-15-0.5",
+"ts": "2026-10-16T16:47:05Z",
+"type": "short",
+"title": "Prysmian: AQR Capital Management, LLC",
+"text": "nuova posizione corta (0.50%, CONSOB, 2026-10-15)",
+"date": "2026-10-15",
+"important": false,
+"link": "#/t/PRY.MI"
+},
+{
+"id": "short-CONSOB-NL00150001Q9-Two Sigma Investments, LP-2026-10-15-1.01",
+"ts": "2026-10-16T16:47:05Z",
+"type": "short",
+"title": "Stellantis: Two Sigma Investments, LP",
+"text": "short da 0.94% a 1.01% (1.01%, CONSOB, 2026-10-15)",
+"date": "2026-10-15",
+"important": true,
+"link": "#/t/STLAM.MI"
+},
+{
 "id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-10-14-2.37",
 "ts": "2026-10-16T11:36:29Z",
 "type": "short",
@@ -4958,45 +4998,5 @@
 "date": "2026-10-01",
 "important": true,
 "link": "#/t/BLND.L"
-},
-{
-"id": "short-FCA-GB00BLGZ9862-Totale dichiarato (aggregato FCA)-2026-10-01-0.21",
-"ts": "2026-10-05T14:57:02Z",
-"type": "short",
-"title": "Tesco: Totale dichiarato (aggregato FCA)",
-"text": "nuova posizione corta (0.21%, FCA, 2026-10-01)",
-"date": "2026-10-01",
-"important": false,
-"link": "#/t/TSCO.L"
-},
-{
-"id": "short-FCA-GB0004082847-Totale dichiarato (aggregato FCA)-2026-10-01-0.4",
-"ts": "2026-10-05T14:57:02Z",
-"type": "short",
-"title": "Standard Chartered: Totale dichiarato (aggregato FCA)",
-"text": "short da 0.20% a 0.40% (0.40%, FCA, 2026-10-01)",
-"date": "2026-10-01",
-"important": false,
-"link": "#/t/STAN.L"
-},
-{
-"id": "short-FCA-GB0008782301-Totale dichiarato (aggregato FCA)-2026-10-01-8.93",
-"ts": "2026-10-05T14:57:02Z",
-"type": "short",
-"title": "Taylor Wimpey: Totale dichiarato (aggregato FCA)",
-"text": "short da 8.83% a 8.93% (8.93%, FCA, 2026-10-01)",
-"date": "2026-10-01",
-"important": true,
-"link": "#/t/TW.L"
-},
-{
-"id": "short-FCA-IM00B7S9G985-Totale dichiarato (aggregato FCA)-2026-10-01-4.37",
-"ts": "2026-10-05T14:57:02Z",
-"type": "short",
-"title": "Playtech: Totale dichiarato (aggregato FCA)",
-"text": "short da 4.47% a 4.37% (4.37%, FCA, 2026-10-01)",
-"date": "2026-10-01",
-"important": true,
-"link": "#/t/PTEC.L"
 }
 ]
