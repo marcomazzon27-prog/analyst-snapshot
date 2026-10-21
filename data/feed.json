@@ -1,5 +1,45 @@
 [
 {
+"id": "short-AMF-FR0000051807-SQUAREPOINT OPS LLC-2026-10-19-0.68",
+"ts": "2026-10-21T12:02:41Z",
+"type": "short",
+"title": "Teleperformance: SQUAREPOINT OPS LLC",
+"text": "short da 0.79% a 0.68% (0.68%, AMF, 2026-10-19)",
+"date": "2026-10-19",
+"important": false,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0010908533-ILEX CAPITAL PARTNERS (UK) LLP-2026-10-19-0.82",
+"ts": "2026-10-21T12:02:41Z",
+"type": "short",
+"title": "Edenred: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.71% a 0.82% (0.82%, AMF, 2026-10-19)",
+"date": "2026-10-19",
+"important": false,
+"link": "#/t/EDEN.PA"
+},
+{
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS LLC-2026-10-19-2.41",
+"ts": "2026-10-21T12:02:41Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS LLC",
+"text": "short da 2.30% a 2.41% (2.41%, AMF, 2026-10-19)",
+"date": "2026-10-19",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000120404-ILEX CAPITAL PARTNERS (UK) LLP-2026-10-19-1.71",
+"ts": "2026-10-21T12:02:41Z",
+"type": "short",
+"title": "Accor: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 1.60% a 1.71% (1.71%, AMF, 2026-10-19)",
+"date": "2026-10-19",
+"important": true,
+"link": "#/t/AC.PA"
+},
+{
 "id": "short-FCA-GB0004866223-Totale dichiarato (aggregato FCA)-2026-10-08-0.89",
 "ts": "2026-10-20T14:22:45Z",
 "type": "short",
@@ -4958,45 +4998,5 @@
 "date": "2026-10-01",
 "important": true,
 "link": "#/t/ASHM.L"
-},
-{
-"id": "short-FCA-GB0004300496-Totale dichiarato (aggregato FCA)-2026-10-02-7.61",
-"ts": "2026-10-06T16:01:37Z",
-"type": "short",
-"title": "Pan African Resources: Totale dichiarato (aggregato FCA)",
-"text": "short da 7.42% a 7.61% (7.61%, FCA, 2026-10-02)",
-"date": "2026-10-02",
-"important": true,
-"link": "#/t/PAF.L"
-},
-{
-"id": "short-FCA-GB00BJVQC708-Totale dichiarato (aggregato FCA)-2026-10-02-0.72",
-"ts": "2026-10-06T16:01:37Z",
-"type": "short",
-"title": "Helios Towers: Totale dichiarato (aggregato FCA)",
-"text": "short da 0.51% a 0.72% (0.72%, FCA, 2026-10-02)",
-"date": "2026-10-02",
-"important": false,
-"link": "#/t/HTWS.L"
-},
-{
-"id": "short-FCA-GB00BDCPN049-Totale dichiarato (aggregato FCA)-2026-10-02-2.04",
-"ts": "2026-10-06T16:01:37Z",
-"type": "short",
-"title": "Coca-Cola Europacific Partners: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.91% a 2.04% (2.04%, FCA, 2026-10-02)",
-"date": "2026-10-02",
-"important": true,
-"link": "#/t/CCEP.L"
-},
-{
-"id": "short-FCA-GB0006776081-Totale dichiarato (aggregato FCA)-2026-10-02-5.84",
-"ts": "2026-10-06T16:01:37Z",
-"type": "short",
-"title": "Pearson plc: Totale dichiarato (aggregato FCA)",
-"text": "short da 5.99% a 5.84% (5.84%, FCA, 2026-10-02)",
-"date": "2026-10-02",
-"important": true,
-"link": "#/t/PSON.L"
 }
 ]
