@@ -1,5 +1,15 @@
 [
 {
+"id": "short-AMF-FR0000131906-CITADEL ADVISORS EUROPE LIMITED-2026-10-20-2.02",
+"ts": "2026-10-22T12:05:04Z",
+"type": "short",
+"title": "Renault: CITADEL ADVISORS EUROPE LIMITED",
+"text": "short da 1.94% a 2.02% (2.02%, AMF, 2026-10-20)",
+"date": "2026-10-20",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
 "id": "short-FCA-GB00B0744B38-Totale dichiarato (aggregato FCA)-2026-10-14-2.62",
 "ts": "2026-10-21T17:22:08Z",
 "type": "short",
@@ -4988,15 +4998,5 @@
 "date": "2026-10-05",
 "important": true,
 "link": "#/t/WTB.L"
-},
-{
-"id": "short-FCA-GB0030913577-Totale dichiarato (aggregato FCA)-2026-10-05-3.45",
-"ts": "2026-10-07T13:36:36Z",
-"type": "short",
-"title": "BT Group: Totale dichiarato (aggregato FCA)",
-"text": "short da 3.52% a 3.45% (3.45%, FCA, 2026-10-05)",
-"date": "2026-10-05",
-"important": true,
-"link": "#/t/BT-A.L"
 }
 ]
