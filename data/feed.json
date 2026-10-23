@@ -1,5 +1,25 @@
 [
 {
+"id": "short-AMF-FR0000131906-D. E. SHAW & CO., L.P.-2026-10-21-0.91",
+"ts": "2026-10-23T11:49:58Z",
+"type": "short",
+"title": "Renault: D. E. SHAW & CO., L.P.",
+"text": "short da 0.81% a 0.91% (0.91%, AMF, 2026-10-21)",
+"date": "2026-10-21",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000120172-KINTBURY CAPITAL LLP-2026-10-21-0.69",
+"ts": "2026-10-23T11:49:58Z",
+"type": "short",
+"title": "Carrefour: KINTBURY CAPITAL LLP",
+"text": "short da 0.88% a 0.69% (0.69%, AMF, 2026-10-21)",
+"date": "2026-10-21",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
 "id": "short-FCA-GB0005576813-Totale dichiarato (aggregato FCA)-2026-10-12-5.74",
 "ts": "2026-10-22T17:19:29Z",
 "type": "short",
@@ -4978,25 +4998,5 @@
 "date": "2026-10-07",
 "important": true,
 "link": "#/t/ENOG.L"
-},
-{
-"id": "short-CONSOB-NL00150001Q9-Ilex Capital Partners (UK) LLP-2026-10-07-0.53",
-"ts": "2026-10-08T18:54:34Z",
-"type": "short",
-"title": "Stellantis: Ilex Capital Partners (UK) LLP",
-"text": "nuova posizione corta (0.53%, CONSOB, 2026-10-07)",
-"date": "2026-10-07",
-"important": false,
-"link": "#/t/STLAM.MI"
-},
-{
-"id": "short-CONSOB-IT0005541336-Capital Fund Management SA-2026-10-07-1.52",
-"ts": "2026-10-08T18:54:34Z",
-"type": "short",
-"title": "Lottomatica Group: Capital Fund Management SA",
-"text": "short da 1.40% a 1.52% (1.52%, CONSOB, 2026-10-07)",
-"date": "2026-10-07",
-"important": true,
-"link": "#/t/LTMC.MI"
 }
 ]
