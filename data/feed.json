@@ -4920,16 +4920,6 @@
 "link": "#/t/TTE.PA"
 },
 {
-"id": "short-FCA-GB0007188757-Totale dichiarato (aggregato FCA)-2026-09-25-0.49",
-"ts": "2026-10-08T18:54:34Z",
-"type": "short",
-"title": "Rio Tinto: Totale dichiarato (aggregato FCA)",
-"text": "short da 0.69% a 0.49% (0.49%, FCA, 2026-09-25)",
-"date": "2026-09-25",
-"important": false,
-"link": "#/t/RIO.L"
-},
-{
 "id": "short-FCA-ES0177542018-Totale dichiarato (aggregato FCA)-2026-10-01-1.7",
 "ts": "2026-10-08T18:54:34Z",
 "type": "short",
