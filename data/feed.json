@@ -1,5 +1,45 @@
 [
 {
+"id": "short-CONSOB-NL00150001Q9-Two Sigma Investments, LP-2026-10-23-1.1",
+"ts": "2026-10-26T20:36:16Z",
+"type": "short",
+"title": "Stellantis: Two Sigma Investments, LP",
+"text": "short da 1.04% a 1.10% (1.10%, CONSOB, 2026-10-23)",
+"date": "2026-10-23",
+"important": true,
+"link": "#/t/STLAM.MI"
+},
+{
+"id": "short-CONSOB-IT0000072618-Verition Management (DIFC) Limited-2026-10-23-0.6",
+"ts": "2026-10-26T20:36:16Z",
+"type": "short",
+"title": "Intesa Sanpaolo: Verition Management (DIFC) Limited",
+"text": "short da 0.52% a 0.60% (0.60%, CONSOB, 2026-10-23)",
+"date": "2026-10-23",
+"important": false,
+"link": "#/t/ISP.MI"
+},
+{
+"id": "short-CONSOB-IT0004965148-Ilex Capital Partners (UK) LLP-2026-10-23-2.32",
+"ts": "2026-10-26T20:36:16Z",
+"type": "short",
+"title": "Moncler: Ilex Capital Partners (UK) LLP",
+"text": "short da 2.23% a 2.32% (2.32%, CONSOB, 2026-10-23)",
+"date": "2026-10-23",
+"important": true,
+"link": "#/t/MONC.MI"
+},
+{
+"id": "short-CONSOB-NL00150001Q9-Qube Research & Technologies Ltd-2026-10-23-0.51",
+"ts": "2026-10-26T20:36:16Z",
+"type": "short",
+"title": "Stellantis: Qube Research & Technologies Ltd",
+"text": "nuova posizione corta (0.51%, CONSOB, 2026-10-23)",
+"date": "2026-10-23",
+"important": false,
+"link": "#/t/STLAM.MI"
+},
+{
 "id": "short-FCA-GB0002374006-Totale dichiarato (aggregato FCA)-2026-10-14-3.83",
 "ts": "2026-10-26T13:18:22Z",
 "type": "short",
@@ -4958,45 +4998,5 @@
 "date": "2026-10-06",
 "important": true,
 "link": "#/t/BT-A.L"
-},
-{
-"id": "short-FCA-GG00B1W3VF54-Totale dichiarato (aggregato FCA)-2026-10-07-2.29",
-"ts": "2026-10-09T18:25:23Z",
-"type": "short",
-"title": "Sirius Real Estate: Totale dichiarato (aggregato FCA)",
-"text": "short da 2.09% a 2.29% (2.29%, FCA, 2026-10-07)",
-"date": "2026-10-07",
-"important": true,
-"link": "#/t/SRE.L"
-},
-{
-"id": "short-FCA-GB0033986497-Totale dichiarato (aggregato FCA)-2026-10-07-4.51",
-"ts": "2026-10-09T18:25:23Z",
-"type": "short",
-"title": "ITV: Totale dichiarato (aggregato FCA)",
-"text": "short da 4.41% a 4.51% (4.51%, FCA, 2026-10-07)",
-"date": "2026-10-07",
-"important": true,
-"link": "#/t/ITV.L"
-},
-{
-"id": "short-FCA-FR0000120073-Totale dichiarato (aggregato FCA)-2026-10-07-1.04",
-"ts": "2026-10-09T18:25:23Z",
-"type": "short",
-"title": "Air Liquide: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.09% a 1.04% (1.04%, FCA, 2026-10-07)",
-"date": "2026-10-07",
-"important": true,
-"link": "#/t/AI.PA"
-},
-{
-"id": "short-FCA-GB00BG5KQW09-Totale dichiarato (aggregato FCA)-2026-10-07-16.16",
-"ts": "2026-10-09T18:25:23Z",
-"type": "short",
-"title": "Ceres Power: Totale dichiarato (aggregato FCA)",
-"text": "short da 15.93% a 16.16% (16.16%, FCA, 2026-10-07)",
-"date": "2026-10-07",
-"important": true,
-"link": "#/t/CWR.L"
 }
 ]
