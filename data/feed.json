@@ -1,5 +1,45 @@
 [
 {
+"id": "short-AMF-FR0010908533-ILEX CAPITAL PARTNERS (UK) LLP-2026-11-02-1.17",
+"ts": "2026-11-04T19:53:36Z",
+"type": "short",
+"title": "Edenred: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 1.02% a 1.17% (1.17%, AMF, 2026-11-02)",
+"date": "2026-11-02",
+"important": true,
+"link": "#/t/EDEN.PA"
+},
+{
+"id": "short-AMF-FR0000130577-AQR CAPITAL MANAGEMENT, LLC-2026-11-02-0.5",
+"ts": "2026-11-04T19:53:36Z",
+"type": "short",
+"title": "Publicis: AQR CAPITAL MANAGEMENT, LLC",
+"text": "nuova posizione corta (0.50%, AMF, 2026-11-02)",
+"date": "2026-11-02",
+"important": false,
+"link": "#/t/PUB.PA"
+},
+{
+"id": "short-AMF-FR0000120172-MARSHALL WACE LLP-2026-11-02-0.62",
+"ts": "2026-11-04T19:53:36Z",
+"type": "short",
+"title": "Carrefour: MARSHALL WACE LLP",
+"text": "short da 0.53% a 0.62% (0.62%, AMF, 2026-11-02)",
+"date": "2026-11-02",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-CONSOB-IT0005541336-Capital Fund Management SA-2026-11-03-1.37",
+"ts": "2026-11-04T19:53:36Z",
+"type": "short",
+"title": "Lottomatica Group: Capital Fund Management SA",
+"text": "short da 1.44% a 1.37% (1.37%, CONSOB, 2026-11-03)",
+"date": "2026-11-03",
+"important": true,
+"link": "#/t/LTMC.MI"
+},
+{
 "id": "short-FCA-GB00B8C3BL03-Totale dichiarato (aggregato FCA)-2026-10-22-0.78",
 "ts": "2026-11-04T11:11:17Z",
 "type": "short",
@@ -4958,45 +4998,5 @@
 "date": "2026-10-16",
 "important": true,
 "link": "#/t/HLMA.L"
-},
-{
-"id": "short-FCA-GB00BYT1DJ19-Totale dichiarato (aggregato FCA)-2026-10-16-1.35",
-"ts": "2026-10-20T14:22:45Z",
-"type": "short",
-"title": "ICG: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.15% a 1.35% (1.35%, FCA, 2026-10-16)",
-"date": "2026-10-16",
-"important": true,
-"link": "#/t/ICG.L"
-},
-{
-"id": "short-FCA-JE00B8KF9B49-Totale dichiarato (aggregato FCA)-2026-10-16-3.9",
-"ts": "2026-10-20T14:22:45Z",
-"type": "short",
-"title": "WPP: Totale dichiarato (aggregato FCA)",
-"text": "short da 4.59% a 3.90% (3.90%, FCA, 2026-10-16)",
-"date": "2026-10-16",
-"important": true,
-"link": "#/t/WPP.L"
-},
-{
-"id": "short-FCA-GB00BQS10J50-Totale dichiarato (aggregato FCA)-2026-10-16-1.19",
-"ts": "2026-10-20T14:22:45Z",
-"type": "short",
-"title": "Gamma Communications: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.39% a 1.19% (1.19%, FCA, 2026-10-16)",
-"date": "2026-10-16",
-"important": true,
-"link": "#/t/GAMA.L"
-},
-{
-"id": "short-FCA-GB00BKDTK925-Totale dichiarato (aggregato FCA)-2026-10-16-4.76",
-"ts": "2026-10-20T14:22:45Z",
-"type": "short",
-"title": "Trainline: Totale dichiarato (aggregato FCA)",
-"text": "short da 4.84% a 4.76% (4.76%, FCA, 2026-10-16)",
-"date": "2026-10-16",
-"important": true,
-"link": "#/t/TRN.L"
 }
 ]
