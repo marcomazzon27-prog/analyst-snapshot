@@ -1,5 +1,55 @@
 [
 {
+"id": "short-AMF-FR0000131906-BLACKROCK ADVISORS, LLC-2026-11-05-1.06",
+"ts": "2026-11-09T11:49:36Z",
+"type": "short",
+"title": "Renault: BLACKROCK ADVISORS, LLC",
+"text": "short da 1.16% a 1.06% (1.06%, AMF, 2026-11-05)",
+"date": "2026-11-05",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000131906-MARSHALL WACE LLP-2026-11-05-2.1",
+"ts": "2026-11-09T11:49:36Z",
+"type": "short",
+"title": "Renault: MARSHALL WACE LLP",
+"text": "short da 2.38% a 2.10% (2.10%, AMF, 2026-11-05)",
+"date": "2026-11-05",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000051807-SQUAREPOINT OPS LLC-2026-11-05-0.58",
+"ts": "2026-11-09T11:49:36Z",
+"type": "short",
+"title": "Teleperformance: SQUAREPOINT OPS LLC",
+"text": "short da 0.68% a 0.58% (0.58%, AMF, 2026-11-05)",
+"date": "2026-11-05",
+"important": false,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0010908533-ILEX CAPITAL PARTNERS (UK) LLP-2026-11-05-1.46",
+"ts": "2026-11-09T11:49:36Z",
+"type": "short",
+"title": "Edenred: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 1.37% a 1.46% (1.46%, AMF, 2026-11-05)",
+"date": "2026-11-05",
+"important": true,
+"link": "#/t/EDEN.PA"
+},
+{
+"id": "short-AMF-FR0000120172-KINTBURY CAPITAL LLP-2026-11-05-0.54",
+"ts": "2026-11-09T11:49:36Z",
+"type": "short",
+"title": "Carrefour: KINTBURY CAPITAL LLP",
+"text": "short da 0.69% a 0.54% (0.54%, AMF, 2026-11-05)",
+"date": "2026-11-05",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
 "id": "short-FCA-GB00B0WMWD03-Totale dichiarato (aggregato FCA)-2026-10-23-2.46",
 "ts": "2026-11-06T19:32:13Z",
 "type": "short",
@@ -4948,55 +4998,5 @@
 "date": "2026-10-21",
 "important": true,
 "link": "#/t/TRN.L"
-},
-{
-"id": "short-FCA-GB0009465807-Totale dichiarato (aggregato FCA)-2026-10-21-10.19",
-"ts": "2026-10-23T17:17:01Z",
-"type": "short",
-"title": "Weir: Totale dichiarato (aggregato FCA)",
-"text": "short da 10.60% a 10.19% (10.19%, FCA, 2026-10-21)",
-"date": "2026-10-21",
-"important": true,
-"link": "#/t/WEIR.L"
-},
-{
-"id": "short-FCA-GB0002875804-Totale dichiarato (aggregato FCA)-2026-10-21-0.71",
-"ts": "2026-10-23T17:17:01Z",
-"type": "short",
-"title": "British American Tobacco: Totale dichiarato (aggregato FCA)",
-"text": "short da 0.49% a 0.71% (0.71%, FCA, 2026-10-21)",
-"date": "2026-10-21",
-"important": false,
-"link": "#/t/BATS.L"
-},
-{
-"id": "short-FCA-GB00BMX86B70-Totale dichiarato (aggregato FCA)-2026-10-21-0.61",
-"ts": "2026-10-23T17:17:01Z",
-"type": "short",
-"title": "Haleon: Totale dichiarato (aggregato FCA)",
-"text": "short da 0.41% a 0.61% (0.61%, FCA, 2026-10-21)",
-"date": "2026-10-21",
-"important": false,
-"link": "#/t/HLN.L"
-},
-{
-"id": "short-FCA-GB0004300496-Totale dichiarato (aggregato FCA)-2026-10-21-7.9",
-"ts": "2026-10-23T17:17:01Z",
-"type": "short",
-"title": "Pan African Resources: Totale dichiarato (aggregato FCA)",
-"text": "short da 7.70% a 7.90% (7.90%, FCA, 2026-10-21)",
-"date": "2026-10-21",
-"important": true,
-"link": "#/t/PAF.L"
-},
-{
-"id": "short-FCA-GB00BG5KQW09-Totale dichiarato (aggregato FCA)-2026-10-21-18.02",
-"ts": "2026-10-23T17:17:01Z",
-"type": "short",
-"title": "Ceres Power: Totale dichiarato (aggregato FCA)",
-"text": "short da 18.14% a 18.02% (18.02%, FCA, 2026-10-21)",
-"date": "2026-10-21",
-"important": true,
-"link": "#/t/CWR.L"
 }
 ]
