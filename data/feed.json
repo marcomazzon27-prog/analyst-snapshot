@@ -1,5 +1,445 @@
 [
 {
+"id": "short-FCA-GB0030232317-Totale dichiarato (aggregato FCA)-2026-11-03-2.13",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Michael Page: Totale dichiarato (aggregato FCA)",
+"text": "short da 2.42% a 2.13% (2.13%, FCA, 2026-11-03)",
+"date": "2026-11-03",
+"important": true,
+"link": "#/t/PAGE.L"
+},
+{
+"id": "short-FCA-GB00B1WY2338-Totale dichiarato (aggregato FCA)-2026-11-05-1.79",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Smiths Group: Totale dichiarato (aggregato FCA)",
+"text": "short da 1.99% a 1.79% (1.79%, FCA, 2026-11-05)",
+"date": "2026-11-05",
+"important": true,
+"link": "#/t/SMIN.L"
+},
+{
+"id": "short-FCA-GB0002374006-Totale dichiarato (aggregato FCA)-2026-11-05-3.53",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Diageo: Totale dichiarato (aggregato FCA)",
+"text": "short da 3.82% a 3.53% (3.53%, FCA, 2026-11-05)",
+"date": "2026-11-05",
+"important": true,
+"link": "#/t/DGE.L"
+},
+{
+"id": "short-FCA-IM00B5VQMV65-Totale dichiarato (aggregato FCA)-2026-11-05-3.46",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Entain: Totale dichiarato (aggregato FCA)",
+"text": "short da 3.66% a 3.46% (3.46%, FCA, 2026-11-05)",
+"date": "2026-11-05",
+"important": true,
+"link": "#/t/ENT.L"
+},
+{
+"id": "short-FCA-JE00B8KF9B49-Totale dichiarato (aggregato FCA)-2026-11-05-4.16",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "WPP: Totale dichiarato (aggregato FCA)",
+"text": "short da 4.36% a 4.16% (4.16%, FCA, 2026-11-05)",
+"date": "2026-11-05",
+"important": true,
+"link": "#/t/WPP.L"
+},
+{
+"id": "short-FCA-GB00BG5KQW09-Totale dichiarato (aggregato FCA)-2026-11-06-19.36",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Ceres Power: Totale dichiarato (aggregato FCA)",
+"text": "short da 19.53% a 19.36% (19.36%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/CWR.L"
+},
+{
+"id": "short-FCA-GB0008782301-Totale dichiarato (aggregato FCA)-2026-11-06-9.2",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Taylor Wimpey: Totale dichiarato (aggregato FCA)",
+"text": "short da 9.32% a 9.20% (9.20%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/TW.L"
+},
+{
+"id": "short-AMF-FR0000051807-SQUAREPOINT OPS LLC-2026-11-06-0.75",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Teleperformance: SQUAREPOINT OPS LLC",
+"text": "short da 0.58% a 0.75% (0.75%, AMF, 2026-11-06)",
+"date": "2026-11-06",
+"important": false,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-FCA-GB0009223206-Totale dichiarato (aggregato FCA)-2026-11-06-5.31",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Smith & Nephew: Totale dichiarato (aggregato FCA)",
+"text": "short da 5.46% a 5.31% (5.31%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/SN.L"
+},
+{
+"id": "short-FCA-GG00B1W3VF54-Totale dichiarato (aggregato FCA)-2026-11-06-2.47",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Sirius Real Estate: Totale dichiarato (aggregato FCA)",
+"text": "short da 2.30% a 2.47% (2.47%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/SRE.L"
+},
+{
+"id": "short-AMF-FR0000120172-MARSHALL WACE LLP-2026-11-06-0.7",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Carrefour: MARSHALL WACE LLP",
+"text": "short da 0.62% a 0.70% (0.70%, AMF, 2026-11-06)",
+"date": "2026-11-06",
+"important": false,
+"link": "#/t/CA.PA"
+},
+{
+"id": "short-FCA-GB00B2PDGW16-Totale dichiarato (aggregato FCA)-2026-11-06-11.48",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "WHSmith: Totale dichiarato (aggregato FCA)",
+"text": "short da 11.55% a 11.48% (11.48%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/SMWH.L"
+},
+{
+"id": "short-FCA-GB00B1KJJ408-Totale dichiarato (aggregato FCA)-2026-11-06-5.17",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Whitbread: Totale dichiarato (aggregato FCA)",
+"text": "short da 5.26% a 5.17% (5.17%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/WTB.L"
+},
+{
+"id": "short-FCA-JE00BN574F90-Totale dichiarato (aggregato FCA)-2026-11-06-9.11",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Wizz Air: Totale dichiarato (aggregato FCA)",
+"text": "short da 8.90% a 9.11% (9.11%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/WIZZ.L"
+},
+{
+"id": "short-FCA-GB00BH4HKS39-Totale dichiarato (aggregato FCA)-2026-11-06-1.49",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Vodafone Group: Totale dichiarato (aggregato FCA)",
+"text": "short da 1.29% a 1.49% (1.49%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/VOD.L"
+},
+{
+"id": "short-FCA-GB00B04V1276-Totale dichiarato (aggregato FCA)-2026-11-06-4.74",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Grainger: Totale dichiarato (aggregato FCA)",
+"text": "short da 4.64% a 4.74% (4.74%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/GRI.L"
+},
+{
+"id": "short-FCA-GB00BF5H9P87-Totale dichiarato (aggregato FCA)-2026-11-06-5.32",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Great Portland Estates: Totale dichiarato (aggregato FCA)",
+"text": "short da 5.03% a 5.32% (5.32%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/GPE.L"
+},
+{
+"id": "short-FCA-GB00B0LCW083-Totale dichiarato (aggregato FCA)-2026-11-06-1.54",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Hikma Pharmaceuticals: Totale dichiarato (aggregato FCA)",
+"text": "short da 1.40% a 1.54% (1.54%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/HIK.L"
+},
+{
+"id": "short-FCA-GB00BVYVFW23-Totale dichiarato (aggregato FCA)-2026-11-06-4.21",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Autotrader Group: Totale dichiarato (aggregato FCA)",
+"text": "short da 4.48% a 4.21% (4.21%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/AUTO.L"
+},
+{
+"id": "short-FCA-GB0005576813-Totale dichiarato (aggregato FCA)-2026-11-06-5.26",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Howdens Joinery: Totale dichiarato (aggregato FCA)",
+"text": "short da 5.35% a 5.26% (5.26%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/HWDN.L"
+},
+{
+"id": "short-FCA-ES0177542018-Totale dichiarato (aggregato FCA)-2026-11-06-1.16",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "International Airlines Group: Totale dichiarato (aggregato FCA)",
+"text": "short da 1.29% a 1.16% (1.16%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/IAG.L"
+},
+{
+"id": "short-FCA-GB00B1FW5029-Totale dichiarato (aggregato FCA)-2026-11-06-1.99",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Hochschild Mining: Totale dichiarato (aggregato FCA)",
+"text": "short da 1.90% a 1.99% (1.99%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/HOC.L"
+},
+{
+"id": "short-FCA-GB00B00FPT80-Totale dichiarato (aggregato FCA)-2026-11-06-2.55",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Chesnara: Totale dichiarato (aggregato FCA)",
+"text": "short da 2.33% a 2.55% (2.55%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/CSN.L"
+},
+{
+"id": "short-FCA-GB0031743007-Totale dichiarato (aggregato FCA)-2026-11-06-4.99",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Burberry Group: Totale dichiarato (aggregato FCA)",
+"text": "short da 5.18% a 4.99% (4.99%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/BRBY.L"
+},
+{
+"id": "short-FCA-GB0033147751-Totale dichiarato (aggregato FCA)-2026-11-06-3.68",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Bloomsbury Publishing: Totale dichiarato (aggregato FCA)",
+"text": "short da 3.52% a 3.68% (3.68%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/BMY.L"
+},
+{
+"id": "short-FCA-GB00BG12Y042-Totale dichiarato (aggregato FCA)-2026-11-06-4.24",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Energean: Totale dichiarato (aggregato FCA)",
+"text": "short da 4.04% a 4.24% (4.24%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/ENOG.L"
+},
+{
+"id": "short-FCA-DE0008430026-Totale dichiarato (aggregato FCA)-2026-11-06-0.9",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Munich Re: Totale dichiarato (aggregato FCA)",
+"text": "short da 0.58% a 0.90% (0.90%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/MUV2.DE"
+},
+{
+"id": "short-FCA-GB00B019KW72-Totale dichiarato (aggregato FCA)-2026-11-06-6.95",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Sainsbury's: Totale dichiarato (aggregato FCA)",
+"text": "short da 6.87% a 6.95% (6.95%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/SBRY.L"
+},
+{
+"id": "short-FCA-GB00B0WMWD03-Totale dichiarato (aggregato FCA)-2026-11-06-2.69",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Qinetiq: Totale dichiarato (aggregato FCA)",
+"text": "short da 2.48% a 2.69% (2.69%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/QQ.L"
+},
+{
+"id": "short-FCA-GB0004300496-Totale dichiarato (aggregato FCA)-2026-11-06-7.87",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Pan African Resources: Totale dichiarato (aggregato FCA)",
+"text": "short da 8.17% a 7.87% (7.87%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/PAF.L"
+},
+{
+"id": "short-FCA-GB0006825383-Totale dichiarato (aggregato FCA)-2026-11-06-9.51",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Persimmon: Totale dichiarato (aggregato FCA)",
+"text": "short da 9.45% a 9.51% (9.51%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/PSN.L"
+},
+{
+"id": "short-FCA-GB00BR3YV268-Totale dichiarato (aggregato FCA)-2026-11-06-0.26",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Polar Capital Technology Trust: Totale dichiarato (aggregato FCA)",
+"text": "nuova posizione corta (0.26%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": false,
+"link": "#/t/PCT.L"
+},
+{
+"id": "short-FCA-GB00BYRJ5J14-Totale dichiarato (aggregato FCA)-2026-11-06-5.37",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Primary Health Properties: Totale dichiarato (aggregato FCA)",
+"text": "short da 5.49% a 5.37% (5.37%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/PHP.L"
+},
+{
+"id": "short-FCA-GB0033195214-Totale dichiarato (aggregato FCA)-2026-11-06-9.59",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Kingfisher plc: Totale dichiarato (aggregato FCA)",
+"text": "short da 9.39% a 9.59% (9.59%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/KGF.L"
+},
+{
+"id": "short-FCA-GB00B4WFW713-Totale dichiarato (aggregato FCA)-2026-11-06-1.74",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "LondonMetric Property: Totale dichiarato (aggregato FCA)",
+"text": "short da 1.48% a 1.74% (1.74%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/LMP.L"
+},
+{
+"id": "short-FCA-GB0003096442-Totale dichiarato (aggregato FCA)-2026-11-06-1.51",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "RS Group: Totale dichiarato (aggregato FCA)",
+"text": "short da 1.19% a 1.51% (1.51%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/RS1.L"
+},
+{
+"id": "short-FCA-GB0031274896-Totale dichiarato (aggregato FCA)-2026-11-06-3.69",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Marks & Spencer: Totale dichiarato (aggregato FCA)",
+"text": "short da 3.48% a 3.69% (3.69%, FCA, 2026-11-06)",
+"date": "2026-11-06",
+"important": true,
+"link": "#/t/MKS.L"
+},
+{
+"id": "short-CONSOB-IT0005541336-Ilex Capital Partners (UK) LLP-2026-11-09-0.69",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Lottomatica Group: Ilex Capital Partners (UK) LLP",
+"text": "short da 0.57% a 0.69% (0.69%, CONSOB, 2026-11-09)",
+"date": "2026-11-09",
+"important": false,
+"link": "#/t/LTMC.MI"
+},
+{
+"id": "short-CONSOB-IT0005541336-Capital Fund Management SA-2026-11-09-1.44",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Lottomatica Group: Capital Fund Management SA",
+"text": "short da 1.37% a 1.44% (1.44%, CONSOB, 2026-11-09)",
+"date": "2026-11-09",
+"important": true,
+"link": "#/t/LTMC.MI"
+},
+{
+"id": "short-CONSOB-IT0005541336-BlackRock Financial Management, Inc.-2026-11-09-0.51",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Lottomatica Group: BlackRock Financial Management, Inc.",
+"text": "nuova posizione corta (0.51%, CONSOB, 2026-11-09)",
+"date": "2026-11-09",
+"important": false,
+"link": "#/t/LTMC.MI"
+},
+{
+"id": "short-CONSOB-IT0001347308-Millennium International Management LP-2026-11-09-0.5",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Buzzi: Millennium International Management LP",
+"text": "nuova posizione corta (0.50%, CONSOB, 2026-11-09)",
+"date": "2026-11-09",
+"important": false,
+"link": "#/t/BZU.MI"
+},
+{
+"id": "short-CONSOB-IT0005119810-Two Sigma Investments, LP-2026-11-09-1.52",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Avio: Two Sigma Investments, LP",
+"text": "short da 1.67% a 1.52% (1.52%, CONSOB, 2026-11-09)",
+"date": "2026-11-09",
+"important": true,
+"link": "#/t/AVIO.MI"
+},
+{
+"id": "short-CONSOB-IT0005366767-ExodusPoint Capital Management LP-2026-11-09-0.71",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Nexi: ExodusPoint Capital Management LP",
+"text": "short da 0.65% a 0.71% (0.71%, CONSOB, 2026-11-09)",
+"date": "2026-11-09",
+"important": false,
+"link": "#/t/NEXI.MI"
+},
+{
+"id": "short-CONSOB-IT0004056880-Capital Fund Management SA-2026-11-09-1.84",
+"ts": "2026-11-10T17:08:42Z",
+"type": "short",
+"title": "Amplifon: Capital Fund Management SA",
+"text": "short da 1.77% a 1.84% (1.84%, CONSOB, 2026-11-09)",
+"date": "2026-11-09",
+"important": true,
+"link": "#/t/AMP.MI"
+},
+{
 "id": "short-FCA-GB00B0LCW083-Totale dichiarato (aggregato FCA)-2026-10-26-1.4",
 "ts": "2026-11-09T22:30:32Z",
 "type": "short",
@@ -4558,445 +4998,5 @@
 "date": "2026-10-23",
 "important": true,
 "link": "#/t/TEP.L"
-},
-{
-"id": "short-FCA-JE00BN574F90-Totale dichiarato (aggregato FCA)-2026-10-23-10.39",
-"ts": "2026-10-27T15:25:59Z",
-"type": "short",
-"title": "Wizz Air: Totale dichiarato (aggregato FCA)",
-"text": "short da 10.28% a 10.39% (10.39%, FCA, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/WIZZ.L"
-},
-{
-"id": "short-FCA-GB00B0744B38-Totale dichiarato (aggregato FCA)-2026-10-23-3.04",
-"ts": "2026-10-27T15:25:59Z",
-"type": "short",
-"title": "Bunzl: Totale dichiarato (aggregato FCA)",
-"text": "short da 2.80% a 3.04% (3.04%, FCA, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/BNZL.L"
-},
-{
-"id": "short-FCA-GB00B019KW72-Totale dichiarato (aggregato FCA)-2026-10-23-7.06",
-"ts": "2026-10-27T15:25:59Z",
-"type": "short",
-"title": "Sainsbury's: Totale dichiarato (aggregato FCA)",
-"text": "short da 6.94% a 7.06% (7.06%, FCA, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/SBRY.L"
-},
-{
-"id": "short-FCA-GB00B01QGK86-Totale dichiarato (aggregato FCA)-2026-10-23-4.35",
-"ts": "2026-10-27T15:25:59Z",
-"type": "short",
-"title": "NCC Group: Totale dichiarato (aggregato FCA)",
-"text": "short da 5.36% a 4.35% (4.35%, FCA, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/NCC.L"
-},
-{
-"id": "short-FCA-JE00B8KF9B49-Totale dichiarato (aggregato FCA)-2026-10-23-4.3",
-"ts": "2026-10-27T15:25:59Z",
-"type": "short",
-"title": "WPP: Totale dichiarato (aggregato FCA)",
-"text": "short da 4.43% a 4.30% (4.30%, FCA, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/WPP.L"
-},
-{
-"id": "short-CONSOB-NL00150001Q9-Jericho Capital Asset Management LP-2026-10-23-1.26",
-"ts": "2026-10-27T15:25:59Z",
-"type": "short",
-"title": "Stellantis: Jericho Capital Asset Management LP",
-"text": "nuova posizione corta (1.26%, CONSOB, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/STLAM.MI"
-},
-{
-"id": "short-FCA-GB0005603997-Totale dichiarato (aggregato FCA)-2026-10-23-4.37",
-"ts": "2026-10-27T15:25:59Z",
-"type": "short",
-"title": "Legal & General: Totale dichiarato (aggregato FCA)",
-"text": "short da 4.27% a 4.37% (4.37%, FCA, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/LGEN.L"
-},
-{
-"id": "short-CONSOB-NL00150001Q9-Kintbury Capital LLP-2026-10-23-0.79",
-"ts": "2026-10-27T15:25:59Z",
-"type": "short",
-"title": "Stellantis: Kintbury Capital LLP",
-"text": "nuova posizione corta (0.79%, CONSOB, 2026-10-23)",
-"date": "2026-10-23",
-"important": false,
-"link": "#/t/STLAM.MI"
-},
-{
-"id": "short-FCA-GB0006731235-Totale dichiarato (aggregato FCA)-2026-10-23-3.65",
-"ts": "2026-10-27T15:25:59Z",
-"type": "short",
-"title": "Associated British Foods: Totale dichiarato (aggregato FCA)",
-"text": "short da 3.49% a 3.65% (3.65%, FCA, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/ABF.L"
-},
-{
-"id": "short-FCA-GB00BH4HKS39-Totale dichiarato (aggregato FCA)-2026-10-23-1.49",
-"ts": "2026-10-27T15:25:59Z",
-"type": "short",
-"title": "Vodafone Group: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.29% a 1.49% (1.49%, FCA, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/VOD.L"
-},
-{
-"id": "short-FCA-GB00BKDTK925-Totale dichiarato (aggregato FCA)-2026-10-23-4.82",
-"ts": "2026-10-27T15:25:59Z",
-"type": "short",
-"title": "Trainline: Totale dichiarato (aggregato FCA)",
-"text": "short da 4.92% a 4.82% (4.82%, FCA, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/TRN.L"
-},
-{
-"id": "short-FCA-GB0031274896-Totale dichiarato (aggregato FCA)-2026-10-23-3.52",
-"ts": "2026-10-27T15:25:59Z",
-"type": "short",
-"title": "Marks & Spencer: Totale dichiarato (aggregato FCA)",
-"text": "short da 3.80% a 3.52% (3.52%, FCA, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/MKS.L"
-},
-{
-"id": "short-FCA-GB00B135BJ46-Totale dichiarato (aggregato FCA)-2026-10-23-3.0",
-"ts": "2026-10-27T15:25:59Z",
-"type": "short",
-"title": "Savills: Totale dichiarato (aggregato FCA)",
-"text": "short da 3.10% a 3.00% (3.00%, FCA, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/SVS.L"
-},
-{
-"id": "short-FCA-GB0006776081-Totale dichiarato (aggregato FCA)-2026-10-23-5.38",
-"ts": "2026-10-27T15:25:59Z",
-"type": "short",
-"title": "Pearson plc: Totale dichiarato (aggregato FCA)",
-"text": "short da 5.28% a 5.38% (5.38%, FCA, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/PSON.L"
-},
-{
-"id": "short-FCA-GB00BG5KQW09-Totale dichiarato (aggregato FCA)-2026-10-23-18.69",
-"ts": "2026-10-27T15:25:59Z",
-"type": "short",
-"title": "Ceres Power: Totale dichiarato (aggregato FCA)",
-"text": "short da 18.33% a 18.69% (18.69%, FCA, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/CWR.L"
-},
-{
-"id": "short-FCA-GB00BP37WF17-Totale dichiarato (aggregato FCA)-2026-10-23-0.4",
-"ts": "2026-10-27T15:25:59Z",
-"type": "short",
-"title": "Pantheon International: Totale dichiarato (aggregato FCA)",
-"text": "short da 0.30% a 0.40% (0.40%, FCA, 2026-10-23)",
-"date": "2026-10-23",
-"important": false,
-"link": "#/t/PIN.L"
-},
-{
-"id": "short-CONSOB-NL00150001Q9-Two Sigma Investments, LP-2026-10-23-1.1",
-"ts": "2026-10-26T20:36:16Z",
-"type": "short",
-"title": "Stellantis: Two Sigma Investments, LP",
-"text": "short da 1.04% a 1.10% (1.10%, CONSOB, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/STLAM.MI"
-},
-{
-"id": "short-CONSOB-IT0000072618-Verition Management (DIFC) Limited-2026-10-23-0.6",
-"ts": "2026-10-26T20:36:16Z",
-"type": "short",
-"title": "Intesa Sanpaolo: Verition Management (DIFC) Limited",
-"text": "short da 0.52% a 0.60% (0.60%, CONSOB, 2026-10-23)",
-"date": "2026-10-23",
-"important": false,
-"link": "#/t/ISP.MI"
-},
-{
-"id": "short-CONSOB-IT0004965148-Ilex Capital Partners (UK) LLP-2026-10-23-2.32",
-"ts": "2026-10-26T20:36:16Z",
-"type": "short",
-"title": "Moncler: Ilex Capital Partners (UK) LLP",
-"text": "short da 2.23% a 2.32% (2.32%, CONSOB, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/MONC.MI"
-},
-{
-"id": "short-CONSOB-NL00150001Q9-Qube Research & Technologies Ltd-2026-10-23-0.51",
-"ts": "2026-10-26T20:36:16Z",
-"type": "short",
-"title": "Stellantis: Qube Research & Technologies Ltd",
-"text": "nuova posizione corta (0.51%, CONSOB, 2026-10-23)",
-"date": "2026-10-23",
-"important": false,
-"link": "#/t/STLAM.MI"
-},
-{
-"id": "short-FCA-GB0002374006-Totale dichiarato (aggregato FCA)-2026-10-14-3.83",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Diageo: Totale dichiarato (aggregato FCA)",
-"text": "short da 4.06% a 3.83% (3.83%, FCA, 2026-10-14)",
-"date": "2026-10-14",
-"important": true,
-"link": "#/t/DGE.L"
-},
-{
-"id": "short-FCA-IM00B5VQMV65-Totale dichiarato (aggregato FCA)-2026-10-15-3.65",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Entain: Totale dichiarato (aggregato FCA)",
-"text": "short da 3.86% a 3.65% (3.65%, FCA, 2026-10-15)",
-"date": "2026-10-15",
-"important": true,
-"link": "#/t/ENT.L"
-},
-{
-"id": "short-FCA-GB00BP0RGD03-Totale dichiarato (aggregato FCA)-2026-10-20-5.16",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Berkeley Group Holdings: Totale dichiarato (aggregato FCA)",
-"text": "short da 5.36% a 5.16% (5.16%, FCA, 2026-10-20)",
-"date": "2026-10-20",
-"important": true,
-"link": "#/t/BKG.L"
-},
-{
-"id": "short-FCA-FR0000120073-Totale dichiarato (aggregato FCA)-2026-10-20-1.04",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Air Liquide: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.24% a 1.04% (1.04%, FCA, 2026-10-20)",
-"date": "2026-10-20",
-"important": true,
-"link": "#/t/AI.PA"
-},
-{
-"id": "short-FCA-GB00BVYVFW23-Totale dichiarato (aggregato FCA)-2026-10-21-5.93",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Autotrader Group: Totale dichiarato (aggregato FCA)",
-"text": "short da 6.21% a 5.93% (5.93%, FCA, 2026-10-21)",
-"date": "2026-10-21",
-"important": true,
-"link": "#/t/AUTO.L"
-},
-{
-"id": "short-FCA-GB00B1ZBKY84-Totale dichiarato (aggregato FCA)-2026-10-21-5.03",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "MONY Group: Totale dichiarato (aggregato FCA)",
-"text": "short da 4.83% a 5.03% (5.03%, FCA, 2026-10-21)",
-"date": "2026-10-21",
-"important": true,
-"link": "#/t/MONY.L"
-},
-{
-"id": "short-FCA-GB0002318888-Totale dichiarato (aggregato FCA)-2026-10-21-1.19",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Cranswick: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.41% a 1.19% (1.19%, FCA, 2026-10-21)",
-"date": "2026-10-21",
-"important": true,
-"link": "#/t/CWK.L"
-},
-{
-"id": "short-FCA-GB00B1FW5029-Totale dichiarato (aggregato FCA)-2026-10-22-1.3",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Hochschild Mining: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.10% a 1.30% (1.30%, FCA, 2026-10-22)",
-"date": "2026-10-22",
-"important": true,
-"link": "#/t/HOC.L"
-},
-{
-"id": "short-FCA-GB0008794710-Totale dichiarato (aggregato FCA)-2026-10-22-1.78",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Telecom Plus: Totale dichiarato (aggregato FCA)",
-"text": "short da 2.06% a 1.78% (1.78%, FCA, 2026-10-22)",
-"date": "2026-10-22",
-"important": true,
-"link": "#/t/TEP.L"
-},
-{
-"id": "short-FCA-GB00B019KW72-Totale dichiarato (aggregato FCA)-2026-10-22-6.94",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Sainsbury's: Totale dichiarato (aggregato FCA)",
-"text": "short da 6.85% a 6.94% (6.94%, FCA, 2026-10-22)",
-"date": "2026-10-22",
-"important": true,
-"link": "#/t/SBRY.L"
-},
-{
-"id": "short-FCA-GB00BM8Q5M07-Totale dichiarato (aggregato FCA)-2026-10-22-3.63",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "JD Sports: Totale dichiarato (aggregato FCA)",
-"text": "short da 3.73% a 3.63% (3.63%, FCA, 2026-10-22)",
-"date": "2026-10-22",
-"important": true,
-"link": "#/t/JD.L"
-},
-{
-"id": "short-FCA-GB0005603997-Totale dichiarato (aggregato FCA)-2026-10-22-4.27",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Legal & General: Totale dichiarato (aggregato FCA)",
-"text": "short da 4.35% a 4.27% (4.27%, FCA, 2026-10-22)",
-"date": "2026-10-22",
-"important": true,
-"link": "#/t/LGEN.L"
-},
-{
-"id": "short-FCA-GB00BJVQC708-Totale dichiarato (aggregato FCA)-2026-10-22-1.23",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Helios Towers: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.13% a 1.23% (1.23%, FCA, 2026-10-22)",
-"date": "2026-10-22",
-"important": true,
-"link": "#/t/HTWS.L"
-},
-{
-"id": "short-FCA-GB0033147751-Totale dichiarato (aggregato FCA)-2026-10-22-3.9",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Bloomsbury Publishing: Totale dichiarato (aggregato FCA)",
-"text": "short da 4.08% a 3.90% (3.90%, FCA, 2026-10-22)",
-"date": "2026-10-22",
-"important": true,
-"link": "#/t/BMY.L"
-},
-{
-"id": "short-AMF-FR0000125338-MARSHALL WACE LLP-2026-10-22-0.78",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Capgemini: MARSHALL WACE LLP",
-"text": "short da 0.88% a 0.78% (0.78%, AMF, 2026-10-22)",
-"date": "2026-10-22",
-"important": false,
-"link": "#/t/CAP.PA"
-},
-{
-"id": "short-FCA-GB00BD3VFW73-Totale dichiarato (aggregato FCA)-2026-10-22-4.93",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Convatec: Totale dichiarato (aggregato FCA)",
-"text": "short da 4.65% a 4.93% (4.93%, FCA, 2026-10-22)",
-"date": "2026-10-22",
-"important": true,
-"link": "#/t/CTEC.L"
-},
-{
-"id": "short-FCA-GB0007908733-Totale dichiarato (aggregato FCA)-2026-10-22-1.4",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "SSE plc: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.10% a 1.40% (1.40%, FCA, 2026-10-22)",
-"date": "2026-10-22",
-"important": true,
-"link": "#/t/SSE.L"
-},
-{
-"id": "short-FCA-GB0006731235-Totale dichiarato (aggregato FCA)-2026-10-22-3.49",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Associated British Foods: Totale dichiarato (aggregato FCA)",
-"text": "short da 3.29% a 3.49% (3.49%, FCA, 2026-10-22)",
-"date": "2026-10-22",
-"important": true,
-"link": "#/t/ABF.L"
-},
-{
-"id": "short-FCA-GB0004544929-Totale dichiarato (aggregato FCA)-2026-10-22-1.43",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Imperial Brands: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.22% a 1.43% (1.43%, FCA, 2026-10-22)",
-"date": "2026-10-22",
-"important": true,
-"link": "#/t/IMB.L"
-},
-{
-"id": "short-FCA-GB00BMTV7393-Totale dichiarato (aggregato FCA)-2026-10-22-6.07",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "THG: Totale dichiarato (aggregato FCA)",
-"text": "short da 6.26% a 6.07% (6.07%, FCA, 2026-10-22)",
-"date": "2026-10-22",
-"important": true,
-"link": "#/t/THG.L"
-},
-{
-"id": "short-FCA-CH0198251305-Totale dichiarato (aggregato FCA)-2026-10-22-1.09",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Coca-Cola HBC: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.18% a 1.09% (1.09%, FCA, 2026-10-22)",
-"date": "2026-10-22",
-"important": true,
-"link": "#/t/CCH.L"
-},
-{
-"id": "short-FCA-GB00BLDRH360-Totale dichiarato (aggregato FCA)-2026-10-22-2.29",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "OSB Group: Totale dichiarato (aggregato FCA)",
-"text": "short da 2.39% a 2.29% (2.29%, FCA, 2026-10-22)",
-"date": "2026-10-22",
-"important": true,
-"link": "#/t/OSB.L"
-},
-{
-"id": "short-FCA-GB0033195214-Totale dichiarato (aggregato FCA)-2026-10-22-9.7",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Kingfisher plc: Totale dichiarato (aggregato FCA)",
-"text": "short da 9.78% a 9.70% (9.70%, FCA, 2026-10-22)",
-"date": "2026-10-22",
-"important": true,
-"link": "#/t/KGF.L"
-},
-{
-"id": "short-FCA-GB00B0744B38-Totale dichiarato (aggregato FCA)-2026-10-22-2.8",
-"ts": "2026-10-26T13:18:22Z",
-"type": "short",
-"title": "Bunzl: Totale dichiarato (aggregato FCA)",
-"text": "short da 2.74% a 2.80% (2.80%, FCA, 2026-10-22)",
-"date": "2026-10-22",
-"important": true,
-"link": "#/t/BNZL.L"
 }
 ]
