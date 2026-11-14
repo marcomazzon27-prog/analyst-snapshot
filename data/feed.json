@@ -1,5 +1,125 @@
 [
 {
+"id": "short-CONSOB-IT0001347308-Marshall Wace LLP-2026-11-02-0.52",
+"ts": "2026-11-14T18:17:26Z",
+"type": "short",
+"title": "Buzzi: Marshall Wace LLP",
+"text": "nuova posizione corta (0.52%, CONSOB, 2026-11-02)",
+"date": "2026-11-02",
+"important": false,
+"link": "#/t/BZU.MI"
+},
+{
+"id": "short-CONSOB-NL00150001Q9-Jupiter Asset Management Limited-2026-11-05-1.08",
+"ts": "2026-11-14T18:17:26Z",
+"type": "short",
+"title": "Stellantis: Jupiter Asset Management Limited",
+"text": "nuova posizione corta (1.08%, CONSOB, 2026-11-05)",
+"date": "2026-11-05",
+"important": true,
+"link": "#/t/STLAM.MI"
+},
+{
+"id": "short-CONSOB-IT0003856405-Two Sigma Investments, LP-2026-11-05-0.69",
+"ts": "2026-11-14T18:17:26Z",
+"type": "short",
+"title": "Leonardo: Two Sigma Investments, LP",
+"text": "nuova posizione corta (0.69%, CONSOB, 2026-11-05)",
+"date": "2026-11-05",
+"important": false,
+"link": "#/t/LDO.MI"
+},
+{
+"id": "short-CONSOB-NL0015000LU4-Two Sigma Investments, LP-2026-11-09-1.09",
+"ts": "2026-11-14T18:17:26Z",
+"type": "short",
+"title": "Iveco: Two Sigma Investments, LP",
+"text": "nuova posizione corta (1.09%, CONSOB, 2026-11-09)",
+"date": "2026-11-09",
+"important": true,
+"link": "#/t/IVG.MI"
+},
+{
+"id": "short-CONSOB-IT0005599938-PDT Partners, LLC-2026-11-10-0.99",
+"ts": "2026-11-14T18:17:26Z",
+"type": "short",
+"title": "Fincantieri: PDT Partners, LLC",
+"text": "nuova posizione corta (0.99%, CONSOB, 2026-11-10)",
+"date": "2026-11-10",
+"important": false,
+"link": "#/t/FCT.MI"
+},
+{
+"id": "short-CONSOB-NL00150001Q9-Citadel Advisors Europe Limited-2026-11-10-0.58",
+"ts": "2026-11-14T18:17:26Z",
+"type": "short",
+"title": "Stellantis: Citadel Advisors Europe Limited",
+"text": "nuova posizione corta (0.58%, CONSOB, 2026-11-10)",
+"date": "2026-11-10",
+"important": false,
+"link": "#/t/STLAM.MI"
+},
+{
+"id": "short-CONSOB-IT0005218380-Two Sigma Investments, LP-2026-11-10-0.61",
+"ts": "2026-11-14T18:17:26Z",
+"type": "short",
+"title": "Banco BPM: Two Sigma Investments, LP",
+"text": "nuova posizione corta (0.61%, CONSOB, 2026-11-10)",
+"date": "2026-11-10",
+"important": false,
+"link": "#/t/BAMI.MI"
+},
+{
+"id": "short-CONSOB-IT0005366767-ExodusPoint Capital Management LP-2026-11-10-0.69",
+"ts": "2026-11-14T18:17:26Z",
+"type": "short",
+"title": "Nexi: ExodusPoint Capital Management LP",
+"text": "nuova posizione corta (0.69%, CONSOB, 2026-11-10)",
+"date": "2026-11-10",
+"important": false,
+"link": "#/t/NEXI.MI"
+},
+{
+"id": "short-CONSOB-IT0001347308-BlackRock Financial Management, Inc.-2026-11-12-0.6",
+"ts": "2026-11-14T18:17:26Z",
+"type": "short",
+"title": "Buzzi: BlackRock Financial Management, Inc.",
+"text": "nuova posizione corta (0.60%, CONSOB, 2026-11-12)",
+"date": "2026-11-12",
+"important": false,
+"link": "#/t/BZU.MI"
+},
+{
+"id": "short-CONSOB-IT0005541336-Ilex Capital Partners (UK) LLP-2026-11-12-0.72",
+"ts": "2026-11-14T18:17:26Z",
+"type": "short",
+"title": "Lottomatica Group: Ilex Capital Partners (UK) LLP",
+"text": "nuova posizione corta (0.72%, CONSOB, 2026-11-12)",
+"date": "2026-11-12",
+"important": false,
+"link": "#/t/LTMC.MI"
+},
+{
+"id": "short-CONSOB-IT0004965148-Two Sigma Investments, LP-2026-11-12-0.99",
+"ts": "2026-11-14T18:17:26Z",
+"type": "short",
+"title": "Moncler: Two Sigma Investments, LP",
+"text": "nuova posizione corta (0.99%, CONSOB, 2026-11-12)",
+"date": "2026-11-12",
+"important": false,
+"link": "#/t/MONC.MI"
+},
+{
+"id": "short-CONSOB-IT0000072618-Verition Management (DIFC) Limited-2026-11-12-0.59",
+"ts": "2026-11-14T18:17:26Z",
+"type": "short",
+"title": "Intesa Sanpaolo: Verition Management (DIFC) Limited",
+"text": "nuova posizione corta (0.59%, CONSOB, 2026-11-12)",
+"date": "2026-11-12",
+"important": false,
+"link": "#/t/ISP.MI"
+},
+{
 "id": "short-FCA-GB00BMX64W89-Totale dichiarato (aggregato FCA)-2026-11-04-2.49",
 "ts": "2026-11-13T19:52:02Z",
 "type": "short",
@@ -4878,125 +4998,5 @@
 "date": "2026-10-28",
 "important": true,
 "link": "#/t/JD.L"
-},
-{
-"id": "short-FCA-GB0001826634-Totale dichiarato (aggregato FCA)-2026-10-28-1.96",
-"ts": "2026-10-30T18:05:04Z",
-"type": "short",
-"title": "Diploma: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.78% a 1.96% (1.96%, FCA, 2026-10-28)",
-"date": "2026-10-28",
-"important": true,
-"link": "#/t/DPLM.L"
-},
-{
-"id": "short-FCA-GB00BG5KQW09-Totale dichiarato (aggregato FCA)-2026-10-28-18.63",
-"ts": "2026-10-30T18:05:04Z",
-"type": "short",
-"title": "Ceres Power: Totale dichiarato (aggregato FCA)",
-"text": "short da 18.69% a 18.63% (18.63%, FCA, 2026-10-28)",
-"date": "2026-10-28",
-"important": true,
-"link": "#/t/CWR.L"
-},
-{
-"id": "short-FCA-GB0002074580-Totale dichiarato (aggregato FCA)-2026-10-28-1.42",
-"ts": "2026-10-30T18:05:04Z",
-"type": "short",
-"title": "Genus: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.32% a 1.42% (1.42%, FCA, 2026-10-28)",
-"date": "2026-10-28",
-"important": true,
-"link": "#/t/GNS.L"
-},
-{
-"id": "short-FCA-GB0000904986-Totale dichiarato (aggregato FCA)-2026-10-28-3.4",
-"ts": "2026-10-30T18:05:04Z",
-"type": "short",
-"title": "Bellway: Totale dichiarato (aggregato FCA)",
-"text": "short da 3.52% a 3.40% (3.40%, FCA, 2026-10-28)",
-"date": "2026-10-28",
-"important": true,
-"link": "#/t/BWY.L"
-},
-{
-"id": "short-FCA-GB0004082847-Totale dichiarato (aggregato FCA)-2026-10-28-0.41",
-"ts": "2026-10-30T18:05:04Z",
-"type": "short",
-"title": "Standard Chartered: Totale dichiarato (aggregato FCA)",
-"text": "short da 0.20% a 0.41% (0.41%, FCA, 2026-10-28)",
-"date": "2026-10-28",
-"important": false,
-"link": "#/t/STAN.L"
-},
-{
-"id": "short-FCA-GB00BKDTK925-Totale dichiarato (aggregato FCA)-2026-10-28-4.77",
-"ts": "2026-10-30T18:05:04Z",
-"type": "short",
-"title": "Trainline: Totale dichiarato (aggregato FCA)",
-"text": "short da 4.53% a 4.77% (4.77%, FCA, 2026-10-28)",
-"date": "2026-10-28",
-"important": true,
-"link": "#/t/TRN.L"
-},
-{
-"id": "short-FCA-GB0004866223-Totale dichiarato (aggregato FCA)-2026-10-28-0.78",
-"ts": "2026-10-30T18:05:04Z",
-"type": "short",
-"title": "Keller Group: Totale dichiarato (aggregato FCA)",
-"text": "short da 0.88% a 0.78% (0.78%, FCA, 2026-10-28)",
-"date": "2026-10-28",
-"important": false,
-"link": "#/t/KLR.L"
-},
-{
-"id": "short-FCA-GB0008782301-Totale dichiarato (aggregato FCA)-2026-10-28-9.53",
-"ts": "2026-10-30T18:05:04Z",
-"type": "short",
-"title": "Taylor Wimpey: Totale dichiarato (aggregato FCA)",
-"text": "short da 9.42% a 9.53% (9.53%, FCA, 2026-10-28)",
-"date": "2026-10-28",
-"important": true,
-"link": "#/t/TW.L"
-},
-{
-"id": "short-FCA-GB00BP0RGD03-Totale dichiarato (aggregato FCA)-2026-10-28-5.32",
-"ts": "2026-10-30T18:05:04Z",
-"type": "short",
-"title": "Berkeley Group Holdings: Totale dichiarato (aggregato FCA)",
-"text": "short da 5.42% a 5.32% (5.32%, FCA, 2026-10-28)",
-"date": "2026-10-28",
-"important": true,
-"link": "#/t/BKG.L"
-},
-{
-"id": "short-FCA-GB00BVYVFW23-Totale dichiarato (aggregato FCA)-2026-10-28-5.5",
-"ts": "2026-10-30T18:05:04Z",
-"type": "short",
-"title": "Autotrader Group: Totale dichiarato (aggregato FCA)",
-"text": "short da 5.64% a 5.50% (5.50%, FCA, 2026-10-28)",
-"date": "2026-10-28",
-"important": true,
-"link": "#/t/AUTO.L"
-},
-{
-"id": "short-FCA-GB0006650450-Totale dichiarato (aggregato FCA)-2026-10-28-0.68",
-"ts": "2026-10-30T18:05:04Z",
-"type": "short",
-"title": "Oxford Instruments: Totale dichiarato (aggregato FCA)",
-"text": "short da 0.48% a 0.68% (0.68%, FCA, 2026-10-28)",
-"date": "2026-10-28",
-"important": false,
-"link": "#/t/OXIG.L"
-},
-{
-"id": "short-FCA-GB00BGDT3G23-Totale dichiarato (aggregato FCA)-2026-10-28-10.98",
-"ts": "2026-10-30T18:05:04Z",
-"type": "short",
-"title": "Rightmove: Totale dichiarato (aggregato FCA)",
-"text": "short da 11.15% a 10.98% (10.98%, FCA, 2026-10-28)",
-"date": "2026-10-28",
-"important": true,
-"link": "#/t/RMV.L"
 }
 ]
