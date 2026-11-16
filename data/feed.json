@@ -4920,16 +4920,6 @@
 "link": "#/t/PAGE.L"
 },
 {
-"id": "short-FCA-GB00B1FH8J72-Totale dichiarato (aggregato FCA)-2026-10-16-2.07",
-"ts": "2026-10-30T18:05:04Z",
-"type": "short",
-"title": "Severn Trent: Totale dichiarato (aggregato FCA)",
-"text": "short da 2.27% a 2.07% (2.07%, FCA, 2026-10-16)",
-"date": "2026-10-16",
-"important": true,
-"link": "#/t/SVT.L"
-},
-{
 "id": "short-FCA-GB00BF8Q6K64-Totale dichiarato (aggregato FCA)-2026-10-21-1.61",
 "ts": "2026-10-30T18:05:04Z",
 "type": "short",
