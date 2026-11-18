@@ -1,5 +1,35 @@
 [
 {
+"id": "short-AMF-FR0000131906-ILEX CAPITAL PARTNERS (UK) LLP-2026-11-16-0.73",
+"ts": "2026-11-18T11:56:08Z",
+"type": "short",
+"title": "Renault: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.60% a 0.73% (0.73%, AMF, 2026-11-16)",
+"date": "2026-11-16",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0010908533-ILEX CAPITAL PARTNERS (UK) LLP-2026-11-16-1.72",
+"ts": "2026-11-18T11:56:08Z",
+"type": "short",
+"title": "Edenred: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 1.60% a 1.72% (1.72%, AMF, 2026-11-16)",
+"date": "2026-11-16",
+"important": true,
+"link": "#/t/EDEN.PA"
+},
+{
+"id": "short-AMF-FR0000125338-MARSHALL WACE LLP-2026-11-16-0.59",
+"ts": "2026-11-18T11:56:08Z",
+"type": "short",
+"title": "Capgemini: MARSHALL WACE LLP",
+"text": "short da 0.69% a 0.59% (0.59%, AMF, 2026-11-16)",
+"date": "2026-11-16",
+"important": false,
+"link": "#/t/CAP.PA"
+},
+{
 "id": "short-FCA-GB00B6XZKY75-Totale dichiarato (aggregato FCA)-2026-11-09-0.87",
 "ts": "2026-11-17T16:14:24Z",
 "type": "short",
@@ -4968,35 +4998,5 @@
 "date": "2026-10-30",
 "important": true,
 "link": "#/t/BWY.L"
-},
-{
-"id": "short-FCA-DE000BAY0017-Totale dichiarato (aggregato FCA)-2026-10-30-1.59",
-"ts": "2026-11-03T19:37:37Z",
-"type": "short",
-"title": "Bayer: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.39% a 1.59% (1.59%, FCA, 2026-10-30)",
-"date": "2026-10-30",
-"important": true,
-"link": "#/t/BAYN.DE"
-},
-{
-"id": "short-FCA-GB00B63QSB39-Totale dichiarato (aggregato FCA)-2026-10-30-5.64",
-"ts": "2026-11-03T19:37:37Z",
-"type": "short",
-"title": "Greggs: Totale dichiarato (aggregato FCA)",
-"text": "short da 5.80% a 5.64% (5.64%, FCA, 2026-10-30)",
-"date": "2026-10-30",
-"important": true,
-"link": "#/t/GRG.L"
-},
-{
-"id": "short-FCA-GB0001826634-Totale dichiarato (aggregato FCA)-2026-10-30-1.87",
-"ts": "2026-11-03T19:37:37Z",
-"type": "short",
-"title": "Diploma: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.96% a 1.87% (1.87%, FCA, 2026-10-30)",
-"date": "2026-10-30",
-"important": true,
-"link": "#/t/DPLM.L"
 }
 ]
