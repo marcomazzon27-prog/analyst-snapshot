@@ -1,5 +1,55 @@
 [
 {
+"id": "short-AMF-FR0000131906-ILEX CAPITAL PARTNERS (UK) LLP-2026-11-17-0.97",
+"ts": "2026-11-19T11:53:15Z",
+"type": "short",
+"title": "Renault: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.73% a 0.97% (0.97%, AMF, 2026-11-17)",
+"date": "2026-11-17",
+"important": false,
+"link": "#/t/RNO.PA"
+},
+{
+"id": "short-AMF-FR0000121485-MARSHALL WACE LLP-2026-11-17-0.54",
+"ts": "2026-11-19T11:53:15Z",
+"type": "short",
+"title": "Kering: MARSHALL WACE LLP",
+"text": "nuova posizione corta (0.54%, AMF, 2026-11-17)",
+"date": "2026-11-17",
+"important": false,
+"link": "#/t/KER.PA"
+},
+{
+"id": "short-AMF-FR0000051807-D. E. SHAW & CO., L.P.-2026-11-17-0.7",
+"ts": "2026-11-19T11:53:15Z",
+"type": "short",
+"title": "Teleperformance: D. E. SHAW & CO., L.P.",
+"text": "short da 0.60% a 0.70% (0.70%, AMF, 2026-11-17)",
+"date": "2026-11-17",
+"important": false,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-MARSHALL WACE LLP-2026-11-17-1.91",
+"ts": "2026-11-19T11:53:15Z",
+"type": "short",
+"title": "Teleperformance: MARSHALL WACE LLP",
+"text": "short da 1.83% a 1.91% (1.91%, AMF, 2026-11-17)",
+"date": "2026-11-17",
+"important": true,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0010908533-ILEX CAPITAL PARTNERS (UK) LLP-2026-11-17-1.81",
+"ts": "2026-11-19T11:53:15Z",
+"type": "short",
+"title": "Edenred: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 1.72% a 1.81% (1.81%, AMF, 2026-11-17)",
+"date": "2026-11-17",
+"important": true,
+"link": "#/t/EDEN.PA"
+},
+{
 "id": "short-FCA-GB00BQS10J50-Totale dichiarato (aggregato FCA)-2026-11-09-0.2",
 "ts": "2026-11-18T20:41:45Z",
 "type": "short",
@@ -4948,55 +4998,5 @@
 "date": "2026-10-28",
 "important": true,
 "link": "#/t/WPP.L"
-},
-{
-"id": "short-FCA-IE0003864109-Totale dichiarato (aggregato FCA)-2026-10-29-2.7",
-"ts": "2026-11-04T11:11:17Z",
-"type": "short",
-"title": "Greencore: Totale dichiarato (aggregato FCA)",
-"text": "short da 2.99% a 2.70% (2.70%, FCA, 2026-10-29)",
-"date": "2026-10-29",
-"important": true,
-"link": "#/t/GNC.L"
-},
-{
-"id": "short-FCA-GB0009223206-Totale dichiarato (aggregato FCA)-2026-10-30-6.13",
-"ts": "2026-11-04T11:11:17Z",
-"type": "short",
-"title": "Smith & Nephew: Totale dichiarato (aggregato FCA)",
-"text": "short da 6.34% a 6.13% (6.13%, FCA, 2026-10-30)",
-"date": "2026-10-30",
-"important": true,
-"link": "#/t/SN.L"
-},
-{
-"id": "short-FCA-GB00BGDT3G23-Totale dichiarato (aggregato FCA)-2026-10-30-10.7",
-"ts": "2026-11-04T11:11:17Z",
-"type": "short",
-"title": "Rightmove: Totale dichiarato (aggregato FCA)",
-"text": "short da 10.90% a 10.70% (10.70%, FCA, 2026-10-30)",
-"date": "2026-10-30",
-"important": true,
-"link": "#/t/RMV.L"
-},
-{
-"id": "short-FCA-GB00B2PDGW16-Totale dichiarato (aggregato FCA)-2026-10-30-11.69",
-"ts": "2026-11-04T11:11:17Z",
-"type": "short",
-"title": "WHSmith: Totale dichiarato (aggregato FCA)",
-"text": "short da 12.24% a 11.69% (11.69%, FCA, 2026-10-30)",
-"date": "2026-10-30",
-"important": true,
-"link": "#/t/SMWH.L"
-},
-{
-"id": "short-FCA-GB0030913577-Totale dichiarato (aggregato FCA)-2026-11-02-3.03",
-"ts": "2026-11-04T11:11:17Z",
-"type": "short",
-"title": "BT Group: Totale dichiarato (aggregato FCA)",
-"text": "short da 2.83% a 3.03% (3.03%, FCA, 2026-11-02)",
-"date": "2026-11-02",
-"important": true,
-"link": "#/t/BT-A.L"
 }
 ]
