@@ -4660,16 +4660,6 @@
 "link": "#/t/CA.PA"
 },
 {
-"id": "short-FCA-GB00B0WMWD03-Totale dichiarato (aggregato FCA)-2026-10-23-2.46",
-"ts": "2026-11-06T19:32:13Z",
-"type": "short",
-"title": "Qinetiq: Totale dichiarato (aggregato FCA)",
-"text": "short da 2.74% a 2.46% (2.46%, FCA, 2026-10-23)",
-"date": "2026-10-23",
-"important": true,
-"link": "#/t/QQ.L"
-},
-{
 "id": "short-FCA-GB00BF5H9P87-Totale dichiarato (aggregato FCA)-2026-10-29-4.91",
 "ts": "2026-11-06T19:32:13Z",
 "type": "short",
