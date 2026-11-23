@@ -1,5 +1,55 @@
 [
 {
+"id": "short-AMF-FR0000121485-BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED-2026-11-19-0.52",
+"ts": "2026-11-23T13:13:02Z",
+"type": "short",
+"title": "Kering: BLACKROCK INVESTMENT MANAGEMENT (UK) LIMITED",
+"text": "nuova posizione corta (0.52%, AMF, 2026-11-19)",
+"date": "2026-11-19",
+"important": false,
+"link": "#/t/KER.PA"
+},
+{
+"id": "short-AMF-FR0000120693-AKO CAPITAL LLP-2026-11-19-0.5",
+"ts": "2026-11-23T13:13:02Z",
+"type": "short",
+"title": "Pernod Ricard: AKO CAPITAL LLP",
+"text": "nuova posizione corta (0.50%, AMF, 2026-11-19)",
+"date": "2026-11-19",
+"important": false,
+"link": "#/t/RI.PA"
+},
+{
+"id": "short-AMF-FR0000051807-SQUAREPOINT OPS LLC-2026-11-19-0.59",
+"ts": "2026-11-23T13:13:02Z",
+"type": "short",
+"title": "Teleperformance: SQUAREPOINT OPS LLC",
+"text": "short da 0.64% a 0.59% (0.59%, AMF, 2026-11-19)",
+"date": "2026-11-19",
+"important": false,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000051807-POINT72 ASSET MANAGEMENT, L.P.-2026-11-19-0.74",
+"ts": "2026-11-23T13:13:02Z",
+"type": "short",
+"title": "Teleperformance: POINT72 ASSET MANAGEMENT, L.P.",
+"text": "short da 0.51% a 0.74% (0.74%, AMF, 2026-11-19)",
+"date": "2026-11-19",
+"important": false,
+"link": "#/t/TEP.PA"
+},
+{
+"id": "short-AMF-FR0000131906-ILEX CAPITAL PARTNERS (UK) LLP-2026-11-19-1.04",
+"ts": "2026-11-23T13:13:02Z",
+"type": "short",
+"title": "Renault: ILEX CAPITAL PARTNERS (UK) LLP",
+"text": "short da 0.97% a 1.04% (1.04%, AMF, 2026-11-19)",
+"date": "2026-11-19",
+"important": true,
+"link": "#/t/RNO.PA"
+},
+{
 "id": "short-CONSOB-IT0004764699-JPMorgan Asset Management (UK) Limited-2026-11-19-1.17",
 "ts": "2026-11-20T20:32:07Z",
 "type": "short",
@@ -4948,45 +4998,5 @@
 "date": "2026-11-04",
 "important": true,
 "link": "#/t/CWR.L"
-},
-{
-"id": "short-FCA-GB0009223206-Totale dichiarato (aggregato FCA)-2026-11-04-5.7",
-"ts": "2026-11-06T19:32:13Z",
-"type": "short",
-"title": "Smith & Nephew: Totale dichiarato (aggregato FCA)",
-"text": "short da 5.84% a 5.70% (5.70%, FCA, 2026-11-04)",
-"date": "2026-11-04",
-"important": true,
-"link": "#/t/SN.L"
-},
-{
-"id": "short-FCA-GB0009465807-Totale dichiarato (aggregato FCA)-2026-11-04-10.59",
-"ts": "2026-11-06T19:32:13Z",
-"type": "short",
-"title": "Weir: Totale dichiarato (aggregato FCA)",
-"text": "short da 10.40% a 10.59% (10.59%, FCA, 2026-11-04)",
-"date": "2026-11-04",
-"important": true,
-"link": "#/t/WEIR.L"
-},
-{
-"id": "short-AMF-FR0000051807-MARSHALL WACE LLP-2026-11-04-1.73",
-"ts": "2026-11-06T19:32:13Z",
-"type": "short",
-"title": "Teleperformance: MARSHALL WACE LLP",
-"text": "short da 1.60% a 1.73% (1.73%, AMF, 2026-11-04)",
-"date": "2026-11-04",
-"important": true,
-"link": "#/t/TEP.PA"
-},
-{
-"id": "short-FCA-DE0005200000-Totale dichiarato (aggregato FCA)-2026-11-04-2.36",
-"ts": "2026-11-06T19:32:13Z",
-"type": "short",
-"title": "Beiersdorf: Totale dichiarato (aggregato FCA)",
-"text": "short da 2.16% a 2.36% (2.36%, FCA, 2026-11-04)",
-"date": "2026-11-04",
-"important": true,
-"link": "#/t/BEI.DE"
 }
 ]
