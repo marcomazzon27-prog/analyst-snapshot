@@ -1,5 +1,55 @@
 [
 {
+"id": "short-CONSOB-NL00150001Q9-Marshall Wace LLP-2026-11-26-1.96",
+"ts": "2026-11-27T23:33:13Z",
+"type": "short",
+"title": "Stellantis: Marshall Wace LLP",
+"text": "short da 2.05% a 1.96% (1.96%, CONSOB, 2026-11-26)",
+"date": "2026-11-26",
+"important": true,
+"link": "#/t/STLAM.MI"
+},
+{
+"id": "short-CONSOB-NL00150001Q9-Ilex Capital Partners (UK) LLP-2026-11-26-0.61",
+"ts": "2026-11-27T23:33:13Z",
+"type": "short",
+"title": "Stellantis: Ilex Capital Partners (UK) LLP",
+"text": "short da 0.55% a 0.61% (0.61%, CONSOB, 2026-11-26)",
+"date": "2026-11-26",
+"important": false,
+"link": "#/t/STLAM.MI"
+},
+{
+"id": "short-CONSOB-IT0004965148-Ilex Capital Partners (UK) LLP-2026-11-26-2.31",
+"ts": "2026-11-27T23:33:13Z",
+"type": "short",
+"title": "Moncler: Ilex Capital Partners (UK) LLP",
+"text": "short da 2.21% a 2.31% (2.31%, CONSOB, 2026-11-26)",
+"date": "2026-11-26",
+"important": true,
+"link": "#/t/MONC.MI"
+},
+{
+"id": "short-CONSOB-IT0004965148-Two Sigma Investments, LP-2026-11-26-0.88",
+"ts": "2026-11-27T23:33:13Z",
+"type": "short",
+"title": "Moncler: Two Sigma Investments, LP",
+"text": "short da 0.99% a 0.88% (0.88%, CONSOB, 2026-11-26)",
+"date": "2026-11-26",
+"important": false,
+"link": "#/t/MONC.MI"
+},
+{
+"id": "short-CONSOB-NL0000226223-Citadel Advisors LLC-2026-11-26-0.5",
+"ts": "2026-11-27T23:33:13Z",
+"type": "short",
+"title": "STMicroelectronics: Citadel Advisors LLC",
+"text": "nuova posizione corta (0.50%, CONSOB, 2026-11-26)",
+"date": "2026-11-26",
+"important": false,
+"link": "#/t/STMMI.MI"
+},
+{
 "id": "short-FCA-GB0001826634-Totale dichiarato (aggregato FCA)-2026-11-23-1.29",
 "ts": "2026-11-27T12:45:32Z",
 "type": "short",
@@ -4948,55 +4998,5 @@
 "date": "2026-11-10",
 "important": true,
 "link": "#/t/RMV.L"
-},
-{
-"id": "short-FCA-GB0009223206-Totale dichiarato (aggregato FCA)-2026-11-10-5.26",
-"ts": "2026-11-12T20:06:54Z",
-"type": "short",
-"title": "Smith & Nephew: Totale dichiarato (aggregato FCA)",
-"text": "short da 5.41% a 5.26% (5.26%, FCA, 2026-11-10)",
-"date": "2026-11-10",
-"important": true,
-"link": "#/t/SN.L"
-},
-{
-"id": "short-FCA-GB0007908733-Totale dichiarato (aggregato FCA)-2026-11-10-1.5",
-"ts": "2026-11-12T20:06:54Z",
-"type": "short",
-"title": "SSE plc: Totale dichiarato (aggregato FCA)",
-"text": "short da 1.20% a 1.50% (1.50%, FCA, 2026-11-10)",
-"date": "2026-11-10",
-"important": true,
-"link": "#/t/SSE.L"
-},
-{
-"id": "short-FCA-JE00BN574F90-Totale dichiarato (aggregato FCA)-2026-11-10-9.05",
-"ts": "2026-11-12T20:06:54Z",
-"type": "short",
-"title": "Wizz Air: Totale dichiarato (aggregato FCA)",
-"text": "short da 8.91% a 9.05% (9.05%, FCA, 2026-11-10)",
-"date": "2026-11-10",
-"important": true,
-"link": "#/t/WIZZ.L"
-},
-{
-"id": "short-FCA-GB00BP0RGD03-Totale dichiarato (aggregato FCA)-2026-11-10-5.29",
-"ts": "2026-11-12T20:06:54Z",
-"type": "short",
-"title": "Berkeley Group Holdings: Totale dichiarato (aggregato FCA)",
-"text": "short da 5.41% a 5.29% (5.29%, FCA, 2026-11-10)",
-"date": "2026-11-10",
-"important": true,
-"link": "#/t/BKG.L"
-},
-{
-"id": "short-FCA-GB00BKDTK925-Totale dichiarato (aggregato FCA)-2026-11-10-4.73",
-"ts": "2026-11-12T20:06:54Z",
-"type": "short",
-"title": "Trainline: Totale dichiarato (aggregato FCA)",
-"text": "short da 4.82% a 4.73% (4.73%, FCA, 2026-11-10)",
-"date": "2026-11-10",
-"important": true,
-"link": "#/t/TRN.L"
 }
 ]
